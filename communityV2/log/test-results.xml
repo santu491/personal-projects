@@ -1,0 +1,1955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="760" failures="8" errors="0" time="68.368">
+  <testsuite name="PublicService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="15.45" tests="5">
+    <testcase classname="PublicService Should Return App version from database" name="PublicService Should Return App version from database" time="0.002">
+    </testcase>
+    <testcase classname="PublicService Should Return user successfully for valid userName" name="PublicService Should Return user successfully for valid userName" time="0">
+    </testcase>
+    <testcase classname="PublicService Should Return all Flagged story" name="PublicService Should Return all Flagged story" time="0.001">
+    </testcase>
+    <testcase classname="PublicService should login a user with oidc access and id tokens" name="PublicService should login a user with oidc access and id tokens" time="0">
+    </testcase>
+    <testcase classname="PublicService Should Return Content Translations from database" name="PublicService Should Return Content Translations from database" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="HealthWiseController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="17.578" tests="17">
+    <testcase classname="HealthWiseController Should Return HealthWise Topic Based on ID in english" name="HealthWiseController Should Return HealthWise Topic Based on ID in english" time="0.002">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return HealthWise Video Topic Based on video ID" name="HealthWiseController Should Return HealthWise Video Topic Based on video ID" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return return error for invalid video ID" name="HealthWiseController Should Return return error for invalid video ID" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return a HealthWise Video Topic" name="HealthWiseController Should Return a HealthWise Video Topic" time="0.001">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return Error for a HealthWise Video Topic" name="HealthWiseController Should Return Error for a HealthWise Video Topic" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return Error for a HealthWise Video Topic" name="HealthWiseController Should Return Error for a HealthWise Video Topic" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return success with response for topicId" name="HealthWiseController Should Return success with response for topicId" time="0.001">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return error with response for invalid topicId" name="HealthWiseController Should Return error with response for invalid topicId" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return Error for a HealthWise Video Topic" name="HealthWiseController Should Return Error for a HealthWise Video Topic" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return success with response for conceptId and aspectId" name="HealthWiseController Should Return success with response for conceptId and aspectId" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return a HealthWise Article Topic" name="HealthWiseController Should Return a HealthWise Article Topic" time="0.001">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return Error for a HealthWise Article Topic" name="HealthWiseController Should Return Error for a HealthWise Article Topic" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return success with response for articleId" name="HealthWiseController Should Return success with response for articleId" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return error with response for invalid articleId" name="HealthWiseController Should Return error with response for invalid articleId" time="0.001">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return Error for a HealthWise Video Topic" name="HealthWiseController Should Return Error for a HealthWise Video Topic" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return content" name="HealthWiseController Should Return content" time="0">
+    </testcase>
+    <testcase classname="HealthWiseController Should Return content" name="HealthWiseController Should Return content" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="PostsnController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="17.641" tests="25">
+    <testcase classname="PostsnController GetAllPosts - Validate Invalid Page number" name="PostsnController GetAllPosts - Validate Invalid Page number" time="0.002">
+    </testcase>
+    <testcase classname="PostsnController GetAllPosts - Undefined Published" name="PostsnController GetAllPosts - Undefined Published" time="0">
+    </testcase>
+    <testcase classname="PostsnController GetAllPosts - Language not defined" name="PostsnController GetAllPosts - Language not defined" time="0.001">
+    </testcase>
+    <testcase classname="PostsnController GetAllPostsForCommunity - Validate Invalid Page number" name="PostsnController GetAllPostsForCommunity - Validate Invalid Page number" time="0">
+    </testcase>
+    <testcase classname="PostsnController GetAllPostsForCommunity - Undefined Published" name="PostsnController GetAllPostsForCommunity - Undefined Published" time="0.001">
+    </testcase>
+    <testcase classname="PostsnController GetAllPostsForCommunity - Language not defined" name="PostsnController GetAllPostsForCommunity - Language not defined" time="0">
+    </testcase>
+    <testcase classname="PostsnController Get Post By Id - Language not defined" name="PostsnController Get Post By Id - Language not defined" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertComment - Valid Parameters - Create a comment" name="PostsnController UpsertComment - Valid Parameters - Create a comment" time="0.001">
+    </testcase>
+    <testcase classname="PostsnController UpsertComment - Valid Parameters - Edit a comment" name="PostsnController UpsertComment - Valid Parameters - Edit a comment" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertComment - post id not hex string" name="PostsnController UpsertComment - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertComment - comment null check" name="PostsnController UpsertComment - comment null check" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertComment - comment is moderated" name="PostsnController UpsertComment - comment is moderated" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReply - post id not hex string" name="PostsnController UpsertReply - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReply - reply null check" name="PostsnController UpsertReply - reply null check" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReply - reply is moderated" name="PostsnController UpsertReply - reply is moderated" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReply - reply is created" name="PostsnController UpsertReply - reply is created" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReaction - post id not hex string" name="PostsnController UpsertReaction - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController UpsertReaction - create reaction" name="PostsnController UpsertReaction - create reaction" time="0.001">
+    </testcase>
+    <testcase classname="PostsnController UpsertReaction - remove reaction" name="PostsnController UpsertReaction - remove reaction" time="0">
+    </testcase>
+    <testcase classname="PostsnController RemoveComment - post id not hex string" name="PostsnController RemoveComment - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController RemoveComment - reply id not hex string" name="PostsnController RemoveComment - reply id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController RemoveComment - delete comment successfully" name="PostsnController RemoveComment - delete comment successfully" time="0">
+    </testcase>
+    <testcase classname="PostsnController ReportComment - post id not hex string" name="PostsnController ReportComment - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController ReportComment - reply id not hex string" name="PostsnController ReportComment - reply id not hex string" time="0">
+    </testcase>
+    <testcase classname="PostsnController ReportComment - report comment successfully" name="PostsnController ReportComment - report comment successfully" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProgramController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:33" time="3.582" tests="6">
+    <testcase classname="ProgramController Verify Resp" name="ProgramController Verify Resp" time="0.001">
+    </testcase>
+    <testcase classname="ProgramController Should Return Program details by Id" name="ProgramController Should Return Program details by Id" time="0.001">
+    </testcase>
+    <testcase classname="ProgramController Should Return programs in a given zip code and limit to specific terms, attribute tags or service tags" name="ProgramController Should Return programs in a given zip code and limit to specific terms, attribute tags or service tags" time="0">
+    </testcase>
+    <testcase classname="ProgramController Should Return Program details by Id - error" name="ProgramController Should Return Program details by Id - error" time="0.001">
+    </testcase>
+    <testcase classname="ProgramController Should Return programs in a given zip code and limit to specific terms, and undefined values" name="ProgramController Should Return programs in a given zip code and limit to specific terms, and undefined values" time="0">
+    </testcase>
+    <testcase classname="ProgramController Should Return programs in a given zip code and limit to specific terms, error" name="ProgramController Should Return programs in a given zip code and limit to specific terms, error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="BinderController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="20.215" tests="23">
+    <testcase classname="BinderController Should Return Binder Info for a specific User" name="BinderController Should Return Binder Info for a specific User" time="0.005">
+    </testcase>
+    <testcase classname="BinderController Should Return Error while creating Binder specific User" name="BinderController Should Return Error while creating Binder specific User" time="0.001">
+    </testcase>
+    <testcase classname="BinderController Should Return Binder Info after adding resources to their binder" name="BinderController Should Return Binder Info after adding resources to their binder" time="0">
+    </testcase>
+    <testcase classname="BinderController Should Return error while removing resources to their binder" name="BinderController Should Return error while removing resources to their binder" time="0">
+    </testcase>
+    <testcase classname="BinderController Should Return Binder Info after removing resources to their binder" name="BinderController Should Return Binder Info after removing resources to their binder" time="0.001">
+    </testcase>
+    <testcase classname="BinderController Should produce error while remove resource from Binder Info for a specific User" name="BinderController Should produce error while remove resource from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController Should produce error while remove resource from Binder Info for a specific User" name="BinderController Should produce error while remove resource from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController Should Return Binder Info after adding Article to their binder" name="BinderController Should Return Binder Info after adding Article to their binder" time="0">
+    </testcase>
+    <testcase classname="BinderController Should Return Error while adding Article to their binder" name="BinderController Should Return Error while adding Article to their binder" time="0.001">
+    </testcase>
+    <testcase classname="BinderController Should Return Binder Info after removing Article to their binder" name="BinderController Should Return Binder Info after removing Article to their binder" time="0.001">
+    </testcase>
+    <testcase classname="BinderController Should Return Error while removing Article to their binder" name="BinderController Should Return Error while removing Article to their binder" time="0">
+    </testcase>
+    <testcase classname="BinderController Should produce error while removing article from Binder Info for a specific User" name="BinderController Should produce error while removing article from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController Add Story To Binder - invalid story ID" name="BinderController Add Story To Binder - invalid story ID" time="0.001">
+    </testcase>
+    <testcase classname="BinderController Add Story to Binder - success" name="BinderController Add Story to Binder - success" time="0.002">
+    </testcase>
+    <testcase classname="BinderController Add Story to Binder - exception" name="BinderController Add Story to Binder - exception" time="0">
+    </testcase>
+    <testcase classname="BinderController Should Return Success after removing story from binder" name="BinderController Should Return Success after removing story from binder" time="0.001">
+    </testcase>
+    <testcase classname="BinderController removeStoryFromBinder - Should Return Error response for invalid story Id" name="BinderController removeStoryFromBinder - Should Return Error response for invalid story Id" time="0">
+    </testcase>
+    <testcase classname="BinderController Should produce error while removing story from Binder Info for a specific User" name="BinderController Should produce error while removing story from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController Should remove post from Binder Info for a specific User" name="BinderController Should remove post from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController Should produce error while removing post from Binder Info for a specific User" name="BinderController Should produce error while removing post from Binder Info for a specific User" time="0.014">
+    </testcase>
+    <testcase classname="BinderController Should produce error while removing post from Binder Info for a specific User" name="BinderController Should produce error while removing post from Binder Info for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController addPost - Should add a post to Binder for a specific User" name="BinderController addPost - Should add a post to Binder for a specific User" time="0">
+    </testcase>
+    <testcase classname="BinderController addPost - Should produce error add a post to Binder for a specific User" name="BinderController addPost - Should produce error add a post to Binder for a specific User" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="PublicController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="19.482" tests="9">
+    <testcase classname="PublicController Should Return API version" name="PublicController Should Return API version" time="0.004">
+    </testcase>
+    <testcase classname="PublicController Should Return APP version" name="PublicController Should Return APP version" time="0.001">
+    </testcase>
+    <testcase classname="PublicController Should Generate a token for DEV login" name="PublicController Should Generate a token for DEV login" time="0.001">
+    </testcase>
+    <testcase classname="PublicController Should return error when empty username is provide for dev login" name="PublicController Should return error when empty username is provide for dev login" time="0">
+    </testcase>
+    <testcase classname="PublicController Should Return Error while retrieving Binder Info" name="PublicController Should Return Error while retrieving Binder Info" time="0.001">
+    </testcase>
+    <testcase classname="PublicController Should Return Translation data for app" name="PublicController Should Return Translation data for app" time="0.001">
+    </testcase>
+    <testcase classname="PublicController Should Return Translation data for app without language" name="PublicController Should Return Translation data for app without language" time="0.001">
+    </testcase>
+    <testcase classname="PublicController getParnerImage - error - not hex" name="PublicController getParnerImage - error - not hex" time="0">
+    </testcase>
+    <testcase classname="PublicController getParnerImage - success" name="PublicController getParnerImage - success" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="LibraryController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="19.628" tests="19">
+    <testcase classname="LibraryController Should Return a specific Library for all zeros community ID" name="LibraryController Should Return a specific Library for all zeros community ID" time="0.002">
+    </testcase>
+    <testcase classname="LibraryController Should Return a specific Library for all zeros community ID - language undefined" name="LibraryController Should Return a specific Library for all zeros community ID - language undefined" time="0.001">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error while retrieving a specific Library" name="LibraryController Should Return Error while retrieving a specific Library" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error while retrieving a specific Library" name="LibraryController Should Return Error while retrieving a specific Library" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error for invalid Library" name="LibraryController Should Return Error for invalid Library" time="0.006">
+    </testcase>
+    <testcase classname="LibraryController Should Return Success response for htmlDescription FALSE" name="LibraryController Should Return Success response for htmlDescription FALSE" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Success response for htmlDescription TRUE" name="LibraryController Should Return Success response for htmlDescription TRUE" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Success response for htmlDescription TRUE - language undefined" name="LibraryController Should Return Success response for htmlDescription TRUE - language undefined" time="0.001">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error response for invalid library Id" name="LibraryController Should Return Error response for invalid library Id" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error while retrieving a specific Library" name="LibraryController Should Return Error while retrieving a specific Library" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error response for invalid title" name="LibraryController Should Return Error response for invalid title" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return library content for given id" name="LibraryController Should Return library content for given id" time="0.001">
+    </testcase>
+    <testcase classname="LibraryController Should Return a specific Library for all zeros community ID" name="LibraryController Should Return a specific Library for all zeros community ID" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return a specific Library for a valid community ID" name="LibraryController Should Return a specific Library for a valid community ID" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return library content for given id in spanish" name="LibraryController Should Return library content for given id in spanish" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return library content for given id - language undefined" name="LibraryController Should Return library content for given id - language undefined" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error while retrieving a specific Library" name="LibraryController Should Return Error while retrieving a specific Library" time="0">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error response for invalid library Id" name="LibraryController Should Return Error response for invalid library Id" time="0.001">
+    </testcase>
+    <testcase classname="LibraryController Should Return Error while retrieving a specific Library" name="LibraryController Should Return Error while retrieving a specific Library" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="StoryController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="20.3" tests="45">
+    <testcase classname="StoryController Should Return all Stories" name="StoryController Should Return all Stories" time="0.007">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while retrieving Stories" name="StoryController Should Return Error while retrieving Stories" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should Return a Story by the ID" name="StoryController Should Return a Story by the ID" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while retrieving specific story" name="StoryController Should Return Error while retrieving specific story" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should Return all stories for a specific user by ID" name="StoryController Should Return all stories for a specific user by ID" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while retrieving all stories for a specific user by ID" name="StoryController Should Return Error while retrieving all stories for a specific user by ID" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return all stories for a single community" name="StoryController Should Return all stories for a single community" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while retrieving all stories for a single community" name="StoryController Should Return Error while retrieving all stories for a single community" time="0">
+    </testcase>
+    <testcase classname="StoryController Should add answer to prompt and return story" name="StoryController Should add answer to prompt and return story" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while Creating Answers for Prompts when COMMUNITY ID MISMATCH" name="StoryController Should Return Error while Creating Answers for Prompts when COMMUNITY ID MISMATCH" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should update story and return with success response" name="StoryController Should update story and return with success response" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return Error while updating when INVALID STORY ID IS FOUND" name="StoryController Should Return Error while updating when INVALID STORY ID IS FOUND" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should Return Error when user is not acive" name="StoryController Should Return Error when user is not acive" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return story based on community id and user id" name="StoryController Should Return story based on community id and user id" time="0">
+    </testcase>
+    <testcase classname="StoryController Should Return error for invalid Id" name="StoryController Should Return error for invalid Id" time="0">
+    </testcase>
+    <testcase classname="StoryController Should return success response while publishing a story" name="StoryController Should return success response while publishing a story" time="0">
+    </testcase>
+    <testcase classname="StoryController Should return error response while publishing a story" name="StoryController Should return error response while publishing a story" time="0">
+    </testcase>
+    <testcase classname="StoryController Should remove the prompt from the story based on promptId" name="StoryController Should remove the prompt from the story based on promptId" time="0.001">
+    </testcase>
+    <testcase classname="StoryController removePrompt - Should return an error" name="StoryController removePrompt - Should return an error" time="0">
+    </testcase>
+    <testcase classname="StoryController Should return success response while set a Flag for Story" name="StoryController Should return success response while set a Flag for Story" time="0">
+    </testcase>
+    <testcase classname="StoryController removePrompt - Should return an error" name="StoryController removePrompt - Should return an error" time="0">
+    </testcase>
+    <testcase classname="StoryController Should create a Story" name="StoryController Should create a Story" time="0">
+    </testcase>
+    <testcase classname="StoryController Should create a Story - Invalid story model" name="StoryController Should create a Story - Invalid story model" time="0.001">
+    </testcase>
+    <testcase classname="StoryController Should create a Story - Inactive User" name="StoryController Should create a Story - Inactive User" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - Valid Parameters - Create a comment" name="StoryController UpsertComment - Valid Parameters - Create a comment" time="0">
+    </testcase>
+    <testcase classname="StoryController removeComment - story id not hex string" name="StoryController removeComment - story id not hex string" time="0">
+    </testcase>
+    <testcase classname="StoryController RemoveComment - reply id not hex string" name="StoryController RemoveComment - reply id not hex string" time="0">
+    </testcase>
+    <testcase classname="StoryController RemoveComment - delete comment successfully" name="StoryController RemoveComment - delete comment successfully" time="0">
+    </testcase>
+    <testcase classname="StoryController upsertReply - add new reply" name="StoryController upsertReply - add new reply" time="0.002">
+    </testcase>
+    <testcase classname="StoryController upsertReply - add new reply" name="StoryController upsertReply - add new reply" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertReply - story id not hex string" name="StoryController UpsertReply - story id not hex string" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertReply - reply null check" name="StoryController UpsertReply - reply null check" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertReply - reply is moderated" name="StoryController UpsertReply - reply is moderated" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - Valid Parameters - Create a comment" name="StoryController UpsertComment - Valid Parameters - Create a comment" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - Valid Parameters - Edit a comment" name="StoryController UpsertComment - Valid Parameters - Edit a comment" time="0.001">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - post id not hex string" name="StoryController UpsertComment - post id not hex string" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - comment null check" name="StoryController UpsertComment - comment null check" time="0">
+    </testcase>
+    <testcase classname="StoryController UpsertComment - comment is moderated" name="StoryController UpsertComment - comment is moderated" time="0">
+    </testcase>
+    <testcase classname="StoryController FlagComment - comment incorrect id" name="StoryController FlagComment - comment incorrect id" time="0">
+    </testcase>
+    <testcase classname="StoryController FlagComment - reply incorrect id" name="StoryController FlagComment - reply incorrect id" time="0">
+    </testcase>
+    <testcase classname="StoryController FlagComment - flag comment successfully" name="StoryController FlagComment - flag comment successfully" time="0.001">
+    </testcase>
+    <testcase classname="StoryController upsertReaction - react successfully" name="StoryController upsertReaction - react successfully" time="0">
+    </testcase>
+    <testcase classname="StoryController upsertReaction - invalid story id" name="StoryController upsertReaction - invalid story id" time="0">
+    </testcase>
+    <testcase classname="StoryController deleteStoryById shoucld return success" name="StoryController deleteStoryById shoucld return success" time="0">
+    </testcase>
+    <testcase classname="StoryController deleteStoryById should return error" name="StoryController deleteStoryById should return error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:35" time="3.805" tests="23">
+    <testcase classname="MemberGateway should return on prem access token" name="MemberGateway should return on prem access token" time="0.003">
+    </testcase>
+    <testcase classname="MemberGateway should return on prem synthetic access token" name="MemberGateway should return on prem synthetic access token" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Get Web User" name="MemberGateway Get Web User" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Authenticate user when provided correct password" name="MemberGateway Authenticate user when provided correct password" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Generate temporary password for user" name="MemberGateway Generate temporary password for user" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Update new password by temporary password" name="MemberGateway Update new password by temporary password" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Authenticate and get commercial user details when provided correct password" name="MemberGateway Authenticate and get commercial user details when provided correct password" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should be able to recover the contact details" name="MemberGateway Should be able to recover the contact details" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Should return GBD member summary" name="MemberGateway Should return GBD member summary" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should be able to validate the security answers" name="MemberGateway Should be able to validate the security answers" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return GBD member eligibility" name="MemberGateway Should return GBD member eligibility" time="0.004">
+    </testcase>
+    <testcase classname="MemberGateway Should return GBD member synthetic eligibility" name="MemberGateway Should return GBD member synthetic eligibility" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return member contact details" name="MemberGateway Should return member contact details" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return member details when forgot username" name="MemberGateway Should return member details when forgot username" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Should return deviceId and UserId along with send otp to communication channel to user" name="MemberGateway Should return deviceId and UserId along with send otp to communication channel to user" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should validate the otp and return the status for commercial" name="MemberGateway Should validate the otp and return the status for commercial" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should validate the otp and return the status for medicaid" name="MemberGateway Should validate the otp and return the status for medicaid" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should verify and save cookie and return the status commercial users" name="MemberGateway Should verify and save cookie and return the status commercial users" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Should verify and save cookie and return the status medicaid users" name="MemberGateway Should verify and save cookie and return the status medicaid users" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return member login treat API response" name="MemberGateway Should return member login treat API response" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return member recovery treat API response" name="MemberGateway Should return member recovery treat API response" time="0">
+    </testcase>
+    <testcase classname="MemberGateway Should return GBD member contact details" name="MemberGateway Should return GBD member contact details" time="0.001">
+    </testcase>
+    <testcase classname="MemberGateway Should return GBD member contact details synthetic APIs" name="MemberGateway Should return GBD member contact details synthetic APIs" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="BinderService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:36" time="4.486" tests="37">
+    <testcase classname="BinderService addPostToBinder Should add a post to Binder" name="BinderService addPostToBinder Should add a post to Binder" time="0.003">
+    </testcase>
+    <testcase classname="BinderService addPostToBinder should return user not found" name="BinderService addPostToBinder should return user not found" time="0">
+    </testcase>
+    <testcase classname="BinderService addPostToBinder should return post not found" name="BinderService addPostToBinder should return post not found" time="0.001">
+    </testcase>
+    <testcase classname="BinderService addPostToBinder should return binder already exists" name="BinderService addPostToBinder should return binder already exists" time="0">
+    </testcase>
+    <testcase classname="BinderService addPostToBinder no existing post" name="BinderService addPostToBinder no existing post" time="0">
+    </testcase>
+    <testcase classname="BinderService removePostFromBinder should return expected value" name="BinderService removePostFromBinder should return expected value" time="0">
+    </testcase>
+    <testcase classname="BinderService removePostFromBinder should return error" name="BinderService removePostFromBinder should return error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeStoryFromBinder should call createSuccess" name="BinderService removeStoryFromBinder should call createSuccess" time="0">
+    </testcase>
+    <testcase classname="BinderService removeStoryFromBinder should return error after creating binder" name="BinderService removeStoryFromBinder should return error after creating binder" time="0">
+    </testcase>
+    <testcase classname="BinderService removeStoryFromBinder should return user not found error" name="BinderService removeStoryFromBinder should return user not found error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeStoryFromBinder should return story does not exist in binder" name="BinderService removeStoryFromBinder should return story does not exist in binder" time="0.001">
+    </testcase>
+    <testcase classname="BinderService removeStoryFromBinder should create an exception" name="BinderService removeStoryFromBinder should create an exception" time="0">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should return success message" name="BinderService addStoryToBinder should return success message" time="0">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should return user does not exist error" name="BinderService addStoryToBinder should return user does not exist error" time="0">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should return story does not exist" name="BinderService addStoryToBinder should return story does not exist" time="0.001">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should return story already exist in binder error" name="BinderService addStoryToBinder should return story already exist in binder error" time="0">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should return user cannot add own story error" name="BinderService addStoryToBinder should return user cannot add own story error" time="0">
+    </testcase>
+    <testcase classname="BinderService addStoryToBinder should create an exception" name="BinderService addStoryToBinder should create an exception" time="0">
+    </testcase>
+    <testcase classname="BinderService removeArticleFromBinder should return a success message" name="BinderService removeArticleFromBinder should return a success message" time="0">
+    </testcase>
+    <testcase classname="BinderService removeArticleFromBinder should return a exception message" name="BinderService removeArticleFromBinder should return a exception message" time="0.001">
+    </testcase>
+    <testcase classname="BinderService removeArticleFromBinder should return user not found error" name="BinderService removeArticleFromBinder should return user not found error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeArticleFromBinder should article does not exist error" name="BinderService removeArticleFromBinder should article does not exist error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeArticleFromBinder should return article does not exist error - 2" name="BinderService removeArticleFromBinder should return article does not exist error - 2" time="0">
+    </testcase>
+    <testcase classname="BinderService addArticleToBinder should return success" name="BinderService addArticleToBinder should return success" time="0">
+    </testcase>
+    <testcase classname="BinderService addArticleToBinder should return exception" name="BinderService addArticleToBinder should return exception" time="0">
+    </testcase>
+    <testcase classname="BinderService addArticleToBinder should return user not found error" name="BinderService addArticleToBinder should return user not found error" time="0">
+    </testcase>
+    <testcase classname="BinderService addArticleToBinder should return article exist in binder error" name="BinderService addArticleToBinder should return article exist in binder error" time="0.001">
+    </testcase>
+    <testcase classname="BinderService removeResourceFromBinder should return success" name="BinderService removeResourceFromBinder should return success" time="0">
+    </testcase>
+    <testcase classname="BinderService removeResourceFromBinder should return resource does not exist error" name="BinderService removeResourceFromBinder should return resource does not exist error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeResourceFromBinder should throw an exception" name="BinderService removeResourceFromBinder should throw an exception" time="0">
+    </testcase>
+    <testcase classname="BinderService removeResourceFromBinder should return user not found error" name="BinderService removeResourceFromBinder should return user not found error" time="0">
+    </testcase>
+    <testcase classname="BinderService removeResourceFromBinder should return resource does not exist error" name="BinderService removeResourceFromBinder should return resource does not exist error" time="0">
+    </testcase>
+    <testcase classname="BinderService addResourceToBinder should return success" name="BinderService addResourceToBinder should return success" time="0.001">
+    </testcase>
+    <testcase classname="BinderService addResourceToBinder should return resource already exists error" name="BinderService addResourceToBinder should return resource already exists error" time="0">
+    </testcase>
+    <testcase classname="BinderService addResourceToBinder should throw an exception" name="BinderService addResourceToBinder should throw an exception" time="0">
+    </testcase>
+    <testcase classname="BinderService addResourceToBinder should return user not found error" name="BinderService addResourceToBinder should return user not found error" time="0">
+    </testcase>
+    <testcase classname="BinderService getBinderByUser should return success" name="BinderService getBinderByUser should return success" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="PromptController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:36" time="4.637" tests="13">
+    <testcase classname="PromptController Should Return all Prompt List in English" name="PromptController Should Return all Prompt List in English" time="0.002">
+    </testcase>
+    <testcase classname="PromptController Should Return Error while retrieving Prompt List" name="PromptController Should Return Error while retrieving Prompt List" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return a specific Prompt" name="PromptController Should Return a specific Prompt" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return Error while retrieving a specific Prompt" name="PromptController Should Return Error while retrieving a specific Prompt" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return all prompts for a community" name="PromptController Should Return all prompts for a community" time="0.001">
+    </testcase>
+    <testcase classname="PromptController Should Return Error while retrieving all prompts for a community" name="PromptController Should Return Error while retrieving all prompts for a community" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return prompt after creating" name="PromptController Should Return prompt after creating" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return error while creating prompt" name="PromptController Should Return error while creating prompt" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return all Prompt List in Spanish" name="PromptController Should Return all Prompt List in Spanish" time="0.001">
+    </testcase>
+    <testcase classname="PromptController Should Return a specific Prompt in Spanish" name="PromptController Should Return a specific Prompt in Spanish" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return all prompts for a community in spanish" name="PromptController Should Return all prompts for a community in spanish" time="0">
+    </testcase>
+    <testcase classname="PromptController getCommunitiesList - success" name="PromptController getCommunitiesList - success" time="0">
+    </testcase>
+    <testcase classname="PromptController Should Return all Prompt List - check for language" name="PromptController Should Return all Prompt List - check for language" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Comment Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:38" time="2.05" tests="10">
+    <testcase classname="Comment Service removeComment - delete reply success" name="Comment Service removeComment - delete reply success" time="0.002">
+    </testcase>
+    <testcase classname="Comment Service removeComment - delete comment success" name="Comment Service removeComment - delete comment success" time="0">
+    </testcase>
+    <testcase classname="Comment Service flagComment - flag reply success" name="Comment Service flagComment - flag reply success" time="0">
+    </testcase>
+    <testcase classname="Comment Service flagComment - flag comment success" name="Comment Service flagComment - flag comment success" time="0.001">
+    </testcase>
+    <testcase classname="Comment Service flagComment - Comment not found error" name="Comment Service flagComment - Comment not found error" time="0">
+    </testcase>
+    <testcase classname="Comment Service flagComment - Reply not found error" name="Comment Service flagComment - Reply not found error" time="0">
+    </testcase>
+    <testcase classname="Comment Service removeComment - comment does not exist error" name="Comment Service removeComment - comment does not exist error" time="0">
+    </testcase>
+    <testcase classname="Comment Service removeComment - Comment No permission to delete comment" name="Comment Service removeComment - Comment No permission to delete comment" time="0">
+    </testcase>
+    <testcase classname="Comment Service removeComment - reply does not exist error" name="Comment Service removeComment - reply does not exist error" time="0.001">
+    </testcase>
+    <testcase classname="Comment Service removeComment - No permission to delete comment" name="Comment Service removeComment - No permission to delete comment" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="CommercialService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:39" time="1.729" tests="6">
+    <testcase classname="CommercialService Should get commercial member information" name="CommercialService Should get commercial member information" time="0.003">
+    </testcase>
+    <testcase classname="CommercialService Should return error when webguid is not present in commercial member information" name="CommercialService Should return error when webguid is not present in commercial member information" time="0">
+    </testcase>
+    <testcase classname="CommercialService Should get commercial member data" name="CommercialService Should get commercial member data" time="0.001">
+    </testcase>
+    <testcase classname="CommercialService Should format commercial member data" name="CommercialService Should format commercial member data" time="0.004">
+    </testcase>
+    <testcase classname="CommercialService memberGetContacts" name="CommercialService memberGetContacts" time="0.001">
+    </testcase>
+    <testcase classname="CommercialService Should return commercial snap user contact details" name="CommercialService Should return commercial snap user contact details" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:18" time="22.865" tests="45">
+    <testcase classname="UserController Should Return User Info while retrieving User Info" name="UserController Should Return User Info while retrieving User Info" time="0.002">
+    </testcase>
+    <testcase classname="UserController Should Return Exception while retrieving User Info" name="UserController Should Return Exception while retrieving User Info" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should Update Community for a given User" name="UserController Should Update Community for a given User" time="0">
+    </testcase>
+    <testcase classname="UserController Should Return Invalid User Id" name="UserController Should Return Invalid User Id" time="0">
+    </testcase>
+    <testcase classname="UserController Should Return Invalid Community Id" name="UserController Should Return Invalid Community Id" time="0">
+    </testcase>
+    <testcase classname="UserController Should Return success operation when a User Blocks another User" name="UserController Should Return success operation when a User Blocks another User" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should Return block list for a user" name="UserController Should Return block list for a user" time="0">
+    </testcase>
+    <testcase classname="UserController Should logout a user" name="UserController Should logout a user" time="0">
+    </testcase>
+    <testcase classname="UserController logout - no access token error" name="UserController logout - no access token error" time="0">
+    </testcase>
+    <testcase classname="UserController Should Return success operation when a User is removed from Block" name="UserController Should Return success operation when a User is removed from Block" time="0.001">
+    </testcase>
+    <testcase classname="UserController removeBlock - invalid user id" name="UserController removeBlock - invalid user id" time="0">
+    </testcase>
+    <testcase classname="UserController Should Reset Badge count in installations" name="UserController Should Reset Badge count in installations" time="0">
+    </testcase>
+    <testcase classname="UserController resetBadgeCount - No user error" name="UserController resetBadgeCount - No user error" time="0">
+    </testcase>
+    <testcase classname="UserController resetBadgeCount - No device token error" name="UserController resetBadgeCount - No device token error" time="0">
+    </testcase>
+    <testcase classname="UserController Should Update terms of use for a user" name="UserController Should Update terms of use for a user" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should return success with complete user profile by id" name="UserController Should return success with complete user profile by id" time="0">
+    </testcase>
+    <testcase classname="UserController Should return error for invalid user id" name="UserController Should return error for invalid user id" time="0">
+    </testcase>
+    <testcase classname="UserController Should return success with updated user object" name="UserController Should return success with updated user object" time="0">
+    </testcase>
+    <testcase classname="UserController Should return Success with response for valid user id" name="UserController Should return Success with response for valid user id" time="0.003">
+    </testcase>
+    <testcase classname="UserController Should return Error with proper response for invalid user id" name="UserController Should return Error with proper response for invalid user id" time="0">
+    </testcase>
+    <testcase classname="UserController Should return success for marking user activity read" name="UserController Should return success for marking user activity read" time="0">
+    </testcase>
+    <testcase classname="UserController Should return activity id not valid" name="UserController Should return activity id not valid" time="0">
+    </testcase>
+    <testcase classname="UserController Should return user activity" name="UserController Should return user activity" time="0">
+    </testcase>
+    <testcase classname="UserController Should return success response after saving installations" name="UserController Should return success response after saving installations" time="0">
+    </testcase>
+    <testcase classname="UserController Should return a user without selected community" name="UserController Should return a user without selected community" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should return bad data with invalid user id" name="UserController Should return bad data with invalid user id" time="0">
+    </testcase>
+    <testcase classname="UserController Should return bad data with invalid community id" name="UserController Should return bad data with invalid community id" time="0">
+    </testcase>
+    <testcase classname="UserController Should add/edit profile picture for a user" name="UserController Should add/edit profile picture for a user" time="0.002">
+    </testcase>
+    <testcase classname="UserController Should Return Success response for valid userID and community ids" name="UserController Should Return Success response for valid userID and community ids" time="0">
+    </testcase>
+    <testcase classname="UserController Should Return Error response for invalid userID" name="UserController Should Return Error response for invalid userID" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should Return Error response for invalid community IDs" name="UserController Should Return Error response for invalid community IDs" time="0">
+    </testcase>
+    <testcase classname="UserController Should update onBoardingState of a user" name="UserController Should update onBoardingState of a user" time="0">
+    </testcase>
+    <testcase classname="UserController Should update help banner viwed flag of a user" name="UserController Should update help banner viwed flag of a user" time="0">
+    </testcase>
+    <testcase classname="UserController Should update local categories of user" name="UserController Should update local categories of user" time="0">
+    </testcase>
+    <testcase classname="UserController Should Secured Return Translation data for app" name="UserController Should Secured Return Translation data for app" time="0">
+    </testcase>
+    <testcase classname="UserController Should Add New Reaction document for given user and entity id" name="UserController Should Add New Reaction document for given user and entity id" time="0.001">
+    </testcase>
+    <testcase classname="UserController Should Remove Reaction document for given user and entity id" name="UserController Should Remove Reaction document for given user and entity id" time="0">
+    </testcase>
+    <testcase classname="UserController Should give error as no Reaction matches with pattern" name="UserController Should give error as no Reaction matches with pattern" time="0">
+    </testcase>
+    <testcase classname="UserController Should give error as no Reaction document exist for given user and entity id" name="UserController Should give error as no Reaction document exist for given user and entity id" time="0">
+    </testcase>
+    <testcase classname="UserController Should return success response after storing Push Notification Preferences" name="UserController Should return success response after storing Push Notification Preferences" time="0">
+    </testcase>
+    <testcase classname="UserController Should Secured Return Spanish translation data for app" name="UserController Should Secured Return Spanish translation data for app" time="0.001">
+    </testcase>
+    <testcase classname="UserController getUserActivity - User Not active" name="UserController getUserActivity - User Not active" time="0">
+    </testcase>
+    <testcase classname="UserController blockUser - Should Return Error for invalid user id" name="UserController blockUser - Should Return Error for invalid user id" time="0">
+    </testcase>
+    <testcase classname="UserController deleteInstallation - success" name="UserController deleteInstallation - success" time="0.001">
+    </testcase>
+    <testcase classname="UserController deleteInstallation - Error" name="UserController deleteInstallation - Error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="CommunitiesController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:40" time="1.514" tests="17">
+    <testcase classname="CommunitiesController Should Return all Community List: Success" name="CommunitiesController Should Return all Community List: Success" time="0.001">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error while retrieving Community List" name="CommunitiesController Should Return Error while retrieving Community List" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error while retrieving Community List" name="CommunitiesController Should Return Error while retrieving Community List" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should return success with nested Community object" name="CommunitiesController Should return success with nested Community object" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should return error with nested Community object" name="CommunitiesController Should return error with nested Community object" time="0.001">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Specific Community" name="CommunitiesController Should Return Specific Community" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Specific Community" name="CommunitiesController Should Return Specific Community" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Specific Community" name="CommunitiesController Should Return Specific Community" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error while fetching Specific Community" name="CommunitiesController Should Return Error while fetching Specific Community" time="0.001">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error while fetching Specific Community" name="CommunitiesController Should Return Error while fetching Specific Community" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return all Community List" name="CommunitiesController Should Return all Community List" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return all Community List" name="CommunitiesController Should Return all Community List" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Active Community" name="CommunitiesController Should Return Active Community" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error for invalid community id" name="CommunitiesController Should Return Error for invalid community id" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return Error for invalid community id" name="CommunitiesController Should Return Error for invalid community id" time="0.001">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return community Image" name="CommunitiesController Should Return community Image" time="0">
+    </testcase>
+    <testcase classname="CommunitiesController Should Return community Image: Error" name="CommunitiesController Should Return community Image: Error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="StoryHelper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:38" time="3.337" tests="5">
+    <testcase classname="StoryHelper addPromptOptionValue - success" name="StoryHelper addPromptOptionValue - success" time="0.004">
+    </testcase>
+    <testcase classname="StoryHelper updateStoryCollection - success" name="StoryHelper updateStoryCollection - success" time="0.001">
+    </testcase>
+    <testcase classname="StoryHelper updateStoryCollection - fail" name="StoryHelper updateStoryCollection - fail" time="0">
+    </testcase>
+    <testcase classname="StoryHelper getCommunityByIdOrUserId - success" name="StoryHelper getCommunityByIdOrUserId - success" time="0.001">
+    </testcase>
+    <testcase classname="StoryHelper getCommunityByIdOrUserId - User Not active" name="StoryHelper getCommunityByIdOrUserId - User Not active" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:40" time="1.86" tests="7">
+    <testcase classname="AdminController Should Return sucess with list of search terms" name="AdminController Should Return sucess with list of search terms" time="0.001">
+    </testcase>
+    <testcase classname="AdminController Should Return sucess with list of search terms - Language not defined" name="AdminController Should Return sucess with list of search terms - Language not defined" time="0.001">
+    </testcase>
+    <testcase classname="AdminController Should Return all local categories by user" name="AdminController Should Return all local categories by user" time="0">
+    </testcase>
+    <testcase classname="AdminController Should Return all local categories by user - language not defined" name="AdminController Should Return all local categories by user - language not defined" time="0">
+    </testcase>
+    <testcase classname="AdminController Should Return User Recommended Resources" name="AdminController Should Return User Recommended Resources" time="0">
+    </testcase>
+    <testcase classname="AdminController Should Return User Recommended Resources - language not defined" name="AdminController Should Return User Recommended Resources - language not defined" time="0.001">
+    </testcase>
+    <testcase classname="AdminController Should Return Error For Null Zipcode" name="AdminController Should Return Error For Null Zipcode" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="PromptService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:40" time="1.993" tests="10">
+    <testcase classname="PromptService getAllPrompt - Should Return all Prompt List" name="PromptService getAllPrompt - Should Return all Prompt List" time="0.002">
+    </testcase>
+    <testcase classname="PromptService getPromptById - Should Return a specific Prompt" name="PromptService getPromptById - Should Return a specific Prompt" time="0">
+    </testcase>
+    <testcase classname="PromptService getPromptById - Should Return a error" name="PromptService getPromptById - Should Return a error" time="0.001">
+    </testcase>
+    <testcase classname="PromptService getByCommunityId - Should Return all prompts for a community" name="PromptService getByCommunityId - Should Return all prompts for a community" time="0">
+    </testcase>
+    <testcase classname="PromptService getByCommunityId - Should Return error" name="PromptService getByCommunityId - Should Return error" time="0">
+    </testcase>
+    <testcase classname="PromptService create - Should Return prompt after creating" name="PromptService create - Should Return prompt after creating" time="0">
+    </testcase>
+    <testcase classname="PromptService create - should return a error" name="PromptService create - should return a error" time="0">
+    </testcase>
+    <testcase classname="PromptService getPromptsWithCommunity - success in English" name="PromptService getPromptsWithCommunity - success in English" time="0.001">
+    </testcase>
+    <testcase classname="PromptService getPromptsWithCommunity - Invalid Community" name="PromptService getPromptsWithCommunity - Invalid Community" time="0">
+    </testcase>
+    <testcase classname="PromptService getPromptsWithCommunity - Invalid Language" name="PromptService getPromptsWithCommunity - Invalid Language" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Image Upload Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:40" time="2.666" tests="1">
+    <testcase classname="Image Upload Service uploadImageBase64 exception" name="Image Upload Service uploadImageBase64 exception" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="SecurityFilter UTest" errors="0" failures="0" skipped="2" timestamp="2024-05-30T09:24:41" time="1.206" tests="17">
+    <testcase classname="SecurityFilter UTest should not scan optional urls" name="SecurityFilter UTest should not scan optional urls" time="0.002">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow blacklisted headers" name="SecurityFilter UTest should not allow blacklisted headers" time="0.001">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should allow not blacklisted headers" name="SecurityFilter UTest should allow not blacklisted headers" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow header values with blacklist charachters" name="SecurityFilter UTest should not allow header values with blacklist charachters" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow long header values" name="SecurityFilter UTest should not allow long header values" time="0.007">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow blacklisted cookies" name="SecurityFilter UTest should not allow blacklisted cookies" time="0.001">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should allow not blacklisted cookies" name="SecurityFilter UTest should allow not blacklisted cookies" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow cookie values with blacklist charachters" name="SecurityFilter UTest should not allow cookie values with blacklist charachters" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow long cookie values" name="SecurityFilter UTest should not allow long cookie values" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow blacklisted charachters in url param name" name="SecurityFilter UTest should not allow blacklisted charachters in url param name" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should allow blacklisted charachters in url param value [Usecase updated for Spanish]" name="SecurityFilter UTest should allow blacklisted charachters in url param value [Usecase updated for Spanish]" time="0.001">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow too long url param names" name="SecurityFilter UTest should not allow too long url param names" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow too long url param values" name="SecurityFilter UTest should not allow too long url param values" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow blacklisted charachters in quertring name" name="SecurityFilter UTest should not allow blacklisted charachters in quertring name" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow blacklisted charachters in quertring value" name="SecurityFilter UTest should not allow blacklisted charachters in quertring value" time="0.001">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow too long quertring names" name="SecurityFilter UTest should not allow too long quertring names" time="0">
+    </testcase>
+    <testcase classname="SecurityFilter UTest should not allow too long quertring values" name="SecurityFilter UTest should not allow too long quertring values" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ValidationController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:40" time="2.304" tests="11">
+    <testcase classname="ValidationController Should be able to send otp and return user and device Ids for commercial users" name="ValidationController Should be able to send otp and return user and device Ids for commercial users" time="0.001">
+    </testcase>
+    <testcase classname="ValidationController Should return error for send OTP with empty channel" name="ValidationController Should return error for send OTP with empty channel" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should return error for send OTP with empty contactUid" name="ValidationController Should return error for send OTP with empty contactUid" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should return error for updateSecret with empty username" name="ValidationController Should return error for updateSecret with empty username" time="0.001">
+    </testcase>
+    <testcase classname="ValidationController Should return error for updateSecret with empty encryptedContact" name="ValidationController Should return error for updateSecret with empty encryptedContact" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should be able to validate otp and return the status for commercial users" name="ValidationController Should be able to validate otp and return the status for commercial users" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should return error for validate OTP with empty otp" name="ValidationController Should return error for validate OTP with empty otp" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should return error for validate OTP with empty usernm" name="ValidationController Should return error for validate OTP with empty usernm" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should be able to validate the security answers" name="ValidationController Should be able to validate the security answers" time="0.001">
+    </testcase>
+    <testcase classname="ValidationController Should be able to validate the security answers" name="ValidationController Should be able to validate the security answers" time="0">
+    </testcase>
+    <testcase classname="ValidationController Should be able to validate the security answers" name="ValidationController Should be able to validate the security answers" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ForgotUserController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:41" time="2.175" tests="9">
+    <testcase classname="ForgotUserController Should successfully find user and return user details" name="ForgotUserController Should successfully find user and return user details" time="0.001">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for forgotUser with empty fname" name="ForgotUserController Should return error for forgotUser with empty fname" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for forgotUser with empty fname" name="ForgotUserController Should return error for forgotUser with empty fname" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for forgotUser with empty dob" name="ForgotUserController Should return error for forgotUser with empty dob" time="0.001">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for forgotUser with empty hcid" name="ForgotUserController Should return error for forgotUser with empty hcid" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should be able to update new password using temporary password" name="ForgotUserController Should be able to update new password using temporary password" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for updateSecret with empty username" name="ForgotUserController Should return error for updateSecret with empty username" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for updateSecret with empty password" name="ForgotUserController Should return error for updateSecret with empty password" time="0">
+    </testcase>
+    <testcase classname="ForgotUserController Should return error for updateSecret with empty password" name="ForgotUserController Should return error for updateSecret with empty password" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Notification Helper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:41" time="1.69" tests="4">
+    <testcase classname="Notification Helper notifyUser - Same User as receiver and sender" name="Notification Helper notifyUser - Same User as receiver and sender" time="0.001">
+    </testcase>
+    <testcase classname="Notification Helper notifyUser - Add Reaction to story" name="Notification Helper notifyUser - Add Reaction to story" time="0.001">
+    </testcase>
+    <testcase classname="Notification Helper notifyUser - Add Reply to story" name="Notification Helper notifyUser - Add Reply to story" time="0.001">
+    </testcase>
+    <testcase classname="Notification Helper notifyUser - Add comment to Post" name="Notification Helper notifyUser - Add comment to Post" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:41" time="2.388" tests="7">
+    <testcase classname="LoginController Should be able to login successfully and return user details" name="LoginController Should be able to login successfully and return user details" time="0.001">
+    </testcase>
+    <testcase classname="LoginController Should return error when user login with empty username" name="LoginController Should return error when user login with empty username" time="0">
+    </testcase>
+    <testcase classname="LoginController Should return error when user login with empty password" name="LoginController Should return error when user login with empty password" time="0.001">
+    </testcase>
+    <testcase classname="LoginController Should be able to save device cookie commercial user" name="LoginController Should be able to save device cookie commercial user" time="0">
+    </testcase>
+    <testcase classname="LoginController Should return error for saveCookie with empty usernm" name="LoginController Should return error for saveCookie with empty usernm" time="0">
+    </testcase>
+    <testcase classname="LoginController Should return error for saveCookie with empty usernm" name="LoginController Should return error for saveCookie with empty usernm" time="0">
+    </testcase>
+    <testcase classname="LoginController Should return error for saveCookie with empty usernm" name="LoginController Should return error for saveCookie with empty usernm" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileUpdateSecurityQAController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:41" time="2.065" tests="9">
+    <testcase classname="ProfileUpdateSecurityQAController Should be able to get the security questions for commercial users" name="ProfileUpdateSecurityQAController Should be able to get the security questions for commercial users" time="0.003">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while user memberType not there" name="ProfileUpdateSecurityQAController Should return error while user memberType not there" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while webguid not there for commercial users" name="ProfileUpdateSecurityQAController Should return error while webguid not there for commercial users" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while memberId not there for commercial users" name="ProfileUpdateSecurityQAController Should return error while memberId not there for commercial users" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should be able to get the security questions for medicaid users" name="ProfileUpdateSecurityQAController Should be able to get the security questions for medicaid users" time="0.003">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while dn not there for medicaid user" name="ProfileUpdateSecurityQAController Should return error while dn not there for medicaid user" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should be able to update the security question answers" name="ProfileUpdateSecurityQAController Should be able to update the security question answers" time="0.002">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while usernm not there while" name="ProfileUpdateSecurityQAController Should return error while usernm not there while" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateSecurityQAController Should return error while webguid not there while" name="ProfileUpdateSecurityQAController Should return error while webguid not there while" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Posts Helper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:42" time="1.674" tests="8">
+    <testcase classname="Posts Helper addAuthor - success" name="Posts Helper addAuthor - success" time="0.001">
+    </testcase>
+    <testcase classname="Posts Helper addAuthor - No Object" name="Posts Helper addAuthor - No Object" time="0.001">
+    </testcase>
+    <testcase classname="Posts Helper mapAuthorToPost - null" name="Posts Helper mapAuthorToPost - null" time="0">
+    </testcase>
+    <testcase classname="Posts Helper mapAuthorToPost - success" name="Posts Helper mapAuthorToPost - success" time="0">
+    </testcase>
+    <testcase classname="Posts Helper updateContent - English" name="Posts Helper updateContent - English" time="0.001">
+    </testcase>
+    <testcase classname="Posts Helper updateContent - Espanol" name="Posts Helper updateContent - Espanol" time="0">
+    </testcase>
+    <testcase classname="Posts Helper updateContent - Default English" name="Posts Helper updateContent - Default English" time="0">
+    </testcase>
+    <testcase classname="Posts Helper formatPosts - success" name="Posts Helper formatPosts - success" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="HttpClient UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:42" time="1.284" tests="13">
+    <testcase classname="HttpClient UTest should run request interceptors" name="HttpClient UTest should run request interceptors" time="0.002">
+    </testcase>
+    <testcase classname="HttpClient UTest should trim spaces from url params and request json body" name="HttpClient UTest should trim spaces from url params and request json body" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should add url and query params properly to url" name="HttpClient UTest should add url and query params properly to url" time="0.001">
+    </testcase>
+    <testcase classname="HttpClient UTest should not json stringify multipart requests" name="HttpClient UTest should not json stringify multipart requests" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should json stringify none multipart requests" name="HttpClient UTest should json stringify none multipart requests" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should reject promise if http response status is not 200" name="HttpClient UTest should reject promise if http response status is not 200" time="0.001">
+    </testcase>
+    <testcase classname="HttpClient UTest should parse json response with json header" name="HttpClient UTest should parse json response with json header" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should remove newlines from text/html responses" name="HttpClient UTest should remove newlines from text/html responses" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should not parse response body for undefined content type headers" name="HttpClient UTest should not parse response body for undefined content type headers" time="0.001">
+    </testcase>
+    <testcase classname="HttpClient UTest should run response interceptors" name="HttpClient UTest should run response interceptors" time="0">
+    </testcase>
+    <testcase classname="HttpClient UTest should set http headers to outgoing request" name="HttpClient UTest should set http headers to outgoing request" time="0.001">
+    </testcase>
+    <testcase classname="HttpClient UTest should return error data when response status not 200 or 201" name="HttpClient UTest should return error data when response status not 200 or 201" time="0.001">
+    </testcase>
+    <testcase classname="HttpClient UTest should return undefined status if raw response is null" name="HttpClient UTest should return undefined status if raw response is null" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="CommunityService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="1.694" tests="21">
+    <testcase classname="CommunityService getAllCommunities should return success" name="CommunityService getAllCommunities should return success" time="0.002">
+    </testcase>
+    <testcase classname="CommunityService getAllCommunities should return exception" name="CommunityService getAllCommunities should return exception" time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityById " name="CommunityService getCommunityById " time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityById " name="CommunityService getCommunityById " time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityById " name="CommunityService getCommunityById " time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCategories success" name="CommunityService getAllCategories success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCategories success" name="CommunityService getAllCategories success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCategories exception" name="CommunityService getAllCategories exception" time="0.008">
+    </testcase>
+    <testcase classname="CommunityService getCommunities success" name="CommunityService getCommunities success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunities exceptions" name="CommunityService getCommunities exceptions" time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCommunitiesNested error" name="CommunityService getAllCommunitiesNested error" time="0.001">
+    </testcase>
+    <testcase classname="CommunityService getAllCommunitiesNested success" name="CommunityService getAllCommunitiesNested success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCommunitiesNested success" name="CommunityService getAllCommunitiesNested success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getAllCommunitiesNested exception" name="CommunityService getAllCommunitiesNested exception" time="0">
+    </testcase>
+    <testcase classname="CommunityService getMyCommunities success" name="CommunityService getMyCommunities success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getMyCommunities exception" name="CommunityService getMyCommunities exception" time="0">
+    </testcase>
+    <testcase classname="CommunityService getActivePageForCommunity getActivePageForCommunity - story success" name="CommunityService getActivePageForCommunity getActivePageForCommunity - story success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getActivePageForCommunity getActivePageForCommunity - story success" name="CommunityService getActivePageForCommunity getActivePageForCommunity - story success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityImage error" name="CommunityService getCommunityImage error" time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityImage success" name="CommunityService getCommunityImage success" time="0">
+    </testcase>
+    <testcase classname="CommunityService getCommunityImage exception" name="CommunityService getCommunityImage exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="1.261" tests="2">
+    <testcase classname="AdminService Should Return List of All Reactions for an Entity" name="AdminService Should Return List of All Reactions for an Entity" time="0.001">
+    </testcase>
+    <testcase classname="AdminService Should Return List of All Reactions for an Entity from DB" name="AdminService Should Return List of All Reactions for an Entity from DB" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ImageController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:42" time="2.108" tests="15">
+    <testcase classname="ImageController Should upload image: exception" name="ImageController Should upload image: exception" time="0.001">
+    </testcase>
+    <testcase classname="ImageController Should upload image: success" name="ImageController Should upload image: success" time="0.001">
+    </testcase>
+    <testcase classname="ImageController Should upload image: Failure" name="ImageController Should upload image: Failure" time="0">
+    </testcase>
+    <testcase classname="ImageController Should throw an error for missing file: update" name="ImageController Should throw an error for missing file: update" time="0">
+    </testcase>
+    <testcase classname="ImageController Should throw an error for invalid file type: update" name="ImageController Should throw an error for invalid file type: update" time="0">
+    </testcase>
+    <testcase classname="ImageController Should throw an error for missing file" name="ImageController Should throw an error for missing file" time="0.001">
+    </testcase>
+    <testcase classname="ImageController Should throw an error for invalid file type" name="ImageController Should throw an error for invalid file type" time="0">
+    </testcase>
+    <testcase classname="ImageController Should update image: success" name="ImageController Should update image: success" time="0.002">
+    </testcase>
+    <testcase classname="ImageController Should update image: Failure" name="ImageController Should update image: Failure" time="0">
+    </testcase>
+    <testcase classname="ImageController Should get image: exception" name="ImageController Should get image: exception" time="0">
+    </testcase>
+    <testcase classname="ImageController Should get image: success" name="ImageController Should get image: success" time="0">
+    </testcase>
+    <testcase classname="ImageController Should get image: Failure" name="ImageController Should get image: Failure" time="0">
+    </testcase>
+    <testcase classname="ImageController Should get image: success" name="ImageController Should get image: success" time="0.001">
+    </testcase>
+    <testcase classname="ImageController Should get image: exception" name="ImageController Should get image: exception" time="0">
+    </testcase>
+    <testcase classname="ImageController Should get image: error" name="ImageController Should get image: error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MedicaidService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="1.92" tests="3">
+    <testcase classname="MedicaidService Call Eligibility API" name="MedicaidService Call Eligibility API" time="0.003">
+    </testcase>
+    <testcase classname="MedicaidService Should return error when age is below 14" name="MedicaidService Should return error when age is below 14" time="0.005">
+    </testcase>
+    <testcase classname="MedicaidService createMemberDataForGbd" name="MedicaidService createMemberDataForGbd" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberOTPGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="1.714" tests="3">
+    <testcase classname="MemberOTPGateway Should return deviceId and UserId along with send otp to communication channel to user" name="MemberOTPGateway Should return deviceId and UserId along with send otp to communication channel to user" time="0.002">
+    </testcase>
+    <testcase classname="MemberOTPGateway Should validate the otp and return the status for commercial" name="MemberOTPGateway Should validate the otp and return the status for commercial" time="0">
+    </testcase>
+    <testcase classname="MemberOTPGateway Should validate the otp and return the status for medicaid" name="MemberOTPGateway Should validate the otp and return the status for medicaid" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ForgotUserService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="2.094" tests="2">
+    <testcase classname="ForgotUserService forgotUser -&gt; commercial" name="ForgotUserService forgotUser -&gt; commercial" time="0.004">
+    </testcase>
+    <testcase classname="ForgotUserService forgotUser -&gt; medicaid" name="ForgotUserService forgotUser -&gt; medicaid" time="0.012">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileSecurityQAMedicaidService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="2.336" tests="2">
+    <testcase classname="ProfileSecurityQAMedicaidService Should get the security questions for medicaid users" name="ProfileSecurityQAMedicaidService Should get the security questions for medicaid users" time="0.003">
+    </testcase>
+    <testcase classname="ProfileSecurityQAMedicaidService Should update the security question answers for commercial users" name="ProfileSecurityQAMedicaidService Should update the security question answers for commercial users" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Reaction Helper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:44" time="1.214" tests="8">
+    <testcase classname="Reaction Helper updateReactionObject - new reaction success" name="Reaction Helper updateReactionObject - new reaction success" time="0.001">
+    </testcase>
+    <testcase classname="Reaction Helper updateReactionObject - change reaction success" name="Reaction Helper updateReactionObject - change reaction success" time="0.002">
+    </testcase>
+    <testcase classname="Reaction Helper updateReactionObject - remove reaction" name="Reaction Helper updateReactionObject - remove reaction" time="0.001">
+    </testcase>
+    <testcase classname="Reaction Helper updateReactionObject - new reaction celebrate" name="Reaction Helper updateReactionObject - new reaction celebrate" time="0">
+    </testcase>
+    <testcase classname="Reaction Helper updateReactionObject - new reaction good idea" name="Reaction Helper updateReactionObject - new reaction good idea" time="0">
+    </testcase>
+    <testcase classname="Reaction Helper handleStoryReactions - edit reaction" name="Reaction Helper handleStoryReactions - edit reaction" time="0">
+    </testcase>
+    <testcase classname="Reaction Helper handleStoryReactions - Remove reaction" name="Reaction Helper handleStoryReactions - Remove reaction" time="0">
+    </testcase>
+    <testcase classname="Reaction Helper handleStoryReactions - edit reaction" name="Reaction Helper handleStoryReactions - edit reaction" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileCredentialUpdateController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:43" time="3.502" tests="6">
+    <testcase classname="ProfileCredentialUpdateController Should be able to update new password from user profile for commercial" name="ProfileCredentialUpdateController Should be able to update new password from user profile for commercial" time="0.005">
+    </testcase>
+    <testcase classname="ProfileCredentialUpdateController Should be able to update new password from user profilefor medicaid" name="ProfileCredentialUpdateController Should be able to update new password from user profilefor medicaid" time="0.002">
+    </testcase>
+    <testcase classname="ProfileCredentialUpdateController Should return error if webguid not available in request" name="ProfileCredentialUpdateController Should return error if webguid not available in request" time="0.001">
+    </testcase>
+    <testcase classname="ProfileCredentialUpdateController Should return error if currentUsernm is not available in request" name="ProfileCredentialUpdateController Should return error if currentUsernm is not available in request" time="0">
+    </testcase>
+    <testcase classname="ProfileCredentialUpdateController Should return error if currentPassword is not available in request" name="ProfileCredentialUpdateController Should return error if currentPassword is not available in request" time="0">
+    </testcase>
+    <testcase classname="ProfileCredentialUpdateController Should return error if currentPassword is not available in request" name="ProfileCredentialUpdateController Should return error if currentPassword is not available in request" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberSecretQAGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:44" time="2.15" tests="3">
+    <testcase classname="MemberSecretQAGateway Should be able to validate the security answers" name="MemberSecretQAGateway Should be able to validate the security answers" time="0.001">
+    </testcase>
+    <testcase classname="MemberSecretQAGateway Should verify and save cookie and return the status commercial users" name="MemberSecretQAGateway Should verify and save cookie and return the status commercial users" time="0.001">
+    </testcase>
+    <testcase classname="MemberSecretQAGateway Should verify and save cookie and return the status medicaid users" name="MemberSecretQAGateway Should verify and save cookie and return the status medicaid users" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Image Upload Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:45" time="2.686" tests="9">
+    <testcase classname="Image Upload Service saveInstallations error" name="Image Upload Service saveInstallations error" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service saveInstallations success" name="Image Upload Service saveInstallations success" time="0.001">
+    </testcase>
+    <testcase classname="Image Upload Service saveInstallations success" name="Image Upload Service saveInstallations success" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service saveInstallations exception" name="Image Upload Service saveInstallations exception" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service saveInstallations exception" name="Image Upload Service saveInstallations exception" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service deleteInstallationById error" name="Image Upload Service deleteInstallationById error" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service deleteInstallationById error" name="Image Upload Service deleteInstallationById error" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service deleteInstallationById success" name="Image Upload Service deleteInstallationById success" time="0">
+    </testcase>
+    <testcase classname="Image Upload Service deleteInstallationById exception" name="Image Upload Service deleteInstallationById exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="RestClient UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:45" time="2.505" tests="4">
+    <testcase classname="RestClient UTest should handle binary response" name="RestClient UTest should handle binary response" time="0.004">
+    </testcase>
+    <testcase classname="RestClient UTest should transform json responses to typescript class definitions if class types is given" name="RestClient UTest should transform json responses to typescript class definitions if class types is given" time="0.001">
+    </testcase>
+    <testcase classname="RestClient UTest should handle api errors" name="RestClient UTest should handle api errors" time="0.013">
+    </testcase>
+    <testcase classname="RestClient UTest should handle api success for json response" name="RestClient UTest should handle api success for json response" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ImageService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:45" time="3.72" tests="14">
+    <testcase classname="ImageService uploadImage error" name="ImageService uploadImage error" time="0.001">
+    </testcase>
+    <testcase classname="ImageService uploadImage success" name="ImageService uploadImage success" time="0">
+    </testcase>
+    <testcase classname="ImageService uploadImage error" name="ImageService uploadImage error" time="0.001">
+    </testcase>
+    <testcase classname="ImageService uploadImage exception" name="ImageService uploadImage exception" time="0">
+    </testcase>
+    <testcase classname="ImageService updateImage error" name="ImageService updateImage error" time="0">
+    </testcase>
+    <testcase classname="ImageService updateImage isDelete" name="ImageService updateImage isDelete" time="0">
+    </testcase>
+    <testcase classname="ImageService updateImage success" name="ImageService updateImage success" time="0">
+    </testcase>
+    <testcase classname="ImageService updateImage error" name="ImageService updateImage error" time="0.001">
+    </testcase>
+    <testcase classname="ImageService updateImage exception" name="ImageService updateImage exception" time="0">
+    </testcase>
+    <testcase classname="ImageService getImage Error" name="ImageService getImage Error" time="0">
+    </testcase>
+    <testcase classname="ImageService getImage Error" name="ImageService getImage Error" time="0">
+    </testcase>
+    <testcase classname="ImageService getImage Error" name="ImageService getImage Error" time="0">
+    </testcase>
+    <testcase classname="ImageService getImage Success" name="ImageService getImage Success" time="0">
+    </testcase>
+    <testcase classname="ImageService getImage Exception" name="ImageService getImage Exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileCommercialARNService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:45" time="3.345" tests="4">
+    <testcase classname="ProfileCommercialARNService Should get the user contact numbers for commercial users" name="ProfileCommercialARNService Should get the user contact numbers for commercial users" time="0.004">
+    </testcase>
+    <testcase classname="ProfileCommercialARNService Should return the user recovery contact number for commercial" name="ProfileCommercialARNService Should return the user recovery contact number for commercial" time="0.005">
+    </testcase>
+    <testcase classname="ProfileCommercialARNService Should able to update recovery contact number" name="ProfileCommercialARNService Should able to update recovery contact number" time="0.001">
+    </testcase>
+    <testcase classname="ProfileCommercialARNService Should able to add new recovery contact number" name="ProfileCommercialARNService Should able to add new recovery contact number" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:46" time="3.24" tests="4">
+    <testcase classname="ProfileGateway Should return user secret questions" name="ProfileGateway Should return user secret questions" time="0.002">
+    </testcase>
+    <testcase classname="ProfileGateway Should return update secret questions" name="ProfileGateway Should return update secret questions" time="0">
+    </testcase>
+    <testcase classname="ProfileGateway Should return all list of secret questions for medicaid" name="ProfileGateway Should return all list of secret questions for medicaid" time="0">
+    </testcase>
+    <testcase classname="ProfileGateway Should return medicaid user secret questions" name="ProfileGateway Should return medicaid user secret questions" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ValidateOneTimePasswordService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:46" time="3.837" tests="2">
+    <testcase classname="ValidateOneTimePasswordService commercialValidateOtp" name="ValidateOneTimePasswordService commercialValidateOtp" time="0.003">
+    </testcase>
+    <testcase classname="ValidateOneTimePasswordService medicaidValidateOtp" name="ValidateOneTimePasswordService medicaidValidateOtp" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="InternalGateway" errors="0" failures="3" skipped="0" timestamp="2024-05-30T09:24:47" time="2.379" tests="6">
+    <testcase classname="InternalGateway should get terms of use" name="InternalGateway should get terms of use" time="0.002">
+    </testcase>
+    <testcase classname="InternalGateway should update terms of use" name="InternalGateway should update terms of use" time="0">
+    </testcase>
+    <testcase classname="InternalGateway should get access token" name="InternalGateway should get access token" time="0.001">
+    </testcase>
+    <testcase classname="InternalGateway should get member info" name="InternalGateway should get member info" time="0.003">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+- Expected
++ Received
+
+@@ -1,20 +1,20 @@
+  Object {
+    &quot;headers&quot;: Array [
+      Object {
+        &quot;name&quot;: &quot;apikey&quot;,
+-       &quot;value&quot;: &quot;ACGJ7yDYQZjq4wk2I99LGvMeQe7ue532&quot;,
++       &quot;value&quot;: &quot;E0OAnvjKZ6J3ihrUieBVv3RS5JVKY6Ax&quot;,
+      },
+      Object {
+        &quot;name&quot;: &quot;Authorization&quot;,
+        &quot;value&quot;: &quot;Bearer token&quot;,
+      },
+    ],
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;requestName&quot;: &quot;GetMemberInfoRequest&quot;,
+    &quot;responseType&quot;: 1,
+-   &quot;url&quot;: &quot;https://uat.api.cloud.anthem.com/v8/cp/members/summary&quot;,
++   &quot;url&quot;: &quot;https://uat.api.sydneymember.ps.awsdns.internal.das/v8/cp/members/summary&quot;,
+    &quot;urlParams&quot;: Array [
+      Object {
+        &quot;isQueryParam&quot;: true,
+        &quot;name&quot;: &quot;usernm&quot;,
+        &quot;value&quot;: &quot;username&quot;,,
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/gateways/_tests/internalGateway.spec.ts:130:35)
+    at Object.asyncJestTest (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="InternalGateway should validate access token" name="InternalGateway should validate access token" time="0.001">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+- Expected
++ Received
+
+@@ -12,7 +12,7 @@
+    ],
+    &quot;isFormData&quot;: true,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;requestName&quot;: &quot;validateAccessTokenRequest&quot;,
+    &quot;responseType&quot;: 1,
+-   &quot;url&quot;: undefined,
++   &quot;url&quot;: &quot;undefined&quot;,
+  },
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/gateways/_tests/internalGateway.spec.ts:155:35)
+    at Object.asyncJestTest (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="InternalGateway should revoke access token" name="InternalGateway should revoke access token" time="0.001">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+- Expected
++ Received
+
+@@ -8,7 +8,7 @@
+    ],
+    &quot;isFormData&quot;: true,
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;requestName&quot;: &quot;revokeAccessTokenRequest&quot;,
+    &quot;responseType&quot;: 1,
+-   &quot;url&quot;: undefined,
++   &quot;url&quot;: &quot;undefined&quot;,
+  },
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/gateways/_tests/internalGateway.spec.ts:176:35)
+    at Object.asyncJestTest (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="InternalService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:47" time="2.471" tests="12">
+    <testcase classname="InternalService getTermsOfUse success" name="InternalService getTermsOfUse success" time="0.001">
+    </testcase>
+    <testcase classname="InternalService getTermsOfUse error/exception" name="InternalService getTermsOfUse error/exception" time="0.007">
+    </testcase>
+    <testcase classname="InternalService updateTermsOfUse success" name="InternalService updateTermsOfUse success" time="0">
+    </testcase>
+    <testcase classname="InternalService updateTermsOfUse exception" name="InternalService updateTermsOfUse exception" time="0">
+    </testcase>
+    <testcase classname="InternalService getAuth success" name="InternalService getAuth success" time="0">
+    </testcase>
+    <testcase classname="InternalService getAuth error" name="InternalService getAuth error" time="0">
+    </testcase>
+    <testcase classname="InternalService getMemberInfo success" name="InternalService getMemberInfo success" time="0">
+    </testcase>
+    <testcase classname="InternalService getMemberInfo exception" name="InternalService getMemberInfo exception" time="0">
+    </testcase>
+    <testcase classname="InternalService validateAccessToken success" name="InternalService validateAccessToken success" time="0">
+    </testcase>
+    <testcase classname="InternalService validateAccessToken exception" name="InternalService validateAccessToken exception" time="0.001">
+    </testcase>
+    <testcase classname="InternalService revokeAccessToken success" name="InternalService revokeAccessToken success" time="0.001">
+    </testcase>
+    <testcase classname="InternalService revokeAccessToken exception" name="InternalService revokeAccessToken exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="LibraryService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:45" time="4.703" tests="3">
+    <testcase classname="LibraryService Should return html reference content" name="LibraryService Should return html reference content" time="0.013">
+    </testcase>
+    <testcase classname="LibraryService Should return library does not exist" name="LibraryService Should return library does not exist" time="0.002">
+    </testcase>
+    <testcase classname="LibraryService Should return content does not exist" name="LibraryService Should return content does not exist" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberContactsGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:47" time="2.497" tests="4">
+    <testcase classname="MemberContactsGateway Should be able to recover the contact details" name="MemberContactsGateway Should be able to recover the contact details" time="0.002">
+    </testcase>
+    <testcase classname="MemberContactsGateway Should return member contact details" name="MemberContactsGateway Should return member contact details" time="0">
+    </testcase>
+    <testcase classname="MemberContactsGateway Should return GBD member contact details" name="MemberContactsGateway Should return GBD member contact details" time="0.001">
+    </testcase>
+    <testcase classname="MemberContactsGateway Should return GBD member contact details synthetic APIs" name="MemberContactsGateway Should return GBD member contact details synthetic APIs" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="InputScanner UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:49" time="1.265" tests="9">
+    <testcase classname="InputScanner UTest should sanitize properties by default for html" name="InputScanner UTest should sanitize properties by default for html" time="0.003">
+    </testcase>
+    <testcase classname="InputScanner UTest should throw error when charachter whitelist not adhered" name="InputScanner UTest should throw error when charachter whitelist not adhered" time="0">
+    </testcase>
+    <testcase classname="InputScanner UTest should mask senstive properties with full property path defined" name="InputScanner UTest should mask senstive properties with full property path defined" time="0">
+    </testcase>
+    <testcase classname="InputScanner UTest should not encode, mask or sanitize passthorugh properties" name="InputScanner UTest should not encode, mask or sanitize passthorugh properties" time="0.001">
+    </testcase>
+    <testcase classname="InputScanner UTest should encode or sanitize senstive properties with full property path defined" name="InputScanner UTest should encode or sanitize senstive properties with full property path defined" time="0">
+    </testcase>
+    <testcase classname="InputScanner UTest should encode senstive properties with property name defined" name="InputScanner UTest should encode senstive properties with property name defined" time="0">
+    </testcase>
+    <testcase classname="InputScanner UTest should mask senstive properties with full property path defined" name="InputScanner UTest should mask senstive properties with full property path defined" time="0.001">
+    </testcase>
+    <testcase classname="InputScanner UTest should mask senstive properties with property name defined" name="InputScanner UTest should mask senstive properties with property name defined" time="0">
+    </testcase>
+    <testcase classname="InputScanner UTest should mask senstive properties in url" name="InputScanner UTest should mask senstive properties in url" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberAuthenticateGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:49" time="1.981" tests="3">
+    <testcase classname="MemberAuthenticateGateway Get Web User" name="MemberAuthenticateGateway Get Web User" time="0.002">
+    </testcase>
+    <testcase classname="MemberAuthenticateGateway Authenticate user when provided correct password" name="MemberAuthenticateGateway Authenticate user when provided correct password" time="0">
+    </testcase>
+    <testcase classname="MemberAuthenticateGateway Authenticate and get commercial user details when provided correct password" name="MemberAuthenticateGateway Authenticate and get commercial user details when provided correct password" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="healthWiseService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:48" time="2.633" tests="7">
+    <testcase classname="healthWiseService getArticleTopicByTopicId should return success" name="healthWiseService getArticleTopicByTopicId should return success" time="0.002">
+    </testcase>
+    <testcase classname="healthWiseService getArticleTopicByTopicId should return error" name="healthWiseService getArticleTopicByTopicId should return error" time="0.001">
+    </testcase>
+    <testcase classname="healthWiseService getArticleTopicByTopicId should return healthwise data deleted error" name="healthWiseService getArticleTopicByTopicId should return healthwise data deleted error" time="0">
+    </testcase>
+    <testcase classname="healthWiseService getArticleTopic should return success" name="healthWiseService getArticleTopic should return success" time="0.002">
+    </testcase>
+    <testcase classname="healthWiseService getArticleTopic should return error" name="healthWiseService getArticleTopic should return error" time="0">
+    </testcase>
+    <testcase classname="healthWiseService getVideoTopic error" name="healthWiseService getVideoTopic error" time="0">
+    </testcase>
+    <testcase classname="healthWiseService getVideoTopic exception" name="healthWiseService getVideoTopic exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="JwtTokenUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:49" time="1.574" tests="4">
+    <testcase classname="JwtTokenUtil UTest should verify valid token" name="JwtTokenUtil UTest should verify valid token" time="0.011">
+    </testcase>
+    <testcase classname="JwtTokenUtil UTest should throw error for invalid signature token" name="JwtTokenUtil UTest should throw error for invalid signature token" time="0.007">
+    </testcase>
+    <testcase classname="JwtTokenUtil UTest should throw error for expired token" name="JwtTokenUtil UTest should throw error for expired token" time="0.001">
+    </testcase>
+    <testcase classname="JwtTokenUtil UTest should allow reading encrypted and unrencrypted claim values" name="JwtTokenUtil UTest should allow reading encrypted and unrencrypted claim values" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberServiceHelper" errors="0" failures="1" skipped="0" timestamp="2024-05-30T09:24:49" time="2.413" tests="6">
+    <testcase classname="MemberServiceHelper Should return comulate web user data object for medicaid" name="MemberServiceHelper Should return comulate web user data object for medicaid" time="0.002">
+    </testcase>
+    <testcase classname="MemberServiceHelper Should return comulate web user data object for anthem" name="MemberServiceHelper Should return comulate web user data object for anthem" time="0.005">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 2
+
+@@ -1,7 +1,7 @@
+- Object {
+-   &quot;apiKey&quot;: &quot;ACGJ7yDYQZjq4wk2I99LGvMeQe7ue532&quot;,
++ WebUserRequestData {
++   &quot;apiKey&quot;: &quot;E0OAnvjKZ6J3ihrUieBVv3RS5JVKY6Ax&quot;,
+    &quot;header&quot;: Object {
+      &quot;name&quot;: &quot;meta-src-envrmt&quot;,
+      &quot;value&quot;: &quot;&quot;,
+    },
+    &quot;token&quot;: &quot;internal access token&quot;,
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/services/_tests/helpers/memberServiceHelper.spec.ts:66:18
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/tslib/tslib.js:166:62)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="MemberServiceHelper formatMemberRequest" name="MemberServiceHelper formatMemberRequest" time="0.001">
+    </testcase>
+    <testcase classname="MemberServiceHelper generateSearchRequest" name="MemberServiceHelper generateSearchRequest" time="0">
+    </testcase>
+    <testcase classname="MemberServiceHelper generateUserRequestObject -&gt; webUserSearch" name="MemberServiceHelper generateUserRequestObject -&gt; webUserSearch" time="0">
+    </testcase>
+    <testcase classname="MemberServiceHelper generateUserRequestObject -&gt; memberAuthenticate" name="MemberServiceHelper generateUserRequestObject -&gt; memberAuthenticate" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:50" time="1.606" tests="2">
+    <testcase classname="AdminService Should Return all Community documents in a List" name="AdminService Should Return all Community documents in a List" time="0.003">
+    </testcase>
+    <testcase classname="AdminService Should Return User Recommended Resources" name="AdminService Should Return User Recommended Resources" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberThreatGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:49" time="2.354" tests="2">
+    <testcase classname="MemberThreatGateway Should return member login treat API response" name="MemberThreatGateway Should return member login treat API response" time="0.002">
+    </testcase>
+    <testcase classname="MemberThreatGateway Should return member recovery treat API response" name="MemberThreatGateway Should return member recovery treat API response" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="InternalService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:50" time="2.171" tests="3">
+    <testcase classname="InternalService userPollResponse success" name="InternalService userPollResponse success" time="0.001">
+    </testcase>
+    <testcase classname="InternalService userPollResponse success" name="InternalService userPollResponse success" time="0">
+    </testcase>
+    <testcase classname="InternalService userPollResponse error/exception" name="InternalService userPollResponse error/exception" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserHelper" errors="0" failures="2" skipped="0" timestamp="2024-05-30T09:24:50" time="2.239" tests="8">
+    <testcase classname="UserHelper buildProfilePicturePath - return null" name="UserHelper buildProfilePicturePath - return null" time="0.002">
+    </testcase>
+    <testcase classname="UserHelper buildProfilePicturePath - return userId with path" name="UserHelper buildProfilePicturePath - return userId with path" time="0">
+    </testcase>
+    <testcase classname="UserHelper buildProfilePicturePath - return null" name="UserHelper buildProfilePicturePath - return null" time="0.001">
+    </testcase>
+    <testcase classname="UserHelper getAuthor - success" name="UserHelper getAuthor - success" time="0.003">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;PHOEBE&quot;
+Received: undefined
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/services/_tests/helpers/userHelper.spec.ts:95:30
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/tslib/tslib.js:166:62)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="UserHelper getActivityUser - success" name="UserHelper getActivityUser - success" time="0">
+      <failure>Error: expect(received).toEqual(expected) // deep equality
+
+Expected: &quot;PHOEBE&quot;
+Received: undefined
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/services/_tests/helpers/userHelper.spec.ts:104:30
+    at Generator.next (&lt;anonymous&gt;)
+    at fulfilled (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/tslib/tslib.js:166:62)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="UserHelper updateActivitiesDisplayName - success" name="UserHelper updateActivitiesDisplayName - success" time="0.001">
+    </testcase>
+    <testcase classname="UserHelper updateBinderDisplayName - success" name="UserHelper updateBinderDisplayName - success" time="0">
+    </testcase>
+    <testcase classname="UserHelper getUserWithoutAttributes - with attributes" name="UserHelper getUserWithoutAttributes - with attributes" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileSecurityQACommercialService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:51" time="2.477" tests="2">
+    <testcase classname="ProfileSecurityQACommercialService Should get the security questions for commercial users" name="ProfileSecurityQACommercialService Should get the security questions for commercial users" time="0.004">
+    </testcase>
+    <testcase classname="ProfileSecurityQACommercialService Should update the security question answers for commercial users" name="ProfileSecurityQACommercialService Should update the security question answers for commercial users" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="AuditHelper UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:52" time="2.088" tests="5">
+    <testcase classname="AuditHelper UTest get cookies header audit record" name="AuditHelper UTest get cookies header audit record" time="0.003">
+    </testcase>
+    <testcase classname="AuditHelper UTest get audit record for request" name="AuditHelper UTest get audit record for request" time="0.001">
+    </testcase>
+    <testcase classname="AuditHelper UTest get audit record for multipart request" name="AuditHelper UTest get audit record for multipart request" time="0">
+    </testcase>
+    <testcase classname="AuditHelper UTest audit record should remove files from auditing in request data" name="AuditHelper UTest audit record should remove files from auditing in request data" time="0">
+    </testcase>
+    <testcase classname="AuditHelper UTest audit record should mask request props" name="AuditHelper UTest audit record should mask request props" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="healthWiseGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:52" time="2.649" tests="7">
+    <testcase classname="healthWiseGateway PostAuth Call" name="healthWiseGateway PostAuth Call" time="0.007">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Topic By Id: EN" name="healthWiseGateway Should Get Topic By Id: EN" time="0.009">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Topic By Id: ES" name="healthWiseGateway Should Get Topic By Id: ES" time="0">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Topic By ConceptId and AspectId" name="healthWiseGateway Should Get Topic By ConceptId and AspectId" time="0">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Topic By ConceptId and AspectId" name="healthWiseGateway Should Get Topic By ConceptId and AspectId" time="0">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Article By Id" name="healthWiseGateway Should Get Article By Id" time="0">
+    </testcase>
+    <testcase classname="healthWiseGateway Should Get Article By Id" name="healthWiseGateway Should Get Article By Id" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="ForgotUserCommercialService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:51" time="3.381" tests="1">
+    <testcase classname="ForgotUserCommercialService commercialForgotUser" name="ForgotUserCommercialService commercialForgotUser" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:50" time="4.252" tests="6">
+    <testcase classname="UserController updateStoryPromotion - success" name="UserController updateStoryPromotion - success" time="0.002">
+    </testcase>
+    <testcase classname="UserController updateStoryPromotion - Inactive User" name="UserController updateStoryPromotion - Inactive User" time="0">
+    </testcase>
+    <testcase classname="UserController updateUserCommunityDetails - success" name="UserController updateUserCommunityDetails - success" time="0.001">
+    </testcase>
+    <testcase classname="UserController updateUserCommunityDetails - failure" name="UserController updateUserCommunityDetails - failure" time="0">
+    </testcase>
+    <testcase classname="UserController updateUserCommunityVisitCount - success" name="UserController updateUserCommunityVisitCount - success" time="0">
+    </testcase>
+    <testcase classname="UserController updateUserCommunityVisitCount - failure" name="UserController updateUserCommunityVisitCount - failure" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileUpdateARNController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:51" time="3.61" tests="4">
+    <testcase classname="ProfileUpdateARNController Should be able to update recovery contact numbers" name="ProfileUpdateARNController Should be able to update recovery contact numbers" time="0.003">
+    </testcase>
+    <testcase classname="ProfileUpdateARNController Should return error if usernm not there while update recovery contact" name="ProfileUpdateARNController Should return error if usernm not there while update recovery contact" time="0.001">
+    </testcase>
+    <testcase classname="ProfileUpdateARNController Should be able to add recovery contact numbers" name="ProfileUpdateARNController Should be able to add recovery contact numbers" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateARNController Should return error if usernm not there while add recovery contact" name="ProfileUpdateARNController Should return error if usernm not there while add recovery contact" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="LocationService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:53" time="2.702" tests="8">
+    <testcase classname="LocationService fetchLocationDetails should return location data" name="LocationService fetchLocationDetails should return location data" time="0.003">
+    </testcase>
+    <testcase classname="LocationService fetchLocationDetails should return no data found" name="LocationService fetchLocationDetails should return no data found" time="0.001">
+    </testcase>
+    <testcase classname="LocationService fetchLocationDetails should return no US region" name="LocationService fetchLocationDetails should return no US region" time="0">
+    </testcase>
+    <testcase classname="LocationService fetchLocationDetails should return no data found for exception" name="LocationService fetchLocationDetails should return no data found for exception" time="0">
+    </testcase>
+    <testcase classname="LocationService fetchPointLocationDetails should return location data" name="LocationService fetchPointLocationDetails should return location data" time="0.001">
+    </testcase>
+    <testcase classname="LocationService fetchPointLocationDetails should return no data found" name="LocationService fetchPointLocationDetails should return no data found" time="0">
+    </testcase>
+    <testcase classname="LocationService fetchPointLocationDetails should return no US region" name="LocationService fetchPointLocationDetails should return no US region" time="0">
+    </testcase>
+    <testcase classname="LocationService fetchPointLocationDetails should return no data found for exception" name="LocationService fetchPointLocationDetails should return no data found for exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="EmailService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:54" time="1.739" tests="9">
+    <testcase classname="EmailService Should send email message" name="EmailService Should send email message" time="0.002">
+    </testcase>
+    <testcase classname="EmailService Should skip sending email message" name="EmailService Should skip sending email message" time="0">
+    </testcase>
+    <testcase classname="EmailService should return comment link" name="EmailService should return comment link" time="0.001">
+    </testcase>
+    <testcase classname="EmailService should return reply link" name="EmailService should return reply link" time="0">
+    </testcase>
+    <testcase classname="EmailService should return replied on story" name="EmailService should return replied on story" time="0">
+    </testcase>
+    <testcase classname="EmailService should return flagged content" name="EmailService should return flagged content" time="0.006">
+    </testcase>
+    <testcase classname="EmailService should return keywords alert" name="EmailService should return keywords alert" time="0">
+    </testcase>
+    <testcase classname="EmailService should return flag story comment" name="EmailService should return flag story comment" time="0">
+    </testcase>
+    <testcase classname="EmailService should return story moderation" name="EmailService should return story moderation" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberDetailsGateway" errors="0" failures="1" skipped="0" timestamp="2024-05-30T09:24:54" time="2.233" tests="4">
+    <testcase classname="MemberDetailsGateway Should return GBD member summary" name="MemberDetailsGateway Should return GBD member summary" time="0.002">
+    </testcase>
+    <testcase classname="MemberDetailsGateway Should return member details when forgot username" name="MemberDetailsGateway Should return member details when forgot username" time="0.003">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+- Expected
++ Received
+
+@@ -11,13 +11,13 @@
+        &quot;name&quot;: &quot;Authorization&quot;,
+        &quot;value&quot;: &quot;Bearer token&quot;,
+      },
+      Object {
+        &quot;name&quot;: &quot;apikey&quot;,
+-       &quot;value&quot;: &quot;ACGJ7yDYQZjq4wk2I99LGvMeQe7ue532&quot;,
++       &quot;value&quot;: &quot;E0OAnvjKZ6J3ihrUieBVv3RS5JVKY6Ax&quot;,
+      },
+    ],
+    &quot;method&quot;: &quot;POST&quot;,
+    &quot;requestName&quot;: &quot;memberCommercialValidatedInfo&quot;,
+    &quot;responseType&quot;: 1,
+-   &quot;url&quot;: undefined,
++   &quot;url&quot;: &quot;https://uat.api.sydneymember.ps.awsdns.internal.das/v1/cp/members/authenticate/validatememberinfo&quot;,
+  },
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/gateways/_tests/memberDetailsGateway.spec.ts:71:35)
+    at Object.asyncJestTest (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+    <testcase classname="MemberDetailsGateway Should return GBD member eligibility" name="MemberDetailsGateway Should return GBD member eligibility" time="0.003">
+    </testcase>
+    <testcase classname="MemberDetailsGateway Should return GBD member synthetic eligibility" name="MemberDetailsGateway Should return GBD member synthetic eligibility" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Activity Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:52" time="3.788" tests="4">
+    <testcase classname="Activity Service markActivityAsRead - success" name="Activity Service markActivityAsRead - success" time="0.001">
+    </testcase>
+    <testcase classname="Activity Service markActivityAsRead - Activity does not exist" name="Activity Service markActivityAsRead - Activity does not exist" time="0">
+    </testcase>
+    <testcase classname="Activity Service getUserActivity - success" name="Activity Service getUserActivity - success" time="0.001">
+    </testcase>
+    <testcase classname="Activity Service getUserActivity - no user activity" name="Activity Service getUserActivity - no user activity" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileUpdateARNGateway" errors="0" failures="1" skipped="0" timestamp="2024-05-30T09:24:54" time="2.248" tests="3">
+    <testcase classname="ProfileUpdateARNGateway Should return user primary phone number" name="ProfileUpdateARNGateway Should return user primary phone number" time="0.002">
+    </testcase>
+    <testcase classname="ProfileUpdateARNGateway Should return user text phone number" name="ProfileUpdateARNGateway Should return user text phone number" time="0">
+    </testcase>
+    <testcase classname="ProfileUpdateARNGateway Should return response bases on method type on recovery contact API" name="ProfileUpdateARNGateway Should return response bases on method type on recovery contact API" time="0.005">
+      <failure>Error: expect(jest.fn()).toBeCalledWith(...expected)
+
+- Expected
++ Received
+
+@@ -14,8 +14,8 @@
+        &quot;value&quot;: &quot;~SIT3SB457T97639&quot;,
+      },
+    ],
+    &quot;method&quot;: &quot;Get&quot;,
+    &quot;responseType&quot;: 1,
+-   &quot;url&quot;: undefined,
++   &quot;url&quot;: &quot;https://uat.api.sydneymember.ps.awsdns.internal.das/v7/members/multifactorauthentication/contacts/recovery&quot;,
+    &quot;usernm&quot;: &quot;~SIT3SB457T97639&quot;,
+  },
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/api/communityresources/gateways/_tests/profileUpdateARNGateway.spec.ts:105:35)
+    at Object.asyncJestTest (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
+    at /Users/AH05879/workSpace/sydneyCommunity/communitiesapiv2/node_modules/jest-jasmine2/build/queueRunner.js:75:41
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="SecureJwtToken UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:55" time="1.592" tests="5">
+    <testcase classname="SecureJwtToken UTest should allow generating token" name="SecureJwtToken UTest should allow generating token" time="0.004">
+    </testcase>
+    <testcase classname="SecureJwtToken UTest should allow generating gbd token" name="SecureJwtToken UTest should allow generating gbd token" time="0.001">
+    </testcase>
+    <testcase classname="SecureJwtToken UTest should throw error if id or subject is missing while generating token" name="SecureJwtToken UTest should throw error if id or subject is missing while generating token" time="0">
+    </testcase>
+    <testcase classname="SecureJwtToken UTest should throw error if id or subject is missing while generating gbd token" name="SecureJwtToken UTest should throw error if id or subject is missing while generating gbd token" time="0.001">
+    </testcase>
+    <testcase classname="SecureJwtToken UTest should allow verifying token" name="SecureJwtToken UTest should allow verifying token" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="OutputScanner UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:55" time="1.241" tests="2">
+    <testcase classname="OutputScanner UTest should show default error when no error mapping available" name="OutputScanner UTest should show default error when no error mapping available" time="0.002">
+    </testcase>
+    <testcase classname="OutputScanner UTest should not suppress properties not configured" name="OutputScanner UTest should not suppress properties not configured" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileGetContactsController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:55" time="3.242" tests="4">
+    <testcase classname="ProfileGetContactsController Should be able to get user contact numbers" name="ProfileGetContactsController Should be able to get user contact numbers" time="0.004">
+    </testcase>
+    <testcase classname="ProfileGetContactsController Should return error while memberId not there" name="ProfileGetContactsController Should return error while memberId not there" time="0">
+    </testcase>
+    <testcase classname="ProfileGetContactsController Should be able to get recovery contact numbers" name="ProfileGetContactsController Should be able to get recovery contact numbers" time="0.001">
+    </testcase>
+    <testcase classname="ProfileGetContactsController Should return error if usernm not there while get recovery contact" name="ProfileGetContactsController Should return error if usernm not there while get recovery contact" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="PartnerService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:55" time="3.341" tests="8">
+    <testcase classname="PartnerService getPartnerLogo" name="PartnerService getPartnerLogo" time="0.002">
+    </testcase>
+    <testcase classname="PartnerService getPartnerLogo - article image - success" name="PartnerService getPartnerLogo - article image - success" time="0">
+    </testcase>
+    <testcase classname="PartnerService getPartnerLogo - shoudl return logo image instead of article image" name="PartnerService getPartnerLogo - shoudl return logo image instead of article image" time="0">
+    </testcase>
+    <testcase classname="PartnerService getPartnerLogo - error" name="PartnerService getPartnerLogo - error" time="0.001">
+    </testcase>
+    <testcase classname="PartnerService getPartnerLogo - exception" name="PartnerService getPartnerLogo - exception" time="0">
+    </testcase>
+    <testcase classname="PartnerService getPartnerList - success" name="PartnerService getPartnerList - success" time="0">
+    </testcase>
+    <testcase classname="PartnerService getPartnerList - community does not exist" name="PartnerService getPartnerList - community does not exist" time="0">
+    </testcase>
+    <testcase classname="PartnerService getPartnerList - bucket does not exist" name="PartnerService getPartnerList - bucket does not exist" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="MemberCredentialGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:56" time="2.504" tests="2">
+    <testcase classname="MemberCredentialGateway Generate temporary password for user" name="MemberCredentialGateway Generate temporary password for user" time="0.003">
+    </testcase>
+    <testcase classname="MemberCredentialGateway Update new password by temporary password" name="MemberCredentialGateway Update new password by temporary password" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="LocationController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:56" time="2.605" tests="6">
+    <testcase classname="LocationController getLocationData should get address from location service" name="LocationController getLocationData should get address from location service" time="0.002">
+    </testcase>
+    <testcase classname="LocationController getLocationData should return a validation error" name="LocationController getLocationData should return a validation error" time="0">
+    </testcase>
+    <testcase classname="LocationController getLocationData should throw an error" name="LocationController getLocationData should throw an error" time="0.001">
+    </testcase>
+    <testcase classname="LocationController getLocationPointData should get address from location service" name="LocationController getLocationPointData should get address from location service" time="0">
+    </testcase>
+    <testcase classname="LocationController getLocationPointData should return a validation error" name="LocationController getLocationPointData should return a validation error" time="0">
+    </testcase>
+    <testcase classname="LocationController getLocationPointData should throw an error" name="LocationController getLocationPointData should throw an error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="KeyStoreUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:57" time="1.562" tests="1">
+    <testcase classname="KeyStoreUtil UTest default passthrough" name="KeyStoreUtil UTest default passthrough" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="ErrorHandlerMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:57" time="2.347" tests="2">
+    <testcase classname="ErrorHandlerMiddleware UTest should message property if error is HttpError" name="ErrorHandlerMiddleware UTest should message property if error is HttpError" time="0.008">
+    </testcase>
+    <testcase classname="ErrorHandlerMiddleware UTest should stack property if error is Error" name="ErrorHandlerMiddleware UTest should stack property if error is Error" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Activity Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:57" time="2.424" tests="8">
+    <testcase classname="Activity Service getPostImage error" name="Activity Service getPostImage error" time="0.001">
+    </testcase>
+    <testcase classname="Activity Service getPostImage success" name="Activity Service getPostImage success" time="0">
+    </testcase>
+    <testcase classname="Activity Service getPostImage exception" name="Activity Service getPostImage exception" time="0">
+    </testcase>
+    <testcase classname="Activity Service buildPostImagePath null" name="Activity Service buildPostImagePath null" time="0.001">
+    </testcase>
+    <testcase classname="Activity Service buildPostImagePath null" name="Activity Service buildPostImagePath null" time="0">
+    </testcase>
+    <testcase classname="Activity Service buildPostImagePath success" name="Activity Service buildPostImagePath success" time="0">
+    </testcase>
+    <testcase classname="Activity Service setPostImage success" name="Activity Service setPostImage success" time="0">
+    </testcase>
+    <testcase classname="Activity Service setPostImage success" name="Activity Service setPostImage success" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ManageProfileService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:57" time="2.695" tests="4">
+    <testcase classname="ManageProfileService delete user profile - success" name="ManageProfileService delete user profile - success" time="0.001">
+    </testcase>
+    <testcase classname="ManageProfileService delete user profile - data not found" name="ManageProfileService delete user profile - data not found" time="0.001">
+    </testcase>
+    <testcase classname="ManageProfileService delete user profile - server error" name="ManageProfileService delete user profile - server error" time="0">
+    </testcase>
+    <testcase classname="ManageProfileService delete user profile - exception" name="ManageProfileService delete user profile - exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="RequestUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:59" time="1.844" tests="3">
+    <testcase classname="RequestUtil UTest getUsername testing" name="RequestUtil UTest getUsername testing" time="0.002">
+    </testcase>
+    <testcase classname="RequestUtil UTest getAuthToken testing" name="RequestUtil UTest getAuthToken testing" time="0">
+    </testcase>
+    <testcase classname="RequestUtil UTest getWebGuid testing" name="RequestUtil UTest getWebGuid testing" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="SendOneTimePasswordService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:57" time="3.49" tests="2">
+    <testcase classname="SendOneTimePasswordService memberSendOtp -&gt; success response for commercial" name="SendOneTimePasswordService memberSendOtp -&gt; success response for commercial" time="0.003">
+    </testcase>
+    <testcase classname="SendOneTimePasswordService memberSendOtp -&gt; success response for GBD" name="SendOneTimePasswordService memberSendOtp -&gt; success response for GBD" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Activity Helper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:58" time="2.679" tests="3">
+    <testcase classname="Activity Helper translateActivities - success" name="Activity Helper translateActivities - success" time="0.011">
+    </testcase>
+    <testcase classname="Activity Helper handleUserActivity - add to existing activity" name="Activity Helper handleUserActivity - add to existing activity" time="0.005">
+    </testcase>
+    <testcase classname="Activity Helper handleUserActivity - add to new activity" name="Activity Helper handleUserActivity - add to new activity" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="OnPremTokenGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:58" time="2.419" tests="2">
+    <testcase classname="OnPremTokenGateway should return on prem access token" name="OnPremTokenGateway should return on prem access token" time="0.002">
+    </testcase>
+    <testcase classname="OnPremTokenGateway should return on prem synthetic access token" name="OnPremTokenGateway should return on prem synthetic access token" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:58" time="2.598" tests="3">
+    <testcase classname="AdminController Should get admin profile by id" name="AdminController Should get admin profile by id" time="0.001">
+    </testcase>
+    <testcase classname="AdminController should throw an error if id is not hex string" name="AdminController should throw an error if id is not hex string" time="0">
+    </testcase>
+    <testcase classname="AdminController should throw an error if exception" name="AdminController should throw an error if exception" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="RequestContext UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:00" time="1.716" tests="3">
+    <testcase classname="RequestContext UTest should get proper clientip" name="RequestContext UTest should get proper clientip" time="0.002">
+    </testcase>
+    <testcase classname="RequestContext UTest should get from namespace" name="RequestContext UTest should get from namespace" time="0">
+    </testcase>
+    <testcase classname="RequestContext UTest should set to namespace" name="RequestContext UTest should set to namespace" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="AdminService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:59" time="2.673" tests="6">
+    <testcase classname="AdminService Should return the Admin details: Success" name="AdminService Should return the Admin details: Success" time="0.001">
+    </testcase>
+    <testcase classname="AdminService Should return the Admin details: User not found" name="AdminService Should return the Admin details: User not found" time="0">
+    </testcase>
+    <testcase classname="AdminService Should return the Admin details: Exception" name="AdminService Should return the Admin details: Exception" time="0">
+    </testcase>
+    <testcase classname="AdminService Should return the Admin Image: Success" name="AdminService Should return the Admin Image: Success" time="0">
+    </testcase>
+    <testcase classname="AdminService Should return the Admin Image: Image not found" name="AdminService Should return the Admin Image: Image not found" time="0">
+    </testcase>
+    <testcase classname="AdminService Should return the Admin Image: Exception" name="AdminService Should return the Admin Image: Exception" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileCredentialsGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:59" time="2.778" tests="1">
+    <testcase classname="ProfileCredentialsGateway Should update user profile password" name="ProfileCredentialsGateway Should update user profile password" time="0.01">
+    </testcase>
+  </testsuite>
+  <testsuite name="FileExportUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:01" time="1.947" tests="3">
+    <testcase classname="FileExportUtil UTest should not parse unknown export formats other than csv/excel" name="FileExportUtil UTest should not parse unknown export formats other than csv/excel" time="0.001">
+    </testcase>
+    <testcase classname="FileExportUtil UTest should parse csv" name="FileExportUtil UTest should parse csv" time="0">
+    </testcase>
+    <testcase classname="FileExportUtil UTest should parse excel" name="FileExportUtil UTest should parse excel" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="SpringCloudConfigClient UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:01" time="1.956" tests="2">
+    <testcase classname="SpringCloudConfigClient UTest should load config from spring client config url periodically" name="SpringCloudConfigClient UTest should load config from spring client config url periodically" time="0.003">
+    </testcase>
+    <testcase classname="SpringCloudConfigClient UTest should handle spring cloud config url request errors gracefully" name="SpringCloudConfigClient UTest should handle spring cloud config url request errors gracefully" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ManageProfileController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:00" time="2.841" tests="2">
+    <testcase classname="ManageProfileController Should delete user profile: success" name="ManageProfileController Should delete user profile: success" time="0.002">
+    </testcase>
+    <testcase classname="ManageProfileController Should delete user profile: failure" name="ManageProfileController Should delete user profile: failure" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="BingGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:01" time="2.41" tests="2">
+    <testcase classname="BingGateway getLocationDetails" name="BingGateway getLocationDetails" time="0.002">
+    </testcase>
+    <testcase classname="BingGateway getPointLocationDetails" name="BingGateway getPointLocationDetails" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="ImageController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:24:59" time="4.818" tests="2">
+    <testcase classname="ImageController addProfilePictureBase64 - Should upload image: success" name="ImageController addProfilePictureBase64 - Should upload image: success" time="0.001">
+    </testcase>
+    <testcase classname="ImageController addProfilePictureBase64 - Should upload image: exception" name="ImageController addProfilePictureBase64 - Should upload image: exception" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case for SQS SendMessage" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:02" time="2.398" tests="1">
+    <testcase classname="Test case for SQS SendMessage should return the UserEvent" name="Test case for SQS SendMessage should return the UserEvent" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="ProfileCredentialService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:01" time="4.043" tests="1">
+    <testcase classname="ProfileCredentialService Should able to update new password from user profile" name="ProfileCredentialService Should able to update new password from user profile" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="HealthCheckMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:02" time="2.304" tests="2">
+    <testcase classname="HealthCheckMiddleware UTest should not send 200 if url is not for health check" name="HealthCheckMiddleware UTest should not send 200 if url is not for health check" time="0.002">
+    </testcase>
+    <testcase classname="HealthCheckMiddleware UTest should not send 200 if health check is false" name="HealthCheckMiddleware UTest should not send 200 if health check is false" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="StringUtils UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:03" time="1.882" tests="4">
+    <testcase classname="StringUtils UTest toTitleCase testing" name="StringUtils UTest toTitleCase testing" time="0.001">
+    </testcase>
+    <testcase classname="StringUtils UTest trimRight testing" name="StringUtils UTest trimRight testing" time="0">
+    </testcase>
+    <testcase classname="StringUtils UTest trimLeft testing" name="StringUtils UTest trimLeft testing" time="0">
+    </testcase>
+    <testcase classname="StringUtils UTest substitute Unicode Symbols testing" name="StringUtils UTest substitute Unicode Symbols testing" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="PollController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:01" time="3.312" tests="2">
+    <testcase classname="PollController userPollResponse should return poll data" name="PollController userPollResponse should return poll data" time="0.002">
+    </testcase>
+    <testcase classname="PollController userPollResponse should return error" name="PollController userPollResponse should return error" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Image Upload Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:03" time="2.573" tests="2">
+    <testcase classname="Image Upload Service sendMessage success" name="Image Upload Service sendMessage success" time="0.001">
+    </testcase>
+    <testcase classname="Image Upload Service getGuid success" name="Image Upload Service getGuid success" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="S3Service" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:04" time="2.397" tests="3">
+    <testcase classname="S3Service Should upload image to s3" name="S3Service Should upload image to s3" time="0.001">
+    </testcase>
+    <testcase classname="S3Service Should delete image from s3" name="S3Service Should delete image from s3" time="0.001">
+    </testcase>
+    <testcase classname="S3Service Should get image from s3" name="S3Service Should get image from s3" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="HtmlSanitizer UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:05" time="1.853" tests="2">
+    <testcase classname="HtmlSanitizer UTest should sanitize properties by default for html" name="HtmlSanitizer UTest should sanitize properties by default for html" time="0.003">
+    </testcase>
+    <testcase classname="HtmlSanitizer UTest should sanitize properties by default for html" name="HtmlSanitizer UTest should sanitize properties by default for html" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Communities Helper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:04" time="2.678" tests="1">
+    <testcase classname="Communities Helper getMultipleCommunities - success" name="Communities Helper getMultipleCommunities - success" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="OutputFilter UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:05" time="2.187" tests="2">
+    <testcase classname="OutputFilter UTest should scan json data" name="OutputFilter UTest should scan json data" time="0.001">
+    </testcase>
+    <testcase classname="OutputFilter UTest should scan non-json data as well" name="OutputFilter UTest should scan non-json data as well" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="RestRequestInterceptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:05" time="2.112" tests="1">
+    <testcase classname="RestRequestInterceptor UTest should add all soa specific headers to outgoing request with contenttype" name="RestRequestInterceptor UTest should add all soa specific headers to outgoing request with contenttype" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="contentModGateway" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:05" time="2.334" tests="1">
+    <testcase classname="contentModGateway Post content mod Call" name="contentModGateway Post content mod Call" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Post Image Controller" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:05" time="2.364" tests="2">
+    <testcase classname="Post Image Controller getPostImage - success" name="Post Image Controller getPostImage - success" time="0.003">
+    </testcase>
+    <testcase classname="Post Image Controller getPostImage - fail" name="Post Image Controller getPostImage - fail" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="JsonTransformer UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:06" time="1.274" tests="2">
+    <testcase classname="JsonTransformer UTest should transform plain json to defined typescript class definition" name="JsonTransformer UTest should transform plain json to defined typescript class definition" time="0.001">
+    </testcase>
+    <testcase classname="JsonTransformer UTest should transform typescript class to plain json" name="JsonTransformer UTest should transform typescript class to plain json" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="InternalController" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:06" time="2.309" tests="1">
+    <testcase classname="InternalController should update terms of use" name="InternalController should update terms of use" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="UserAttributeService" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:04" time="4.522" tests="2">
+    <testcase classname="UserAttributeService update story promotion -" name="UserAttributeService update story promotion -" time="0.004">
+    </testcase>
+    <testcase classname="UserAttributeService update story promotion" name="UserAttributeService update story promotion" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="JwtFilter UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="2.102" tests="1">
+    <testcase classname="JwtFilter UTest verify null" name="JwtFilter UTest verify null" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="AuditFilter UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="1.949" tests="1">
+    <testcase classname="AuditFilter UTest should audit request/response and debug request cookies" name="AuditFilter UTest should audit request/response and debug request cookies" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Test case for Sns create platform endpoint" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="1.807" tests="1">
+    <testcase classname="Test case for Sns create platform endpoint should add endpoint" name="Test case for Sns create platform endpoint should add endpoint" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="AesEncryptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="1.797" tests="2">
+    <testcase classname="AesEncryptor UTest should encrypt data" name="AesEncryptor UTest should encrypt data" time="0.035">
+    </testcase>
+    <testcase classname="AesEncryptor UTest should decrypt data" name="AesEncryptor UTest should decrypt data" time="0.033">
+    </testcase>
+  </testsuite>
+  <testsuite name="AesEncryptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="1.774" tests="2">
+    <testcase classname="AesEncryptor UTest should encrypt data" name="AesEncryptor UTest should encrypt data" time="0.037">
+    </testcase>
+    <testcase classname="AesEncryptor UTest should decrypt data" name="AesEncryptor UTest should decrypt data" time="0.039">
+    </testcase>
+  </testsuite>
+  <testsuite name="CorsMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="1.705" tests="1">
+    <testcase classname="CorsMiddleware UTest verify null" name="CorsMiddleware UTest verify null" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="EncryptionUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:08" time="1.56" tests="2">
+    <testcase classname="EncryptionUtil UTest should encrypt and decrypt aes symmetric data" name="EncryptionUtil UTest should encrypt and decrypt aes symmetric data" time="0.011">
+    </testcase>
+    <testcase classname="EncryptionUtil UTest should encrypt and decrypt aes data" name="EncryptionUtil UTest should encrypt and decrypt aes data" time="0.036">
+    </testcase>
+  </testsuite>
+  <testsuite name="JwtMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:07" time="2.759" tests="1">
+    <testcase classname="JwtMiddleware UTest should not send 401 error when token is valid" name="JwtMiddleware UTest should not send 401 error when token is valid" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="HealthwiseTokenServices" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:08" time="1.826" tests="1">
+    <testcase classname="HealthwiseTokenServices PostAuth Call should return token" name="HealthwiseTokenServices PostAuth Call should return token" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="utils UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="1.852" tests="3">
+    <testcase classname="utils UTest getOsEnv testing" name="utils UTest getOsEnv testing" time="0.001">
+    </testcase>
+    <testcase classname="utils UTest toNumber testing" name="utils UTest toNumber testing" time="0">
+    </testcase>
+    <testcase classname="utils UTest toBool testing" name="utils UTest toBool testing" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="AesBouncyEncryptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="1.87" tests="2">
+    <testcase classname="AesBouncyEncryptor UTest should encrypt data" name="AesBouncyEncryptor UTest should encrypt data" time="0.003">
+    </testcase>
+    <testcase classname="AesBouncyEncryptor UTest should decrypt data" name="AesBouncyEncryptor UTest should decrypt data" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="NotFoundMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="1.812" tests="1">
+    <testcase classname="NotFoundMiddleware UTest should not send 404 error if response already sent" name="NotFoundMiddleware UTest should not send 404 error if response already sent" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="paths UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="1.725" tests="2">
+    <testcase classname="paths UTest getControllerPaths testing" name="paths UTest getControllerPaths testing" time="0">
+    </testcase>
+    <testcase classname="paths UTest getMiddlewarePaths testing" name="paths UTest getMiddlewarePaths testing" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="LoginServiceHelper" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="2.569" tests="1">
+    <testcase classname="LoginServiceHelper Should return boolean value medicaid user demo user or not" name="LoginServiceHelper Should return boolean value medicaid user demo user or not" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="NotFoundMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:10" time="1.398" tests="1">
+    <testcase classname="NotFoundMiddleware UTest verify null" name="NotFoundMiddleware UTest verify null" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="AesSymmetricEncryptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:10" time="1.639" tests="1">
+    <testcase classname="AesSymmetricEncryptor UTest should encrypt and decrypt data" name="AesSymmetricEncryptor UTest should encrypt and decrypt data" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="args UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:11" time="1.243" tests="1">
+    <testcase classname="args UTest getApiArgument testing" name="args UTest getApiArgument testing" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="RequestValidator UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:11" time="1.325" tests="1">
+    <testcase classname="RequestValidator UTest should sanitize by regex" name="RequestValidator UTest should sanitize by regex" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="SecurityMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:09" time="2.636" tests="1">
+    <testcase classname="SecurityMiddleware UTest should override headers, cookies, params, query" name="SecurityMiddleware UTest should override headers, cookies, params, query" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="DefaultLogger UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:11" time="1.449" tests="1">
+    <testcase classname="DefaultLogger UTest should log path to source file" name="DefaultLogger UTest should log path to source file" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="AuditMiddleware UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:10" time="2.896" tests="1">
+    <testcase classname="AuditMiddleware UTest should cache data if request is cacheable and response is 200 status" name="AuditMiddleware UTest should cache data if request is cacheable and response is 200 status" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="AesEncryptor UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:11" time="2.273" tests="1">
+    <testcase classname="AesEncryptor UTest should encrypt data" name="AesEncryptor UTest should encrypt data" time="0.267">
+    </testcase>
+  </testsuite>
+  <testsuite name="HealthCheckUtil UTest" errors="0" failures="0" skipped="0" timestamp="2024-05-30T09:25:12" time="2.091" tests="1">
+    <testcase classname="HealthCheckUtil UTest should sanitize by regex" name="HealthCheckUtil UTest should sanitize by regex" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>

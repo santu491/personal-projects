@@ -1,0 +1,77 @@
+<div cdkDropList (cdkDropListDropped)="reorderBuckets($event)">
+  <div *ngFor="let section of subSections?.en.content; let i = index" cdkDrag>
+    <div class="custom-placeholder" *cdkDragPlaceholder></div>
+    <div *ngIf="section?.type.match(videoBucketType)" class="mt-2">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header (click)="fetchSubContent(section?.link, i)">
+          <mat-panel-title>
+            {{ section?.title }}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{ section?.description }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div cdkDropList (cdkDropListDropped)="reorderArticle($event)">
+          <div *ngFor="let bucket of getBucketContent()" cdkDrag>
+            <div class="custom-placeholder" *cdkDragPlaceholder></div>
+            <app-article-view
+              [article]="bucket"
+              [parentId]="section.helpfulInfoId"
+              (onDelete)="deleteSectionArticle($event)"
+              (onEdit)="editSubSectionArticle($event)"
+            ></app-article-view>
+          </div>
+        </div>
+        <mat-action-row>
+          <button mat-button color="primary" (click)="editSubSection(i)">
+            Edit Details
+          </button>
+          <button mat-button color="primary" (click)="addArticleToSection()">
+            Add Article
+          </button>
+          <button
+            *ngIf="section.isOrderChanged"
+            mat-raised-button
+            color="primary"
+            (click)="publishArticleOrderChanges()"
+          >
+            Publish Article Order
+          </button>
+          <button
+            *ngIf="section.isModified"
+            mat-raised-button
+            color="primary"
+            (click)="publishChanges()"
+          >
+            Publish Changes
+          </button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </div>
+    <div *ngIf="section?.type?.match(videoType)">
+      <app-article-view
+        [article]="section"
+        [parentId]="section.helpfulInfoId"
+        (onEdit)="editArticle($event)"
+        (onDelete)="deleteArticle($event)"
+      ></app-article-view>
+    </div>
+  </div>
+</div>
+<div class="btn-container">
+  <button
+    mat-raised-button
+    class="mt-2"
+    *ngIf="isArticleDeleted"
+    (click)="onPublish()"
+  >
+    Publish
+  </button>
+  <button
+    mat-raised-button
+    *ngIf="sectionOrderChanged"
+    (click)="publishSectionOrderChange()"
+  >
+    Publish Order Change
+  </button>
+</div>

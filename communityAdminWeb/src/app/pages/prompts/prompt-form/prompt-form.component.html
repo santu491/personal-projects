@@ -1,0 +1,172 @@
+<div>
+  <form (ngSubmit)="onSave()">
+    <h2>English Data</h2>
+    <mat-form-field class="full-width">
+      <mat-label>Question</mat-label>
+      <textarea
+        name="question"
+        placeholder="Enter Question"
+        matInput
+        [(ngModel)]="prompt.en.question"
+        required
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Section Title</mat-label>
+      <textarea
+        name="sectionTitle"
+        placeholder="Enter Section Title"
+        matInput
+        [(ngModel)]="prompt.en.sectionTitle"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Help Text</mat-label>
+      <textarea
+        name="helpText"
+        placeholder="Enter Help Text"
+        matInput
+        [(ngModel)]="prompt.en.helpText"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Sensitive Content</mat-label>
+      <textarea
+        name="sensitiveContent"
+        placeholder="Enter Sensitive Content"
+        matInput
+        [(ngModel)]="prompt.en.sensitiveContentText"
+      ></textarea>
+    </mat-form-field>
+
+    <h2>Spanish Data</h2>
+    <mat-form-field class="full-width">
+      <mat-label>Question</mat-label>
+      <textarea
+        name="esQuestion"
+        placeholder="Enter Question"
+        matInput
+        [(ngModel)]="prompt.es.question"
+        required
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Section Title</mat-label>
+      <textarea
+        name="esSectionTitle"
+        placeholder="Enter Section Title"
+        matInput
+        [(ngModel)]="prompt.es.sectionTitle"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Help Text</mat-label>
+      <textarea
+        name="esHelpText"
+        placeholder="Enter Help Text"
+        matInput
+        [(ngModel)]="prompt.es.helpText"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Sensitive Content</mat-label>
+      <textarea
+        name="esSensitiveContent"
+        placeholder="Enter Sensitive Content"
+        matInput
+        [(ngModel)]="prompt.es.sensitiveContentText"
+      ></textarea>
+    </mat-form-field>
+
+    <!-- Cancer community option list -->
+    <div *ngIf="prompt.en?.options" class="row">
+      <label class="label">Options:</label>
+      <div class="col">
+        <div cdkDropList (cdkDropListDropped)="drop($event)">
+          <div
+            *ngFor="let option of prompt.en.options; let i = index"
+            cdkDrag
+            class="option-holder"
+            (click)="getOptionDetails(option.id)"
+          >
+            <span class="option-placeholder" *cdkDragPlaceholder></span>
+            <span
+              class="option-title"
+              [matTooltip]="
+                this.prompt.es.options ? this.prompt.es.options[i].title : ''
+              "
+              matTooltipPosition="right"
+              >{{ option.title }}</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col left-break">
+        <button
+          type="button"
+          mat-raised-button
+          color="primary"
+          (click)="showAddCommunityForm()"
+        >
+          Add Cancer Option
+        </button>
+        <div *ngIf="showAddCommunity" class="mt-3">
+          <mat-form-field class="full-width">
+            <input
+              #enCancerName
+              matInput
+              name="enCancerName"
+              [(ngModel)]="optionData.en"
+              placeholder="Enter Community Title"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <input
+              #esCancerName
+              matInput
+              name="esCancerName"
+              [(ngModel)]="optionData.es"
+              placeholder="Enter Spanish Community Title"
+            />
+          </mat-form-field>
+          <div class="btn-container mt-2">
+            <button
+              mat-stroked-button
+              color="primary"
+              (click)="addCommunityOption()"
+              type="button"
+            >
+              {{ optionData?.isEdit ? 'Edit' : 'Add' }} Cancer Type
+            </button>
+            <button
+              mat-stroked-button
+              type="button"
+              color="warn"
+              (click)="clearOptionForm()"
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container mt-2">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!prompt.en.question || !prompt.es.question"
+      >
+        Save Prompt as Draft
+      </button>
+      <button
+        *ngIf="prompt.promptId"
+        mat-stroked-button
+        color="warn"
+        (click)="onDelete(prompt.promptId)"
+      >
+        Delete
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,300 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: subSectionModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered section-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h3 class="heading">{{ isVideoLibrary ? 'Video Library Details' :'Sub Section Details' }}</h3>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <app-section-details
+          [mode]="'modal'"
+          [sectionData]="subSectionData"
+          (onSubmit)="addToSubSection($event)"
+        ></app-section-details>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Article modal -->
+<div *ngIf="articleModal">
+  <app-add-article
+    [article]="articleData"
+    [displayModal]="articleModal"
+    (onAddArticle)="createArticle($event)"
+    (onClose)="onCloseModal()"
+  ></app-add-article>
+</div>
+
+<!-- Partner Modal -->
+<div *ngIf="partnerModal">
+  <add-partner-section
+    [displayModal]="partnerModal"
+    [partnerData]="selectedPartner"
+    (onClose)="onCloseModal()"
+    (onAdd)="handleAddPartner($event)"
+  ></add-partner-section>
+</div>
+
+<!-- External Referance form-->
+<div *ngIf="isExternalReferenceOpened">
+  <app-external-reference-view
+    [displayForm]="isExternalReferenceOpened"
+    (closeModal)="closeExternalReferenceModal()"
+    (onSubmitForm)="createExternalRefernce($event)"
+    [externalRefernceData]="externalRefernceData"
+  ></app-external-reference-view>
+</div>
+
+<div *ngIf="displayCommonLibrary">
+  <app-common-lib-view
+    [displayModal]="displayCommonLibrary"
+    (onClose)="onCloseModal()"
+    (onSubmit)="addSelectedCommonArticles($event)"
+  ></app-common-lib-view>
+</div>
+
+<p class="community-holder">{{ title }} Community</p>
+<div class="form-container view">
+  <div class="container">
+    <!--
+      Step 1 Card to get Section Details
+    -->
+    <div *ngIf="step === 0" class="top-margin">
+      <h3 class="heading">
+        <span class="step">Step 1 -</span> Enter Section Details
+      </h3>
+      <app-section-details
+        [sectionData]="sectionBasicData"
+        [mode]="'step'"
+        (onBack)="toHelpfulInfo()"
+        (onSubmit)="toStep1($event)"
+      ></app-section-details>
+    </div>
+
+    <!--
+      Step 2 card to get Section Content
+    -->
+    <mat-card *ngIf="step === 1" class="top-margin">
+      <h3 class="heading">
+        <span class="step">Step 2 -</span> Add Content to section -
+        <em>{{ this.sectionData.en.sections[0].title }}</em>
+      </h3>
+      <!--
+        Common Buttons to Add Items to Section
+      -->
+      <div class="center">
+        <button
+          mat-button
+          color="primary"
+          (click)="showAddSubSectionForm(false)"
+          [disabled]="sectionData.en.sections[0].isGridView"
+        >
+          Add Sub Section
+        </button>
+        <button
+          mat-button
+          color="primary"
+          (click)="showAddArticleForm()"
+          [disabled]="subSections.length > 0"
+        >
+          Add Article
+        </button>
+        <button mat-button color="primary" (click)="showCommonArticles()">
+          Add Common Section
+        </button>
+        <button mat-button color="primary" (click)="toggleExternalLink()">
+          Add External References
+        </button>
+        <button
+          mat-button
+          color="primary"
+          (click)="showAddSubSectionForm(true)"
+        >
+          Add Video Library
+        </button>
+        <button mat-button color="primary" (click)="showAddPartnerModal()">
+          Add Partner
+        </button>
+      </div>
+
+      <div
+        class="mt-2"
+        *ngIf="sectionData.en.sections[0].content.length > 0; else elseBlock"
+      >
+        <!--
+        Grid View Content
+      -->
+        <div *ngIf="sectionData.en.sections[0]?.isGridView">
+          <div cdkDropList (cdkDropListDropped)="reorderSectionContent($event)">
+            <div
+              class="ps-4 pe-4 pb-2"
+              *ngFor="
+                let content of sectionData.en.sections[0].content;
+                let index = index
+              "
+              cdkDrag
+            >
+              <div class="custom-placeholder" *cdkDragPlaceholder></div>
+              <app-section-article
+                [article]="content"
+                (onEditArticle)="editGridViewArticle(content, index)"
+                (onDeleteArticle)="deleteGridViewArticle(index)"
+              ></app-section-article>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="!sectionData.en.sections[0]?.isGridView">
+          <div cdkDropList (cdkDropListDropped)="reorderSectionContent($event)">
+            <div
+              class="ps-4 pe-4 pb-2"
+              *ngFor="
+                let content of sectionData.en.sections[0].content;
+                let index = index
+              "
+              cdkDrag
+            >
+              <div class="custom-placeholder" *cdkDragPlaceholder></div>
+              <!-- For Video Library -->
+              <!-- For External Link added outside of SubSection Content -->
+              <div
+                *ngIf="
+                  content.type === 'HWExternalReference' ||
+                  content.type.match(videoType)
+                "
+              >
+                <app-section-article
+                  [article]="content"
+                  (onEditArticle)="editGridViewArticle(content, index)"
+                  (onDeleteArticle)="deleteGridViewArticle(index)"
+                ></app-section-article>
+              </div>
+
+              <!-- Sub Section Content-->
+              <mat-expansion-panel *ngIf="content.type.match(bucketType)">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <mat-icon class="inline-icon">folder</mat-icon>
+                      {{ content.title }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      {{ content.description }}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+
+                  <!-- Sub Content -->
+                  <div
+                    cdkDropList
+                    (cdkDropListDropped)="
+                      reorderSubSectionContent($event, content.link)
+                    "
+                    class="content-list"
+                  >
+                    <div
+                      *ngFor="
+                        let child of getChildren(content.link);
+                        let cIndex = index
+                      "
+                      [ngClass]="cIndex === 0 ? 'mt-4' : 'mt-1'"
+                      cdkDrag
+                    >
+                      <div class="custom-placeholder" *cdkDragPlaceholder></div>
+                      <app-section-article
+                        [article]="child"
+                        (onEditArticle)="
+                          editArticleInSubSection(child, content.link, cIndex)
+                        "
+                        (onDeleteArticle)="
+                          deleteArticleInSubSection(content.link, cIndex)
+                        "
+                      ></app-section-article>
+                    </div>
+                  </div>
+
+                  <mat-action-row class="icon-holder">
+                    <button
+                      mat-button
+                      matTooltip="Edit Section Data"
+                      (click)="manageSubSectionEdit(content, index)"
+                    >
+                      <mat-icon>edit</mat-icon>
+                      Edit
+                    </button>
+                    <button
+                      mat-button
+                      matTooltip="Add Articles to Section"
+                      *ngIf="!content?.commonSection"
+                      (click)="addArticleToSection(content.link)"
+                    >
+                      <mat-icon color="primary">add</mat-icon>
+                      Article
+                    </button>
+
+                    <button
+                      mat-stroked-button
+                      *ngIf="
+                        content.type === 'HWTopic' && !content?.commonSection
+                      "
+                      matTooltip="Add External Reference to Section"
+                      (click)="
+                        onPressAddExternalRefernceToSection(content.link)
+                      "
+                    >
+                      <mat-icon color="primary">add</mat-icon>
+                      External link
+                    </button>
+                    <button
+                      mat-button
+                      matTooltip="Delete Section"
+                      color="warn"
+                      (click)="onDeleteSubSection(content, index)"
+                    >
+                      <mat-icon color="warn"> delete_outline</mat-icon>
+                      Delete
+                    </button>
+                  </mat-action-row>
+              </mat-expansion-panel>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+        Section to display, If there is no section content added
+      -->
+      <ng-template #elseBlock>
+        <div class="center top-margin">
+          <strong
+            ><em
+              >Add content by clicking on 'Add Sub Section' or 'Add Article'
+              button.</em
+            ></strong
+          >
+        </div>
+      </ng-template>
+      <div class="btn-container">
+        <button mat-stroked-button color="warn" (click)="toStepZero()">
+          Back
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="getCreateStatus()"
+          (click)="createSection()"
+        >
+          Create Section
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</div>

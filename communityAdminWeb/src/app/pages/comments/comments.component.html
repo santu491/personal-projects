@@ -1,0 +1,49 @@
+<div>
+  <app-create-comment
+    [isCommentModalVisible]="isCommentModalVisible"
+    [communityList]="communityList"
+    [existingValue]="existingValue"
+    [deeplinkLabel]="deeplinkLabel"
+    (toggleCommentModal)="toggleCommentModal($event)"
+    (addComment)="sendComment($event)"
+    [commentDeepLink]="commentDeepLink"
+    [commentTitle]="commentTitle"
+  ></app-create-comment>
+</div>
+
+<div *ngIf="showComments">
+  <div
+    *ngFor="let item of comments; let commentIndex = index"
+    [attr.data-index]="commentIndex"
+  >
+    <app-comment
+      [comment]="item"
+      [id]="id"
+      [authorId]="authorId"
+      (addNewReply)="onAddNewReply($event)"
+      (reloadStory)="reload($event)"
+      [selectedPersona]="selectedPersona"
+      (onPressEditComment)="onPressEditComment($event)"
+    ></app-comment>
+
+    <!--Reply-->
+    <div *ngIf="isReplyExist(item.replyCount)" class="reply-view">
+      <div
+        *ngFor="let replyItem of item.replies; let replyIndex = index"
+        [attr.data-index]="replyIndex"
+        class="row"
+      >
+        <app-comment
+          [comment]="replyItem"
+          [id]="id"
+          [authorId]="authorId"
+          [commentId]="item._id"
+          (reloadStory)="reload($event)"
+          [selectedPersona]="selectedPersona"
+          (addNewReply)="onAddNewReply($event)"
+          (onPressEditComment)="onPressEditComment($event)"
+        ></app-comment>
+      </div>
+    </div>
+  </div>
+</div>

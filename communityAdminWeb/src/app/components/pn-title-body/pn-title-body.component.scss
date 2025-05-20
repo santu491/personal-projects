@@ -1,0 +1,27 @@
+.count-message {
+    background-color: gray;
+    padding: 3px;
+    border-radius: 2px;
+    color: white;
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  .customError {
+    margin-top: -20px;
+    font-size: 75%;
+  }
+
+  .emoji-icon{
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .emoji-mart-styles{
+    display: flex;
+    justify-content: flex-end;
+  }

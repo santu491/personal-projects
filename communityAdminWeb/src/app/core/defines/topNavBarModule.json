@@ -1,0 +1,46 @@
+{
+  "navbarRouting": [
+    {
+      "btnName": "Home",
+      "routerLink": "ui/pages/home",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": true },
+      "accessPrivilege": ["scadmin", "scadvocate", "sysadmin"]
+    },
+    {
+      "btnName": "Engage",
+      "routerLink": "ui/pages/engage",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": false },
+      "accessPrivilege": ["scadmin", "scadvocate", "sysadmin"]
+    },
+    {
+      "btnName": "Metrics",
+      "routerLink": "ui/pages/metrics",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": false },
+      "accessPrivilege": ["scadmin", "scadvocate", "sysadmin"]
+    },
+    {
+      "btnName": "Moderate",
+      "routerLink": "ui/pages/moderate",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": false },
+      "accessPrivilege": ["scadmin", "sysadmin"]
+    },
+    {
+      "btnName": "Admin",
+      "routerLink": "ui/pages/admin",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": false },
+      "accessPrivilege": ["scadmin", "sysadmin"]
+    },
+    {
+      "btnName": "System",
+      "routerLink": "ui/pages/system",
+      "routerLinkActive": "active",
+      "routerLinkActiveOptions": { "exact": false },
+      "accessPrivilege": ["sysadmin"]
+    }
+  ]
+}

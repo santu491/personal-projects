@@ -1,0 +1,40 @@
+{
+  "contentNotFound": "Content not found",
+  "contentUploaded": "Content uploaded successfully",
+  "updateContent": "Update Content",
+  "exportJson": "Download / Export Content",
+  "choose": "Choose",
+  "download": "Download",
+  "close": "Close",
+  "uploadJson": "Upload JSON",
+  "uploadContent": "Upload Content",
+  "clear": "Clear",
+  "maxLength": 20,
+  "isRequired": "is required",
+  "contentArray": [
+    {
+      "key": "language",
+      "name": "Language",
+      "list": ["en", "es"],
+      "placeholder": "en, es..."
+    },
+
+    {
+      "key": "contentType",
+      "name": "Content Type",
+      "list": [],
+      "placeholder": "eg: public, generic..."
+    },
+    {
+      "key": "version",
+      "name": "Version",
+      "list": [],
+      "placeholder": "eg: 1.0.0..."
+    }
+  ],
+  "contentInfoTitle": "Bad and Sensitive Word Bank",
+  "searchTextPlaceHolder": "Search Bad / Sensitive Word",
+  "badWords": "Bad Words",
+  "sensitiveWords": "Sensitive Words",
+  "tryAnotherWord": "We couldn't find what you were looking for. Try another word."
+}

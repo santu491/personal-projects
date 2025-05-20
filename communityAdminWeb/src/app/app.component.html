@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="app-container">
+  <router-outlet>
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-elastic-dots" [fullScreen]="true">
+    </ngx-spinner>
+  </router-outlet>
+</div>
+<app-footer class="footer container" *ngIf="isLoggedIn"></app-footer>

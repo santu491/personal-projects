@@ -1,0 +1,21 @@
+@import '/src/app/pages/pages.component.scss';
+@import '../../admin/admin.component.scss';
+
+.article {
+    background-color: #fffeff;
+    padding: 1.5rem;
+    margin-bottom: 5px;
+    border: 1px solid #bebdbd;
+    box-shadow: 2px 3px 3px #e2dfdf;
+
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 0.5em;
+    }
+}
+
+.icon-holder {
+    display: flex;
+    place-content: space-evenly;
+}

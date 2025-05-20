@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="article-id">
+    <div class="field-container">
+      <mat-form-field>
+        <mat-label>Article ID</mat-label>
+        <input
+          name="hwArticleId"
+          placeholder="Enter Article Id"
+          matInput
+          [(ngModel)]="articleId"
+          [disabled]="articleData?.isEdit ?? false"
+        />
+      </mat-form-field>
+      <mat-error *ngIf="articleError">Invalid Article ID</mat-error>
+    </div>
+    <div class="btn-container">
+      <button
+        mat-stroked-button
+        (click)="getHWArticle()"
+        [disabled]="articleData?.isEdit"
+      >
+        Fetch Article
+      </button>
+    </div>
+  </div>
+  <!-- On Article Load -->
+  <div *ngIf="isArticleLoaded">
+    <div class="row">
+      <h3 class="heading">English</h3>
+      <div class="col">
+        <mat-form-field class="full-width">
+          <mat-label>Title</mat-label>
+          <input
+            name="enTitle"
+            placeholder="Enter Article Title"
+            class="title"
+            matInput
+            [(ngModel)]="articleData.en.title"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea
+            name="enDescription"
+            placeholder="Enter Article Description"
+            matInput
+            [(ngModel)]="articleData.en.description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="heading">Spanish</h3>
+      <div class="col">
+        <mat-form-field class="full-width">
+          <mat-label>Title</mat-label>
+          <input
+            name="esTitle"
+            placeholder="Enter Article Title in Spanish"
+            class="title"
+            matInput
+            [(ngModel)]="articleData.es.title"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea
+            name="esDescription"
+            placeholder="Enter Article Description in Spanish"
+            matInput
+            [(ngModel)]="articleData.es.description"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div
+      class="row"
+      *ngIf="articleData.en.thumbnail && articleData.en.thumbnail != ''"
+    >
+      <div class="thumbnail col">
+        <label>Thumbnail:</label>
+        <img [src]="articleData.en.thumbnail" [alt]="articleData.en.title" />
+      </div>
+      <div
+        class="thumbnail col"
+        *ngIf="articleData.en.video && articleData.en.video != ''"
+      >
+        <label>Video Link:</label>
+        <a [href]="articleData.en.video" target="_blank">{{
+          articleData.en.video
+        }}</a>
+      </div>
+    </div>
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    class="create-btn"
+    [disabled]="enableCreateArticle()"
+    (click)="createArticle()"
+  >
+    {{ articleData?.isEdit ? 'Update Article' : 'Create Article' }}
+  </button>
+</div>

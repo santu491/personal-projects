@@ -1,0 +1,23 @@
+{
+  "sidenavHeader": "Moderate Community",
+  "sidenavRouting": [
+    {
+      "btnName": "Add User",
+      "routerLink": "/ui/pages/moderate/add-user",
+      "matIcon": "mode_edit",
+      "routerLinkActive": "active"
+    },
+    {
+      "btnName": "View All Users",
+      "routerLink": "/ui/pages/moderate/view-user",
+      "matIcon": "list_alt",
+      "routerLinkActive": "active"
+    },
+    {
+      "btnName": "Word Bank",
+      "routerLink": "/ui/pages/moderate/word-bank",
+      "matIcon": "list_alt",
+      "routerLinkActive": "active"
+    }
+  ]
+}

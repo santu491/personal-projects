@@ -1,0 +1,28 @@
+@import '../../pages.component.scss';
+
+textarea {
+  resize: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.option-holder {
+  padding-top: 0.5em;
+
+  .option-title {
+    padding: 0.25em 1em;
+    background-color: #e3dbeb;
+    border-radius: 10px;
+  }
+}
+
+.left-break {
+  border-left: 1px solid #dfdbdb;
+}
+
+.label {
+  font-weight: 500;
+}

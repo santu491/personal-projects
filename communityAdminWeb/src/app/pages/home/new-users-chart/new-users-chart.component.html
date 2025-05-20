@@ -1,0 +1,14 @@
+<mat-card>
+  <canvas
+    *ngIf="isDataLoaded"
+    baseChart
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="true"
+  >
+  </canvas>
+  <div class="spinner" *ngIf="!isDataLoaded">
+    <img src="assets/gif/spinner.gif" alt="Spinner" />
+  </div>
+</mat-card>

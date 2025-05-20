@@ -1,0 +1,80 @@
+mat-toolbar {
+  background: linear-gradient(-90deg, rgb(116, 2, 223), rgb(252, 252, 252));
+  color: white;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 280px;
+  border-right: none;
+  background: linear-gradient(-180deg, rgb(116, 2, 223), rgb(252, 252, 252));
+  color: white;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100vh - 175px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  font-size: 2rem;
+  color: lightgray;
+  border-radius: 10px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 140px);
+
+  mat-sidenav-content {
+    overflow-y: hidden;
+  }
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  margin-bottom: 10px;
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.menu-button:hover {
+  background-color: white;
+  color: blueviolet;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+.black {
+  color: black;
+}
+
+.auto-zindex {
+  z-index: auto !important;
+}
+
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+
+.submenu.expanded {
+  transform: scaleY(1);
+}
+
+mat-tree {
+  background-color: transparent;
+}

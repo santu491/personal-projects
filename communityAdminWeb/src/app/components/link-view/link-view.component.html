@@ -1,0 +1,16 @@
+<div class="row link-holder">
+    <div class="col-6 text-container">
+      <a href="{{ linkContent.url }}" target="_blank">{{
+        linkContent.title
+      }}</a>
+      <p>{{linkContent.description}}</p>
+    </div>
+    <div class="col-6 image-container" *ngIf="linkContent.isImageUploaded; else imageLinkBlock">
+      <img src="{{linkContent.imageBase64}}" alt="{{linkContent.title}}" />
+    </div>
+    <ng-template #imageLinkBlock>
+        <div class="col-6 image-container">
+            <img src="{{linkContent.imageLink}}" alt="{{linkContent.title}}" />
+        </div>
+    </ng-template>
+  </div>

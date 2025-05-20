@@ -1,0 +1,48 @@
+@import '/src/app/pages/pages.component.scss';
+
+.list-item {
+    margin-left: -16px;
+}
+
+.deeplink-container {
+    position: relative;
+}
+
+.deeplink-container ::ng-deep .amml-menu-container {
+    background-color: #f4f4f4;
+    margin-top: 10px;
+}
+
+.deeplink-container ::ng-deep .amml-submenu ::ng-deep .amml-menu-container {
+    margin-top: 0px;
+    .label {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+.selected {
+    padding: 2px 15px;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+.deeplink {
+    background-color: #63a963;
+    color: white;
+    box-shadow: 2px 3px 2px #1b8f1b;
+}
+
+.community {
+    background-color: #b873b4;
+    color: white;
+    box-shadow: 2px 3px 2px #894085;
+}
+
+.spinner {
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 3%;
+}

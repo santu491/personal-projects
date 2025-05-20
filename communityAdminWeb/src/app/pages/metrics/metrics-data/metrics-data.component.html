@@ -1,0 +1,111 @@
+<div class="container" *ngIf="metricsData">
+    <div class="data-container">
+        <table>
+            <tr>
+                <td class="heading">Users Count</td>
+                <td class="heading"><strong>{{metricsData?.usersCount?.totalCount}}</strong></td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+            <tr *ngIf="!filterApplied">
+                <td class="pad-15"><strong>Commercial Users</strong> (Sydney Health):</td>
+                <td class="pad-15"><strong><em>{{metricsData?.usersCount?.commercialUsers}}</em></strong></td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+            <tr *ngIf="!filterApplied">
+                <td class="pad-15"><strong>Medicaid Users:</strong></td>
+                <td class="pad-15"><strong><em>{{medicaidTotalUsers}}</em></strong></td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+            <tr *ngFor="let market of medicaidMarkets" class="data-set">
+                <td>{{market.title}}</td>
+                <td>{{market.value}}</td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+            <tr *ngIf="!filterApplied">
+                <td class="pad-15"><strong>Medicare Users:</strong></td>
+                <td class="pad-15">0</td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="data-container page-break">
+        <div class="heading">User Count By Community</div>
+        <table>
+            <tr *ngFor="let community of usersPerCommunity" class="data-set">
+                <td>{{community.title}}</td>
+                <td>{{community.userCount}}</td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+        </table>
+        <div class="sub-heading">Users in Multiple Community</div>
+        <table>
+            <tr *ngFor="let communityCount of metricsData?.usersJoinedMoreThanOneCommunity" class="data-set">
+                <td>{{
+                    communityCount.numberOfCommunities == 0 ? 'No Community' :
+                        communityCount.numberOfCommunities == 1 ? '1 Community' :
+                        communityCount.numberOfCommunities + ' Communities'
+                }}</td>
+                <td>{{communityCount.userCount}}</td>
+                <td [ngClass]="filterApplied?'some-space':'space'"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="data-container">
+        <table>
+            <tr>
+                <td class="heading">Stories</td>
+                <td class="heading">{{metricsData?.storiesCount}}</td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngIf="metricsData?.publishedStoriesCount > 0">
+            <div class="data-container">
+                <table>
+                    <tr>
+                        <td class="heading">Published Stories</td>
+                        <td class="heading">{{metricsData?.publishedStoriesCount}}</td>
+                        <td [ngClass]="filterApplied?'more-space':'space'"></td>
+                    </tr>
+                </table>
+                <div class="sub-heading">Break Down by Community</div>
+                <table>
+                    <tr *ngFor="let community of storiesPerCommunity" class="data-set">
+                        <td class="col">{{community.title}}</td>
+                        <td class="col">{{community.storiesCount}}</td>
+                        <td [ngClass]="filterApplied?'more-space':'space'"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngIf="metricsData?.unPublishedStoriesCount > 0">
+            <div class="data-container">
+                <table>
+                    <tr>
+                        <td class="heading">Unpublished Stories</td>
+                        <td class="heading">{{metricsData?.unPublishedStoriesCount}}</td>
+                        <td [ngClass]="filterApplied?'more-space':'space'"></td>
+                    </tr>
+                </table>
+                <div class="sub-heading">Break Down by Community</div>
+                <table>
+                    <tr *ngFor="let community of unpublishedStoriesPerCommunity" class="data-set">
+                        <td class="col">{{community.title}}</td>
+                        <td class="col">{{community.storiesCount}}</td>
+                        <td [ngClass]="filterApplied?'more-space':'space'"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="data-container">
+        <table>
+            <tr>
+                <td class="heading">Push Notification Enabled Users</td>
+                <td class="heading">{{metricsData?.usersOptedForPn}}</td>
+                <td [ngClass]="filterApplied?'more-space':'space'"></td>
+            </tr>
+        </table>
+    </div>
+</div>

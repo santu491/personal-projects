@@ -1,0 +1,55 @@
+{
+  "APP_VERSION": "1.4.1",
+  "JWT": "ffc00da69b079d14d48ac95a633b1db2ab3a04740d37577ab9be0e1404cad7feffb3a532ea4b74a3f7e7066eb324a344",
+  "smtpSettings": {
+    "smtpAuthUser": "ab82e3538a3a1bde99cde03fd10cbdaa1f3dcff67628933db744f389dd78df1b85a9f8f6bc8536fcba3424322075595055ad9680467c183223b9049c06bc4cf5",
+    "smtpAuthValue": "2ede25c1b329bf38d0987c72037d285cac1a1d1052fcdbc560eaf732160cdd38",
+    "sendEmail": true,
+    "smtpPort": 587,
+    "service": "smtps",
+    "tlsVersion": "TLSv1.2",
+    "smtpServer": "smtp-us.ser.proofpoint.com",
+    "fromEmail": "noreply@carelon.com",
+    "fromEmailName": "Carelon",
+    "subject": "Carelon Behavioral Health mobile app: one-time authentication code."
+  },
+  "encryption": {
+    "algorithm": "aes-256-cbc",
+    "salt": "c4rel0nmOb!l@pp"
+  },
+  "logger": {
+    "console": true,
+    "level": "DEBUG"
+  },
+  "security": {
+    "SMTP_TLS": "SSLv3",
+    "maskedFields": [
+      "pdsw",
+      "clientId",
+      "access_token",
+      "dob",
+      "newPassword",
+      "cookie",
+      "Cookie",
+      "token",
+      "installationId",
+      "authorization",
+      "surveyId",
+      "UpdateExpression",
+      "ExpressionAttributeNames",
+      "ExpressionAttributeValues",
+      "ExpressionAttributeValues",
+      "Key",
+      "locale",
+      "deviceToken",
+      "badge"
+    ],
+    "encryptedFields": [
+      "iamguid",
+      "username",
+      "userName",
+      "cookie",
+      "TableName"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<div class="image-preview" [ngClass]="{ 'disable-click': disableClick }">
+  <label class="image-holder" *ngFor="let data of imageList; let i = index">
+    <input
+      type="radio"
+      name="imagePicked"
+      [(ngModel)]="imagePicked"
+      value="{{ data.image }}"
+      (change)="selectImage(i)"
+    />
+    <img
+      [src]="data.image"
+      [alt]="data.title + ' related images'"
+      [ngClass]="imageStyle"
+    />
+  </label>
+</div>

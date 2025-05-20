@@ -1,0 +1,99 @@
+<!-- Card View for Admin Profile -->
+<div mat-elevation-z8>
+    <mat-card class="profile-preview">
+        <div class="row align-ceter" *ngIf="adminUserDetails">
+            <!-- Avatar Photo -->
+            <div class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 avatar-view">
+                <img [src]="myProfileImage" alt="" class="profileImage" *ngIf="myProfileImage">
+                <div class="circle" *ngIf="profileInitials && !myProfileImage">
+                    <span class="initials">{{profileInitials}}</span>
+                </div>
+            </div>
+            <div class="col col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Display Name</mat-label>
+                                <input formControlName="displayName" matInput autocomplete="off"
+                                    value={{adminUserDetails.displayName}} [readonly]="true" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Display Title</mat-label>
+                                <input formControlName="displayTitle" matInput required autocomplete="off"
+                                    value={{adminUserDetails.displayTitle}} [readonly]="true" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>First Name</mat-label>
+                                <input formControlName="firstName" matInput required autocomplete="off"
+                                    value={{adminUserDetails.firstName}} [readonly]="true" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Last Name</mat-label>
+                                <input formControlName="lastName" matInput autocomplete="off" [readonly]="true"
+                                    value={{adminUserDetails.lastName}} [readonly]="true" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+                            *ngIf="!isAdvocate">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Communities</mat-label>
+                                <input formControlName="scAdminCommunity" matInput required autocomplete="off"
+                                    placeholder="All Communities"
+                                    value="All Communities" [readonly]="true"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+                            *ngIf="isAdvocate">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Communities</mat-label>
+                                <input formControlName="scAdminCommunity" matInput required autocomplete="off" 
+                                    placeholder="Communities" value={{myCommunityName}} [readonly]="true"/>
+                            </mat-form-field>
+                        </div>
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Location</mat-label>
+                                <input formControlName="location" matInput autocomplete="off"
+                                    value={{adminUserDetails.location}} [readonly]="true" />
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>About Me</mat-label>
+                                <textarea formControlName="aboutMe" matInput autocomplete="off"
+                                    value={{adminUserDetails.aboutMe}} [readonly]="true"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Interests</mat-label>
+                                <textarea formControlName="interests" matInput autocomplete="off"
+                                    value={{adminUserDetails.interests}} [readonly]="true"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </div>
+        </div>
+        <!-- No Profile View -->
+        <div *ngIf="!adminUserDetails" class="full-width no-profile-view">
+            <p class="error">{{error}}</p>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,107 @@
+.form-container {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 32px;
+  border-radius: 10px;
+  overflow-y: auto;
+  height: calc(100vh - 175px);
+  border: 1px solid gray;
+}
+
+.row {
+  --bs-gutter-x: 0 --bs-gutter-y: 0;
+}
+
+.table-width {
+  width: 90%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+th {
+  color: #000000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.center-alignment {
+  align-items: center;
+}
+
+.main-title {
+  align-items: center;
+  font-weight: bolder;
+  margin-left: 16px;
+  text-align: center;
+}
+
+.main-title-container {
+  padding-top: 18px;
+  padding-left: 4px;
+  // height: 64px;
+  overflow: hidden;
+  width: 100%;
+  background-color: purple;
+  background-image: linear-gradient(plum, white);
+}
+
+
+.refresh-icon {
+  color: blue;
+  cursor: pointer;
+}
+
+.bolder-txt {
+  font-weight: bolder;
+}
+
+.m-top-10 {
+  margin-top: 10px;
+}
+
+.m-top-20 {
+  margin-top: 20px;
+}
+
+.m-top-40 {
+  margin-top: 40px;
+}
+
+.height-575 {
+  height: 575px;
+}
+
+.bottom-15 {
+  margin-bottom: 15px;
+}
+
+.height-unset {
+  height: unset;
+}
+
+.mat-form-field {
+  padding-left: 5px;
+}
+
+.refresh {
+  margin-left: 25px;
+  margin-top: -15px;
+}
+
+.table-scroll {
+  height: 675px;
+  overflow: auto;
+}
+
+.tool {
+  background-color: whitesmoke;
+}

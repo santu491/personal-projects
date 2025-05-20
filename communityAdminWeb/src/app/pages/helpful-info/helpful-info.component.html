@@ -1,0 +1,97 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: sectionModalDisplay }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2 class="heading">Edit Section Data</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <app-lib-section-detail
+          [sectionMode]="sectionMode"
+          [sectionData]="sectionEditData"
+          (submitData)="onEditSection($event)"
+        ></app-lib-section-detail>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page view -->
+<p class="community-holder">{{ title }} Community</p>
+<div class="form-container view mat-elevation-z4">
+  <div class="row">
+    <div class="col-4 section-container">
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let section of enSections; let i = index" cdkDrag>
+          <div class="custom-placeholder" *cdkDragPlaceholder></div>
+          <div
+            class="section-holder"
+            (click)="showSectionData(i)"
+            [ngClass]="{ active: selectedSectionIndex === i }"
+          >
+            <div class="icon-holder">
+              <mat-icon color="primary" (click)="editSection(i)">edit</mat-icon>
+              <mat-icon color="warn" (click)="deleteSection(i)"
+                >delete_outline</mat-icon
+              >
+            </div>
+            <h3>{{ section?.title }}</h3>
+            <p>
+              {{
+                section?.description.length > limits.articleDescription
+                  ? (section?.description
+                      | slice : 0 : limits.articleDescription) + '...'
+                  : section.description
+              }}
+            </p>
+            <div *ngIf="isCommonSectionPresent(section?.content)">
+              <h5 class="note-data">
+                Note: This section contains resources that are used across
+                communities. Editing the articles under this, will reflect the
+                same under all the communities.
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- When No data in Community Library -->
+      <div *ngIf="enSections.length === 0" class="error-msg">
+        Click on Add Section to Add Library Data
+      </div>
+
+      <!-- Common Actions -->
+      <div class="btn-container">
+        <button
+          *ngIf="isSectionOrderModified"
+          mat-stroked-button
+          color="primary"
+          (click)="publishChanges()"
+        >
+          Publish Changes
+        </button>
+        <button mat-raised-button color="primary" (click)="addSection()">
+          Add Section
+        </button>
+      </div>
+    </div>
+    <div class="col-8 section-content-container">
+      <app-section-content
+        *ngIf="subSectionData?.en"
+        [subSections]="subSectionData"
+        [communityId]="communityId"
+        (onEditSubSection)="editSubSection($event)"
+      ></app-section-content>
+    </div>
+  </div>
+</div>

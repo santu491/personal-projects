@@ -1,0 +1,14 @@
+<div *ngIf="isDataLoaded">
+  <div class="total-count board">
+    <p class="count">{{ countData.totalUsers }}</p>
+    <p class="description">users</p>
+  </div>
+  <div class="month-login board">
+    <p class="count">{{ countData.monthLogin }}</p>
+    <p class="description">users logged in this month</p>
+  </div>
+  <div class="login-today board">
+    <p class="count">{{ countData.todayLogin }}</p>
+    <p class="description">users logged in today</p>
+  </div>
+</div>

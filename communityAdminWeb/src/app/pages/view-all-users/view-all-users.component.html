@@ -1,0 +1,51 @@
+<div class="form-container" mat-elevation-z8>
+    <strong class="user-count full-width">
+        {{viewAllUser.totalUsersLabel}}: {{allProfileRes?.length || 0}}
+    </strong>
+    <mat-divider></mat-divider>
+
+    <mat-list role="list" class="list">
+        <!-- No Users View -->
+        <div *ngIf="!allProfileRes" class="full-width no-users-view">
+            <p>{{viewAllUser.noUserLine1}}</p>
+            <p>{{viewAllUser.noUserLine2}}</p>
+        </div>
+
+        <div *ngIf="allProfileRes">
+            <div *ngFor="let item of allProfileRes">
+                <div class="row">
+                    <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 width75percent">
+                        <mat-list-item role="listitem" color="primary">
+                            {{item.displayName || item.firstName}}, {{ item.role === roles[0].role ? roles[0].name :
+                            item.role ===
+                            roles[1].role ? roles[1].name : item.role === roles[2].role ? roles[2].name : ""}}
+                        </mat-list-item>
+
+                        <p class="d-flex user-details">
+                            <strong>{{item.username?.toUpperCase()}}</strong>
+                            <span class="material-icons dot-icon" *ngIf="item.communityName">fiber_manual_record</span>
+                            <strong *ngIf="item.communityName">{{item.communityName}}</strong>
+                            <strong
+                                *ngIf="item.communities?.length > 1 &&  item.communityName && item.communityName !== viewAllUser.allCommunitiesLabel"
+                                class="additional-selection">
+                                (+{{item.communities?.length - 1}}
+                                {{item.communities?.length === 2 ? 'other' : 'others'}})
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="item-action-view">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 margin-right-16">
+                            <mat-icon (click)="removeUser(item.id)" color="warn"
+                                matTooltip="{{viewAllUser.deleteUserToolTip}}">delete</mat-icon>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 margin-horizon-16">
+                            <mat-icon (click)="editUserDetails(item)" color="primary"
+                                matTooltip="{{viewAllUser.editUserToolTip}}">edit</mat-icon>
+                        </div>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+            </div>
+        </div>
+    </mat-list>
+</div>

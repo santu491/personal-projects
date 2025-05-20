@@ -1,0 +1,69 @@
+<div [formGroup]="postContent" class="pt-2">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>{{ postsModule.en.title }}</mat-label>
+        <input
+          formControlName="title"
+          matInput
+          [placeholder]="postsModule.en.title"
+          maxlength="{{ postsModule.charCount80 }}"
+          required
+          autocomplete="off"
+        />
+
+        <mat-icon class="emoji-icon" color="primary" (click)="onToggleEmoji()">
+          {{ emoji ? 'close' : 'mood' }}
+        </mat-icon>
+
+        <span class="pull-right label label-default count-message">
+          {{ title?.value?.length ?? 0 }} /
+          {{ postsModule.charCount80 }}
+        </span>
+        <mat-error *ngIf="title && title.invalid && title.touched">
+          {{ postsModule.en.titleEmpty }}
+        </mat-error>
+      </mat-form-field>
+      <!-- Custom Error - Content Moderation -->
+      <div *ngIf="invalidField?.title" class="error-text">
+        {{ postsModule.en.contentTextError }}
+      </div>
+      <!-- Emojis -->
+      <div class="emoji-mart-styles">
+        <emoji-mart
+          *ngIf="emoji"
+          title="Pick your emoji…"
+          emoji="point_up"
+          (emojiClick)="onSelectEmoji($event, postsModule.charCount80)"
+          [exclude]="['flags']"
+          [emojisToShowFilter]="getEmojis"
+        ></emoji-mart>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <div class="row">
+    <div class="col-md-12">
+      <mat-label
+        class="body-label"
+        [style.color]="body && body.invalid && body.touched ? 'red' : 'black'"
+        >Body *</mat-label
+      >
+      <angular-editor
+        [placeholder]="'Enter body text here...'"
+        [required]="true"
+        [config]="editorConfig"
+        formControlName="body"
+      ></angular-editor>
+
+      <mat-error *ngIf="body && body.invalid && body.touched">
+        {{ postsModule.en.bodyEmpty }}
+      </mat-error>
+      <!-- Custom Error - Content Moderation -->
+      <mat-error *ngIf="invalidField?.body">
+        {{ postsModule.en.contentTextError }}
+      </mat-error>
+    </div>
+  </div>
+</div>

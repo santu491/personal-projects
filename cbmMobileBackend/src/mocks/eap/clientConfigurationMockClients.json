@@ -1,0 +1,58 @@
+{
+  "data": {
+    "data": {
+      "clientList": {
+        "items": [
+          {
+            "type": "ClientModel",
+            "path": "/content/dam/careloneap/content-fragments/clients/company-demo",
+            "enable": true,
+            "clientName": "Company Demo",
+            "clientUri": "company-demo",
+            "customClient": false,
+            "brandLogo": {},
+            "clientLogo": null,
+            "eapId": null,
+            "eapSupportText": "EAP support :",
+            "eapNumber": "888-888-8888",
+            "otherEapNumbers": null
+          },
+          {
+            "type": "ClientModel",
+            "path": "/content/dam/careloneap/content-fragments/clients/bcbsnc",
+            "enable": true,
+            "clientName": "Blue Cross Blue Shield of North Carolina",
+            "clientUri": "bcbsnc",
+            "customClient": true,
+            "brandLogo": {},
+            "clientLogo": {
+              "url": "https://qa.aem.anthem.com/content/dam/careloneap/logos/minimum-clients/Resized_BCBS_NC.png"
+            },
+            "eapId": null,
+            "eapSupportText": "EAP support call/text :",
+            "eapNumber": "877-764-5643",
+            "otherEapNumbers": []
+          },
+          {
+            "type": "ClientModel",
+            "path": "/content/dam/careloneap/content-fragments/clients/myeaphelper",
+            "enable": true,
+            "clientName": "Deseret Mutual Benefits Administrations (DMBA)+",
+            "clientUri": "myeaphelper",
+            "customClient": true,
+            "brandLogo": {},
+            "clientLogo": {
+              "url": "https://qa.aem.anthem.com/content/dam/careloneap/logos/myeaphelper/DMBA_horz.png"
+            },
+            "eapId": null,
+            "eapSupportText": null,
+            "eapNumber": "844-280-9629",
+            "otherEapNumbers": [
+              "{\"eapNumberType\":\"Call or text : \",\"otherEapNumber\":\"844-280-9629\"}"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

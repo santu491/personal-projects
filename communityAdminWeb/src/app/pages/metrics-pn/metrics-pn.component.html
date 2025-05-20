@@ -1,0 +1,66 @@
+<div class="main-container">
+    <div class="metrics-container">
+        <app-community-filter (selectedCommunities)="onCommunitySelect($event)"></app-community-filter>
+        <div class="flex justify-content-center">
+            <mat-card id="metrics-data">
+                <h2>{{pnMetricsLiterals.heading}}</h2>
+                <h3 *ngIf="allUsersSelected" class="sub-heading">{{pnMetricsLiterals.allUsersLabel}}</h3>
+                <h3 *ngIf="!allUsersSelected" class="sub-heading">{{filter.text}}
+                    <span *ngIf="filter.communityText !== ''"><strong>{{filter.communityText}}</strong></span>
+                </h3>
+                <hr />
+                <div class="metrics-table justify-content-center">
+                    <table aria-label="Push Notification Metrics Data">
+                        <tr>
+                            <th scope="rowgroup">{{pnMetricsLiterals.overallStatus}}</th>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.totalOptInUsers}}</td>
+                            <td>{{ metricsData?.activeOptInUsers ?? 0 }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="rowgroup">
+                                {{pnMetricsLiterals.bySubscription}}
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.commentNotification}}</td>
+                            <td>{{ metricsData?.subscription?.commentNotification ?? 0}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.commentReaction}}</td>
+                            <td>{{ metricsData?.subscription?.commentReactionNotification ?? 0}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.communityActivity}}</td>
+                            <td>{{ metricsData?.subscription?.communityNotification ?? 0}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.reactionNotification}}</td>
+                            <td>{{ metricsData?.subscription?.reactionNotification ?? 0}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.repliedNotification}}</td>
+                            <td>{{ metricsData?.subscription?.replyNotification ?? 0}}</td>
+                        </tr>
+                        <tr>
+                            <td>{{pnMetricsLiterals.maternityNotification}}</td>
+                            <td>{{ metricsData?.subscription?.maternityNotification ?? 0}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </mat-card>
+            <div class="btn-container">
+                <button mat-raised-button color="primary" (click)="downloadPdf()">
+                    <span class="btn-label pad-r-8"><em class="fa fa-download"></em></span>
+                    {{pnMetricsLiterals.download}}
+                </button>
+                <button mat-raised-button color="accent" (click)="printMetrics()">
+                    <span class="btn-label pad-r-8"><em class="fa fa-print"></em></span>
+                    {{pnMetricsLiterals.print}}
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>

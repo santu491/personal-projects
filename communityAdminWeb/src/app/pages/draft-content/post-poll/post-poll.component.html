@@ -1,0 +1,113 @@
+<div>
+  <mat-label><strong>Poll Question</strong></mat-label>
+  <div class="row mt-1 mb-2 mt-1">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-form-field class="full-width">
+        <mat-label>In English</mat-label>
+        <input
+          [(ngModel)]="enQuestion"
+          name="question_en"
+          [maxLength]="postsModule.charCount140"
+          [readonly]="pollData && !pollData.isEditAllowed"
+          matInput
+          required
+          placeholder="In English"
+          (blur)="submitPoll()"
+        />
+        <mat-hint>
+          {{ enQuestion.length }}/{{ postsModule.charCount140 }}
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-form-field class="full-width" *ngIf="isSpanishEnabled">
+        <mat-label>In Spanish</mat-label>
+        <input
+          [(ngModel)]="esQuestion"
+          name="question_es"
+          [maxLength]="postsModule.charCount140"
+          [readonly]="pollData && !pollData.isEditAllowed"
+          matInput
+          placeholder="In Spanish"
+          (blur)="submitPoll()"
+        />
+        <mat-hint>
+          {{ esQuestion.length }}/{{ postsModule.charCount140 }}
+        </mat-hint>
+      </mat-form-field>
+      <mat-error *ngIf="spanishError"> Enter Question in spanish </mat-error>
+    </div>
+  </div>
+  <mat-label class="mb-2"><strong>Poll Options</strong></mat-label>
+  <div class="row" *ngFor="let option of pollData?.en?.options; let i = index">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-form-field class="full-width">
+        <mat-label>Option {{ i + 1 }}(English)</mat-label>
+        <input
+          #enOption
+          matInput
+          [name]="'option' + i"
+          [maxLength]="postsModule.charCount60"
+          [disabled]="pollData && !pollData.isEditAllowed"
+          [value]="option.text"
+          (blur)="setOption(i, 'en', $event)"
+        />
+        <mat-hint>
+          {{ enOption.value.length }}/{{ postsModule.charCount60 }}
+        </mat-hint>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-form-field class="full-width" *ngIf="isSpanishEnabled">
+        <mat-label>Option {{ i + 1 }}(Spanish)</mat-label>
+        <input
+          #esOption
+          matInput
+          [name]="'option_es' + i"
+          [maxLength]="postsModule.charCount60"
+          [disabled]="pollData && !pollData.isEditAllowed"
+          [value]="getSpanishOptionText(i)"
+          (blur)="setOption(i, 'es', $event)"
+        />
+        <mat-hint>
+          {{ esOption.value.length }}/{{ postsModule.charCount60 }}
+        </mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <a
+      (click)="isAddOptionDisabled() || addOption()"
+      class="button-link"
+      [ngClass]="{ 'disabled-link': isAddOptionDisabled() }"
+    >
+      + Option
+    </a>
+  </div>
+  <div class="row mt-2">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-label
+        ><strong>{{ postsModule.setPollEndDate }}</strong></mat-label
+      >
+      <mat-form-field class="ms-2">
+        <mat-select
+          [(value)]="pollEndDate"
+          [disabled]="pollData && !pollData.isEditAllowed"
+          (valueChange)="selectEndDate($event)"
+        >
+          <mat-option *ngFor="let day of days" [value]="day.value">
+            {{ day.key }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <mat-error *ngIf="optionError"
+        >Please check the options provided</mat-error
+      >
+      <mat-error *ngIf="pollData && !pollData.isEditAllowed"
+        >Poll cannot be edited</mat-error
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.image-preview {
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  padding: 1rem;
+  background-color: #37475a;
+  border: 2px solid #000000;
+
+  .image-holder {
+    text-align: center;
+    scroll-snap-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+    cursor: pointer;
+  }
+}
+
+.disable-click {
+  pointer-events: none;
+  opacity: 0.5;
+  overflow-x: hidden;
+}
+
+.icon {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.regular {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type='radio']:checked + img {
+  outline: 2px solid rgb(68, 68, 253);
+}

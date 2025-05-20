@@ -1,0 +1,39 @@
+@import '/src/app/pages/pages.component.scss';
+
+.article-view {
+  padding: 1rem 2rem;
+  margin-bottom: 5px;
+}
+
+.article-modal {
+  max-width: 80%;
+}
+
+.btn-container {
+  padding: 1rem;
+  text-align: center;
+
+  button {
+    margin-right: 1em;
+  }
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #edeaea;
+  box-shadow: 0 2px 3px -3px #dbdada, 0 5px 7px 1px #cac8c8,
+    0 3px 10px 1px #c1c1c1;
+  min-height: 80px;
+}
+
+.cdk-drag-placeholder {
+  background: #7402df;
+  border: dotted 2px #4b048e;
+  min-height: 80px;
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

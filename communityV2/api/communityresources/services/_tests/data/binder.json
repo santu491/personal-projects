@@ -1,0 +1,389 @@
+{
+  "success": {
+    "userId": "60646605a450020007eae236",
+    "binderStories": [
+      {
+        "storyId": "6188e1d94dd042001c6151a1",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Parenting",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "something new",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      },
+      {
+        "storyId": "62d91caef1f7370023f4716b",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Cancer",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "21",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      }
+    ],
+    "binderArticles": [
+      {
+        "articleId": "acj2976",
+        "createdDate": "2021-08-17T10:14:37.278Z",
+        "articleTitle": "How is anal cancer treated? ",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/acj2976",
+        "articleThumbnail": ""
+      },
+      {
+        "articleId": "5ff33bb977b01e2046c36a14",
+        "createdDate": "2021-08-25T07:29:11.779Z",
+        "articleTitle": "Toileting and Bathroom Care",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/5ff33bb977b01e2046c36a14",
+        "articleThumbnail": ""
+      }
+    ],
+    "binderResources": [
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0",
+        "resourceCategory": "disease management",
+        "resourceTitle": "Home Health ",
+        "providerName": "Random",
+        "createdDate": "2021-08-23T11:04:43.149Z"
+      },
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0YgICArODWhwkM",
+        "resourceCategory": "emergency food",
+        "resourceTitle": "The Food Resource Network Federation",
+        "providerName": "The Food Resource Network Federation",
+        "createdDate": "2021-08-25T12:02:16.062Z"
+      }
+    ],
+    "binderPosts": [
+      {
+        "postId": "624fe23cb0877b401745361b",
+        "publishedAt": "2022-04-08T07:20:28.147Z",
+        "communities": ["6214e8959aa982c0d09b40f5"],
+        "title": {
+          "en": "title",
+          "es": ""
+        },
+        "author": {
+          "firstName": "Ananya",
+          "displayName": "",
+          "profileImage": "",
+          "role": "scadmin",
+          "displayTitle": "Sydney Community",
+          "id": "622b417fb3add3c1b5cb1c84"
+        }
+      }
+    ],
+    "id": "61164db9bf4869001cdcb31c"
+  },
+  "binderWithoutPost": {
+    "userId": "60646605a450020007eae236",
+    "binderStories": [
+      {
+        "storyId": "6188e1d94dd042001c6151a1",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Parenting",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "something new",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      }
+    ],
+    "binderArticles": [
+      {
+        "articleId": "acj2976",
+        "createdDate": "2021-08-17T10:14:37.278Z",
+        "articleTitle": "How is anal cancer treated? ",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/acj2976",
+        "articleThumbnail": ""
+      },
+      {
+        "articleId": "5ff33bb977b01e2046c36a14",
+        "createdDate": "2021-08-25T07:29:11.779Z",
+        "articleTitle": "Toileting and Bathroom Care",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/5ff33bb977b01e2046c36a14",
+        "articleThumbnail": ""
+      }
+    ],
+    "binderResources": [
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0",
+        "resourceCategory": "disease management",
+        "resourceTitle": "Home Health ",
+        "providerName": "Random",
+        "createdDate": "2021-08-23T11:04:43.149Z"
+      },
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0YgICArODWhwkM",
+        "resourceCategory": "emergency food",
+        "resourceTitle": "The Food Resource Network Federation",
+        "providerName": "The Food Resource Network Federation",
+        "createdDate": "2021-08-25T12:02:16.062Z"
+      }
+    ],
+    "id": "61164db9bf4869001cdcb31c"
+  },
+  "binderWithoutStories": {
+    "userId": "60646605a450020007eae236",
+    "binderArticles": [
+      {
+        "articleId": "acj2976",
+        "createdDate": "2021-08-17T10:14:37.278Z",
+        "articleTitle": "How is anal cancer treated? ",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/acj2976",
+        "articleThumbnail": ""
+      },
+      {
+        "articleId": "5ff33bb977b01e2046c36a14",
+        "createdDate": "2021-08-25T07:29:11.779Z",
+        "articleTitle": "Toileting and Bathroom Care",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/5ff33bb977b01e2046c36a14",
+        "articleThumbnail": ""
+      }
+    ],
+    "binderResources": [
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0",
+        "resourceCategory": "disease management",
+        "resourceTitle": "Home Health ",
+        "providerName": "Random",
+        "createdDate": "2021-08-23T11:04:43.149Z"
+      },
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0YgICArODWhwkM",
+        "resourceCategory": "emergency food",
+        "resourceTitle": "The Food Resource Network Federation",
+        "providerName": "The Food Resource Network Federation",
+        "createdDate": "2021-08-25T12:02:16.062Z"
+      }
+    ],
+    "binderPosts": [
+      {
+        "postId": "624fe23cb0877b401745361b",
+        "publishedAt": "2022-04-08T07:20:28.147Z",
+        "communities": ["6214e8959aa982c0d09b40f5"],
+        "title": {
+          "en": "title",
+          "es": ""
+        },
+        "author": {
+          "firstName": "Ananya",
+          "displayName": "",
+          "profileImage": "",
+          "role": "scadmin",
+          "displayTitle": "Sydney Community",
+          "id": "622b417fb3add3c1b5cb1c84"
+        }
+      }
+    ],
+    "id": "61164db9bf4869001cdcb31c"
+  },
+  "newBinder": {
+    "_id": "60646605a452220007eae236",
+    "userId": "60646605a450020007eae236",
+    "binderStories": [],
+    "binderArticles": [],
+    "binderResources": [],
+    "binderPosts": []
+  },
+  "storyData": {
+    "data": {
+      "value": {
+        "id": "62d91caef1f7370023f4716b",
+        "authorId": "621f8e9c9de67400165a0e7b",
+        "featuredQuote": "This is a fresh new parenting story with data",
+        "answer": [
+          {
+            "id": "62d91caef1f7370023f47166",
+            "promptId": "60e2e72a7c37b43a668a32fa",
+            "question": "How many children do you have? How old are they?",
+            "sensitiveContentText": null,
+            "response": "I can create many",
+            "order": 0,
+            "type": "PromptQuestion",
+            "createdDate": "2022-07-21T09:30:22.136Z",
+            "updatedDate": "2022-07-21T09:30:22.136Z"
+          },
+          {
+            "id": "62d91caef1f7370023f47168",
+            "promptId": "60e2e72a7c37b43a668a32fb",
+            "question": "What's your top parenting concern today?",
+            "sensitiveContentText": null,
+            "response": "I was talking about story\nDo we always do that just because we can?",
+            "order": 0,
+            "type": "PromptQuestion",
+            "createdDate": "2022-07-21T09:30:22.136Z",
+            "updatedDate": "2022-07-21T09:30:22.136Z"
+          },
+          {
+            "id": "62d91caef1f7370023f4716a",
+            "promptId": "60e2e72a7c37b43a668a32fd",
+            "question": "If you could go back in time, what would you do differently?",
+            "sensitiveContentText": null,
+            "response": "We should care about all things",
+            "order": 0,
+            "type": "PromptQuestion",
+            "createdDate": "2022-07-21T09:30:22.136Z",
+            "updatedDate": "2022-07-21T09:30:22.136Z"
+          }
+        ],
+        "communityId": "60e2e7277c37b43a668a32f2",
+        "storyText": "Placeholder story text",
+        "authorAgeWhenStoryBegan": 1,
+        "relation": "self",
+        "displayName": "All Might",
+        "relationAgeWhenDiagnosed": 1,
+        "allowComments": true,
+        "createdDate": "2022-07-21T09:30:22.136Z",
+        "updatedDate": "2022-07-21T09:30:32.773Z",
+        "published": true,
+        "flagged": true,
+        "removed": false,
+        "hasStoryBeenPublishedOnce": true,
+        "reaction": {},
+        "comments": [],
+        "author": {
+          "firstName": "Test",
+          "displayName": "Unit"
+        }
+      }
+    }
+  },
+  "binderWithoutArticle": {
+    "userId": "60646605a450020007eae236",
+    "binderStories": [
+      {
+        "storyId": "6188e1d94dd042001c6151a1",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Parenting",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "something new",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      },
+      {
+        "storyId": "62d91caef1f7370023f4716b",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Cancer",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "21",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      }
+    ],
+    "binderResources": [
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0",
+        "resourceCategory": "disease management",
+        "resourceTitle": "Home Health ",
+        "providerName": "Random",
+        "createdDate": "2021-08-23T11:04:43.149Z"
+      },
+      {
+        "resourceId": "ahJzfnNlYXJjaGJlcnRoYS1xYTFyFAsSB1Byb2dyYW0YgICArODWhwkM",
+        "resourceCategory": "emergency food",
+        "resourceTitle": "The Food Resource Network Federation",
+        "providerName": "The Food Resource Network Federation",
+        "createdDate": "2021-08-25T12:02:16.062Z"
+      }
+    ],
+    "binderPosts": [
+      {
+        "postId": "624fe23cb0877b401745361b",
+        "publishedAt": "2022-04-08T07:20:28.147Z",
+        "communities": ["6214e8959aa982c0d09b40f5"],
+        "title": {
+          "en": "title",
+          "es": ""
+        },
+        "author": {
+          "firstName": "Ananya",
+          "displayName": "",
+          "profileImage": "",
+          "role": "scadmin",
+          "displayTitle": "Sydney Community",
+          "id": "622b417fb3add3c1b5cb1c84"
+        }
+      }
+    ],
+    "id": "61164db9bf4869001cdcb31c"
+  },
+  "binderWithoutResources": {
+    "userId": "60646605a450020007eae236",
+    "binderStories": [
+      {
+        "storyId": "6188e1d94dd042001c6151a1",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Parenting",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "something new",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      },
+      {
+        "storyId": "62d91caef1f7370023f4716b",
+        "createdDate": "2021-11-08T11:30:18.570Z",
+        "profilePicture": "https://sit.api.sydney-community.com/v2/users/profileImageString/61796cad30cd04002b54e39e",
+        "firstName": "GLENN",
+        "communityTitle": "Cancer",
+        "displayName": "Eloonn Muskk",
+        "authorAgeWhenStoryBegan": 60,
+        "featuredQuote": "21",
+        "relation": "Grandparent",
+        "relationAgeWhenDiagnosed": 55
+      }
+    ],
+    "binderArticles": [
+      {
+        "articleId": "acj2976",
+        "createdDate": "2021-08-17T10:14:37.278Z",
+        "articleTitle": "How is anal cancer treated? ",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/acj2976",
+        "articleThumbnail": ""
+      },
+      {
+        "articleId": "5ff33bb977b01e2046c36a14",
+        "createdDate": "2021-08-25T07:29:11.779Z",
+        "articleTitle": "Toileting and Bathroom Care",
+        "articleLink": "/v1/api/HealthWise/ArticleTopic/5ff33bb977b01e2046c36a14",
+        "articleThumbnail": ""
+      }
+    ],
+    "binderPosts": [
+      {
+        "postId": "624fe23cb0877b401745361b",
+        "publishedAt": "2022-04-08T07:20:28.147Z",
+        "communities": ["6214e8959aa982c0d09b40f5"],
+        "title": {
+          "en": "title",
+          "es": ""
+        },
+        "author": {
+          "firstName": "Ananya",
+          "displayName": "",
+          "profileImage": "",
+          "role": "scadmin",
+          "displayTitle": "Sydney Community",
+          "id": "622b417fb3add3c1b5cb1c84"
+        }
+      }
+    ],
+    "id": "61164db9bf4869001cdcb31c"
+  }
+}

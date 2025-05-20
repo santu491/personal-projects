@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "src/swagger.json"
+  ],
+  "ext": "js,ts,json"
+}

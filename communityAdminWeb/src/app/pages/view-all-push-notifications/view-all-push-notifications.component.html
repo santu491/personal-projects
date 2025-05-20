@@ -1,0 +1,302 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: modalDisplay }"
+  data-backdrop="true"
+  #storyModal
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h1>Edit Push Notification</h1>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-schedule-pn
+          [editData]="editData"
+          (editResult)="handleEditResult($event)"
+        ></app-schedule-pn>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: viewPNModalDispaly }"
+  data-backdrop="true"
+>
+  <div class="pn-view-modal-container">
+    <div class="pn-view-modal">
+      <div class="close-button">
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+
+      <div class="view-table">
+        <table>
+          <caption></caption>
+          <tr>
+            <th>S.No</th>
+            <th>Attributes</th>
+            <th>Details</th>
+          </tr>
+          <tr *ngFor="let item of selectedViewPN; let i = index">
+            <td style="width: 80px; text-align: center">{{ i + 1 }}</td>
+            <td>{{ item?.key }}</td>
+            <td *ngIf="item.key !== 'Publish date'; else showDate">
+              {{ item.value }}
+            </td>
+            <ng-template #showDate>
+              <td>{{ item.value | date: "medium" }}</td>
+            </ng-template>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="form-container view">
+  <form [formGroup]="formFilter">
+    <div class="row">
+      <mat-form-field appearance="outline" class="col-md-6">
+        <mat-label>{{ viewAllPNModule.chooseAudienceLabel }}</mat-label>
+        <mat-select
+          multiple
+          formControlName="communities"
+          class="mr-3"
+          required
+        >
+          <mat-select-trigger
+            >{{ selectedCommunity }}
+            <span
+              *ngIf="
+                formControls.communities.value.length > 1 &&
+                selectedCommunity !== viewAllPNModule.allCommunities
+              "
+              >(+{{ formControls.communities.value.length - 1 }}
+              {{
+                formControls.communities.value.length > 2 ? "others" : "other"
+              }})</span
+            ></mat-select-trigger
+          >
+          <mat-option #allSelected (click)="toggleAllSelection()" [value]="0">
+            Select All</mat-option
+          >
+          <mat-option
+            *ngFor="let community of communityList"
+            [value]="community.id"
+            (click)="singleSelectAssignedCommunity()"
+            >{{ community.title }}</mat-option
+          >
+          <mat-option
+            [value]="viewAllPNModule.noCommunity"
+            #noCommunity
+            *ngIf="isAdvocateAction()"
+            (click)="singleSelectAssignedCommunity()"
+            >{{ viewAllPNModule.allUsers }}</mat-option
+          >
+        </mat-select>
+        <mat-error *ngIf="formControls.communities.invalid"
+          >Select atleast one option</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-md-6">
+        <mat-label>Choose Status</mat-label>
+        <mat-select required formControlName="pnFilters">
+          <mat-option
+            value="{{ item.value }}"
+            *ngFor="let item of filters"
+            (click)="handleStatusFilter()"
+            >{{ item.name }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <mat-table [dataSource]="dataSource" matSort>
+        <ng-container matColumnDef="colorCode">
+          <mat-header-cell
+            *matHeaderCellDef
+            class="color-code"
+          ></mat-header-cell>
+          <mat-cell
+            *matCellDef="let item"
+            [ngStyle]="{ 'background-color': colorCode(item.data) }"
+          >
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="index" class="index-width">
+          <mat-header-cell *matHeaderCellDef ngClass="index-width"
+            >S.No.</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item; let i = index" class="index-text">
+            {{ paginator.pageIndex * pageSize + i + 1 }}</mat-cell
+          >
+        </ng-container>
+
+        <ng-container matColumnDef="author">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Author</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">
+            {{
+              !!item.data.author.displayName
+                ? item.data.author.displayName
+                : item.data.author.firstName
+            }}
+          </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Title</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{ item?.data?.title }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="body">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Body</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item"> {{ item?.data?.body }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="audience">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Target Audience</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{
+            targetAudience(item.data)
+          }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <mat-header-cell *matHeaderCellDef mat-sort-header="sendOn"
+            ><span>Publish Date</span></mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{
+            item?.data?.sendOn | date: "medium"
+          }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="deepLink">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >DeepLink</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{
+            item?.data?.deepLink?.label
+          }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="community">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Community</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{
+            getCommunitiesTitle(item?.data?.communities)
+          }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef mat-sort-header
+            >Status</mat-header-cell
+          >
+          <mat-cell *matCellDef="let item">{{ getStatus(item.data) }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <mat-header-cell *matHeaderCellDef
+            ><span class="action-title"> Actions</span></mat-header-cell
+          >
+
+          <mat-cell *matCellDef="let item">
+            <ng-container [ngSwitch]="getStatus(item.data)">
+              <ng-container *ngSwitchCase="PN_STATUS.scheduled">
+                <mat-icon color="primary" (click)="editPN(item)">edit</mat-icon>
+                <span class="px-3 pt-1">
+                  <mat-icon color="primary" (click)="deletePN(item)"
+                    >delete</mat-icon
+                  ></span
+                >
+              </ng-container>
+              <ng-container *ngSwitchCase="PN_STATUS.sent">
+                <mat-icon
+                  color="primary"
+                  style="margin-left: 25px"
+                  (click)="onClickViewIcon(item)"
+                  >visibility</mat-icon
+                >
+              </ng-container>
+              <ng-container *ngSwitchDefault>
+                <span style="margin-left: 30px">-- --</span>
+              </ng-container>
+            </ng-container>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+
+      <div class="footer-container">
+        <div class="status-color-info">
+          <div class="status-color-label">
+            <p
+              class="color-box scheduled-color"
+              style="background-color: orange"
+            ></p>
+            <p>Scheduled</p>
+          </div>
+          <div class="status-color-label">
+            <p
+              class="color-box scheduled-color"
+              style="background-color: green"
+            ></p>
+            <p>Sent</p>
+          </div>
+          <div class="status-color-label">
+            <p class="color-box" style="background-color: #adb5bd"></p>
+            <p>Cancelled</p>
+          </div>
+        </div>
+        <div class="pagination">
+          <div class="page-select" *ngIf="totalPages > 0">
+            <mat-label>Go to page: </mat-label>
+            <mat-form-field>
+              <mat-select [(value)]="paginator.pageIndex">
+                <mat-option
+                  *ngFor="let number of allPages"
+                  [value]="number"
+                  (click)="goToPage(number)"
+                  >{{ number + 1 }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <mat-paginator
+            #paginator
+            [pageSizeOptions]="pageSizeOption"
+            showFirstLastButtons
+            [pageIndex]="paginator.pageIndex"
+            [pageSize]="pageSize"
+            [length]="totalPNs"
+            (page)="pageChanged($event)"
+            aria-label="Select page"
+          ></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

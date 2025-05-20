@@ -1,0 +1,30 @@
+<label for="file-upload" class="custom-file-upload">
+    Upload File
+</label>
+<input 
+    #uploadedImage
+    id="file-upload" 
+    type="file" 
+    (change)="fileChangeEvent($event)" accept="image/*" autocomplete="off"/>
+
+<button mat-flat-button color="primary" (click)="clear()">
+    Clear
+</button>
+<div class="row" *ngIf="imageUploaded">
+    <div class="col col-sm-12 col-md-6 col-lg-6">
+        <image-cropper class="imageSize"
+            [imageChangedEvent]="imageChangedEvent" 
+            [maintainAspectRatio]="true" 
+            [aspectRatio]="5 / 4" 
+            format="jpeg"
+            [imageQuality]="100"
+            (imageCropped)="imageCropped($event)" 
+            (imageLoaded)="imageLoaded()" 
+            (cropperReady)="cropperReady()"
+            (loadImageFailed)="loadImageFailed()">
+        </image-cropper>
+    </div>
+    <div class="col col-sm-12 col-md-6 col-lg-6">
+        <img [src]="croppedImage" class="imageSize"/>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+@import '/src/app/pages/pages.component.scss';
+
+.form-container {
+  padding: 16px;
+}
+mat-header-cell.cdk-header-cell.cdk-column-serialNo.mat-column-serialNo.ng-star-inserted,
+mat-cell.mat-cell.cdk-cell.cdk-column-serialNo.mat-column-serialNo.ng-star-inserted {
+  text-align: center;
+  max-width: 10%;
+}
+
+.mat-header-cell {
+  color: #000000;
+  font-size: 14px;
+}

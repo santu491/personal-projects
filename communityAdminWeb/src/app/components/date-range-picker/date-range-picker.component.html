@@ -1,0 +1,41 @@
+<mat-form-field>
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+    <input
+      matStartDate
+      formControlName="start"
+      placeholder="Start date"
+      (dateChange)="selectDate()"
+    />
+    <input
+      matEndDate
+      formControlName="end"
+      placeholder="End date"
+      (dateChange)="selectDate()"
+    />
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matPrefix [for]="picker">
+    <mat-icon matDatepickerToggleIcon style="font-size: 1.49em" color="primary"
+      >calendar_today</mat-icon
+    >
+  </mat-datepicker-toggle>
+  <mat-datepicker-toggle
+    matTooltip="Reset"
+    matSuffix
+    (click)="clearStartDate()"
+    *ngIf="!!start?.value && !!end?.value"
+  >
+    <mat-icon matDatepickerToggleIcon>clear</mat-icon>
+  </mat-datepicker-toggle>
+
+  <mat-date-range-picker #picker></mat-date-range-picker>
+
+  <!--Errors-->
+  <mat-error *ngIf="range.controls.start.hasError('matStartDateInvalid')"
+    >Invalid start date</mat-error
+  >
+  <mat-error *ngIf="range.controls.end.hasError('matEndDateInvalid')"
+    >Invalid end date</mat-error
+  >
+</mat-form-field>

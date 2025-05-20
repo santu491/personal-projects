@@ -1,0 +1,546 @@
+.form-container {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 32px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.view {
+  overflow-y: auto;
+  height: calc(100vh - 170px);
+}
+.header {
+  padding-left: 16px;
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+input {
+  background-color: transparent;
+  border: 0px solid;
+  width: 100%;
+  margin-right: 16px;
+  outline: none;
+}
+
+.search-button {
+  padding-top: 7px;
+}
+
+.no-search-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.post-preview {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  // background-color: #e3edff;
+  background-color: #ffffff;
+}
+
+.image {
+  max-width: inherit;
+  max-height: 400px;
+}
+
+.image-view {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.post-body {
+  margin-top: 5px;
+}
+
+.spanish-view {
+  font-style: italic;
+}
+
+.gray {
+  color: gray;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+
+.red {
+  color: red;
+}
+
+.red-bg {
+  background: red;
+  color: white;
+}
+
+.status,
+.comment-count {
+  color: gray;
+  font-size: 12px;
+}
+
+.comment-count:hover {
+  text-decoration: underline;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card-action-view {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 2px;
+}
+
+.profileImage {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.commentAuthorImage {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.post-option-icon {
+  border-radius: 50%;
+  border: none;
+  float: right;
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+}
+.post-option-icon:hover {
+  height: 35px;
+  width: 35px;
+  background-color: #d7e8fc;
+  float: right;
+  border-radius: 50%;
+  border: none;
+}
+
+.icon-default-color {
+  color: #6a6d71;
+}
+.icon-select-color {
+  color: #0073f5;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #6a6d71;
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.menu-button:active,
+.menu-button:hover {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #0073f5;
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+.active {
+  color: #0073f5;
+}
+
+.divider-top {
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+}
+
+.divider-bottom {
+  border-bottom: 1px solid gray;
+  margin-top: 5px;
+}
+
+.comment-option-icon {
+  border-radius: 50%;
+  border: none;
+  float: right;
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  .mat-icon {
+    vertical-align: middle;
+  }
+}
+.comment-option-icon:hover {
+  height: 35px;
+  width: 35x;
+  background-color: #d7e8fc;
+  float: right;
+  border-radius: 50%;
+  border: none;
+  .mat-icon {
+    vertical-align: middle;
+  }
+}
+
+.authorLine1 {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.authorLine2 {
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.float-right {
+  float: right;
+}
+
+.community-name {
+  color: gray;
+  margin-top: 10px;
+}
+
+.community-name-line2 {
+  color: gray;
+  margin-top: 5px;
+}
+
+.dot-icon {
+  font-size: 10px;
+  margin-right: 5px;
+}
+
+.dot-icon-comment {
+  font-size: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.dot-icon-reaction {
+  margin-left: 2px;
+  margin-right: 5px;
+  font-size: 5px;
+}
+
+.font-size12 {
+  font-size: 12px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flagged-status {
+  color: red;
+  font-size: 12px;
+}
+
+.add-comment-view {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-input-view {
+  display: flex;
+  border-radius: 20px;
+  // background-color: #f7f7f7;
+  background-color: #eff2f5;
+  padding: 10px;
+}
+
+.comment-input {
+  color: #656768;
+}
+
+.comment-text-view {
+  border-radius: 20px;
+  background-color: #eff2f5;
+  width: fit-content;
+  padding: 10px;
+}
+
+.author-name {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+}
+
+.author-title {
+  font-style: italic;
+  font-size: smaller;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-weight: 300;
+  color: #333333;
+  display: inline-block;
+}
+
+.comment-text {
+  color: #131313;
+  padding: 10px;
+  margin: 0px;
+  word-break: break-word;
+}
+
+.comment-text-flagged {
+  color: red;
+}
+
+.comment-more-option {
+  display: flex;
+  display: contents;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.hide-comments {
+  color: #656768;
+  font-weight: bold;
+}
+
+.hide-comments:hover {
+  text-decoration: underline;
+}
+
+// Clear Icon for Search
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 50em;
+  background: url(../../../assets/img/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type='search']:focus::-webkit-search-cancel-button,
+input[type='search']:hover::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+input[type='search'].dark::-webkit-search-cancel-button {
+  filter: invert(1);
+}
+
+// Reaction Styling
+.reaction-container {
+  z-index: 5;
+  position: absolute;
+  bottom: 50px;
+  width: auto;
+}
+
+.reaction-container-comment {
+  z-index: 5;
+  position: absolute;
+  bottom: 30px;
+  left: -10px;
+}
+
+.reaction-container-reply {
+  z-index: 5;
+  position: absolute;
+  bottom: 30px;
+  left: -10px;
+}
+
+.post-reaction-view {
+  font-size: 12px;
+  color: gray;
+}
+
+.like-reply-view {
+  margin-left: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: gray;
+  padding-top: 5px;
+}
+
+.like-comment,
+.reply-comment {
+  font-weight: bold;
+}
+
+.like-comment:hover {
+  text-decoration: underline;
+}
+
+.reply-comment:hover {
+  text-decoration: underline;
+}
+
+.last-updated-comment {
+  // margin-left: 5px;
+  font-size: 10px;
+  float: right;
+  padding-top: 8px;
+  padding-right: 0px;
+  padding-left: 10px;
+}
+
+// Reply Comment Styling
+.reply-view {
+  margin-left: 50px;
+}
+
+.reply-text {
+  color: #131313;
+  padding: 10px;
+  word-break: break-word;
+  margin: 0px;
+}
+
+.deeplink {
+  word-break: break-word;
+  display: flex;
+  margin: 0px 10px 10px 10px;
+  background-color: #37475a;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.reply-text-flagged {
+  color: red;
+}
+
+.reply-text-view {
+  border-radius: 20px;
+  background-color: #eff2f5;
+  width: fit-content;
+  margin-right: 50px;
+  padding: 10px;
+}
+
+.comment-reactions {
+  display: inline-flex;
+  // margin-left: 5px;
+}
+
+.relative {
+  position: relative;
+}
+
+.like-color {
+  color: #2a73e5;
+}
+
+.care-color {
+  color: #cc2a73;
+}
+
+.celebrate-color {
+  color: #108709;
+}
+
+.good-idea-color {
+  color: #511284;
+}
+
+.post-reaction-icon {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.author-text {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: dimgray;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.wrap-text {
+  overflow-wrap: break-word;
+}
+
+.post-view-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 40px 0;
+  padding-right: 30px;
+}
+
+.poll-status {
+  font-size: 14px;
+  color: gray;
+  margin: 0px;
+}
+
+.poll-view {
+  margin: 0px;
+  padding-top: 15px;
+}
+
+.poll-option {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  padding: 10px 18px;
+  background-color: #f7f7f7;
+}
+
+.add-comment {
+  align-items: center;
+  width: 90%;
+  font-size: 1rem;
+  background-color: #2a73e5;
+  mat-icon {
+    margin-right: 8px;
+  }
+  margin: 30px 20px 30px 30px;
+}
+
+.deeplink-text {
+  margin-left: 5px;
+  color: #ffffff;
+}

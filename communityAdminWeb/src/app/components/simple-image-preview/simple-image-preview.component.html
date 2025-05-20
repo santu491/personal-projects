@@ -1,0 +1,23 @@
+<div class="row mt-2">
+  <div class="col-sm-12 col-md-4 col-lg-4 field-container">
+      <label for="imageBase64">{{title}}</label>
+        <input
+          name="imageBase64"
+          type="file"
+          accept="image/*"
+          matInput
+          #fileUpload
+          (change)="handleUpload($event)"
+          class="mt-1"
+        />
+        <button mat-button color="warn" (click)="reset()">Reset</button>
+  </div>
+  <div class="col-sm-12 col-md-8 col-lg-8 image-preview" *ngIf="previewImage">
+    <div [ngStyle]="{
+      'background-color': imageBackground
+    }"
+    class="p-2">
+      <img [src]="previewImage" alt="Uploaded Image" />
+    </div>
+  </div>
+</div>

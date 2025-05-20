@@ -1,0 +1,6 @@
+{
+    "delay": "0",
+    "events": {
+        "start": "eslint -c ./.eslintrc.js 'api/**/*.ts' 'app/**/*.ts' 'libs/**/*.ts'"
+    }
+}

@@ -1,0 +1,769 @@
+<app-create-comment
+  [isCommentModalVisible]="isCommentModalVisible"
+  [communityList]="communityList"
+  [existingValue]="existingValue"
+  [deeplinkLabel]="deeplinkLabel"
+  (toggleCommentModal)="toggleCommentModal($event)"
+  (addComment)="sendComment($event)"
+  [commentDeepLink]="commentDeepLink"
+  [commentTitle]="commentTitle"
+></app-create-comment>
+
+<div class="form-container view" mat-elevation-z8>
+  <div *ngIf="!parentPostData; else viewHeader">
+    <div class="header full-width">
+      <input
+        type="search"
+        id="searchInput"
+        matInput
+        placeholder="Search Posts"
+        [(ngModel)]="searchText"
+        (ngModelChange)="onChangeSearchText($event)"
+        autocomplete="off"
+        (keydown.enter)="onSearch()"
+      />
+      <div class="search-button">
+        <button id="searchButton" matSuffix mat-button (click)="onSearch()">
+          <mat-icon matTooltip="Click here to Search">search</mat-icon>
+        </button>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <!-- No Search View -->
+    <div
+      class="full-width no-search-view"
+      *ngIf="noSearchLine1 || noSearchLine2"
+    >
+      <br />
+      <strong
+        *ngIf="noSearchLine1"
+        [class.red]="noSearchLine1.includes(noPostFoundLine1) == true"
+        >{{ noSearchLine1 }}</strong
+      >
+      <br />
+      <p *ngIf="noSearchLine2">{{ noSearchLine2 }}</p>
+      <br />
+    </div>
+  </div>
+
+  <ng-template #viewHeader>
+    <div class="post-view-title">Post Detailed View</div>
+  </ng-template>
+
+  <!-- Card View for Search Result -->
+  <div *ngIf="showCard">
+    <mat-card class="post-preview shadow-lg p-3 mb-5 bg-white rounded">
+      <div class="row">
+        <!-- Avatar Photo -->
+        <div class="col col-1 col-xs-1 col-sm-1 col-md-1">
+          <img src="{{ profilePicture }}" alt="" class="profileImage" />
+        </div>
+        <!-- Author Details -->
+        <div class="col col-9 col-xs-9 col-sm-9 col-md-9">
+          <strong class="authorLine1">{{ authorLine1 }}</strong>
+          <p class="authorLine2" *ngIf="authorLine2 != ''">{{ authorLine2 }}</p>
+          <div class="authorLine2" *ngIf="authorLine2 == ''">
+            <p class="community-name-line2">
+              {{ searchResponse?.communities[0]?.displayName?.en }}
+              <span class="material-icons dot-icon">fiber_manual_record</span>
+              <span *ngIf="isPostEdited == true">{{
+                search.en.editedLabel
+              }}</span>
+              <span>&nbsp;{{ updatedDate }}</span>
+            </p>
+          </div>
+        </div>
+        <!-- Edit/Delete Post Option -->
+        <div
+          class="col col-2 col-xs-2 col-sm-2 col-md-2"
+          *ngIf="!parentPostData"
+        >
+          <mat-menu #postOptionMenu="matMenu">
+            <button mat-menu-item (click)="onEditPost(searchResponse)">
+              Edit post
+            </button>
+            <button mat-menu-item (click)="onDeletePost(searchResponse.id)">
+              Delete post
+            </button>
+          </mat-menu>
+          <button [matMenuTriggerFor]="postOptionMenu" class="post-option-icon">
+            <mat-icon class="float-right" matTooltip="Edit or delete this post"
+              >more_horiz</mat-icon
+            >
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="row"
+        *ngIf="
+          searchResponse?.author?.role == 'scadvocate' ||
+          searchResponse.authorRole == 'scadvocate'
+        "
+      >
+        <!-- Community Name / Last Updated -->
+        <div class="col col-12 col-xs-12 col-sm-12 col-md-12">
+          <p class="community-name">
+            {{ searchResponse?.communities[0]?.displayName?.en }}
+            <span class="material-icons dot-icon">fiber_manual_record</span>
+            <span *ngIf="isPostEdited">{{ search.en.editedLabel }}</span>
+            <span>&nbsp;{{ updatedDate }}</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Post Image -->
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 image-view"
+          *ngIf="searchResponse.content.image"
+        >
+          <img
+            src="{{ searchResponse.content.image }}"
+            class="image"
+            alt="Post Image"
+          />
+        </div>
+
+        <!-- English Content -->
+        <div class="col col-12 col-xs-12 col-sm-6 col-md-12 font-size12">
+          <strong *ngIf="searchResponse.content.en.title" class="post-title">{{
+            searchResponse.content.en.title
+          }}</strong>
+          <div
+            *ngIf="searchResponse.content.en.body"
+            class="post-body"
+            [innerHTML]="searchResponse.content.en.body"
+          ></div>
+          <!-- <p *ngIf="searchResponse.content.en.body" class="post-body">
+            {{ searchResponse.content.en.body }}
+          </p> -->
+          <div *ngIf="searchResponse.content?.link?.en" class="wrap-text">
+            <strong>{{ search.en.linkTxt }}:</strong>
+            <app-link-view
+              [linkContent]="getLinkContent(searchResponse.content.link.en)"
+            ></app-link-view>
+          </div>
+          <p
+            *ngIf="
+              searchResponse.content.en.deepLink &&
+              searchResponse.content.en.deepLink?.label
+            "
+          >
+            {{ search.en.deepLinkTxt }}:
+            {{ searchResponse.content.en.deepLink?.label }}
+          </p>
+
+          <!-- View Spanish Link -->
+          <a
+            (click)="onClickViewSpanish()"
+            *ngIf="
+              searchResponse.content.es.title ||
+              searchResponse.content.es.body ||
+              searchResponse.content.es.link ||
+              searchResponse.content.es.deepLink?.label
+            "
+            >{{ viewSpanishLabel }}</a
+          >
+
+          <!-- Spanish Translated Version -->
+          <div *ngIf="isSpanishAvailable" class="spanish-view">
+            <br />
+            <p class="gray">English ~ Spanish</p>
+            <strong
+              *ngIf="searchResponse.content.es.title"
+              class="post-title"
+              >{{ searchResponse.content.es.title }}</strong
+            >
+            <div
+              *ngIf="searchResponse.content.es.body"
+              class="post-body"
+              [innerHTML]="searchResponse.content.es.body"
+            ></div>
+            <div
+              *ngIf="
+                searchResponse.content?.link?.es?.url &&
+                searchResponse.content?.link?.es?.url != ''
+              "
+              class="wrap-text"
+            >
+              <strong>{{ search.en.linkTxt }}:</strong>
+              <app-link-view
+                [linkContent]="getLinkContent(searchResponse.content.link.es)"
+              ></app-link-view>
+            </div>
+            <p *ngIf="searchResponse.content.es.deepLink?.label">
+              {{ search.en.deepLinkTxt }}:
+              {{ searchResponse.content.es.deepLink?.label }}
+            </p>
+          </div>
+
+          <!-- Poll View-->
+          <div *ngIf="!!searchResponse?.content?.en?.poll?.question">
+            <p class="poll-view">
+              <strong style="font-size: 16px">Poll</strong>
+              <span
+                class="material-icons dot-icon community-name-line2"
+                style="padding-left: 3px; margin: 0px"
+                >fiber_manual_record</span
+              >
+              <span class="poll-status"> {{ pollStatus() }}</span>
+            </p>
+
+            <ul class="pt-2">
+              <li>
+                Total No. of Votes : {{ searchResponse?.numberOfVotes ?? 0 }}
+              </li>
+              <li>
+                Total No. of Votes Edited :
+                {{ searchResponse?.numberOfVoteEdit ?? 0 }}
+              </li>
+            </ul>
+            <div class="pb-2">
+              <strong style="font-size: 14px">
+                {{ searchResponse?.content?.en?.poll?.question }}
+              </strong>
+            </div>
+            <div
+              *ngFor="let item of searchResponse?.content?.en?.poll?.options"
+              class="poll-option"
+            >
+              <p>{{ item?.text }}</p>
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="progress">
+                    <div
+                      [ngClass]="
+                        isPollClosed()
+                          ? 'progress-bar progress-bar-striped bg-secondary'
+                          : 'progress-bar progress-bar-striped'
+                      "
+                      role="progressbar"
+                      [style.width.%]="item?.result?.percentage ?? 0"
+                      aria-valuenow="20"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      {{ item?.result?.percentage | number : '1.0-0' }}%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <p>Votes : {{ item?.result?.voteCount ?? 0 }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Status -->
+        <div class="col col-12 col-xs-12 col-sm-12 col-md-12">
+          <p class="status">
+            {{ search.en.statusTxt }}:
+            <span class="status">{{ searchResponse?.status }}</span>
+          </p>
+          <span class="flagged-status" *ngIf="searchResponse.flagged">
+            {{ search.en.flaggedLabel }}
+          </span>
+        </div>
+
+        <!-- Reaction Count on Post -->
+        <div class="col col-6 col-xs-6 col-sm-6 col-md-6">
+          <app-reaction-with-count [data]="reactions"></app-reaction-with-count>
+        </div>
+
+        <!-- Comments Count -->
+        <div
+          class="col col-6 col-xs-6 col-sm-6 col-md-6"
+          *ngIf="commentsCount > 0"
+        >
+          <p (click)="toggleComments()" class="comment-count float-right">
+            {{ commentsCount }}
+            <span *ngIf="commentsCount == 1">{{ search.en.commentTxt }}</span>
+            <span *ngIf="commentsCount > 1">{{ search.en.commentsTxt }}</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Post Comment/Reaction Row -->
+      <div class="row relative" *ngIf="searchResponse.published">
+        <!-- Divider -->
+        <div class="col col-12 col-xs-12 col-sm-12 col-md-12 divider-top"></div>
+
+        <!-- Reaction Container for Post -->
+        <div
+          class="flex reaction-container post-reaction-view"
+          *ngIf="showReactionContainerForPost"
+          (mouseenter)="onMouseOverLikePost(this)"
+          (mouseleave)="onMouseOutLikePost(this)"
+        >
+          <app-reaction-container
+            [contentType]="'post'"
+            [postId]="postId"
+            [currentAdminReaction]="currentAdminReaction"
+          ></app-reaction-container>
+        </div>
+
+        <!-- Like Button -->
+        <div
+          class="col col-6 col-xs-6 col-sm-6 col-md-6 flex"
+          (mouseleave)="onMouseOutLikePost(this)"
+        >
+          <button
+            mat-button
+            class="menu-button"
+            routerLinkActive="active"
+            (click)="onClickLikeButton()"
+            (mouseenter)="onMouseOverLikePost(this)"
+          >
+            <img
+              src="{{ currentReaction }}"
+              alt=""
+              class="post-reaction-icon"
+            />
+            <span
+              [class.like-color]="
+                currentReactionText == search.en.likedReactionText
+              "
+              [class.care-color]="
+                currentReactionText == search.en.careReactionText
+              "
+              [class.celebrate-color]="
+                currentReactionText == search.en.celebrateReactionText
+              "
+              [class.good-idea-color]="
+                currentReactionText == search.en.goodIdeaReactionText
+              "
+            >
+              {{ currentReactionText }}
+            </span>
+          </button>
+        </div>
+        <!-- Comment Button -->
+        <div class="col col-6 col-xs-6 col-sm-6 col-md-6 flex">
+          <button
+            mat-button
+            class="menu-button"
+            (click)="showCommentsSection()"
+            routerLinkActive="active"
+          >
+            <mat-icon>chat_bubble_outline</mat-icon>
+            <span>{{ search.en.commentBtn }}</span>
+          </button>
+        </div>
+        <!-- Divider -->
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 divider-bottom"
+          *ngIf="showComments"
+        ></div>
+      </div>
+
+      <!-- Comments Section Start-->
+      <div class="row" *ngIf="showComments">
+        <div class="col-md-12">
+          <button
+            mat-button
+            class="add-comment btn btn-primary"
+            (click)="onPressAddComment()"
+            routerLinkActive="active"
+          >
+            <mat-icon>add_comment</mat-icon>
+            <span>Add comment</span>
+          </button>
+        </div>
+
+        <div
+          *ngFor="let item of visibleComments; let commentIndex = index"
+          [attr.data-index]="commentIndex"
+        >
+          <div class="row flex">
+            <div class="col col-1 col-xs-1 col-sm-1 col-md-1">
+              <!-- Comment Author's Image -->
+              <img
+                [src]="
+                  item?.author?.role == 'scadmin'
+                    ? scadminImage
+                    : item?.author?.role == 'scadvocate'
+                    ? scadvocateImage
+                    : commentAuthorImage
+                "
+                alt=""
+                class="commentAuthorImage"
+              />
+            </div>
+            <div class="col col-11 col-xs-11 col-sm-11 col-md-11">
+              <div class="comment-text-view">
+                <!-- Comments - More Option -->
+                <span class="comment-more-option" *ngIf="item.removed == false">
+                  <mat-menu #commentOptionMenu="matMenu">
+                    <button
+                      mat-menu-item
+                      (click)="onClickEditComment(item)"
+                      *ngIf="checkEditPrivilege(item)"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      mat-menu-item
+                      (click)="onFlagOrUnFlagComment(item, false)"
+                      *ngIf="checkUnFlagPrivilege(item)"
+                    >
+                      Ignore
+                    </button>
+                    <button
+                      mat-menu-item
+                      (click)="onDeleteComment(item)"
+                      *ngIf="checkDeletePrivilege(item)"
+                    >
+                      Remove
+                    </button>
+                    <button
+                      mat-menu-item
+                      (click)="removeAndBanUser(false, item)"
+                      *ngIf="checkBanPrivilege(item)"
+                    >
+                      Remove and Ban User
+                    </button>
+                    <button
+                      mat-menu-item
+                      (click)="onFlagOrUnFlagComment(item, true)"
+                      *ngIf="checkFlagPrivilege(item)"
+                    >
+                      Report comment
+                    </button>
+                  </mat-menu>
+
+                  <button
+                    [matMenuTriggerFor]="commentOptionMenu"
+                    class="comment-option-icon"
+                  >
+                    <mat-icon matTooltip="Actions">more_horiz</mat-icon>
+                  </button>
+                  <span class="last-updated-comment">{{
+                    getDateDifference(item?.updatedAt)
+                  }}</span>
+                </span>
+                <!-- Comment's Author Name -->
+                <p
+                  class="author-name"
+                  *ngIf="item?.author?.displayName || item?.author?.firstName"
+                >
+                  {{ item.author.displayName || item.author.firstName }}
+                  <span *ngIf="checkIfAuthor(item)" class="author-text">{{
+                    search.authorTxt
+                  }}</span>
+                </p>
+                <!-- Author Text -->
+                <p
+                  class="author-title"
+                  *ngIf="
+                    item?.author?.role == 'scadvocate' &&
+                    item?.author?.displayTitle
+                  "
+                >
+                  {{ item.author.displayTitle }}
+                </p>
+                <!-- Comment Text -->
+                <p
+                  class="comment-text"
+                  [innerHTML]="getComments(item.comment)"
+                  [class.comment-text-flagged]="item.flagged == true"
+                ></p>
+                <div *ngIf="item?.deeplink?.label?.en" class="deeplink">
+                  <mat-icon style="color: #ffffff">{{
+                    getCommentDeepLinkIcon(item)
+                  }}</mat-icon>
+
+                  <!-- pencil-alt -->
+                  <span class="deeplink-text">{{
+                    item?.deeplink?.label?.en
+                  }}</span>
+                </div>
+              </div>
+
+              <!-- Like and Comment For Comments -->
+              <div class="like-reply-view relative">
+                <!-- Reaction Container for Comments -->
+                <div
+                  class="flex reaction-container-comment"
+                  *ngIf="item.showReactionContainer"
+                  (mouseenter)="onMouseOverLikeComment(this, item)"
+                  (mouseleave)="onMouseOutLikeComment(this, item)"
+                >
+                  <app-reaction-container
+                    [contentType]="'comment'"
+                    [postId]="postId"
+                    [commentId]="item._id"
+                    [currentAdminReaction]="item.currentAdminReaction"
+                  >
+                  </app-reaction-container>
+                </div>
+
+                <span
+                  class="like-comment"
+                  [class.like-color]="
+                    item.hasCurrentAdminReacted &&
+                    item.reactionText == search.en.likedReactionText
+                  "
+                  [class.care-color]="
+                    item.hasCurrentAdminReacted &&
+                    item.reactionText == search.en.careReactionText
+                  "
+                  [class.celebrate-color]="
+                    item.hasCurrentAdminReacted &&
+                    item.reactionText == search.en.celebrateReactionText
+                  "
+                  [class.good-idea-color]="
+                    item.hasCurrentAdminReacted &&
+                    item.reactionText == search.en.goodIdeaReactionText
+                  "
+                  (mouseenter)="onMouseOverLikeComment(this, item)"
+                  (mouseleave)="onMouseOutLikeComment(this, item)"
+                  (click)="onClickLikeComment(item)"
+                >
+                  {{ item.reactionText }}
+                </span>
+
+                <span
+                  class="material-icons dot-icon-reaction"
+                  *ngIf="item.reactions && item.reactions.count.total"
+                  >fiber_manual_record</span
+                >
+                <!-- Reaction Count on Comment -->
+                <span class="comment-reactions" *ngIf="item.reactions">
+                  <app-reaction-with-count
+                    [data]="item.reactions"
+                  ></app-reaction-with-count>
+                </span>
+                <span class="material-icons dot-icon-comment"
+                  >fiber_manual_record</span
+                >
+                <span class="reply-comment" (click)="onClickAddNewReply(item)">
+                  {{ search.en.replyLabel }}
+                </span>
+                <span
+                  class="material-icons dot-icon-comment"
+                  *ngIf="item.replyCount > 0"
+                  >fiber_manual_record</span
+                >
+                <span class="" *ngIf="item.replyCount > 0"
+                  >{{ item.replyCount }}
+                  {{
+                    item.replyCount == 1 ? search.replyTxt : search.repliesTxt
+                  }}</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Reply Section Start -->
+          <div *ngIf="item?.replies?.length > 0">
+            <div
+              *ngFor="let replyItem of item.replies; let replyIndex = index"
+              [attr.data-index]="replyIndex"
+              class="row"
+            >
+              <div class="row flex reply-view">
+                <div class="col col-1 col-xs-1 col-sm-1 col-md-1">
+                  <!-- Comment Author's Image -->
+                  <img
+                    [src]="
+                      replyItem?.author?.role == 'scadmin'
+                        ? scadminImage
+                        : replyItem?.author?.role == 'scadvocate'
+                        ? scadvocateImage
+                        : commentAuthorImage
+                    "
+                    alt=""
+                    class="commentAuthorImage"
+                  />
+                </div>
+                <div class="col col-11 col-xs-11 col-sm-11 col-md-11">
+                  <div class="reply-text-view">
+                    <!-- Reply - More Option -->
+                    <span
+                      class="comment-more-option"
+                      *ngIf="replyItem.removed == false"
+                    >
+                      <mat-menu #commentOptionMenu="matMenu">
+                        <button
+                          mat-menu-item
+                          (click)="onClickEditReply(item, replyItem)"
+                          *ngIf="checkEditPrivilege(replyItem)"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          mat-menu-item
+                          (click)="onFlagOrUnFlagReply(item, replyItem, false)"
+                          *ngIf="checkUnFlagPrivilege(replyItem)"
+                        >
+                          Ignore
+                        </button>
+                        <button
+                          mat-menu-item
+                          (click)="onDeleteReply(item, replyItem)"
+                          *ngIf="checkDeletePrivilege(replyItem)"
+                        >
+                          Remove
+                        </button>
+                        <button
+                          mat-menu-item
+                          (click)="removeAndBanUser(true, item, replyItem)"
+                          *ngIf="checkBanPrivilege(replyItem)"
+                        >
+                          Remove and Ban User
+                        </button>
+                        <button
+                          mat-menu-item
+                          (click)="onFlagOrUnFlagReply(item, replyItem, true)"
+                          *ngIf="checkFlagPrivilege(replyItem)"
+                        >
+                          Report reply
+                        </button>
+                      </mat-menu>
+                      <button
+                        [matMenuTriggerFor]="commentOptionMenu"
+                        class="comment-option-icon"
+                      >
+                        <mat-icon matTooltip="Actions">more_horiz</mat-icon>
+                      </button>
+                      <span class="last-updated-comment">{{
+                        getDateDifference(replyItem.updatedAt)
+                      }}</span>
+                    </span>
+                    <!-- Reply Author's Name -->
+                    <p
+                      class="author-name"
+                      *ngIf="
+                        replyItem?.author?.displayName ||
+                        replyItem?.author?.firstName
+                      "
+                    >
+                      {{
+                        replyItem.author.displayName ||
+                          replyItem.author.firstName
+                      }}
+                      <span
+                        *ngIf="checkIfAuthor(replyItem)"
+                        class="author-text"
+                        >{{ search.authorTxt }}</span
+                      >
+                    </p>
+                    <!-- Author Text -->
+                    <p
+                      class="author-title"
+                      *ngIf="
+                        replyItem?.author?.role == 'scadvocate' &&
+                        replyItem?.author?.displayTitle
+                      "
+                    >
+                      {{ replyItem.author.displayTitle }}
+                    </p>
+
+                    <!-- Reply Text -->
+                    <p
+                      class="reply-text"
+                      [innerHTML]="getComments(replyItem.comment)"
+                      [class.reply-text-flagged]="replyItem.flagged == true"
+                    ></p>
+
+                    <div
+                      *ngIf="replyItem?.deeplink?.label?.en"
+                      class="deeplink"
+                    >
+                      <mat-icon style="color: #ffffff">{{
+                        getCommentDeepLinkIcon(replyItem)
+                      }}</mat-icon>
+                      <span class="deeplink-text">{{
+                        replyItem?.deeplink?.label?.en
+                      }}</span>
+                    </div>
+                  </div>
+
+                  <!-- Like and Reply Option For Reply -->
+                  <div class="like-reply-view relative">
+                    <!-- Reaction Container for Reply -->
+                    <div
+                      class="flex reaction-container-reply"
+                      *ngIf="replyItem.showReactionContainer"
+                      (mouseenter)="
+                        onMouseOverLikeReply(this, item._id, replyItem)
+                      "
+                      (mouseleave)="onMouseOutLikeReply(this, replyItem)"
+                    >
+                      <app-reaction-container
+                        [contentType]="'reply'"
+                        [postId]="postId"
+                        [currentAdminReaction]="replyItem.currentAdminReaction"
+                      >
+                      </app-reaction-container>
+                    </div>
+
+                    <span
+                      class="like-comment"
+                      [class.like-color]="
+                        replyItem.hasCurrentAdminReacted &&
+                        replyItem.reactionText == search.en.likedReactionText
+                      "
+                      [class.care-color]="
+                        replyItem.hasCurrentAdminReacted &&
+                        replyItem.reactionText == search.en.careReactionText
+                      "
+                      [class.celebrate-color]="
+                        replyItem.hasCurrentAdminReacted &&
+                        replyItem.reactionText ==
+                          search.en.celebrateReactionText
+                      "
+                      [class.good-idea-color]="
+                        replyItem.hasCurrentAdminReacted &&
+                        replyItem.reactionText == search.en.goodIdeaReactionText
+                      "
+                      (mouseenter)="
+                        onMouseOverLikeReply(this, item._id, replyItem)
+                      "
+                      (mouseleave)="onMouseOutLikeReply(this, replyItem)"
+                      (click)="onClickLikeReply(item._id, replyItem)"
+                    >
+                      {{ replyItem.reactionText }}
+                    </span>
+
+                    <span
+                      class="material-icons dot-icon-reaction"
+                      *ngIf="
+                        replyItem.reactions && replyItem.reactions.count.total
+                      "
+                      >fiber_manual_record</span
+                    >
+                    <!-- Reaction Count on Reply -->
+                    <span class="comment-reactions" *ngIf="replyItem.reactions">
+                      <app-reaction-with-count [data]="replyItem.reactions">
+                      </app-reaction-with-count>
+                    </span>
+
+                    <span class="material-icons dot-icon-comment"
+                      >fiber_manual_record</span
+                    >
+                    <span
+                      class="reply-comment"
+                      (click)="onClickAddNewReply(item)"
+                    >
+                      {{ search.en.replyLabel }}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Reply Section End -->
+        </div>
+        <!-- Hide comments-->
+        <p (click)="toggleComments()" class="hide-comments">
+          {{ search.en.hideCommentsLink }}
+        </p>
+      </div>
+      <!-- Comment Section End -->
+    </mat-card>
+  </div>
+</div>

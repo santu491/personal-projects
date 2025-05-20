@@ -1,0 +1,166 @@
+{
+  "success": {
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2023 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+      {
+        "estimatedTotal": 2,
+        "resources": [
+          {
+            "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+            "bbox": [
+              33.934799194335938, -118.26517486572266, 33.960224151611328,
+              -118.22676086425781
+            ],
+            "name": "90002, CA",
+            "point": {
+              "type": "Point",
+              "coordinates": [33.95066452, -118.24512482]
+            },
+            "address": {
+              "adminDistrict": "CA",
+              "adminDistrict2": "Los Angeles County",
+              "countryRegion": "United States",
+              "formattedAddress": "90002, CA",
+              "locality": "Los Angeles",
+              "postalCode": "90002"
+            },
+            "confidence": "High",
+            "entityType": "Postcode1",
+            "geocodePoints": [
+              {
+                "type": "Point",
+                "coordinates": [33.95066452, -118.24512482],
+                "calculationMethod": "Rooftop",
+                "usageTypes": ["Display"]
+              }
+            ],
+            "matchCodes": ["Ambiguous"]
+          },
+          {
+            "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+            "bbox": [
+              22.689187666950808, 120.48353055477952, 22.696913102092161,
+              120.49469515322829
+            ],
+            "name": "90002, Taiwan",
+            "point": {
+              "type": "Point",
+              "coordinates": [22.69305038, 120.48911285]
+            },
+            "address": {
+              "countryRegion": "Taiwan",
+              "formattedAddress": "90002, Taiwan",
+              "locality": "P’ingtung",
+              "postalCode": "90002"
+            },
+            "confidence": "High",
+            "entityType": "Postcode1",
+            "geocodePoints": [
+              {
+                "type": "Point",
+                "coordinates": [22.69305038, 120.48911285],
+                "calculationMethod": "Rooftop",
+                "usageTypes": ["Display"]
+              }
+            ],
+            "matchCodes": ["Ambiguous"]
+          }
+        ]
+      }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "1373fd5bb8514706b77bf7c723814f5d|CHI001BAA1|0.0.0.1|Ref A: C0F41868449D48DEA30022FF9A20511B Ref B: CH1EDGE1917 Ref C: 2023-06-08T15:20:20Z"
+  },
+  "noUSRegion": {
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2023 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+      {
+        "estimatedTotal": 2,
+        "resources": [
+          {
+            "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+            "bbox": [
+              33.934799194335938, -118.26517486572266, 33.960224151611328,
+              -118.22676086425781
+            ],
+            "name": "90002, CA",
+            "point": {
+              "type": "Point",
+              "coordinates": [33.95066452, -118.24512482]
+            },
+            "address": {
+              "adminDistrict": "CA",
+              "adminDistrict2": "Los Angeles County",
+              "countryRegion": "Norway",
+              "formattedAddress": "90002, CA",
+              "locality": "Los Angeles",
+              "postalCode": "90002"
+            },
+            "confidence": "High",
+            "entityType": "Postcode1",
+            "geocodePoints": [
+              {
+                "type": "Point",
+                "coordinates": [33.95066452, -118.24512482],
+                "calculationMethod": "Rooftop",
+                "usageTypes": ["Display"]
+              }
+            ],
+            "matchCodes": ["Ambiguous"]
+          },
+          {
+            "__type": "Location:http://schemas.microsoft.com/search/local/ws/rest/v1",
+            "bbox": [
+              22.689187666950808, 120.48353055477952, 22.696913102092161,
+              120.49469515322829
+            ],
+            "name": "90002, Taiwan",
+            "point": {
+              "type": "Point",
+              "coordinates": [22.69305038, 120.48911285]
+            },
+            "address": {
+              "countryRegion": "Taiwan",
+              "formattedAddress": "90002, Taiwan",
+              "locality": "P’ingtung",
+              "postalCode": "90002"
+            },
+            "confidence": "High",
+            "entityType": "Postcode1",
+            "geocodePoints": [
+              {
+                "type": "Point",
+                "coordinates": [22.69305038, 120.48911285],
+                "calculationMethod": "Rooftop",
+                "usageTypes": ["Display"]
+              }
+            ],
+            "matchCodes": ["Ambiguous"]
+          }
+        ]
+      }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "1373fd5bb8514706b77bf7c723814f5d|CHI001BAA1|0.0.0.1|Ref A: C0F41868449D48DEA30022FF9A20511B Ref B: CH1EDGE1917 Ref C: 2023-06-08T15:20:20Z"
+  },
+  "noResult": {
+    "authenticationResultCode": "ValidCredentials",
+    "brandLogoUri": "http://dev.virtualearth.net/Branding/logo_powered_by.png",
+    "copyright": "Copyright © 2023 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.",
+    "resourceSets": [
+      {
+        "estimatedTotal": 0,
+        "resources": []
+      }
+    ],
+    "statusCode": 200,
+    "statusDescription": "OK",
+    "traceId": "1373fd5bb8514706b77bf7c723814f5d|CHI001BAA1|0.0.0.1|Ref A: C0F41868449D48DEA30022FF9A20511B Ref B: CH1EDGE1917 Ref C: 2023-06-08T15:20:20Z"
+  }
+}

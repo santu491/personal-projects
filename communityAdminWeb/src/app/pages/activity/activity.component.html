@@ -1,0 +1,82 @@
+<div class="activity-container row" mat-elevation-z8>
+  <div class="col-8 col-sm10 col-md-12 col-lg-9">
+    <div class="header-container">
+      <strong class="full-width activity-header">{{activityScreenHeader}}</strong>
+    </div>
+    <mat-icon matBadge="{{unread + '+'}}" style='margin-top: 14px;'
+      matBadgeColor="primary" 
+      matBadgeSize="medium" 
+      matBadgeOverlap="false"
+      matBadgeHidden="{{unread > 0 ? false : true}}">
+      notifications
+    </mat-icon>
+    <p class="full-width activity-subheader">{{activityScreenSubHeader}}</p>
+    <mat-divider></mat-divider>
+    <br>
+  </div>
+  <br>
+  <div class="col-md-3 personalFilter" *ngIf="isPersonaEnabled()">
+    <button mat-button [matMenuTriggerFor]="community">{{choosedUser}}</button>
+    <mat-menu #community="matMenu">
+      <button mat-menu-item (click)="onSelectPersona(null)">{{ getUserRoleTitle() }}</button>
+      <button mat-menu-item [matMenuTriggerFor]="persona" (menuOpened)="getData(item)"
+        *ngFor="let item of communityList">
+        {{ item.title }}
+      </button>
+    </mat-menu>
+    <mat-menu #persona="matMenu">
+      <button mat-menu-item (click)="onSelectPersona(item)" *ngFor="let item of communityPersonaUsers">
+        {{ !!item.displayName ? item.displayName : item?.firstName }}
+      </button>
+    </mat-menu>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}" data-backdrop="true" #adminUserModel>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-body text-center">
+            <app-admin-content [adminUserId]="adminUserId"> </app-admin-content>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div style="width: 100%">
+            <button type="button" class="btn btn-default pull-right" (click)="onCloseModal()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <mat-list role="list" class="list list-container">
+    <div *ngFor="let item of activityList">
+      <button class="row activity-list-item full-width" [class.unread]="item.isRead == false"
+        [class.flagged]="item.isFlagged == true" (click)="onClickActivityItem(item)" *ngIf="item.author">
+        <!-- User/Admin Avatar Placeholder, will update once we get from API -->
+        <div class="col col-1 col-xs-1 col-sm-1 col-md-1 image-container">
+          <img src="{{profilePicture}}" alt="" class="profileImage">
+        </div>
+        <div class="col col-1 col-xs-1 col-sm-1 col-md-1 image-container">
+          <img *ngIf="item.reactionType" src="{{item.reactionType}}" alt="" class="reactionImage">
+        </div>
+        <div class="col col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 activity-line">
+          <mat-list-item role="listitem" color="primary" class="author-name"
+            *ngIf="item.author.displayName || item.author.firstName">
+            {{ item.author.displayName || item.author.firstName }}
+          </mat-list-item>
+          <mat-list-item role="listitem" color="primary" *ngIf="item.title">
+            {{item?.title ?? item.title}}
+          </mat-list-item>
+          <p class="d-flex timeread" [class.timeunread]="item.isRead == false">{{ item.createdAt }}</p>
+        </div>
+      </button>
+    </div>
+
+    <!-- No Activity View -->
+    <div *ngIf="activityList.length == 0" class="full-width no-activity-view">
+      <p>{{noActivityLine1}}</p>
+      <p>{{noActivityLine2}}</p>
+    </div>
+  </mat-list>
+
+</div>

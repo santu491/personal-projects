@@ -1,0 +1,7 @@
+apps:
+  - script: app/communityresources/main.js
+    name: 'communityresources'
+    instances: 4
+    exec_mode: cluster
+    out_file: /dev/null
+    error_file: /dev/null

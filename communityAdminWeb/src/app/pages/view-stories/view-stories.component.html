@@ -1,0 +1,284 @@
+<div class="form-container view" mat-elevation-z8>
+  <form [formGroup]="filterForm">
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      [ngStyle]="{ display: display }"
+      data-backdrop="true"
+      #storyModal
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="modal-title">
+              <h1>{{ modalTitle }}</h1>
+            </span>
+            <button
+              type="button"
+              class="btn btn-light"
+              (click)="onCloseModal()"
+            >
+              <mat-icon class="float-right">close</mat-icon>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <app-story-content
+              [storyId]="selectedStoryId"
+              [communityName]="communityName"
+              [adminUser]="selectedPersona"
+              [communityList]="communityList"
+            ></app-story-content>
+          </div>
+          <div class="modal-footer">
+            <div style="width: 100%">
+              <app-admin-action-list
+                class="pull-left"
+                (removeStory)="removeStory($event)"
+                (reportStory)="reportStory($event)"
+                (banUser)="banUser($event)"
+                [story]="currentSelectedRow"
+                [modalView]="true"
+              ></app-admin-action-list>
+
+              <mat-form-field
+                class="pull-right"
+                appearance="outline"
+                *ngIf="isPersonaEnabled() && allowComment"
+              >
+                <mat-label>
+                  <strong>Comment As</strong>
+                </mat-label>
+                <mat-select>
+                  <mat-option value="none" (click)="onSelectPersona(null)">{{
+                    getUserRoleTitle()
+                  }}</mat-option>
+                  <mat-option
+                    *ngFor="let item of personaDetails"
+                    value="{{ item.id }}"
+                    (click)="onSelectPersona(item)"
+                    >{{
+                      !item?.displayName ? item.displayName : item?.firstName
+                    }}, {{ item.displayTitle }}</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+              <!-- <button type="button" class="btn btn-default pull-right" (click)="onCloseModal()">Close</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-lg-3">
+      <mat-form-field appearance="outline" class="col-md-6">
+        <mat-label>{{ viewStoryModule.selectCommunities }}</mat-label>
+        <mat-select formControlName="communities" multiple required>
+          <mat-select-trigger>
+            {{ selectedCommunityName }}
+            <span
+              *ngIf="
+                communities.value?.length > 1 &&
+                selectedCommunityName != 'All Communities'
+              "
+              class="additional-selection"
+            >
+              (+{{ communities.value.length - 1 }}
+              {{ communities.value?.length === 2 ? 'other' : 'others' }})
+            </span>
+          </mat-select-trigger>
+          <mat-option #allSelected (click)="toggleAllSelection()" [value]="0">
+            All Communities</mat-option
+          >
+          <mat-option
+            *ngFor="let community of communityList"
+            (click)="singleSelectAssignedCommunity()"
+            [value]="community.id"
+          >
+            {{ community.title }}</mat-option
+          >
+        </mat-select>
+        <mat-error
+          *ngIf="
+            filterForm?.get('communities')?.invalid &&
+            filterForm?.get('communities')?.touched
+          "
+        >
+          Select at least one community
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-md-6">
+        <mat-label>Choose Filter</mat-label>
+        <mat-select formControlName="storyFilters" required>
+          <mat-option
+            value="{{ item.value }}"
+            (click)="applyFilters()"
+            *ngFor="let item of filters"
+          >
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="example-container mat-elevation-z8">
+        <mat-table [dataSource]="dataSource" matSort>
+          <!-- ID Column -->
+          <ng-container matColumnDef="index">
+            <mat-header-cell *matHeaderCellDef> S.No: </mat-header-cell>
+            <mat-cell *matCellDef="let i = index">
+              {{ paginator.pageIndex * pageSize + i + 1 }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- FeaturedQuote Column -->
+          <ng-container matColumnDef="featuredQuote">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Story Title
+            </mat-header-cell>
+            <mat-cell
+              *matCellDef="let row"
+              class="featured-quote"
+              (click)="openModal(row)"
+            >
+              {{ row.featuredQuote }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- DisplayName Column -->
+          <ng-container matColumnDef="displayName">
+            <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              {{ row?.displayName || row?.author?.firstName }}
+              <span *ngIf="!row?.author?.active ?? true" class="inactive-user"
+                >INACTIVE</span
+              >
+            </mat-cell>
+          </ng-container>
+
+          <!-- CommunityId Column -->
+          <ng-container matColumnDef="communityId">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Community
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              {{ getCommunityName(row.communityId) }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- Flagged Column -->
+          <ng-container matColumnDef="flagged">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Flagged
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{ row.flagged }} </mat-cell>
+          </ng-container>
+
+          <!-- Published Column -->
+          <ng-container matColumnDef="published">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Published
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{ row.published }} </mat-cell>
+          </ng-container>
+
+          <!-- Removed Column -->
+          <ng-container matColumnDef="removed">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Removed
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row"> {{ row.removed }} </mat-cell>
+          </ng-container>
+
+          <!-- PublishedAt Column -->
+          <ng-container matColumnDef="publishedAt">
+            <mat-header-cell *matHeaderCellDef mat-sort-header>
+              Published At
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              {{ row.publishedAt | date : 'medium' }}
+            </mat-cell>
+          </ng-container>
+
+          <!-- Actions Column -->
+          <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+              <div class="col col-2 col-xs-2 col-sm-2 col-md-2">
+                <mat-menu #storyOptionMenu="matMenu">
+                  <app-admin-action-list
+                    (removeStory)="removeStory($event)"
+                    (reportStory)="reportStory($event)"
+                    (banUser)="banUser($event)"
+                    [story]="row"
+                  ></app-admin-action-list>
+                  <!--<button mat-menu-item *ngIf="!row.flagged && !row.removed"
+                    (click)="reportStory(row, true)">Report</button>
+                  <button mat-menu-item *ngIf="row.flagged && !row.removed"
+                    (click)="reportStory(row, false)">Ignore</button>
+                  <button mat-menu-item *ngIf="row.flagged || row.removed" (click)="banUser(row)">Ban User</button>
+                  <button mat-menu-item *ngIf="!row.removed" (click)="removeStory(row)">Remove</button>
+                  -->
+                </mat-menu>
+                <button
+                  [matMenuTriggerFor]="storyOptionMenu"
+                  class="story-option-icon"
+                  [disabled]="row.flagged && isAdvocate"
+                >
+                  <mat-icon
+                    class="float-right"
+                    [matTooltip]="
+                      (row.flagged || row.removed) && !row?.author?.active
+                        ? 'No actions to perform'
+                        : 'Perform actions'
+                    "
+                  >
+                    more_horiz</mat-icon
+                  >
+                </button>
+              </div>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row
+            *matRowDef="let row; columns: displayedColumns; let i = index"
+            [class.flag-story]="
+              row.flagged &&
+              filterForm?.controls?.storyFilters?.value !== 'flagged' &&
+              filterForm?.controls?.storyFilters?.value !== 'removed'
+            "
+          >
+          </mat-row>
+        </mat-table>
+        <div class="pagination">
+          <div class="page-select" *ngIf="totalPages > 0">
+            <mat-label>Go to page: </mat-label>
+            <mat-form-field>
+              <mat-select [(value)]="paginator.pageIndex">
+                <mat-option
+                  *ngFor="let number of allPages"
+                  [value]="number"
+                  (click)="goToPage(number)"
+                  >{{ number + 1 }}</mat-option
+                >
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <mat-paginator
+            #paginator
+            [pageIndex]="paginator.pageIndex"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            [length]="totalStories"
+            (page)="pageChanged($event)"
+            aria-label="Select page"
+            showFirstLastButtons
+          >
+          </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

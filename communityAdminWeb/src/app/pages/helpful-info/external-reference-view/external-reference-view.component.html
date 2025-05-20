@@ -1,0 +1,169 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  data-backdrop="true"
+  [ngStyle]="{ display: displayForm ? 'block' : 'none' }"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title"
+          ><h3 class="heading">External Reference</h3></span
+        >
+        <button class="btn btn-light" type="button" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>In English</h4>
+        <form [formGroup]="form">
+          <div formGroupName="en">
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Title"
+                  formControlName="title"
+                  name="title"
+                  [maxlength]="limits.articleTitle"
+                />
+                <mat-hint [align]="'end'"
+                  >{{ title?.value?.length ?? 0 }}/{{
+                    limits.articleTitle
+                  }}</mat-hint
+                >
+              </mat-form-field>
+              <mat-error
+                *ngIf="title?.touched && title?.invalid"
+                class="text-align-left"
+                >Please Enter Title
+              </mat-error>
+            </div>
+
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  formControlName="description"
+                  name="description"
+                  placeholder="Description"
+                  [maxlength]="limits.articleDescription"
+                />
+                <mat-hint [align]="'end'"
+                  >{{ description?.value?.length ?? 0 }} /
+                  {{ limits.articleDescription }}
+                </mat-hint>
+              </mat-form-field>
+            </div>
+
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  formControlName="link"
+                  name="link"
+                  matInput
+                  placeholder="Link"
+                />
+              </mat-form-field>
+              <mat-error
+                *ngIf="
+                  link?.touched &&
+                  link?.invalid &&
+                  link?.value?.trim()?.length === 0
+                "
+                >Please Enter Link</mat-error
+              >
+              <mat-error
+                *ngIf="
+                  link?.touched &&
+                  link?.value?.trim()?.length > 0 &&
+                  link?.hasError('mismatchedUrl')
+                "
+                >Please Enter Valid Link</mat-error
+              >
+            </div>
+          </div>
+
+          <h4>In Spanish</h4>
+
+          <div formGroupName="es">
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  matInput
+                  placeholder="Title"
+                  formControlName="title"
+                  name="es title"
+                  [maxLength]="limits.articleTitle"
+                />
+                <mat-hint [align]="'end'"
+                  >{{ es_title?.value?.length ?? 0 }}/{{
+                    limits.articleTitle
+                  }}</mat-hint
+                >
+              </mat-form-field>
+              <mat-error *ngIf="es_title?.touched && es_title?.invalid"
+                >Please Enter Title</mat-error
+              >
+            </div>
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  type="text"
+                  formControlName="description"
+                  name="es_description"
+                  placeholder="Description"
+                  matInput
+                  [maxLength]="limits.articleDescription"
+                />
+                <mat-hint [align]="'end'"
+                  >{{ es_description?.value?.length ?? 0 }}/{{
+                    limits.articleDescription
+                  }}</mat-hint
+                >
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field class="full-width">
+                <input
+                  placeholder="Link"
+                  formControlName="link"
+                  name="link"
+                  matInput
+                />
+              </mat-form-field>
+
+              <mat-error
+                *ngIf="
+                  es_link?.touched &&
+                  es_link?.invalid &&
+                  es_link?.value?.trim()?.length === 0
+                "
+                >Please Enter Link</mat-error
+              >
+              <mat-error
+                *ngIf="
+                  es_link?.touched &&
+                  es_link?.value?.trim()?.length > 0 &&
+                  es_link?.hasError('mismatchedUrl')
+                "
+                >Please Enter Valid Link</mat-error
+              >
+            </div>
+          </div>
+
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="onpress()"
+            class="btn btn-primary"
+            [disabled]="!form.valid"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

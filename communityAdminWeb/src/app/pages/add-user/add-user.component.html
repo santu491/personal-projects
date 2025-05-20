@@ -1,0 +1,137 @@
+<form class="form-container" [formGroup]="addUserForm">
+    <mat-card class="form-view">
+        <mat-card-title class="text-center">{{addUserModule.addUserHeader}}</mat-card-title>
+        <mat-card-content>
+            <div class="row">
+                <div class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="bottom-15">
+                        <mat-slide-toggle
+                          formControlName="isPersona"
+                          class="full-width"
+                          color="primary"
+                          class="notify-toggle"
+                          (change)="togglePersona($event)"
+                        >
+                        {{addUserModule.persona}}
+                        </mat-slide-toggle>
+                        <mat-card
+                          class="shadow p-3 mb-3 bg-white rounded"
+                          *ngIf="this.personaUser"
+                        >
+                          <p style="font-weight: bold">Persona User Details</p>
+
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.firstName}}</mat-label>
+                                <input formControlName="firstName" matInput required autocomplete="off"
+                                    [placeholder]="addUserModule.firstName"
+                                    (input)="onTextChange($event, 'firstName')"
+                                />
+                                <mat-error
+                                    *ngIf="this.personaUser && addUserForm?.get('firstName')?.touched">
+                                    {{addUserModule.usDomainErr}} 
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.lastName}}</mat-label>
+                                <input formControlName="lastName" matInput required autocomplete="off"
+                                    [placeholder]="addUserModule.lastName"
+                                    (input)="onTextChange($event, 'lastName')"
+                                />
+                                <mat-error
+                                    *ngIf="this.personaUser && addUserForm?.get('lastName')?.touched">
+                                    {{addUserModule.usDomainErr}} </mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.displayName}}</mat-label>
+                                <input formControlName="displayName" matInput
+                                    [placeholder]="addUserModule.displayName"
+                                />
+                                <mat-error
+                                    *ngIf="this.personaUser && addUserForm?.get('displayName') === null">
+                                    {{addUserModule.usDomainErr}} </mat-error>
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.aboutMe}}</mat-label>
+                                <input formControlName="aboutMe" matInput
+                                    [placeholder]="addUserModule.aboutMe"
+                                />
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.interest}}</mat-label>
+                                <input formControlName="interests" matInput
+                                    [placeholder]="addUserModule.interest"
+                                />
+                            </mat-form-field>
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>{{addUserModule.location}}</mat-label>
+                                <input formControlName="location" matInput
+                                    [placeholder]="addUserModule.location"
+                                />
+                            </mat-form-field>
+                        </mat-card>
+                    </div>
+                    <mat-form-field appearance="outline" class="full-width" 
+                    *ngIf="!this.personaUser">
+                        <mat-label>{{addUserModule.usDomainID}}</mat-label>
+                        <input formControlName="anthemUSDomainID" matInput required autocomplete="off"
+                            [placeholder]="addUserModule.usDomainIDPlaceHolder"
+                            (blur)="onBlurForm($event, 'anthemUSDomainID')"
+                            (input)="onTextChange($event, 'anthemUSDomainID')"
+                        />
+                        <mat-error
+                            *ngIf="!this.personaUser && addUserForm?.get('anthemUSDomainID')?.invalid && addUserForm?.get('anthemUSDomainID')?.touched">
+                            {{addUserModule.usDomainErr}} </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="full-width" appearance="outline"
+                    >
+                        <mat-label>{{addUserModule.chooseRole}}</mat-label>
+                        <mat-select formControlName="selectedRole" required
+                            (selectionChange)="onRoleChange($event.value)">
+                            <mat-option 
+                                [value]="item.role" 
+                                *ngFor="let item of selectiveRole"
+                            >
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="addUserForm?.get('selectedRole')?.invalid && addUserForm?.get('selectedRole')?.touched ">
+                            {{addUserModule.chooseRoleErr}} </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="full-width"
+                        *ngIf="addUserForm?.get('selectedRole')?.value === roleList[1].role || this.personaUser">
+                        <mat-label>{{addUserModule.selectCommunity}}</mat-label>
+                        <mat-select formControlName="communities" multiple required>
+                            <mat-select-trigger>
+                                {{selectedCommunityName}}
+                                <span
+                                    *ngIf="communities.value?.length > 1 && selectedCommunityName != profile.allCommunitiesLabel"
+                                    class="additional-selection">
+                                    (+{{communities.value.length - 1}}
+                                    {{communities.value?.length === 2 ? 'other' : 'others'}})
+                                </span>
+                            </mat-select-trigger>
+                            <mat-option #allSelected (click)="toggleAllSelection()" [value]="0">
+                                {{profile.allCommunitiesLabel}}</mat-option>
+                            <mat-option *ngFor="let community of communityList"
+                                (click)="singleSelectAssignedCommunity()" [value]="community.id">
+                                {{community.title}}</mat-option>
+                        </mat-select>
+                        <mat-error
+                            *ngIf="addUserForm?.get('communities')?.invalid && addUserForm?.get('communities')?.touched">
+                            {{addUserModule.communityErr}} </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" class="update-profile-btn" type="reset"
+                (click)="clearAddUserForm()">{{addUserModule.clearBtn}}</button>
+            <button mat-raised-button color="primary" class="update-profile-btn" [disabled]="onFormChange()"
+                type="reset" (click)="onClickAddUser()">{{addUserModule.addUserBtn}}</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

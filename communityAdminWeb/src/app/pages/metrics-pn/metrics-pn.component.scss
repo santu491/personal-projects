@@ -1,0 +1,42 @@
+.main-container {
+    margin-top: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-left: 32px;
+    border-radius: 10px;
+    overflow-y: auto;
+    height: calc(100vh - 175px);
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.metrics-container {
+    padding: 2%;
+}
+
+.sub-heading {
+    color: #888888;
+    margin-top: -20px;
+}
+
+.metrics-table {
+    display: flex;
+}
+
+tr td {
+    padding: 0px 10px;
+}
+
+th {
+    padding: 5px 0px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+
+    button {
+        margin-right: 10px;
+    }
+}

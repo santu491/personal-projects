@@ -1,0 +1,103 @@
+<mat-card>
+  <form [formGroup]="form">
+    <div formGroupName="en">
+      <mat-form-field class="full-width">
+        <mat-label>Section Title</mat-label>
+        <input
+          name="title"
+          placeholder="Enter Section Title"
+          matInput
+          formControlName="title"
+          [maxlength]="limits.articleTitle"
+        />
+        <mat-hint [align]="'end'"
+          >{{ title?.value?.length ?? 0 }} / {{ limits.articleTitle }}</mat-hint
+        >
+      </mat-form-field>
+      <mat-error *ngIf="title?.touched && title?.invalid">
+        Enter Valid Value for Section Title
+      </mat-error>
+
+      <mat-form-field class="full-width">
+        <mat-label>Section Description</mat-label>
+        <input
+          name="description"
+          placeholder="Enter Description (Optional)"
+          matInput
+          formControlName="description"
+          [maxlength]="limits.articleDescription"
+        />
+        <mat-hint [align]="'end'"
+          >{{ description?.value?.length }} /
+          {{ limits.articleDescription }}</mat-hint
+        >
+      </mat-form-field>
+    </div>
+
+    <h3><strong>In Spanish</strong></h3>
+    <div formGroupName="es">
+      <mat-form-field class="full-width">
+        <mat-label>Section Title</mat-label>
+        <input
+          name="title"
+          placeholder="Enter Section Title"
+          matInput
+          formControlName="title"
+          [maxlength]="limits.articleTitle"
+        />
+        <mat-hint [align]="'end'"
+          >{{ esTitle?.value?.length }} / {{ limits.articleTitle }}</mat-hint
+        >
+      </mat-form-field>
+      <mat-error *ngIf="esTitle?.touched && esTitle?.invalid">
+        Enter Valid Value for Section Title
+      </mat-error>
+
+      <mat-form-field class="full-width">
+        <mat-label>Section Description</mat-label>
+        <input
+          name="description"
+          placeholder="Enter Description (Optional)"
+          matInput
+          formControlName="description"
+          [maxlength]="limits.articleDescription"
+        />
+        <mat-hint [align]="'end'"
+          >{{ esDescription?.value?.length }} /
+          {{ limits.articleDescription }}</mat-hint
+        >
+      </mat-form-field>
+    </div>
+
+    <div class="btn-container" *ngIf="mode === 'step'">
+      <button
+        type="button"
+        mat-stroked-button
+        color="warn"
+        (click)="onBackClick()"
+      >
+        Back
+      </button>
+      <button
+        mat-stroked-button
+        type="button"
+        color="primary"
+        [disabled]="!form.valid"
+        (click)="onNextClick()"
+      >
+        Next
+      </button>
+    </div>
+    <div class="btn-container" *ngIf="mode === 'modal'">
+      <button
+        mat-stroked-button
+        type="button"
+        color="primary"
+        [disabled]="!form.valid"
+        (click)="onNextClick()"
+      >
+        {{ sectionData?.isEdit ? 'Edit Section' : 'Create Section' }}
+      </button>
+    </div>
+  </form>
+</mat-card>

@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "pretty": true,
+        "sourceMap": true,
+        "importHelpers": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "noImplicitThis": false,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@app/*": ["./app/*"],
+            "@anthem/communityadminapi/*": ["./libs/*"],
+            "@tcp/*": ["./api/tcp/*"]
+        },
+        "types": ["jest", "node"]
+    }
+}

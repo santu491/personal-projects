@@ -1,0 +1,28 @@
+<div class="container mat-elevation-z8">
+
+   <div class="reaction-view" (click)="onReactionClicked('like')">
+      <img src="{{likeOn}}" alt="" class="reaction-image grow">
+      <p class="reaction-text like-color">
+         {{search.en.likeReactionText}}
+      </p>
+   </div>
+   <div class="reaction-view" (click)="onReactionClicked('care')">
+      <img src="{{care}}" alt="" class="reaction-image grow">
+      <p class="reaction-text care-color">
+         {{search.en.careReactionText}}
+      </p>
+   </div>
+   <div class="reaction-view" (click)="onReactionClicked('celebrate')">
+      <img src="{{celebrate}}" alt="" class="reaction-image grow">
+      <p class="reaction-text celebrate-color">
+         {{search.en.celebrateReactionText}}
+      </p>
+   </div>
+   <div class="reaction-view good-idea" (click)="onReactionClicked('good_idea')">
+      <img src="{{idea}}" alt="" class="reaction-image grow">
+      <p class="reaction-text good-idea-color">
+         {{search.en.goodIdeaReactionText}}
+      </p>
+   </div>
+
+</div>

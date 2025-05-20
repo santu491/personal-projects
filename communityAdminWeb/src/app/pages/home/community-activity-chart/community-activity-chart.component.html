@@ -1,0 +1,13 @@
+<div *ngIf="isDataLoaded">
+  <h2>Community Members' Activity</h2>
+  <mat-card>
+    <canvas
+      baseChart
+      [data]="chartData"
+      [options]="chartOptions"
+      [legend]="true"
+    >
+    </canvas>
+    <div class="mt-3 disclaimer">*Comment count from last 30 days on posts</div>
+  </mat-card>
+</div>

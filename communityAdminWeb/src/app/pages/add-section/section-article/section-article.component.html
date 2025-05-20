@@ -1,0 +1,48 @@
+<div class="row article">
+  <div class="col-sm-12 col-md-9 col-lg-9">
+    <div class="d-flex align-items-center">
+      <img
+        *ngIf="article.type == 'HWReference'"
+        src="/assets/img/article-icon.png"
+        alt="Article Icon"
+      />
+      <img
+        *ngIf="article.type.match(videoType)"
+        src="/assets/img/video-icon.png"
+        alt="Video Icon"
+      />
+      <mat-icon
+        *ngIf="article.type === 'HWExternalReference'"
+        style="align-items: center; padding-right: 30px"
+        >link icon</mat-icon
+      >
+      <span class="title"> {{ article.title }}</span>
+    </div>
+    <a
+      *ngIf="article.type === 'HWExternalReference'"
+      [href]="article.link"
+      target="_blank"
+      class="px-1 py-2"
+    >
+      {{ article.link }}
+    </a>
+  </div>
+  <div class="col-sm-12 col-md-3 col-lg-3 icon-holder">
+    <button
+      mat-stroked-button
+      matTooltip="Edit Article Item"
+      (click)="editArticle()"
+    >
+      <mat-icon>edit</mat-icon>
+      Edit
+    </button>
+    <button
+      mat-stroked-button
+      matTooltip="Delete Article Item"
+      (click)="deleteArticle()"
+    >
+      <mat-icon color="warn"> delete_outline</mat-icon>
+      Delete
+    </button>
+  </div>
+</div>

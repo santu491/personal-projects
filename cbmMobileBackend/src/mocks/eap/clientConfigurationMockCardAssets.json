@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/company-demo/counselling-therapy-emotional-assistance-with-verified-experts",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": ""
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/company-demo/judicial-assistance",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "https://www.clclegalforms.com/clc/index.cfm?aft=7B13B1A8"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/company-demo/monetary-support",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "/content/careloneap/us/en/client-home/plan-finances/cm-article?page=topics/financial-wellness?query="
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/company-demo/family-support",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "/company-demo/work-life-resources/resource-library"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/bcbsnc/counselling-therapy-emotional-assistance-with-verified-experts",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": ""
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/bcbsnc/judicial-assistance",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "https://www.clclegalforms.com/clc/index.cfm?aft=7B13B1A8"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/bcbsnc/monetary-support",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "/content/careloneap/us/en/client-home/plan-finances/cm-article?page=topics/financial-wellness?query="
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/assets/careloneap/content-fragments/custom-card/bcbsnc/family-support",
+      "properties": {
+        "elements": {
+          "onlineResourceUrl": {
+            "value": "/bcbsnc/work-life-resources/resource-library"
+          }
+        }
+      }
+    }
+  ]
+}

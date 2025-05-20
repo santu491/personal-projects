@@ -1,0 +1,124 @@
+$comment-base-color: #f7f6f8;
+$max-window-height: 500px;
+$border-width: 1px solid #0000001f;
+
+.content-container {
+  display: flex;
+}
+
+.story-details {
+  text-align: left;
+}
+
+.story-container {
+  text-align: left;
+  overflow-y: auto;
+  height: $max-window-height;
+}
+
+.answer-container {
+  padding-top: 2rem;
+  p {
+    text-align: justify;
+    word-break: break-word;
+  }
+}
+
+.title-holder {
+  padding: 1%;
+  border-left: $border-width;
+  h3 {
+    margin: 2%;
+  }
+}
+
+.comment-container {
+  overflow-y: auto;
+  padding: 1%;
+  padding: 1em 0.5em;
+  background-color: $comment-base-color;
+  -webkit-box-shadow: inset 0px 5px 10px -7px #d4beea;
+  box-shadow: inset 0px 5px 10px -7px #d4beea;
+  height: $max-window-height - 84px;
+}
+
+.comment-input {
+  width: 100%;
+  color: #363737;
+  border: 0px;
+  background-color: transparent;
+  outline: none;
+}
+
+.comment-input-view {
+  background-color: #286ce2;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.add-comment-view {
+  background-color: $comment-base-color;
+  padding-bottom: 1%;
+}
+
+.allow-comment-msg {
+  font-size: 12px;
+  border-left: $border-width;
+  border-top: $border-width;
+  color: #76539e;
+  align-items: center;
+  .info-icon {
+    width: 5px;
+    height: 5px;
+    float: right;
+    padding-right: 5em;
+  }
+}
+
+.comment-section {
+  padding-right: 12px;
+  height: 100%;
+}
+
+.no-comments {
+  color: #969f9f;
+}
+
+.reaction-count {
+  margin-top: 5%;
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  margin-top: 0.5em;
+  justify-content: center;
+  font-size: 1rem;
+  .reaction-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+
+.reaction-container-story {
+  z-index: 5;
+  position: absolute;
+  width: fit-content;
+}
+
+.emoji-mart-styles {
+  position: absolute;
+  left: 192px;
+  top: 44px;
+}
+
+.white-icon {
+  color: white;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.white-icon svg {
+  fill: white;
+}

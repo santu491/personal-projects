@@ -1,0 +1,1 @@
+{"version":3,"file":"iLdUser.js","sourceRoot":"","sources":["iLdUser.ts"],"names":[],"mappings":"","sourcesContent":["export interface ILdUser {\r\n  key: string;\r\n  custom?: { [key: string]: string };\r\n}\r\n"]}

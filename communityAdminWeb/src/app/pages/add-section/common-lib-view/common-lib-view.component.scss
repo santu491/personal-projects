@@ -1,0 +1,50 @@
+@import '/src/app/pages/pages.component.scss';
+@import '../../admin/admin.component.scss';
+
+.common-modal {
+    max-width: 80%;
+}
+
+.lib-option {
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid #43205a;
+    background-color: #fff;
+    margin-top: 1em;
+    box-shadow: 2px 2px 3px #e3d9e9;
+    border-radius: 0.5em;
+
+    &:hover {
+        background-color: #fbf4ff;
+    }
+
+    .selected {
+        background-color: #43205a;
+    }
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 100%;
+    }
+}
+
+.lib-list {
+    height: 520px;
+}
+
+.lib-content {
+    border-left: 1px solid #eee;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.icons {
+    img {
+        height: 18px;
+        width: 18px;
+    }
+}

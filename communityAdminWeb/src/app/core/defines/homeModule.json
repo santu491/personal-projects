@@ -1,0 +1,16 @@
+{
+  "placeholderLine1": "Admin Portal is one stop destination for all your Admin related activities within Sydney Community.",
+  "placeholderLine2": "Navigate to other tabs to explore more.",
+  "tools": "Tools",
+  "healthCheckDashboard": "Health Check Dashboard",
+  "communityAPI": "Community API",
+  "communityAPICaption": "Community APIs Realtime Status",
+  "adminAPI": "Admin API",
+  "adminAPICaption": "Admin APIs Realtime Status",
+  "sNo": "S.No.",
+  "env": "Environment",
+  "currentVersion": "Current Version",
+  "status": "Status",
+  "success": "Success",
+  "error": "Error"
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "6226f729aacdf5002bf8d84e",
+    "isActivityNotificationRead": false,
+    "activityCreatedDate": "2022-03-08T06:26:49.147Z",
+    "activityText": "Has shared a post to your community",
+    "postLink": {
+      "postId": "6226f728aacdf5002bf8d812",
+      "commentId": null,
+      "replyId": null
+    },
+    "activityInitiator": {
+      "id": "62261e3095da9115d3a2809d",
+      "firstName": "Gokul",
+      "lastName": "Deep",
+      "username": "Don",
+      "token": "",
+      "gender": "",
+      "displayName": "",
+      "age": 0,
+      "profilePicture": "",
+      "myCommunities": [],
+      "contacts": [],
+      "active": false,
+      "hasAgreedToTerms": false,
+      "personId": "",
+      "onBoardingState": "",
+      "localCategories": [],
+      "tou": [],
+      "dummy2FACheck": false,
+      "secretQuestionAnswers": [],
+      "cancerCommunityCard": false
+    },
+    "isCurrentUserAlsoAuthorOfLinkedStory": false,
+    "isHide": false,
+    "isDelete": false,
+    "isFlagged": false
+  },
+  {
+    "id": "6226f729aacdf5002bf8d84e",
+    "isActivityNotificationRead": false,
+    "activityCreatedDate": "2022-03-08T06:26:49.147Z",
+    "activityText": "Published a New Story in Cancer",
+    "storyLink": {
+      "storyId": "6226f728aacdf5002bf8d812",
+      "commentId": null,
+      "replyId": null,
+      "questionId": null,
+      "answerId": null,
+      "reactionId": null,
+      "genericId": null,
+      "articleId": null
+    },
+    "activityInitiator": {
+      "id": "62261e3095da9115d3a2809d",
+      "firstName": "Gokul",
+      "lastName": "Deep",
+      "username": "Don",
+      "token": "",
+      "gender": "",
+      "displayName": "",
+      "age": 0,
+      "profilePicture": "",
+      "myCommunities": [],
+      "contacts": [],
+      "active": false,
+      "hasAgreedToTerms": false,
+      "personId": "",
+      "onBoardingState": "",
+      "localCategories": [],
+      "tou": [],
+      "dummy2FACheck": false,
+      "secretQuestionAnswers": [],
+      "cancerCommunityCard": false
+    },
+    "isCurrentUserAlsoAuthorOfLinkedStory": true,
+    "isHide": false,
+    "isDelete": false,
+    "isFlagged": false
+  },
+  {
+    "id" : "622923d918a6c500290c4546",
+    "isActivityNotificationRead" : true,
+    "activityCreatedDate" : "2022-03-09T22:02:01.337Z",
+    "activityText" : "Has reacted to your story",
+    "isCurrentUserAlsoAuthorOfLinkedStory" : true,
+    "activityInitiator" : {
+        "id" : "62021eb615794e00237056b0",
+        "displayName" : "Amitav",
+        "firstName" : "GRAYSON",
+        "profilePicture" : "https://uat.api.sydney-community.com/v2/users/profileImageString/4adfa52a-477a-004a-f4a6-67a14e7fec97"
+    },
+    "storyLink" : {
+        "storyId" : "6228a1329fb2b50029bdf214"
+    },
+    "notification" : {
+        "status" : "success",
+        "type" : "reaction",
+        "title" : "New reaction received",
+        "body" : "A member has reacted to your story",
+        "deepLink" : "activity",
+        "createdDate" : "2022-03-09T22:02:01.346Z",
+        "senderId" : "61d710d4fe3d81002ade38d4",
+        "reason" : [],
+        "failedCount" : 0
+    }
+}
+]

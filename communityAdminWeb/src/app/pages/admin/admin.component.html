@@ -1,0 +1,11 @@
+<div style="height: 575px" *ngIf="!view">
+    <div class="d-flex flex-column justify-content-center center-alignment"></div>
+    <p class="placeholder-text">Admin Portal is one stop destination for all your Admin related activities within Sydney
+      Community.</p>
+    <br>
+    <p class="placeholder-subtext">Navigate to other tabs to explore more.</p>
+  </div>
+  
+  <div *ngIf="view">
+    <app-sidenav [moduleDetails]="adminSideNav"></app-sidenav>
+  </div>

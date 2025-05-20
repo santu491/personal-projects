@@ -1,0 +1,8 @@
+apps:
+  - script: app/tcp/main.js
+    name: 'tcp'
+    node_args: 'node_modules/ca-apm-probe-simple/bin/ca-apm-run.js'
+    instances: 4
+    exec_mode: cluster
+    out_file: /dev/null
+    error_file: /dev/null

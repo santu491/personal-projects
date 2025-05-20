@@ -1,0 +1,26 @@
+@import '/src/app/pages/pages.component.scss';
+
+.margin-left mat-radio-button:not(:first-child) {
+  margin-left: 10px;
+}
+
+.post-setting {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.image {
+  border: 1px solid gray;
+  border-radius: 10px;
+  max-height: 250px;
+  max-width: 350px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.notify-toggle {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

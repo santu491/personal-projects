@@ -1,0 +1,83 @@
+<div class="container other-form">
+  <form [formGroup]="articleForm">
+    <div class="row">
+      <div class="col" formGroupName="en">
+        <mat-form-field class="full-width">
+          <mat-label>English Title</mat-label>
+          <input
+            name="enOtherTitle"
+            placeholder="Enter Article Title"
+            matInput
+            formControlName="title"
+          />
+        </mat-form-field>
+        <angular-editor
+          [placeholder]="'Enter text here...'"
+          [config]="editorConfig"
+          id="enEditor"
+          formControlName="description"
+        ></angular-editor>
+      </div>
+      <div class="col" formGroupName="es">
+        <mat-form-field class="full-width">
+          <mat-label>Spanish Title</mat-label>
+          <input
+            name="esOtherTitle"
+            placeholder="Enter Article Title in Spanish"
+            matInput
+            formControlName="title"
+          />
+        </mat-form-field>
+        <angular-editor
+          [placeholder]="'Enter Spanish text here...'"
+          [config]="spanishEditorConfig"
+          id="esEditor"
+          formControlName="description"
+        ></angular-editor>
+      </div>
+    </div>
+    <mat-form-field class="full-width">
+      <mat-label>Image Link</mat-label>
+      <input
+        name="imageLink"
+        placeholder="Enter Image Link (if any)"
+        matInput
+        type="text"
+        formControlName="thumbnail"
+      />
+    </mat-form-field>
+
+    <label>Select Brand Image</label>
+    <app-image-picker
+      [imageList]="imageData"
+      [imageType]="iconType"
+      [imagePicked]="getPartnerImage()"
+      (onPickingImage)="handleBrandLogo($event)"
+      class="partner-picker"
+    ></app-image-picker>
+
+    <mat-form-field class="full-width">
+      <mat-label>Disclaimer</mat-label>
+      <input
+        name="disclaimer"
+        placeholder="Enter disclaimer text"
+        matInput
+        type="text"
+        formControlName="disclaimer"
+      />
+    </mat-form-field>
+
+    <mat-error *ngIf="articleDescriptionError"
+      >Description cannot be empty</mat-error
+    >
+    <div class="btn-container">
+      <button
+        mat-raised-button
+        [disabled]="articleForm.invalid"
+        (click)="addCustomArticle()"
+      >
+        {{ articleData?.isEdit ? 'Update Article' : 'Create Article' }}
+      </button>
+    </div>
+  </form>
+</div>

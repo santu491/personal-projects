@@ -1,0 +1,24 @@
+{
+  "_id" : "62065e392715d2002aa45fba",
+  "id" : "62065e392715d2002aa45fba",
+  "username" : "TEST",
+  "createdAt" : "2022-02-11T13:01:45.807Z",
+  "updatedAt" : "2022-09-16T12:37:16.431Z",
+  "role" : "scadvocate",
+  "firstName" : "Test",
+  "lastName" : "User",
+  "lastLogInAt" : "2022-04-05T17:39:57.995Z",
+  "aboutMe" : "Tell us about yourself!!",
+  "displayName" : "Tester",
+  "displayTitle" : "Community Advocate",
+  "interests" : "..",
+  "location" : "",
+  "communities" : [
+      "607e7c99d0a2b533bb2ae3d2",
+      "60a358bc9c336e882b19bbf0",
+      "60e2e7277c37b43a668a32f2",
+      "6214e8959aa982c0d09b40f5"
+  ],
+  "active" : false,
+  "isPersona" : false
+}

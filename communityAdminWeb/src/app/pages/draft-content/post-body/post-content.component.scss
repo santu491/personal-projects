@@ -1,0 +1,32 @@
+@import '/src/app/pages/pages.component.scss';
+
+.count-message {
+  background-color: gray;
+  padding: 3px;
+  border-radius: 2px;
+  color: white;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.emoji-mart-styles {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 500;
+}
+
+.emoji-icon {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-top: -1em;
+  padding-bottom: 1em;
+}

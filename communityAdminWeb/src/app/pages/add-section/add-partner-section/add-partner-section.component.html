@@ -1,0 +1,79 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2 class="heading">Add Partner</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="closeModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div *ngIf="partners.length > 0; else elseBlock">
+          <h3>Select a Partner Logo</h3>
+          <div class="image-preview">
+            <label class="image-holder" *ngFor="let partner of partners">
+              <input
+                type="radio"
+                name="imagePicked"
+                [value]="partner.logoImage"
+                [checked]="imageLink && partner.logoImage === imageLink"
+                (change)="selectImage(partner)"
+              />
+              <img [src]="partner.logoImage" [alt]="" />
+            </label>
+          </div>
+          <mat-form-field class="full-width">
+            <mat-label>Title</mat-label>
+            <input
+              matInput
+              type="text"
+              name="title"
+              placeholder="Select a logo"
+              [(ngModel)]="title"
+              readonly
+              required
+            />
+            <mat-hint> Title is Auto Populated on selecting a logo </mat-hint>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Description</mat-label>
+            <input
+              matInput
+              type="text"
+              name="description"
+              [(ngModel)]="enDescription"
+            />
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Spanish Description</mat-label>
+            <input
+              matInput
+              type="text"
+              name="esDescription"
+              [(ngModel)]="esDescription"
+            />
+          </mat-form-field>
+          <mat-error *ngIf="partnerError">
+            {{ errorMessage }}
+          </mat-error>
+        </div>
+        <ng-template #elseBlock>
+          Add partners from Partner Logo Tab.
+        </ng-template>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button color="primary" (click)="addPartner()">
+          Add Partner Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

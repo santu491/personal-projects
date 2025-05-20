@@ -1,0 +1,127 @@
+<div class="content-container row">
+  <div class="story-container col-sm-6 col-md-6 col-lg-6 col-xs-6">
+    <div class="row">
+      <div class="details-holder col-sm-8 col-md-8 col-lg-8 col-xs-8">
+        <div>
+          {{ viewStory.authorLabel }}: <strong>{{ authorName }}</strong>
+        </div>
+        <div>
+          {{ viewStory.communityLabel }}: <strong>{{ community }}</strong>
+        </div>
+        <div>
+          <span *ngIf="storyValue?.publishedAt"
+            >{{ viewStory.publishedAtLabel }}:
+            <i>{{ storyValue?.publishedAt | date : 'short' }}</i></span
+          >
+        </div>
+      </div>
+      <div class="reaction-count col-sm-4 col-md-4 col-lg-4 col-xs-4">
+        <app-reaction-with-count
+          [data]="storyValue?.reaction"
+        ></app-reaction-with-count>
+      </div>
+    </div>
+    <div class="answer-container">
+      <div *ngFor="let answer of storyValue?.answer">
+        <p>
+          <strong>{{ answer.question }}</strong>
+        </p>
+        <p>{{ getAnswerText(answer.response) }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+    <div class="row comment-section">
+      <div class="title-holder col-sm-6 col-md-6 col-lg-6 col-xs-6">
+        <h3>
+          {{ search.en.commentBtn }}
+          <span *ngIf="commentsCount > 0">({{ commentsCount }})</span>
+        </h3>
+      </div>
+      <div
+        class="title-holder col-sm-6 col-md-6 col-lg-6 col-xs-6"
+        (mouseenter)="onMouseOverLikeStory(this)"
+        (mouseleave)="onMouseOutLikeStory(this)"
+      >
+        <div mat-button class="menu-button">
+          <img src="{{ currentReaction }}" alt="" class="reaction-icon" />
+          <span
+            [class.like-color]="
+              currentReactionText == search.en.likedReactionText
+            "
+            [class.care-color]="
+              currentReactionText == search.en.careReactionText
+            "
+            [class.celebrate-color]="
+              currentReactionText == search.en.celebrateReactionText
+            "
+            [class.good-idea-color]="
+              currentReactionText == search.en.goodIdeaReactionText
+            "
+          >
+            {{ currentReactionText }}
+          </span>
+        </div>
+        <div
+          class="flex reaction-container-story"
+          *ngIf="showReactionContainerForStory"
+        >
+          <app-reaction-container
+            [contentType]="'story'"
+            [postId]="storyId"
+            [currentAdminReaction]="currentAdminReaction"
+            [adminUser]="adminUser"
+          ></app-reaction-container>
+        </div>
+      </div>
+      <div
+        *ngIf="!allowComments"
+        class="allow-comment-msg col-sm-12 col-md-12 col-lg-12 col-xs-12"
+      >
+        <h5>
+          {{ viewStory.commentsOffLabel }}
+          <span class="info-icon">
+            <mat-icon>info</mat-icon>
+          </span>
+        </h5>
+      </div>
+      <div class="comment-container col-sm-12 col-md-12 col-lg-12 col-xs-12">
+        <app-comments
+          [showComments]="comments.length > 0 && allowComments"
+          [comments]="comments"
+          [id]="storyId"
+          [authorId]="storyValue?.author?.id"
+          [selectedPersona]="adminUser"
+          [communityList]="communityList"
+          [isEnabledAddCommentModal]="isEnabledAddCommentModal"
+          (onCloseAddCommentModal)="onCloseAddCommentModal()"
+          (onAddComment)="onAddComment($event)"
+        ></app-comments>
+        <h4 *ngIf="comments.length <= 0" class="no-comments">
+          {{ viewStory.noCommentsLabel }}
+        </h4>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 add-comment-view">
+        <button
+          mat-button
+          class="comment-input-view"
+          (click)="onPressLink()"
+          routerLinkActive="active"
+        >
+          <mat-icon class="white-icon">add_comment</mat-icon>
+          <span style="color: #ffffff; padding-left: 5px">Add comment</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="emoji-mart-styles">
+    <emoji-mart
+      *ngIf="isEmojiShown"
+      title="Pick your emoji…"
+      emoji="point_up"
+      (emojiClick)="onSelectEmoji($event)"
+      [exclude]="['flags']"
+      [emojisToShowFilter]="getEmojis"
+    ></emoji-mart>
+  </div>
+</div>

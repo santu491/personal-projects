@@ -1,0 +1,52 @@
+{
+  "sidenavHeader": "Admin",
+  "sidenavRouting": [
+    {
+      "btnName": "Manage Mobile App Users",
+      "children": [
+        {
+          "btnName": "Search Mobile Users",
+          "routerLink": "/ui/pages/admin/search-user",
+          "matIcon": "search",
+          "routerLinkActive": "active"
+        },
+        {
+          "btnName": "Deleted Users",
+          "routerLink": "/ui/pages/admin/plan-expired-users",
+          "matIcon": "supervised_user_circle",
+          "routerLinkActive": "active"
+        }
+      ]
+    },
+    {
+      "btnName": "Communities",
+      "children": [
+        {
+          "btnName": "Communities",
+          "routerLink": "/ui/pages/admin/community",
+          "matIcon": "group",
+          "routerLinkActive": "active"
+        },
+        {
+          "btnName": "Time Based PNs",
+          "routerLink": "/ui/pages/admin/notification",
+          "matIcon": "note",
+          "routerLinkActive": "active"
+        }
+      ]
+    },
+    {
+      "btnName": "Partner Logos",
+      "routerLink": "/ui/pages/admin/partners",
+      "matIcon": "recent_actors",
+      "routerLinkActive": "active"
+    },
+    {
+      "btnName": "TOU & Privacy Policy",
+      "routerLink": "/ui/pages/admin/tou-privacy-policy",
+      "matIcon": "list_alt",
+      "routerLinkActive": "active"
+    }
+  ],
+  "deepLink": "Choose Deeplink"
+}

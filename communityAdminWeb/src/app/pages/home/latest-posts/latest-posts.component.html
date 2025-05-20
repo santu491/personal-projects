@@ -1,0 +1,4 @@
+<h2 *ngIf="posts && posts.length > 0">LATEST POSTS</h2>
+<div *ngFor="let post of posts">
+  <post-quick-view [post]="post"></post-quick-view>
+</div>

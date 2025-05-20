@@ -1,0 +1,113 @@
+<div class="modal" style="display: block" *ngIf="isCommentModalVisible">
+  <div style="width: 70%; margin: 0 auto">
+    <div class="bg-white" style="margin: 20px">
+      <div class="header">
+        <div>
+          <h3 class="title">
+            {{ commentTitle }}
+          </h3>
+        </div>
+
+        <div class="button-View">
+          <button class="btn btn-light" (click)="closeModal()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <form [formGroup]="commentForm">
+        <div class="form-container">
+          <div
+            class="col col-12 col-xs-12 col-sm-12 col-md-12 add-comment-view"
+          >
+            <mat-form-field appearance="outline">
+              <div class="comment-input-view">
+                <mat-icon
+                  class="emoji-icon"
+                  color="primary"
+                  (click)="onToggleEmoji()"
+                >
+                  {{ isEmojiShown ? 'close' : 'mood' }}
+                </mat-icon>
+                <input
+                  id="add-coment"
+                  type="text"
+                  placeholder="Write a comment"
+                  class="comment-input"
+                  formControlName="comment"
+                  autocomplete="off"
+                  autofocus
+                  matInput
+                />
+              </div>
+            </mat-form-field>
+
+            <p
+              *ngIf="
+                this.commentForm?.controls?.comment?.touched &&
+                this.commentForm?.controls?.comment?.invalid
+              "
+              class="text-danger customError"
+            >
+              Input can not be empty
+            </p>
+
+            <div class="emoji-mart-styles">
+              <emoji-mart
+                *ngIf="isEmojiShown"
+                title="Pick your emoji…"
+                emoji="point_up"
+                (emojiClick)="onSelectEmoji($event)"
+                [exclude]="['flags']"
+                [emojisToShowFilter]="getEmojis"
+              ></emoji-mart>
+            </div>
+          </div>
+
+          <div class="toggle-switch">
+            <mat-slide-toggle formControlName="enableDeepLink" color="primary"
+              >Enable DeepLink</mat-slide-toggle
+            >
+          </div>
+          <div
+            style="padding: 30px 30px 40px 30px"
+            *ngIf="this.commentForm.controls.enableDeepLink.value"
+          >
+            <mat-card
+              class="shadow mb-2 bg-white rounded"
+              style="text-align: left !important"
+            >
+              <app-multilevel-menu
+                headerData="Choose Deeplink:"
+                [communityListData]="communityList"
+                [deeplinkLabel]="deeplinkLabel"
+                (onItemSelectEvent)="onDeepLinkItemSelect($event)"
+              >
+              </app-multilevel-menu>
+            </mat-card>
+          </div>
+        </div>
+
+        <div class="modal-footer mt-3">
+          <button
+            mat-raised-button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeModal()"
+          >
+            Cancel
+          </button>
+          <button
+            mat-raised-button
+            type="button"
+            class="btn btn-primary submit-button"
+            [disabled]="this.isSubmitButtonDisable"
+            (click)="onPressSubmit()"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

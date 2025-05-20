@@ -1,0 +1,48 @@
+.form-container {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 32px;
+  border-radius: 10px;
+  overflow-y: auto;
+  height: calc(100vh - 175px);
+  border: 1px solid gray;
+}
+
+.main-title {
+  align-items: center;
+  font-weight: bolder;
+  margin-left: 16px;
+  text-align: center;
+}
+
+.main-title-container {
+  padding-top: 18px;
+  padding-left: 4px;
+  height: 64px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fau-preview {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.margin-ver-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.mat-card {
+  box-shadow: none;
+}
+
+.label {
+  color: black;
+}

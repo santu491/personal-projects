@@ -1,0 +1,113 @@
+<!-- Partner modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-settings"
+    role="document"
+  >
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2 class="heading">Manage Partner Logo</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="closeModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addPartner">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Partner Name</mat-label>
+                <input
+                  name="title"
+                  placeholder="Enter Partner Name"
+                  formControlName="title"
+                  type="text"
+                  matInput
+                />
+                <mat-error
+                  *ngIf="
+                    addPartner.get('title')?.touched &&
+                    addPartner.get('title')?.invalid
+                  "
+                >
+                  Enter a valid partner name
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="row col-md-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Partner Type</mat-label>
+                <mat-select formControlName="type" required>
+                  <mat-option
+                    *ngFor="let item of partnerTypes"
+                    [value]="item.key"
+                  >
+                    {{ item.value }}
+                  </mat-option>
+                </mat-select>
+                <mat-error
+                  *ngIf="
+                    addPartner.get('type')?.touched &&
+                    addPartner.get('type')?.invalid
+                  "
+                >
+                  Please select partner type
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 pt-1 pb-2">
+            <mat-slide-toggle
+              color="primary"
+              name="active"
+              formControlName="active"
+              >Active</mat-slide-toggle
+            >
+          </div>
+
+          <app-simple-image-preview
+            (onAddImage)="handleImage($event, false)"
+            [previewImage]="brandLogo"
+            [title]="'Upload Brand Logo'"
+          ></app-simple-image-preview>
+
+          <app-simple-image-preview
+            (onAddImage)="handleImage($event, true)"
+            [previewImage]="articleLogo"
+            [imageBackground]="'#37475A'"
+            [title]="'Upload Article Logo (Optional)'"
+          ></app-simple-image-preview>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!isFormValid()"
+          (click)="onSubmit()"
+          *ngIf="!editId"
+        >
+          Create Partner
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!isFormValid()"
+          (click)="updatePartner()"
+          *ngIf="editId"
+        >
+          Update Partner
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':linkModal}" data-backdrop="true" #storyModal>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title">
+            <h1>Manage Link Details</h1>
+          </span>
+          <button type="button" class="btn btn-light" (click)="onCloseModal()">
+            <mat-icon class="float-right">close</mat-icon>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <form [formGroup]="linkForm">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Link Title</mat-label>
+                    <input matInput formControlName="title" placeholder="Fill in Link Title"
+                           required>
+                  </mat-form-field>
+                  <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Link URL</mat-label>
+                      <input matInput formControlName="url" placeholder="Fill in Link URL"
+                             required>
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button mat-raised-button (click)="manageLink()">Update Section</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="pb-3">
+    <div class="section-title d-flex">
+        <div>{{section.sectionTitle}}</div>
+        <div class="icon-holder" *ngIf="isAdmin">
+            <mat-icon color="primary" (click)="editSectionTitle()" matTooltip="Edit Section Title">edit</mat-icon>
+            <mat-icon color="primary" (click)="addNewLink()" matTooltip="Add New Link">add</mat-icon>
+        </div>
+    </div>
+    <div *ngFor="let link of section.link; let i = index" class="ms-3">
+        <div class="link-title d-flex">
+            <span>{{link.title}} - <a href="{{link.url.startsWith('http') ? link.url : '//' + link.url}}" target="_blank">{{link.url}}</a></span>
+            <div class="icon-holder ms-1" *ngIf="isAdmin">
+                <mat-icon color="primary" (click)="editLink(i)" matTooltip="Edit Section Title">edit</mat-icon>
+            </div>
+        </div>
+    </div>
+</div>

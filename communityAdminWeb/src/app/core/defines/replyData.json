@@ -1,0 +1,10 @@
+{
+  "confirmDelete": "Are you sure you want to delete this reply?",
+  "deleteSuccess": "Reply deleted successfully!",
+  "confirmFlag": "Are you sure you want to flag this reply?",
+  "confirmUnFlag": "Are you sure you want to un-flag this reply?",
+  "flagSuccess": "Reply flagged successfully!",
+  "unFlagSuccess": "Reply un-flagged successfully!",
+  "removeAndBanUser": "Are you sure you want to remove this reply and ban user?",
+  "replyRemovedAndUserBanned": "Reply removed and banned user successfully"
+}

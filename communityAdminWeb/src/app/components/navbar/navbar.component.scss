@@ -1,0 +1,47 @@
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .nav-link.active {
+  color: black;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.flex-d-row {
+  flex-direction: row;
+}
+
+.top-bar {
+  background: linear-gradient(-90deg, rgb(116, 2, 223), rgb(252, 252, 252));
+}
+
+.iconProfile {
+  border-radius: 50%;
+  border: none;
+  float: right;
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  .mat-icon {
+    vertical-align: middle;
+  }
+}
+
+.notification-icon {
+  color: white !important;
+  font-size: 30px;
+  margin-right: 0 !important;
+  width: 100%;
+}
+
+:host ::ng-deep .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content {
+  right: 10px;
+  top: 0px;
+}
+
+.env-indicator {
+  background-color: yellow;
+  font-size: 1.5rem;
+  align-self: center;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #0407ad;
+}

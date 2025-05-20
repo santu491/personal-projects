@@ -1,0 +1,251 @@
+<form class="form-container" [formGroup]="schedulePNForm">
+  <mat-card>
+    <mat-card-title>{{ schedulePNModule.header }}</mat-card-title>
+    <mat-card-content>
+      <app-pn-title-body></app-pn-title-body>
+
+      <div class="row top-15">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ schedulePNModule.selectCommunity }}</mat-label>
+            <mat-select
+              formControlName="targetCommunities"
+              [disabled]="targetCommunitiesDisable"
+              (selectionChange)="onCommunitySelect($event)"
+            >
+              <mat-option
+                [value]="0"
+                [disabled]="targetCommunitiesDisable"
+                *ngIf="!isAdvocate"
+              >
+                {{ schedulePNModule.allCommunitiesLabel }}</mat-option
+              >
+              <mat-option
+                *ngFor="let community of communityList"
+                [value]="community.id"
+                [disabled]="targetCommunitiesDisable"
+              >
+                {{ community.title }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+          <div class="top-15" *ngIf="audienceCount.totalCount > 0">
+            <p>
+              {{ schedulePNModule.targetAudienceCount }}
+              <span class="label">{{ audienceCount.totalCount }}</span>
+            </p>
+            <p>
+              {{ schedulePNModule.activeAudienceCount }}
+              <span class="label audience">{{ audienceCount.pnActiveUsers }}</span>
+            </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-7 right-panel">
+          <mat-label class="label">{{
+            schedulePNModule.targetAudience
+          }}</mat-label>
+          <div class="row top-5">
+            <div class="col-xs-12 col-sm-12 col-md-6 toggle-holder">
+              <mat-slide-toggle
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggle(toggleType.usersWithNoStory, $event)"
+                [checked]="schedulePNForm?.get('usersWithNoStory')?.value"
+                [disabled]="usersWithNoStoryDisabled"
+              >
+                {{ schedulePNModule.usersWithNoStory }}
+              </mat-slide-toggle>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 toggle-holder">
+              <mat-slide-toggle
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggle(toggleType.usersWithDraftStory, $event)"
+                [checked]="schedulePNForm?.get('usersWithDraftStory')?.value"
+                [disabled]="usersWithDraftStoryDisabled"
+              >
+                {{ schedulePNModule.usersWithDraftStory }}
+              </mat-slide-toggle>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 toggle-holder">
+              <mat-slide-toggle
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggle(toggleType.nonCommunityUsers, $event)"
+                [checked]="schedulePNForm?.get('nonCommunityUsers')?.value"
+                [disabled]="isAdvocate || nonCommunityUsersDisable"
+              >
+                {{ schedulePNModule.includeNonJoinedUsers }}
+              </mat-slide-toggle>
+            </div>
+            <div
+              class="col-xs-12 col-sm-12 col-md-6 inactive-days toggle-holder"
+            >
+              <div>
+                <mat-slide-toggle
+                  class="full-width"
+                  color="primary"
+                  class="notify-toggle"
+                  (change)="onToggle(toggleType.usersWithNoRecentLogin, $event)"
+                  [checked]="
+                    schedulePNForm?.get('usersWithNoRecentLogin')?.value
+                  "
+                  [disabled]="usersWithNoRecentLoginDisabled"
+                >
+                  {{ schedulePNModule.usersWithNoRecentLogin }}
+                </mat-slide-toggle>
+              </div>
+              <div style="margin-top: -15px">
+                <mat-form-field class="days-drop-down" appearance="fill">
+                  <mat-label>Days</mat-label>
+                  <mat-select
+                    [(value)]="selectedNumberOfDays"
+                    [disabled]="numberOfDaysDisabled"
+                  >
+                    <mat-option
+                      *ngFor="let day of numberOfDays"
+                      [value]="day"
+                      >{{ day }}</mat-option
+                    >
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 toggle-holder">
+              <mat-slide-toggle
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggle(toggleType.bannedUsers, $event)"
+                [checked]="schedulePNForm?.get('bannedUsers')?.value"
+                [disabled]="true"
+              >
+                {{ schedulePNModule.includeBannedUsers }}
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deep Link -->
+      <div class="row top-15">
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 top-15 bottom-15 right-panel"
+          *ngIf="communityList.length > 0"
+        >
+          <p class="label">{{ schedulePNModule.chooseDeepLink }}</p>
+          <app-multilevel-menu *ngIf="!resetDeeplink"
+            [communityListData]="communityList"
+            (onItemSelectEvent)="onDeepLinkItemSelect($event)"
+            formGroupName="deepLink"
+            [deeplinkLabel]="editDeeplink"
+          >
+          </app-multilevel-menu>
+        </div>
+      </div>
+
+      <div class="row schedule-section">
+        <div class="col-md-4 col-sm-12 col-lg-3">
+          <div class="checkbox-container">
+            <mat-checkbox
+              (change)="checkCheckBoxvalue($event)"
+              [checked]="isScheduled"
+            >
+              {{ schedulePNModule.scheduleLabel }}
+            </mat-checkbox>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-3" *ngIf="isScheduled">
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>{{ schedulePNModule.dateAndTime }}</mat-label>
+            <input
+              formControlName="sendOn"
+              matInput
+              [ngxMatDatetimePicker]="picker"
+              [placeholder]="schedulePNModule.dateAndTime"
+              [min]="minDate"
+              [max]="maxDate"
+              [disabled]="!isScheduled"
+              autocomplete="off"
+              required
+              (dateInput)="onDateSelect('input', $event)"
+              [readonly]="true"
+              (blur)="onBlurDatePicker($event)"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="$any(picker)"
+            ></mat-datepicker-toggle>
+            <ngx-mat-datetime-picker
+              #picker
+              [showSpinners]="showSpinners"
+              [showSeconds]="showSeconds"
+              [stepHour]="stepHour"
+              [stepMinute]="stepMinute"
+              [stepSecond]="stepSecond"
+              [touchUi]="touchUi"
+              [color]="color"
+              [enableMeridian]="enableMeridian"
+              [disableMinute]="disableMinute"
+              [hideTime]="hideTime"
+            >
+              <ng-template>
+                <span>OK</span>
+              </ng-template>
+            </ngx-mat-datetime-picker>
+            <mat-error
+              *ngIf="
+                (sendOn &&
+                  sendOn.invalid &&
+                  sendOn.touched &&
+                  schedulePNForm?.get('sendOn')?.value?.length == 0) ||
+                showDatePickerErr
+              "
+              class="customErrorLeft10"
+            >
+              {{ schedulePNModule.sendOnErr }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        class="update-profile-btn"
+        type="reset"
+        (click)="clearForm()"
+      >
+        {{ schedulePNModule.clearBtn }}
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="update-profile-btn"
+        [disabled]="onFormChange()"
+        *ngIf="!isEdit"
+        type="reset"
+        (click)="submitForm()"
+      >
+        {{ schedulePNModule.scheduleBtn }}
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        class="update-profile-btn"
+        [disabled]="onFormChange()"
+        *ngIf="isEdit"
+        type="reset"
+        (click)="submitEditForm()"
+      >
+        {{ schedulePNModule.scheduleEdit }}
+      </button>
+    </mat-card-actions>
+    <span class="bottom-15"></span>
+  </mat-card>
+</form>

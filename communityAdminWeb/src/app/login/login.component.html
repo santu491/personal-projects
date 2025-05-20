@@ -1,0 +1,73 @@
+<div class="bg-white border rounded-5">
+  <section class="w-100 p-4 p-xl-5" style="border-radius: 0.5rem 0.5rem 0 0">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12">
+        <div class="card" style="border-radius: 1rem">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block p-4">
+              <img src="assets/img/logo/SydneyCommunityLogo.svg" alt="login form" width="100%" height="100%"
+                style="border-radius: 1rem 0 0 1rem" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+                <div class="d-flex align-items-center mb-3 pb-1">
+                  <span class="h1 fw-bold mb-0">{{loginModule.adminLogin}}</span>
+                </div>
+
+                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px">
+                  {{loginModule.signInToYourAcc}}
+                </h5>
+
+                <mat-card mat-elevation-z8>
+                  <mat-card-content>
+                    <form name="loginForm" [formGroup]="loginForm">
+                      <div class="username-input">
+                        <mat-form-field appearance="outline" style="width: 100%;">
+                          <mat-label style="font-size: 1.25rem;">{{loginModule.userName}}</mat-label>
+                          <input formControlName="username" matInput required autocomplete="off" autofocus="true"
+                            (blur)="onBlurMethod($event, 'username')" style="font-size: 1.25rem;" />
+                          <mat-error *ngIf="loginForm.get('username')?.errors?.required">
+                            {{loginModule.userNameRequired}}
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div>
+                        <mat-form-field appearance="outline" style="width: 100%; margin-top: 20px;">
+                          <mat-label style="font-size: 1.25rem;">{{loginModule.password}}</mat-label>
+                          <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required
+                            style="font-size: 1.25rem; letter-spacing: 0.1ch;" />
+                          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" tabindex="-1">
+                            <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+                          </button>
+                          <mat-error *ngIf="loginForm.get('password')?.errors?.required">
+                            {{loginModule.passwordRequired}}
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <button mat-flat-button color="primary" style="margin-top: 20px; font-size: 1.25rem;"
+                        (click)="onSubmit()">{{loginModule.loginBtn}}</button>
+                    </form>
+                  </mat-card-content>
+                </mat-card>
+
+                <div style="margin-top: 20px;">
+                  <!-- <a class="small" href="#!">{{loginModule.forgotPass}}</a> -->
+                  <p class="mb-5 pb-lg-2">
+                    <a href="#!" class="small" style="margin-right: 10px">{{loginModule.termsOfUse}}</a>
+                    <a href="#!" class="small">{{loginModule.privacyPolicy}}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="p-4 text-center border-top">
+    <small style="float: left;">API Version: {{apiVersion}}</small>
+    <span>© {{financialYearInfo}}</span>
+    <small style="float: right;">App Version: {{appVersion}}</small>
+  </div>
+</div>

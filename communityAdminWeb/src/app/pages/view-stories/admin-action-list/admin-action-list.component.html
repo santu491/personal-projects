@@ -1,0 +1,12 @@
+<div *ngIf="!modalView">
+    <button mat-menu-item *ngIf="!flagged && !removed" (click)="report(true)">Report</button>
+    <button mat-menu-item *ngIf="(flagged && !removed && !isAdvocate)" (click)="report(false)">Ignore</button>
+    <button mat-menu-item *ngIf="(flagged || removed) && !isAdvocate" (click)="ban()">Ban User</button>
+    <button mat-menu-item *ngIf="!removed && !isAdvocate" (click)="remove()">Remove</button>
+</div>
+<div *ngIf="modalView" class="btn-container">
+    <button mat-stroked-button color="primary" *ngIf="!flagged && !removed" (click)="report(true)">Report Story</button>
+    <button mat-stroked-button class="success" *ngIf="(flagged && !removed && !isAdvocate)" (click)="report(false)">Ignore Story</button>
+    <button mat-stroked-button color="warn" *ngIf="(flagged || removed) && !isAdvocate" (click)="ban()">Ban User</button>
+    <button mat-stroked-button color="warn" *ngIf="!removed && !isAdvocate" (click)="remove()">Remove Story</button>
+</div>

@@ -1,0 +1,172 @@
+.activity-container {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  border-radius: 10px;
+  overflow-y: auto;
+  height: auto;
+  width: auto;
+  border: 1px solid gray;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.list {
+  overflow-y: auto;
+}
+
+.activity-header {
+  margin: 16px;
+  display: flex;
+  font-size: large;
+  text-align: start;
+}
+
+.activity-subheader {
+  padding-left: 16px;
+  display: flex;
+  font-size: medium;
+  text-align: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.no-activity-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+}
+
+.activity-list-item {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.activity-list-item:hover {
+  background-color: #e3e6ea;
+}
+
+.timeunread {
+  margin-left: 16px;
+  margin-top: -16px;
+  font-size: 10px;
+  color: #286ce2 !important;
+}
+
+.timeread {
+  margin-left: 16px;
+  margin-top: -16px;
+  font-size: 10px;
+  color: grey;
+}
+
+.unread {
+  border-right-style: inset;
+  border-right-color: #286ce2;
+  border-right-width: 8px;
+  font-weight: bold;
+}
+
+.flagged {
+  border-right-style: inset;
+  border-right-color: #d20a3c;
+  border-right-width: 8px;
+}
+
+button {
+  border: none;
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.profileImage {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.reactionImage {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 40px;
+}
+
+.activity-line {
+  padding-left: initial;
+}
+
+.author-name {
+  font-weight: normal;
+  margin-bottom: -25px;
+  font-size: 14px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+.notification {
+  font-size: 36px;
+  color: black;
+  margin-right: 16px;
+  float: left;
+}
+
+.list-container {
+  overflow-y: auto;
+  max-height: calc(100vh - 230px);
+  position: relative;
+}
+
+.modal {
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 99999;
+  position: fixed;
+  opacity: 1;
+}
+
+.modal-body {
+  padding: 0% 0% 0% 0%;
+}
+
+.modal-dialog {
+  max-width: 60%;
+}
+
+.modal-title {
+  width: 50%;
+  h1 {
+    margin: 50px;
+  }
+}
+
+.personalFilter {
+  margin-top: 15px;
+} 

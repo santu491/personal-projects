@@ -1,0 +1,11 @@
+{
+  "columnsData": ["serialNo", "userName", "firstName", "lastName", "action"],
+  "deleteUserConfirmAlert": "Are you sure, You want to delete the user permanently from Sydney Community?",
+  "addUserConfirmAlert": "Are you sure, You want to enable permission to login?",
+  "userName": "User Name",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "deleteUserConfirmSuccess": " User deleted Sucessfully",
+  "enableUserConfirmSuccess": " User enabled Sucessfully",
+  "title": "Deleted Users"
+}

@@ -1,0 +1,41 @@
+{
+  "id" : "62021eb615794e00237056b0",
+  "username" : "~SIT3SB620T95107",
+  "firstName" : "SANKAR",
+  "lastName" : "KEERTHI",
+  "active" : true,
+  "personId" : "334046978",
+  "tou" : [
+      {
+          "version" : "1.0",
+          "acceptedAt" : "2022-03-10T08:21:26.513Z"
+      }
+  ],
+  "onBoardingState" : "completed",
+  "displayName" : "Sankar1",
+  "profilePicture" : "eafbe829-5cc4-8ab3-1eef-cd1bcfd71810",
+  "myCommunities" : [
+      "622232033eb6ab7e525b54cb",
+      "60e2e7277c37b43a668a32f2",
+      "60a358bc9c336e882b19bbf0"
+  ],
+  "attributes": {
+    "storyPromotion": {
+        "remindMe": true
+    }
+  },
+  "localCategories" : [],
+  "communityHelpCardBanner" : true,
+  "cancerCommunityCard" : true,
+  "meTabHelpCardBanner" : true,
+  "answerNotificationFlag" : true,
+  "communityNotificationFlag" : true,
+  "questionNotificationFlag" : true,
+  "reactionNotificationFlag" : true,
+  "dueDateBasedNotificationFlag" : true,
+  "lastLoginAt" : "2022-04-07T07:09:17.162Z",
+  "memberType" : "eMember",
+  "commentNotificationFlag" : true,
+  "commentReactionNotificationFlag" : true,
+  "replyNotificationFlag" : true
+}

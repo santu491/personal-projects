@@ -1,0 +1,20 @@
+<div class="form-container view p-3">
+    <!-- Show Link Content -->
+    <ng-container *ngIf="linkSections.length > 0; else noLinkBlock">
+        <div *ngFor="let section of linkSections">
+            <link-section [section]="section" (onSectionEdit)="getLinkData()"></link-section>
+        </div>
+    </ng-container>
+    <ng-template #noLinkBlock>
+        <div class="p-3 text-center">
+            {{ isAdmin ? 'Click on Create Section to add Sections with Training Links': 'Help sections will be added by the Admins' }}
+        </div>
+    </ng-template>
+
+    <button class="mt-2" mat-raised-button class="btn-color" (click)="toggleCreateSection()" *ngIf="isAdmin">
+        {{ showCreateSectionForm ? 'Hide section form' : 'Create a section' }}
+    </button>
+    <div class="p-3" *ngIf="showCreateSectionForm"> 
+        <create-help-section (onSectionCreate)="onSectionCreate()"></create-help-section>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+@import '../pages.component.scss';
+
+.view {
+    overflow-y: auto;
+    height: calc(100vh - 170px);
+}
+
+.template-form {
+    padding: 2rem;
+    border-left: 1px solid #d5d5d5;
+    overflow: hidden;
+  }
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.template {
+    padding: 1rem;
+    border-bottom: 1px solid #e3e2e3;
+    line-height: 10px;
+    background-color: #fafafa;
+
+    &:hover {
+        background-color: rgb(219, 215, 215)
+    }
+
+    h3 {
+        font-weight: 500;
+    }
+}
+
+.templateScroll {
+    height: calc(100vh - 170px);
+    overflow: auto;
+    text-align: justify;
+    padding: 20px;
+}
+
+.scroll {
+    height: calc(100vh - 170px);
+    overflow: auto;
+    text-align: justify;
+    padding: 20px;
+}
+
+.highlight {
+    background-color: rgb(175, 172, 172)
+}

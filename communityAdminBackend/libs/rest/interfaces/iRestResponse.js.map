@@ -1,0 +1,1 @@
+{"version":3,"file":"iRestResponse.js","sourceRoot":"","sources":["iRestResponse.ts"],"names":[],"mappings":"","sourcesContent":["export interface IRestResponse {\r\n  headers: { [key: string]: string };\r\n  body: string | object | Array<object> | Buffer;\r\n  status: number;\r\n}\r\n"]}

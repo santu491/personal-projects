@@ -1,0 +1,21 @@
+{
+  "addUserHeader": "Add User",
+  "usDomainID": "US Domain ID",
+  "usDomainIDPlaceHolder": "Enter US Domain ID",
+  "usDomainErr": "US Domain ID is required",
+  "chooseRole": "Choose Role",
+  "chooseRoleErr": "Role is required",
+  "selectCommunity": "Assign Community",
+  "communityErr": "Select at least one community",
+  "clearBtn": "Clear",
+  "addUserBtn": "Add User",
+  "persona": "Is a Persona user?",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "aboutMe": "About Me",
+  "interest": "Interests",
+  "location": "Location",
+  "displayName": "Display Name",
+  "userAddedSuccess": "User added successfully!",
+  "confirmAddingInactiveUser": "This user was deleted, by clicking on OK, you will add the user back"
+}

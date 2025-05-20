@@ -1,0 +1,2840 @@
+{
+  "company-demo": {
+    "data": {
+      "data": {
+        "clientList": {
+          "items": [
+            {
+              "enable": true,
+              "clientName": "Company Demo",
+              "wpoClientName": "TNT",
+              "customClient": false,
+              "welcomeTitle": "Welcome to Carelon Wellbeing",
+              "welcomeSubtitle": {
+                "text": "Tap into no-cost resources and tools that can help you live your life to the fullest potential."
+              },
+              "enableSecureExperience": true,
+              "enableCustomCardDescription": true,
+              "enableAppointmentScheduling": true,
+              "enableSearchCounsellor": true,
+              "enableCredibleMinds": true,
+              "disableCallText": false,
+              "credibleMindClientName": "carelonwellbeing",
+              "isTerminated": false,
+              "terminatedMessageTitle": null,
+              "terminatedMessageDescription": {
+                "text": null
+              },
+              "brandLogo": {
+                "url": "https: //uat.aem.anthem.com/content/dam/careloneap/logos/Carelon_New_Svg.svg"
+              },
+              "clientLogo": null,
+              "home": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/gtc-default/take-an-assessment_2",
+                  "title": "Support starts here",
+                  "description": {
+                    "text": "Let us guide you to the right resources."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/target/GettyImages-1423556847.jpg"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //sit.assessment.carelonwellbeing.com/survey/anonymous/63c97a6c-716e-4006-a34c-b7dd202afa51"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/company-demo/counselling-therapy-emotional-assistance-with-verified-experts",
+                  "title": "Find a counselor",
+                  "description": {
+                    "text": "Connect in-person or virtually with a licensed counselor."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Connect%20with%20a%20counselor%20Img-Opt%201.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Get started",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "company-demo/connect-with-a-counselor"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/company-demo/judicial-assistance",
+                  "title": "Legal resources ",
+                  "description": {
+                    "text": "Get the support and resources you need to resolve legal issues."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/143920624-senior-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Legal resources ",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "company-demo/find-legal-support"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/company-demo/monetary-support",
+                  "title": "Financial planning ",
+                  "description": {
+                    "text": "Get guidance on money management for right now, and for the future."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/532097353-young-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Financial planning",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "company-demo/cm-article?page=topics/financial-wellness?query="
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/company-demo/family-support",
+                  "title": "Work-life resources",
+                  "description": {
+                    "text": "Get the support that can help you handle everyday challenges."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/700673212-they-ve-formed-a-friendship-over-the-course-of-her-care@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Work - life resources",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "company-demo/work-life-resources"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/default/explore-wellness-topics",
+                  "title": "Explore wellness topics",
+                  "description": {
+                    "text": "Search the full library of articles, podcasts and videos."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/gettyimages-175138890.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": null,
+                  "redirectUrl": {
+                    "url": "https: //uat.aem.anthem.com/content/careloneap/us/en/client-home/emotional-wellness/wellness-content.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/wellness-content"
+                }
+              ],
+              "coursesAndResourcesTitle": "Courses and resources",
+              "coursesAndResourcesData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/learn-to-live",
+                  "title": "Learn to Live",
+                  "description": {
+                    "text": "Your emotional health is an important part of your overall health. With Learn to Live, you can receive support to help you and your household members live your happiest, healthiest lives."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/learn%20to%20live.png"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": "Explore now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.learntolive.com/partners",
+                  "cardTag": "Article",
+                  "otherCardTags": [
+                    "Emotional health",
+                    "Healthiest"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/emindful",
+                  "title": "eMindful",
+                  "description": {
+                    "text": "eM Life is part of eMindful’s mental wellbeing solution that can be accessed with the app or online. "
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/e-mindful.png"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": "Listen now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //vibe.emindful.com/signup/beaconhealthplans",
+                  "cardTag": "Podcast",
+                  "otherCardTags": [
+                    "Mindfulness",
+                    "Health plans",
+                    "Provider"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/2023-work-life-webinars",
+                  "title": "2023 work-life webinars",
+                  "description": {
+                    "text": "Check out recorded seminars that address a wide variety of topics."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/work-life%20webinars.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Watch now",
+                  "redirectUrl": {
+                    "url": "https: //uat.aem.anthem.com/content/careloneap/us/en/client-home/webinar.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/webinar",
+                  "cardTag": "Video",
+                  "otherCardTags": [
+                    "Seminars",
+                    "Caring"
+                  ]
+                }
+              ],
+              "coursesAndResourcesExploreMoreData": [
+                {
+                  "type": "ArticleModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/learn-to-live-article1",
+                  "title": "Learn to Live",
+                  "description": {
+                    "text": "Your emotional health is an important part of your overall health. With Learn to Live, you can receive support to help you and your household members live your happiest, healthiest lives."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/learn%20to%20live.png"
+                  },
+                  "uri": null,
+                  "buttonText": "Explore now",
+                  "redirectUrl": "https: //www.learntolive.com/partners",
+                  "openURLInNewTab": true,
+                  "tags": [
+                    "Provider",
+                    "Emotional health",
+                    "Healthiest",
+                    "Cognitive Behavioral Therapy"
+                  ]
+                },
+                {
+                  "type": "ArticleModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/emindful-article2",
+                  "title": "eMindful",
+                  "description": {
+                    "text": "eM Life is part of eMindful’s mental wellbeing solution that can be accessed with the app or online. "
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/e-mindful.png"
+                  },
+                  "uri": null,
+                  "buttonText": "Explore now",
+                  "redirectUrl": "https: //vibe.emindful.com/signup/beaconhealthplans",
+                  "openURLInNewTab": true,
+                  "tags": [
+                    "Mindfulness",
+                    "Counselor"
+                  ]
+                },
+                {
+                  "type": "ArticleModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/company-demo/2023-work-life-webinars-article3",
+                  "title": "2023 work-life webinars",
+                  "description": {
+                    "text": "Check out recorded seminars that address a wide variety of topics."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/work-life%20webinars.png"
+                  },
+                  "uri": null,
+                  "buttonText": "Watch now",
+                  "redirectUrl": "/company-demo/webinar",
+                  "openURLInNewTab": false,
+                  "tags": [
+                    "Video",
+                    "Seminars",
+                    "Caring"
+                  ]
+                }
+              ],
+              "coursesAndResourcesExploreMoreTitle": "Courses and resources",
+              "coursesAndResourcesExploreMoreSubtitle": {
+                "text": "Find a variety of educational tools in a range of engaging formats so you can choose what works best for you."
+              },
+              "criticalEventsTitle": "Critical event resources",
+              "criticalEventsSubtitle": {
+                "text": "Natural disasters, violence, death of a loved one, and other major events can disrupt our lives. Learn how you can plan, cope, and recover when the uncontrollable happens."
+              },
+              "criticalEventsData": [
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/default/current-events/currentevents",
+                  "title": "Current critical events",
+                  "description": {
+                    "text": "Find resources to help you deal with upsetting current news and events."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/icons8-event-24.png"
+                  },
+                  "resourcesTitle": null,
+                  "resourcesSubtitle": "Resources",
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/wildfire",
+                  "title": "Wildfires",
+                  "description": {
+                    "text": "What to do before, during, or after a fire in your community."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/icons-8-fire-50@2x.png"
+                  },
+                  "resourcesTitle": "Wildfire emergency resources",
+                  "resourcesSubtitle": "State-specific wildfire  resources",
+                  "resourcesData": [
+                    {
+                      "type": "CardModel",
+                      "path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/external-cards/louisiana",
+                      "title": "Louisiana",
+                      "description": {
+                        "text": "At magnum periculum adiit in quo minus id, de utilitatibus."
+                      },
+                      "image": null,
+                      "buttonText": "https: //www.louisianahelpresource.gov",
+                      "redirectUrl": null,
+                      "staticRedirectUrl": "https: //www.louisianahelpresource.gov",
+                      "openURLInNewTab": true,
+                      "cardTag": "Website",
+                      "otherCardTags": null
+                    },
+                    {
+                      "type": "CardModel",
+                      "path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/external-cards/mississippi",
+                      "title": "Mississippi",
+                      "description": {
+                        "text": "At magnum periculum adiit in quo minus id, de utilitatibus."
+                      },
+                      "image": null,
+                      "buttonText": "https: //www.mississippihelpresource.gov",
+                      "redirectUrl": null,
+                      "staticRedirectUrl": "https: //www.mississippihelpresource.gov",
+                      "openURLInNewTab": true,
+                      "cardTag": "Website",
+                      "otherCardTags": null
+                    },
+                    {
+                      "type": "CardModel",
+                      "path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/external-cards/texas",
+                      "title": "Texas",
+                      "description": {
+                        "text": "At magnum periculum adiit in quo minus id, de utilitatibus."
+                      },
+                      "image": null,
+                      "buttonText": "https: //www.texashelpresource.gov",
+                      "redirectUrl": null,
+                      "staticRedirectUrl": "https: //www.texashelpresource.gov",
+                      "openURLInNewTab": true,
+                      "cardTag": "Website",
+                      "otherCardTags": null
+                    },
+                    {
+                      "type": "CardModel",
+                      "path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/external-cards/how-to-evacuate-safely-from-a-wildfire--safety-preparedness-tips",
+                      "title": "How to evacuate safely from a wildfire: Safety preparedness tips",
+                      "description": {
+                        "text": "You may have to leave your home quickly to stay safe. Know where you will go, how you will get there, and where you will stay."
+                      },
+                      "image": {
+                        "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/critical-event-support/gettyimages-534730529-1024-x-1024-copy@3x.png"
+                      },
+                      "buttonText": "Watch now",
+                      "redirectUrl": null,
+                      "staticRedirectUrl": "#",
+                      "openURLInNewTab": true,
+                      "cardTag": "Video",
+                      "otherCardTags": [
+                        "Lorem"
+                      ]
+                    },
+                    {
+                      "type": "CardModel",
+                      "path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/wild-fire/external-cards/wildfire-preparedness-and-safety--a-how-to-guide",
+                      "title": "Wildfire Preparedness and Safety: A How-To Guide",
+                      "description": {
+                        "text": "The risk of wildfires rises as more people continue to live in the wildland-urban interface across the United States."
+                      },
+                      "image": {
+                        "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/critical-event-support/WildfirePreparednessandSafety-A%20How-To-Guide-copy@3x.png"
+                      },
+                      "buttonText": "Read now",
+                      "redirectUrl": null,
+                      "staticRedirectUrl": "#",
+                      "openURLInNewTab": true,
+                      "cardTag": "Article",
+                      "otherCardTags": [
+                        "Lorem"
+                      ]
+                    }
+                  ],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/floods-and-flooding/floods-and-flooding",
+                  "title": "Floods",
+                  "description": {
+                    "text": "Learn how to prepare, stay safe, and protect your physical and mental health during a flood."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-floods-50.png"
+                  },
+                  "resourcesTitle": "Floods and flooding emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/tornadoes/tornadoes",
+                  "title": "Tornadoes",
+                  "description": {
+                    "text": "Tornadoes can be unpredictable and dangerous. Learn what you can do to be ready."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/Object.png"
+                  },
+                  "resourcesTitle": "Tornado emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/hurricanes/hurricanes",
+                  "title": "Hurricanes",
+                  "description": {
+                    "text": "Know the steps you can take to prepare for a hurricane."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-hurricane-32.png"
+                  },
+                  "resourcesTitle": "Hurricane emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/violent-events/violent-events",
+                  "title": "Violent events",
+                  "description": {
+                    "text": "Access tools for coping, talking about, and managing stress after traumatic and violent events."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-fist-48.png"
+                  },
+                  "resourcesTitle": "Violent events emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/climate-change/climate-change",
+                  "title": "Climate change",
+                  "description": {
+                    "text": "Learn how to manage the emotional stressors that come with climate change."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-greenhouse-effect-100.png"
+                  },
+                  "resourcesTitle": "Climate change emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/earthquakes/earthquakes",
+                  "title": "Earthquakes",
+                  "description": {
+                    "text": "Understand how to prepare for an earthquake and how to stay safe when one happens."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-earthquakes-50.png"
+                  },
+                  "resourcesTitle": "Earthquake emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/company-demo/natural-disasters/natural-disasters",
+                  "title": "Natural disasters",
+                  "description": {
+                    "text": "Explore helpful resources, tools, and tips to prepare mentally and physcially for a natural disaster."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-tsunami-96.png"
+                  },
+                  "resourcesTitle": "Natural disaster emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                }
+              ],
+              "criticalEventsIsDynamicWPORedirectUrl": false,
+              "criticalEventsUrl": null,
+              "featuredItemsTitle": "Featured items",
+              "featuredItemsImage": {
+                "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Featured%20Items%20Img.png"
+              },
+              "featuredItemsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/how-to-explain-adhd-to-kids-ned-hallowell-md-edd",
+                  "title": "How to explain ADHD to kids",
+                  "description": {
+                    "text": "Edward Hallowell, MD, EdD, Psychiatrist, ADHD Specialist, and Author, shares advice for parents on the best way to tell their child that they have ADD or ADHD and how to explain it in a way that the child will understand."
+                  },
+                  "buttonText": "Watch Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/how-to-explain-adhd-to-kids-ned-hallowell-md-edd",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/behavioral-treatments-for-kids-with-adhd",
+                  "title": "Behavioral Treatments for Kids With ADHD",
+                  "description": {
+                    "text": "There are two kinds of behavioral treatments that can help kids with ADHD (attention-deficit hyperactivity disorder). While they don’t change the symptoms of ADHD, they do teach kids how to manage them. Some kids who get behavioral treatment might need to take medication as well. For others, behavioral treatment is enough to keep their ADHD symptoms under control. "
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/behavioral-treatments-for-kids-with-adhd",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/adhd-101-why-kids-with-adhd-need-different-parenting-strategies",
+                  "title": "Whykids with ADHD need different parenting strategies",
+                  "description": {
+                    "text": "We discuss 3 core difficulties related to ADHD that make it harder for children to follow instructions and stay motivated. We then identify 3 changes caregivers can make to their parenting approach to help their child with ADHD stay engaged and set them up for success."
+                  },
+                  "buttonText": "Watch Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/adhd-101-why-kids-with-adhd-need-different-parenting-strategies",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/ep-179-how-to-help-your-child-and-others-understand-adhd",
+                  "title": "How to help your child (and others) understand ADHD",
+                  "description": {
+                    "text": "Siope Kinikini M.A. discusses the approach recommended for talking to children and teens about ADHD and how to communicate about it with family members who may not understand it."
+                  },
+                  "buttonText": "Listen Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/ep-179-how-to-help-your-child-and-others-understand-adhd",
+                  "openURLInNewTab": false
+                }
+              ],
+              "trendingTopicsEnabled": false,
+              "trendingTopicsTitle": "Trending topics ",
+              "trendingTopicsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/company-demo/find-your-local-eap",
+                  "title": "Find Your Local EAP",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/company-demo/legal-center-build-a-legal-will-or-access-a-variety-of-business-documents-legal-and-financial-resources",
+                  "title": "Legal Center: Build a Legal Will or Access a Variety of Business Documents, Legal and Financial Resources",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/company-demo/child-care-assisted-search",
+                  "title": "Child Care Assisted Search",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/company-demo/depression-screening-questionnaire",
+                  "title": "Depression Screening Questionnaire",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/company-demo/company-demo-eap-resources-near-your-worksite",
+                  "title": "Company Demo EAP Resources Near Your Worksite",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                }
+              ],
+              "trendingTopicsImage": {
+                "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Trending%20Topics%20Img.png"
+              },
+              "trendingTopicsExploreMoreEnabled": true,
+              "trendingTopicsOpenExploreMoreButtonURLInNewTab": false,
+              "trendingTopicsExploreMoreButtonDynamicWPORedirectUrl": false,
+              "trendingTopicsEmotionalWellnessTitle": "Trending topics",
+              "trendingTopicsEmotionalWellnessData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/parenting-a-child-with-adhd",
+                  "title": "Parenting a child with ADHD",
+                  "description": {
+                    "text": "Resources to support parents and loved ones"
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Parenting-a-child-1338762456.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/parenting-a-child-with-adhd",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Parents",
+                    "ADHD"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/coping-with-lifes-challenges",
+                  "title": "Coping with life's challenges",
+                  "description": {
+                    "text": "World Mental Health Day is October 10th. Learn how to develop mental strength & resilience."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Coping-challenges-1472848106.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/coping-with-lifes-challenges",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Mental resilience"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/how-to-talk-about-cancer-with-your-loved-ones",
+                  "title": "How to talk about cancer with your loved ones",
+                  "description": {
+                    "text": "Finding the right words to share your struggle with those around you."
+                  },
+                  "image": {
+                    "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Talk-cancer-1395118078.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/how-to-talk-about-cancer-with-your-loved-ones",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Talking about cancer"
+                  ]
+                }
+              ],
+              "trendingTopicsEmotionalWellnessExploreMoreEnabled": true,
+              "trendingTopicsEmotionalWellnessExploreMoreTitle": "Emotional wellness topics",
+              "trendingTopicsEmotionalWellnessExploreMoreSubtitle": {
+                "text": "Life comes with a lot of challenges. Explore topics that can help you improve your emotional well-being."
+              },
+              "carouselTitle": "Explore more topics",
+              "carouselData": [
+                {
+                  "title": "Political stress",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/political-stress/political-stress-carousel-items/political-stress-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/us-2-0-what-we-have-in-common",
+                          "title": "What we have in common",
+                          "description": {
+                            "text": "In this podcast, psychologist Kurt Gray explores new paths to bridge the divide and foster meaningful political dialogue."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Have-in-common-1654534247.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/us-2-0-what-we-have-in-common",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/how-to-ease-election-stress",
+                          "title": "How to ease election stress",
+                          "description": {
+                            "text": "Explore how to manage election-related anxiety and maintain your mental well-being."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Election-stress-1334231976.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/how-to-ease-election-stress",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/election-anxiety-navigating-and-easing-the-stress",
+                          "title": "Election anxiety: Navigating and easing the stress",
+                          "description": {
+                            "text": "Gabe Howard and Dr. Michelle A. Patriquin disccus election anxiety, its effects on our minds, and tips to stay mentally healthy during this time."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Election-anxiety-1329931969.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/election-anxiety-navigating-and-easing-the-stress",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/4-ways-to-cope-when-politics-are-stressing-you-out",
+                          "title": "4 ways to cope when politics are stressing you out",
+                          "description": {
+                            "text": "Learn how to set healthy boundaries, engage in productive conversations, and focus on your well-being during this political times."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Improve-your-651953563.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/4-ways-to-cope-when-politics-are-stressing-you-out",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Article/five-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "title": "Five ways to keep your cool when election season gets heated",
+                          "description": {
+                            "text": "Five Ways to Keep Your Cool When Election Season Gets Heated"
+                          },
+                          "image": null,
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/5-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Video/what-is-election-stress-disorder-",
+                          "title": "What is election stress disorder?",
+                          "description": {
+                            "text": "What is Election Stress Disorder and how can it affect you?"
+                          },
+                          "image": null,
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/what-is-election-stress-disorder-and-how-can-it-affect-you",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Humor and Play",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/humor-and-play/humor-and-play-carousel-items/humor-and-play-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/the-art-and-wellbeing-benefits-of-play-for-both-kids-and-adults",
+                          "title": "The art and wellbeing benefits of play (for both kids and adults)",
+                          "description": {
+                            "text": "Learn how adding play to your daily routine can improve your mood and help you handle conflicts better."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Art-wellbeing-579980791.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/the-art-and-wellbeing-benefits-of-play-for-both-kids-and-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/how-to-have-more-fun",
+                          "title": "How to have more fun",
+                          "description": {
+                            "text": "In this podcast, Catherine Price, author of The Power of Fun, explains what makes true fun and how to find joy in everyday life."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/More-fun-1609807673.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/how-to-have-more-fun",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "title": "Why having Fun is the secret to a Healththier live",
+                          "description": {
+                            "text": "You know that a good laugh can boost your mood. But what about your body? See these 6 ways..."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Having-fun-1487387558.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/the-benefits-of-play-for-adults",
+                          "title": "The benefits of play for adults",
+                          "description": {
+                            "text": "Learn how play can improve your relationships, creativity, and productivity."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Benefits-of-play-170153653.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/the-benefits-of-play-for-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/humor-can-help-you-manage-grief-and-cope-with-loss",
+                          "title": "Humor can help you manage grief and cope with loss",
+                          "description": {
+                            "text": "Explore how humor can help you handle grief and cope with loss."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Humor-can-help-529080145.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/humor-can-help-you-manage-grief-and-cope-with-loss",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/30-benefits-of-humor-at-work",
+                          "title": "30 Benefits of humor at work",
+                          "description": {
+                            "text": "Discover how humor at work can improve your interactions with colleagues and enhance your well-being"
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/30-benefits-79860528.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/30-benefits-of-humor-at-work",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Positive Psychology",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/positive-psychology/positive-psychology-carousel-items/positive-psychology-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/flourishing-for-beginners-five-ways-to-get-started",
+                          "title": "Flourishing for beginners: 5 ways to get started",
+                          "description": {
+                            "text": "Learn what it means to truly flourish by focusing on Positive Emotions, Engagement, Relationships, Meaning, and Accomplishment."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Flourishing-for-1193052039.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/flourishing-for-beginners-five-ways-to-get-started",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/The positive effects of positive emotions",
+                          "title": "The positive effects of positive emotions",
+                          "description": {
+                            "text": "Researcher Jennifer Stellar explores how remarkable experiences can significantly impact our physical and mental health."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Positive-effects-667790518.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/The positive effects of positive emotions",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/sonja-lyubomirsky-on-the-myths-of-happiness",
+                          "title": "Myths of happiness",
+                          "description": {
+                            "text": "Learn how misconceptions about happiness can actually lead to a richer, more meaningful life."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Myths-happiness-1302836174.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/sonja-lyubomirsky-on-the-myths-of-happiness",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/improve-your-flourishing-with-these-three-easy-steps",
+                          "title": "Improve your flourishing with these three easy steps",
+                          "description": {
+                            "text": "Understand how you can use positive psychology to enhance your emotional wellbeing, psychological wellbeing, and social wellbeing."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Improve-your-651953563.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/improve-your-flourishing-with-these-three-easy-steps",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/positive-psychology-exercises-self-compassion-letter-and-your-daily-holiday",
+                          "title": "Positive Psychology Exercises: Self Compassion Letter & Your Daily Holiday",
+                          "description": {
+                            "text": "Put positive psychology into practice with simple exercises highlighted in this video."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Positive-psy-1395504255.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/positive-psychology-exercises-self-compassion-letter-and-your-daily-holiday",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/love-your-life-through-the-science-of-happiness",
+                          "title": "Love your life through the Science of Happiness",
+                          "description": {
+                            "text": "Dr. Lisa Coyne discusses positive psychology and ways to create happiness in our daily lives. She shares tips for managing stress and avoiding self-sabotage."
+                          },
+                          "image": {
+                            "url": "https: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Love-your-1492169447.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/love-your-life-through-the-science-of-happiness",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "genesysChatDisabled": false,
+              "genesysChatDisableHeader": false,
+              "genesysChatEnabled": true,
+              "genesysChatClientLogo": {
+                "url": "https: //uat.aem.anthem.com/content/dam/careloneap/logos/Carelon_New_Svg.svg"
+              },
+              "genesysChatHeader": {
+                "text": "We're here to help 8 a.m. to 8 p.m. ET.  Call 888-888-8888 for immediate support outside these hours."
+              },
+              "genesysChatAnonymousUserHeader": {
+                "text": "Please fill out the required fields below to begin. This information is only used to follow up, if needed, and never shared."
+              },
+              "genesysChatClosedHeader": {
+                "text": "Chat support is available 8 a.m. to 8 p.m. ET."
+              },
+              "genesysChatClosedSupportAssistance": {
+                "text": "For immediate support, call 888-888-8888 if you are outside these hours."
+              },
+              "genesysChatErrorHeader": {
+                "text": "We are currently experiencing technical issues and will be back online soon."
+              },
+              "genesysChatErrorSupportAssistance": {
+                "text": "Please check back or call 888-888-8888 for immediate support."
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "ynhhs": {
+    "data": {
+      "data": {
+        "clientList": {
+          "items": [
+            {
+              "enable": true,
+              "clientName": "Yale New Haven Health System",
+              "wpoClientName": "YNH; YNHH",
+              "customClient": true,
+              "welcomeTitle": "Welcome to Employee and Family Resources (EFR)",
+              "welcomeSubtitle": {
+                "text": "Tap into no-cost resources and tools that can help you live your life to the fullest potential."
+              },
+              "enableSecureExperience": true,
+              "enableCustomCardDescription": true,
+              "enableAppointmentScheduling": true,
+              "enableSearchCounsellor": true,
+              "enableCredibleMinds": true,
+              "disableCallText": false,
+              "credibleMindClientName": "carelonwellbeing-ynhhs",
+              "isTerminated": false,
+              "terminatedMessageTitle": null,
+              "terminatedMessageDescription": {
+                "text": null
+              },
+              "brandLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/Carelon_New_Svg.svg"
+              },
+              "clientLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/minimum-clients/ynhhs.png"
+              },
+              "home": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/gtc-default/take-an-assessment_3",
+                  "title": "Support starts here",
+                  "description": {
+                    "text": "Let us guide you to the right resources."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/target/GettyImages-1423556847.jpg"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //sit.assessment.carelonwellbeing.com/survey/anonymous/63c97a6c-716e-4006-a34c-b7dd202afa51"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/ynhhs/counselling-therapy-emotional-assistance-with-verified-experts",
+                  "title": "Find a counselor",
+                  "description": {
+                    "text": "Connect in-person or virtually with a licensed counselor."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Connect%20with%20a%20counselor%20Img-Opt%201.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Get started",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "ynhhs/connect-with-a-counselor"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/ynhhs/judicial-assistance",
+                  "title": "Legal Resources ",
+                  "description": {
+                    "text": "Get the support and resources you need to resolve legal issues."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/143920624-senior-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Legal resources ",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "ynhhs/find-legal-support"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/ynhhs/monetary-support",
+                  "title": "Financial planning ",
+                  "description": {
+                    "text": "Get guidance on money management for right now, and for the future."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/532097353-young-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Financial planning",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "ynhhs/plan-finances"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/ynhhs/family-support",
+                  "title": "Work-life resources",
+                  "description": {
+                    "text": "Get the support that can help you handle everyday challenges."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/700673212-they-ve-formed-a-friendship-over-the-course-of-her-care@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Work - life resources",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "ynhhs/work-life-resources"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/default/explore-wellness-topics",
+                  "title": "Explore wellness topics",
+                  "description": {
+                    "text": "Search the full library of articles, podcasts and videos."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/gettyimages-175138890.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": null,
+                  "redirectUrl": {
+                    "url": "http: //uat.aem.anthem.com/content/careloneap/us/en/client-home/emotional-wellness/wellness-content.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/wellness-content"
+                }
+              ],
+              "coursesAndResourcesTitle": "Courses and resources",
+              "coursesAndResourcesData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/ynhhs/emindful",
+                  "title": "eMindful",
+                  "description": {
+                    "text": "eM Life is a mindfulness-based mental wellbeing solution accessed via app or web."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/GettyImages-1126676831.jpg"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": "Listen now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //vibe.emindful.com/signup/beaconhealthplans",
+                  "cardTag": "Podcast",
+                  "otherCardTags": [
+                    "Mindfulness",
+                    "Health Plans"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/webinar/global-webinar-cards/work-life-webinars-fragment",
+                  "title": "2024 webinars",
+                  "description": {
+                    "text": "Check out recorded seminars that address a wide variety of topics."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/work-life%20webinars.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Watch now",
+                  "redirectUrl": {
+                    "url": "http: //uat.aem.anthem.com/content/careloneap/us/en/client-home/webinar.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/webinar",
+                  "cardTag": "Video",
+                  "otherCardTags": [
+                    "Seminars"
+                  ]
+                }
+              ],
+              "coursesAndResourcesExploreMoreData": [
+                {
+                  "type": "ArticleModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/ynhhs/emindful-article2",
+                  "title": "eMindful",
+                  "description": {
+                    "text": "eM Life is a mindfulness-based mental wellbeing solution accessed via app or web."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/e-mindful.png"
+                  },
+                  "uri": null,
+                  "buttonText": "Listen now",
+                  "redirectUrl": "https: //vibe.emindful.com/signup/beaconhealthplans",
+                  "openURLInNewTab": true,
+                  "tags": [
+                    "Podcast",
+                    "Mindfulness",
+                    "Health Plans"
+                  ]
+                }
+              ],
+              "coursesAndResourcesExploreMoreTitle": "Courses and resources",
+              "coursesAndResourcesExploreMoreSubtitle": {
+                "text": "Find a variety of educational tools in a range of engaging formats so you can choose what works best for you."
+              },
+              "criticalEventsTitle": "Critical event resources",
+              "criticalEventsSubtitle": {
+                "text": "Natural disasters, violence, death of a loved one, and other major events can disrupt our lives. Learn how you can plan, cope, and recover when the uncontrollable happens."
+              },
+              "criticalEventsData": [
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/default/current-events/currentevents",
+                  "title": "Current critical events",
+                  "description": {
+                    "text": "Find resources to help you deal with upsetting current news and events."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/icons8-event-24.png"
+                  },
+                  "resourcesTitle": null,
+                  "resourcesSubtitle": "Resources",
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/wild-fire/wildfire",
+                  "title": "Wildfire",
+                  "description": {
+                    "text": "What to do before, during or after a fire in your community"
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/icons-8-fire-50@2x.png"
+                  },
+                  "resourcesTitle": "Wildfire emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/floods-and-flooding/floods-and-flooding",
+                  "title": "Floods and Flooding",
+                  "description": {
+                    "text": "Learn how to prepare for a flood, stay safe during a flood, and protect your personal and mental health if you experience a flood."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-floods-50.png"
+                  },
+                  "resourcesTitle": "Floods and Flooding emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/tornadoes/tornadoes",
+                  "title": "Tornadoes",
+                  "description": {
+                    "text": "Tornadoes are unusual, unpredictable, and erratic. Learn what you can do to stay ahead of the storm."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/Object.png"
+                  },
+                  "resourcesTitle": "Tornadoes emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/hurricanes/hurricanes",
+                  "title": "Hurricanes",
+                  "description": {
+                    "text": "Know the steps you can take to prepare for a hurricane before it approaches."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-hurricane-32.png"
+                  },
+                  "resourcesTitle": "Hurricanes emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/violent-events/violent-events",
+                  "title": "Violent Events",
+                  "description": {
+                    "text": "Tools for coping, talking about, and managing stress after traumatic and violent events."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-fist-48.png"
+                  },
+                  "resourcesTitle": "Violent Events emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/climate-change/climate-change",
+                  "title": "Climate Change",
+                  "description": {
+                    "text": "How to manage climate anxiety by taking action and connect with others who share similar values and concerns."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-greenhouse-effect-100.png"
+                  },
+                  "resourcesTitle": "Climate Change emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/earthquakes/earthquakes",
+                  "title": "Earthquakes",
+                  "description": {
+                    "text": "Understand how to prepare for an earthquake and how to stay safe if one happens."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-earthquakes-50.png"
+                  },
+                  "resourcesTitle": "Earthquakes emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/ynhhs/natural-disasters/natural-disasters",
+                  "title": "Natural Disasters",
+                  "description": {
+                    "text": "Explore helpful resources, tools, and tips to prepare mentally and physcially for a natural disaster."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-tsunami-96.png"
+                  },
+                  "resourcesTitle": "Natural Disasters emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                }
+              ],
+              "criticalEventsIsDynamicWPORedirectUrl": false,
+              "criticalEventsUrl": null,
+              "featuredItemsTitle": "Featured items",
+              "featuredItemsImage": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Featured%20Items%20Img%20old.png"
+              },
+              "featuredItemsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Video/teen-depression--what-parents-need-to-know",
+                  "title": "Teen depression: what parents need to know",
+                  "description": {
+                    "text": "Teen depression is an incredibly nuanced and complex issue. Here's what to look for and how you can help."
+                  },
+                  "buttonText": "Watch now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/teen-depression-what-parents-need-to-know-and-how-to-help",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/insights/four-strategies-to-prevent-youth-substance-misuse",
+                  "title": "Four strategies to prevent youth substance misuse",
+                  "description": {
+                    "text": "ubstance misuse is a growing problem among young adults. Here are four strategies to prevent substance misuse in young adults."
+                  },
+                  "buttonText": "Read now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=insights/four-strategies-to-prevent-youth-substance-misuse",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Article/does-social-media-cause-depression-in-our-kids-",
+                  "title": "Does social media cause depression in our kids?",
+                  "description": {
+                    "text": "Is using social media making our kids unhappy? Evidence is mounting that there is a link between social media and depression"
+                  },
+                  "buttonText": "Read now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/does-social-media-cause-depression",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/how-to-help-kids-&-teens-build-coping-skills-by",
+                  "title": "How to help kids & teens build coping skills",
+                  "description": {
+                    "text": "Clinical psychologist and best-selling author Dr. Jeffrey Bernstein talks about what parents can do  to equip kids and teens with the skills they need to navigate any challenge."
+                  },
+                  "buttonText": "Listen now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/dr-jeffrey-bernstein-how-to-help-kids-and-teens-build-coping-skills-by",
+                  "openURLInNewTab": false
+                }
+              ],
+              "trendingTopicsEnabled": false,
+              "trendingTopicsTitle": "Trending topics ",
+              "trendingTopicsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/ynhhs/find-your-local-eap",
+                  "title": "Find Your Local EAP",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/ynhhs/legal-center-build-a-legal-will-or-access-a-variety-of-business-documents-legal-and-financial-resources",
+                  "title": "Legal Center: Build a Legal Will or Access a Variety of Business Documents, Legal and Financial Resources",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/ynhhs/child-care-assisted-search",
+                  "title": "Child Care Assisted Search",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/ynhhs/depression-screening-questionnaire",
+                  "title": "Depression Screening Questionnaire",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/ynhhs/ynhhs-eap-resources-near-your-worksite",
+                  "title": "Company Demo EAP Resources Near Your Worksite",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                }
+              ],
+              "trendingTopicsImage": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Trending%20Topics%20Img.png"
+              },
+              "trendingTopicsExploreMoreEnabled": true,
+              "trendingTopicsOpenExploreMoreButtonURLInNewTab": false,
+              "trendingTopicsExploreMoreButtonDynamicWPORedirectUrl": false,
+              "trendingTopicsEmotionalWellnessTitle": "Trending topics",
+              "trendingTopicsEmotionalWellnessData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/list/managing-back-to-school-anxiety",
+                  "title": "Managing back-to-school anxiety",
+                  "description": {
+                    "text": "Most students experience some sort of back-to-school anxiety every year. Explore resources  and tips to help your child navigate this stressful time."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/students-walking-1465474406.jpg"
+                  },
+                  "buttonText": "Read now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/how-to-manage-back-to-school-anxiety-as-a-teen",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": null
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/list/healing-power-of-music",
+                  "title": "Healing power of music",
+                  "description": {
+                    "text": "Learn how sound healing therapy uses aspects of music to improve physical and emotional health and well-being."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/music-1351827223.jpg"
+                  },
+                  "buttonText": "Read now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/The-benefits-of-sound-therapy",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": null
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/list/tips-for-managing-money-worries",
+                  "title": "Tips for managing money worries",
+                  "description": {
+                    "text": "Stress from finances and other sources can affect your metnal and physical health. Learn how coping strategies that can help."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/budget-1492289682.jpg"
+                  },
+                  "buttonText": "Read now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/financial-stress",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": null
+                }
+              ],
+              "trendingTopicsEmotionalWellnessExploreMoreEnabled": true,
+              "trendingTopicsEmotionalWellnessExploreMoreTitle": "Emotional wellness topics",
+              "trendingTopicsEmotionalWellnessExploreMoreSubtitle": {
+                "text": "Life comes with a lot of challenges. Explore topics that can help you improve your emotional well-being."
+              },
+              "carouselTitle": "Explore more topics",
+              "carouselData": [
+                {
+                  "title": "Election stress",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/More Topics Skeleton/election-stress/election-stress---carousal-items/Election stress - carousal-tab",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Video/what-is-political-stress-",
+                          "title": "What is political stress?",
+                          "description": {
+                            "text": "Political stress is a real thing. Clinical Psychologist Sheela Raja explains what political stress is and how it affects us."
+                          },
+                          "image": null,
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/what-is-political-stress-clinical-psychologist-sheela-raja-explains",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Podcast/how-to-talk-to-people-you-disagree-with",
+                          "title": "How to talk to people you disagree with",
+                          "description": {
+                            "text": "Trying to have a conversation with someone who has an opposing view can be exhausting. Explore what it means to have productive discussions when we disagree."
+                          },
+                          "image": null,
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/how-to-talk-to-people-you-disagree-with",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Article/five-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "title": "Five ways to keep your cool when election season gets heated",
+                          "description": {
+                            "text": "Five Ways to Keep Your Cool When Election Season Gets Heated"
+                          },
+                          "image": null,
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/5-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Article/election-stress--tips-to-manage-anxious-feelings-about-politics",
+                          "title": "Election stress: Tips to manage anxious feelings about politics",
+                          "description": {
+                            "text": "If you’re grappling with election stress, you are not alone, more than 60% of registered U.S. voters say politics are a significant source of stress. These tips can help."
+                          },
+                          "image": null,
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/election-stress-tips-to-manage-anxious-feelings-about-politics",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Video/what-is-election-stress-disorder-",
+                          "title": "What is election stress disorder?",
+                          "description": {
+                            "text": "What is Election Stress Disorder and how can it affect you?"
+                          },
+                          "image": null,
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/what-is-election-stress-disorder-and-how-can-it-affect-you",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Podcast/how-to-cope-with-political-stress-this-election-season",
+                          "title": "How to cope with political stress this election season",
+                          "description": {
+                            "text": "Learn how political stress affects your well-being and and how to stay politically engaged while still maintaining your mental health."
+                          },
+                          "image": null,
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/how-to-cope-with-political-stress-this-election-season-with-brett-q-ford-phd",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "The power of play",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/More Topics Skeleton/the-power-of-play/the-power-of-play--carousal-items/The power of play - carousal-tab",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Video/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "title": "Why having fun is the secret to a healthier life",
+                          "description": {
+                            "text": "Having fun isn't just enjoyable, it's essential for your health and happiness.Watch this video to learn how to weave playfulness into your every day life."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/carnival-prize-1784185580.jpg"
+                          },
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/how-to-have-more-fun",
+                          "title": "How to have more fun",
+                          "description": {
+                            "text": "Do you have enough fun in life? Catherine Price, author of \"The Power of Fun,\" explains the three components of true fun and how to tap into this powerful, everyday source of joy."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/silly-faces-1267464490.jpg"
+                          },
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/how-to-have-more-fun",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/insights/the-art-and-wellbeing-benefits-of-play",
+                          "title": "The art and wellbeing benefits of play",
+                          "description": {
+                            "text": "While kids may be the true original innovators of play, we adults were once kids too. We can also harness and benefit from this powerful act."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/sidewalk%20chalk-1322701584.jpg"
+                          },
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=insights/the-art-and-wellbeing-benefits-of-play-for-both-kids-and-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Insights",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Video/playing-board-games-for-mental-health",
+                          "title": "Playing board games for mental health",
+                          "description": {
+                            "text": "Explore how playing board games can be used as a healthy coping skill and how to practice mindfulness with playing games."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/students-walking-1465474406.jpg"
+                          },
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/playing-board-games-for-mental-health",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Article/the-benefits-of-play-for-adults",
+                          "title": "The benefits of play for adults",
+                          "description": {
+                            "text": "Play is not just for kids. Learn how play can improve your relationships, creativity, and productivity."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/piggyback-couple-639780040.jpg"
+                          },
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/the-benefits-of-play-for-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/the-power-of-play-a-path-to-healding-anxiety-depression-and-ptsd",
+                          "title": "The power of play: A path to healding anxiety, depression, and PTSD",
+                          "description": {
+                            "text": "Embracing playfulness and silliness is not only a way to heal a fried nervous system. Let's dive into why play matters and how it can be a vital part of your mental health journey."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/gaming-1492582097.jpg"
+                          },
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/the-power-of-play-a-path-to-healing-anxiety-depression-and-ptsd",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Mindful Eating",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/More Topics Skeleton/Mindful Eating/Mindful Eating - carousal-items/Mindful Eating - carousal-tab",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/what-does-mindful-eating-mean-",
+                          "title": "What does mindful eating mean?",
+                          "description": {
+                            "text": "An introduction to understand more about mindful eating and the benefits it can bring."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/snack-break-769731445.jpg"
+                          },
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/what-does-mindful-eating-mean",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Article/mindful-eating-101---a-beginner's-guide",
+                          "title": "Mindful eating 101 — a beginner's guide",
+                          "description": {
+                            "text": "Mindful eating is a powerful tool to support managing your eating habits. It can help with weight loss, reducing binge eating, and making you feel better."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/sandwich-707435321.jpg"
+                          },
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/mindful-eating-101-a-beginners-guide",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Video/mindful-eating-exercise",
+                          "title": "Mindful eating exercise",
+                          "description": {
+                            "text": "Dr. Dave Johnson takes us through guided meditation for sensory awareness at the dinner table."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/woman-enjoying-meal-527955972.jpg"
+                          },
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/mindful-eating-exercise",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/the-well-nourished-life--tips-for-mindful-eating-and-living",
+                          "title": "The well-nourished life: tips for mindful eating and living",
+                          "description": {
+                            "text": "Learn practical strategies to reduce emotional eating and foster a healthier approach to nourishment and and understand triggers that contribute to unhealthy eating habits."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/salad-break-1459654637.jpg"
+                          },
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/the-well-nourished-life-tips-for-mindful-eating-and-living-with-andrea",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/August - 2024/Podcast/mindful-eating-tips-and-strategies-from-the-pros",
+                          "title": "Mindful eating tips and strategies from the pros",
+                          "description": {
+                            "text": "Learn mindful eating to help resolve mindless and emotional eating and senseless yo-yo dieting to live the vibrant life you crave."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/august-2024/groceries-1744747132.jpg"
+                          },
+                          "buttonText": "Listen now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/season-5-opener-mindful-eating-tips-and-strategies-from-the-pros-w-guest",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "genesysChatDisabled": false,
+              "genesysChatDisableHeader": false,
+              "genesysChatEnabled": false,
+              "genesysChatClientLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/minimum-clients/ynhhs.png"
+              },
+              "genesysChatHeader": {
+                "text": "We're here to help 8 a.m. to 8 p.m. ET.  Call 877-275-6226 for immediate support outside these hours."
+              },
+              "genesysChatAnonymousUserHeader": {
+                "text": "Please fill out the required fields below to begin. This information is only used to follow up, if needed, and never shared."
+              },
+              "genesysChatClosedHeader": {
+                "text": "Chat support is available 8 a.m. to 8 p.m. ET."
+              },
+              "genesysChatClosedSupportAssistance": {
+                "text": "For immediate support, call 877-275-6226 if you are outside these hours."
+              },
+              "genesysChatErrorHeader": {
+                "text": "We are currently experiencing technical issues and will be back online soon."
+              },
+              "genesysChatErrorSupportAssistance": {
+                "text": "Please check back or call 877-275-6226 for immediate support."
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "bcbsnc": {
+    "data": {
+      "data": {
+        "clientList": {
+          "items": [
+            {
+              "enable": true,
+              "clientName": "Blue Cross Blue Shield of North Carolina",
+              "wpoClientName": "BCB",
+              "customClient": true,
+              "welcomeTitle": "Welcome to Carelon Wellbeing",
+              "welcomeSubtitle": {
+                "text": "Tap into no-cost resources and tools that can help you live your life to the fullest potential."
+              },
+              "enableSecureExperience": true,
+              "enableCustomCardDescription": true,
+              "enableAppointmentScheduling": true,
+              "enableSearchCounsellor": true,
+              "enableCredibleMinds": true,
+              "disableCallText": false,
+              "credibleMindClientName": "carelonwellbeing-bcbsnc",
+              "isTerminated": false,
+              "terminatedMessageTitle": null,
+              "terminatedMessageDescription": {
+                "text": null
+              },
+              "brandLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/Carelon_New_Svg.svg"
+              },
+              "clientLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/minimum-clients/Resized_BCBS_NC.png"
+              },
+              "home": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/gtc-default/take-an-assessment_default",
+                  "title": "Support starts here",
+                  "description": {
+                    "text": "Let us guide you to the right resources."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/target/GettyImages-1423556847.jpg"
+                  },
+                  "openURLInNewTab": true,
+                  "buttonText": "Get started",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //sit.assessment.carelonwellbeing.com/survey/anonymous/a2640dfa-6990-4f59-8f39-d84a1c5bbdae"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/bcbsnc/counselling-therapy-emotional-assistance-with-verified-experts",
+                  "title": "Find a counselor",
+                  "description": {
+                    "text": "Connect in-person or virtually with a licensed counselor."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Connect%20with%20a%20counselor%20Img-Opt%201.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Get started",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "bcbsnc/connect-with-a-counselor"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/bcbsnc/judicial-assistance",
+                  "title": "Obtain legal advice",
+                  "description": {
+                    "text": "Find legal support and resources."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/143920624-senior-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Legal resources ",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "bcbsnc/find-legal-support"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/bcbsnc/monetary-support",
+                  "title": "Plan your finances",
+                  "description": {
+                    "text": "Get your finances in order with money coaching."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/532097353-young-couple-meeting-with-financial-advisor@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Financial planning",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "bcbsnc/plan-finances"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/bcbsnc/family-support",
+                  "title": "Access work-life benefits",
+                  "description": {
+                    "text": "Locate work, family and everyday life resources."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/custom-cards/700673212-they-ve-formed-a-friendship-over-the-course-of-her-care@3x.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Work - life resources",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "bcbsnc/work-life-resources"
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/custom-card/default/explore-wellness-topics",
+                  "title": "Explore wellness topics",
+                  "description": {
+                    "text": "Search the full library of articles, podcasts and videos."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/gettyimages-175138890.jpg"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": null,
+                  "redirectUrl": {
+                    "url": "http: //uat.aem.anthem.com/content/careloneap/us/en/client-home/emotional-wellness/wellness-content.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/wellness-content"
+                }
+              ],
+              "coursesAndResourcesTitle": "Courses and resources",
+              "coursesAndResourcesData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/bcbsnc/November-2023/three-research-backed-rules-for-building-a-grateful-workplace",
+                  "title": "Three Research-Backed Rules for Building a Grateful Workplace",
+                  "description": {
+                    "text": "University of Washington professor Ryan Fehr shares research on how to build a culture of gratitude at work."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources-november/Three%20Research-Backed%20Rules%20for%20Building%20a%20Grateful%20Workplace.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Watch now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/three-research-backed-tips-for-a-grateful-workplace?query=",
+                  "cardTag": "Video",
+                  "otherCardTags": null
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/courses-and-resources/bcbsnc/November-2023/the-why-and-how-of-effective-altruism",
+                  "title": "The Why and How of Effective Altruism",
+                  "description": {
+                    "text": "Philosopher Peter Singer talks through some surprising thought experiments to help you balance emotion and practicality of altruism."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources-november/The%20Why%20and%20How%20of%20Effective%20Altruism.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Watch now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/the-why-and-how-of-effective-altruism?query=",
+                  "cardTag": "Video",
+                  "otherCardTags": null
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/webinar/global-webinar-cards/work-life-webinars-fragment",
+                  "title": "2024 webinars",
+                  "description": {
+                    "text": "Check out recorded seminars that address a wide variety of topics."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/courses-and-resources/work-life%20webinars.png"
+                  },
+                  "openURLInNewTab": false,
+                  "buttonText": "Watch now",
+                  "redirectUrl": {
+                    "url": "http: //uat.aem.anthem.com/content/careloneap/us/en/client-home/webinar.html"
+                  },
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/webinar",
+                  "cardTag": "Video",
+                  "otherCardTags": [
+                    "Seminars"
+                  ]
+                }
+              ],
+              "coursesAndResourcesExploreMoreData": [],
+              "coursesAndResourcesExploreMoreTitle": "Courses and resources",
+              "coursesAndResourcesExploreMoreSubtitle": {
+                "text": "Find a variety of educational tools in a range of engaging formats so you can choose what works best for you."
+              },
+              "criticalEventsTitle": "Critical event resources",
+              "criticalEventsSubtitle": {
+                "text": "Natural disasters, violence, death of a loved one, and other major events can disrupt our lives. Learn how you can plan, cope, and recover when the uncontrollable happens."
+              },
+              "criticalEventsData": [
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/default/current-events/currentevents",
+                  "title": "Current critical events",
+                  "description": {
+                    "text": "Find resources to help you deal with upsetting current news and events."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/icons8-event-24.png"
+                  },
+                  "resourcesTitle": null,
+                  "resourcesSubtitle": "Resources",
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/wild-fire/wildfire",
+                  "title": "Wildfires",
+                  "description": {
+                    "text": "What to do before, during, or after a fire in your community."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/icons-8-fire-50@2x.png"
+                  },
+                  "resourcesTitle": "Wildfire emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/floods-and-flooding/floods-and-flooding",
+                  "title": "Floods",
+                  "description": {
+                    "text": "Learn how to prepare, stay safe, and protect your physical and mental health during a flood."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-floods-50.png"
+                  },
+                  "resourcesTitle": "Floods and flooding emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/tornadoes/tornadoes",
+                  "title": "Tornadoes",
+                  "description": {
+                    "text": "Tornadoes can be unpredictable and dangerous. Learn what you can do to be ready."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/Object.png"
+                  },
+                  "resourcesTitle": "Tornado emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/hurricanes/hurricanes",
+                  "title": "Hurricanes",
+                  "description": {
+                    "text": "Know the steps you can take to prepare for a hurricane."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-hurricane-32.png"
+                  },
+                  "resourcesTitle": "Hurricane emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/violent-events/violent-events",
+                  "title": "Violent events",
+                  "description": {
+                    "text": "Access tools for coping, talking about, and managing stress after traumatic and violent events."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-fist-48.png"
+                  },
+                  "resourcesTitle": "Violent events emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/climate-change/climate-change",
+                  "title": "Climate change",
+                  "description": {
+                    "text": "Learn how to manage the emotional stressors that come with climate change."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-greenhouse-effect-100.png"
+                  },
+                  "resourcesTitle": "Climate change emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/earthquakes/earthquakes",
+                  "title": "Earthquakes",
+                  "description": {
+                    "text": "Understand how to prepare for an earthquake and how to stay safe when one happens."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-earthquakes-50.png"
+                  },
+                  "resourcesTitle": "Earthquake emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                },
+                {
+                  "_path": "/content/dam/careloneap/content-fragments/self-help-resources/bcbsnc/natural-disasters/natural-disasters",
+                  "title": "Natural disasters",
+                  "description": {
+                    "text": "Explore helpful resources, tools, and tips to prepare mentally and physcially for a natural disaster."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/icons/criticaleventsupport/icons8-tsunami-96.png"
+                  },
+                  "resourcesTitle": "Natural disaster emergency resources",
+                  "resourcesSubtitle": null,
+                  "resourcesData": [],
+                  "highlight": false,
+                  "highlightActivationDate": null,
+                  "highlightExpiryDate": null
+                }
+              ],
+              "criticalEventsIsDynamicWPORedirectUrl": false,
+              "criticalEventsUrl": null,
+              "featuredItemsTitle": "Featured items",
+              "featuredItemsImage": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Featured%20Items%20Img.png"
+              },
+              "featuredItemsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/how-to-explain-adhd-to-kids-ned-hallowell-md-edd",
+                  "title": "How to explain ADHD to kids",
+                  "description": {
+                    "text": "Edward Hallowell, MD, EdD, Psychiatrist, ADHD Specialist, and Author, shares advice for parents on the best way to tell their child that they have ADD or ADHD and how to explain it in a way that the child will understand."
+                  },
+                  "buttonText": "Watch Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/how-to-explain-adhd-to-kids-ned-hallowell-md-edd",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/behavioral-treatments-for-kids-with-adhd",
+                  "title": "Behavioral Treatments for Kids With ADHD",
+                  "description": {
+                    "text": "There are two kinds of behavioral treatments that can help kids with ADHD (attention-deficit hyperactivity disorder). While they don’t change the symptoms of ADHD, they do teach kids how to manage them. Some kids who get behavioral treatment might need to take medication as well. For others, behavioral treatment is enough to keep their ADHD symptoms under control. "
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/behavioral-treatments-for-kids-with-adhd",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/adhd-101-why-kids-with-adhd-need-different-parenting-strategies",
+                  "title": "Whykids with ADHD need different parenting strategies",
+                  "description": {
+                    "text": "We discuss 3 core difficulties related to ADHD that make it harder for children to follow instructions and stay motivated. We then identify 3 changes caregivers can make to their parenting approach to help their child with ADHD stay engaged and set them up for success."
+                  },
+                  "buttonText": "Watch Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/adhd-101-why-kids-with-adhd-need-different-parenting-strategies",
+                  "openURLInNewTab": false
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/ep-179-how-to-help-your-child-and-others-understand-adhd",
+                  "title": "How to help your child (and others) understand ADHD",
+                  "description": {
+                    "text": "Siope Kinikini M.A. discusses the approach recommended for talking to children and teens about ADHD and how to communicate about it with family members who may not understand it."
+                  },
+                  "buttonText": "Listen Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/ep-179-how-to-help-your-child-and-others-understand-adhd",
+                  "openURLInNewTab": false
+                }
+              ],
+              "trendingTopicsEnabled": false,
+              "trendingTopicsTitle": "Trending topics ",
+              "trendingTopicsData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/bcbsnc/find-your-local-eap",
+                  "title": "Find Your Local EAP",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/bcbsnc/legal-center-build-a-legal-will-or-access-a-variety-of-business-documents-legal-and-financial-resources",
+                  "title": "Legal Center: Build a Legal Will or Access a Variety of Business Documents, Legal and Financial Resources",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/bcbsnc/child-care-assisted-search",
+                  "title": "Child Care Assisted Search",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/bcbsnc/depression-screening-questionnaire",
+                  "title": "Depression Screening Questionnaire",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/trending-topics/bcbsnc/bcbsnc-eap-resources-near-your-worksite",
+                  "title": "Company Demo EAP Resources Near Your Worksite",
+                  "description": {
+                    "text": "Tum dicere exorsus est eligendi optio, cumque nihil ut summo bono, dolorem ipsum autem nusquam hoc."
+                  },
+                  "image": null,
+                  "buttonText": null,
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "https: //www.beaconhealthoptions.com",
+                  "openURLInNewTab": true
+                }
+              ],
+              "trendingTopicsImage": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/latest/Trending%20Topics%20Img.png"
+              },
+              "trendingTopicsExploreMoreEnabled": true,
+              "trendingTopicsOpenExploreMoreButtonURLInNewTab": false,
+              "trendingTopicsExploreMoreButtonDynamicWPORedirectUrl": false,
+              "trendingTopicsEmotionalWellnessTitle": "Trending topics",
+              "trendingTopicsEmotionalWellnessData": [
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/parenting-a-child-with-adhd",
+                  "title": "Parenting a child with ADHD",
+                  "description": {
+                    "text": "Resources to support parents and loved ones"
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Parenting-a-child-1338762456.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/parenting-a-child-with-adhd",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Parents",
+                    "ADHD"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/coping-with-lifes-challenges",
+                  "title": "Coping with life's challenges",
+                  "description": {
+                    "text": "World Mental Health Day is October 10th. Learn how to develop mental strength & resilience."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Coping-challenges-1472848106.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/coping-with-lifes-challenges",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Mental resilience"
+                  ]
+                },
+                {
+                  "type": "CardModel",
+                  "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/list/how-to-talk-about-cancer-with-your-loved-ones",
+                  "title": "How to talk about cancer with your loved ones",
+                  "description": {
+                    "text": "Finding the right words to share your struggle with those around you."
+                  },
+                  "image": {
+                    "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Talk-cancer-1395118078.jpg"
+                  },
+                  "buttonText": "Read Now",
+                  "redirectUrl": null,
+                  "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-list?page=lists/how-to-talk-about-cancer-with-your-loved-ones",
+                  "openURLInNewTab": false,
+                  "cardTag": "List",
+                  "otherCardTags": [
+                    "Talking about cancer"
+                  ]
+                }
+              ],
+              "trendingTopicsEmotionalWellnessExploreMoreEnabled": true,
+              "trendingTopicsEmotionalWellnessExploreMoreTitle": "Emotional wellness topics",
+              "trendingTopicsEmotionalWellnessExploreMoreSubtitle": {
+                "text": "Life comes with a lot of challenges. Explore topics that can help you improve your emotional well-being."
+              },
+              "carouselTitle": "Explore more topics",
+              "carouselData": [
+                {
+                  "title": "Political stress",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/political-stress/political-stress-carousel-items/political-stress-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/us-2-0-what-we-have-in-common",
+                          "title": "What we have in common",
+                          "description": {
+                            "text": "In this podcast, psychologist Kurt Gray explores new paths to bridge the divide and foster meaningful political dialogue."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Have-in-common-1654534247.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/us-2-0-what-we-have-in-common",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/how-to-ease-election-stress",
+                          "title": "How to ease election stress",
+                          "description": {
+                            "text": "Explore how to manage election-related anxiety and maintain your mental well-being."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Election-stress-1334231976.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/how-to-ease-election-stress",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/election-anxiety-navigating-and-easing-the-stress",
+                          "title": "Election anxiety: Navigating and easing the stress",
+                          "description": {
+                            "text": "Gabe Howard and Dr. Michelle A. Patriquin disccus election anxiety, its effects on our minds, and tips to stay mentally healthy during this time."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Election-anxiety-1329931969.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/election-anxiety-navigating-and-easing-the-stress",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/4-ways-to-cope-when-politics-are-stressing-you-out",
+                          "title": "4 ways to cope when politics are stressing you out",
+                          "description": {
+                            "text": "Learn how to set healthy boundaries, engage in productive conversations, and focus on your well-being during this political times."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Improve-your-651953563.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/4-ways-to-cope-when-politics-are-stressing-you-out",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Article/five-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "title": "Five ways to keep your cool when election season gets heated",
+                          "description": {
+                            "text": "Five Ways to Keep Your Cool When Election Season Gets Heated"
+                          },
+                          "image": null,
+                          "buttonText": "Read now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/5-ways-to-keep-your-cool-when-election-season-gets-heated",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/July - 2024/Video/what-is-election-stress-disorder-",
+                          "title": "What is election stress disorder?",
+                          "description": {
+                            "text": "What is Election Stress Disorder and how can it affect you?"
+                          },
+                          "image": null,
+                          "buttonText": "Watch now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/what-is-election-stress-disorder-and-how-can-it-affect-you",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Humor and Play",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/humor-and-play/humor-and-play-carousel-items/humor-and-play-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/the-art-and-wellbeing-benefits-of-play-for-both-kids-and-adults",
+                          "title": "The art and wellbeing benefits of play (for both kids and adults)",
+                          "description": {
+                            "text": "Learn how adding play to your daily routine can improve your mood and help you handle conflicts better."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Art-wellbeing-579980791.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/the-art-and-wellbeing-benefits-of-play-for-both-kids-and-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/how-to-have-more-fun",
+                          "title": "How to have more fun",
+                          "description": {
+                            "text": "In this podcast, Catherine Price, author of The Power of Fun, explains what makes true fun and how to find joy in everyday life."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/More-fun-1609807673.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/how-to-have-more-fun",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "title": "Why having Fun is the secret to a Healththier live",
+                          "description": {
+                            "text": "You know that a good laugh can boost your mood. But what about your body? See these 6 ways..."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Having-fun-1487387558.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/why-having-fun-is-the-secret-to-a-healthier-life",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/the-benefits-of-play-for-adults",
+                          "title": "The benefits of play for adults",
+                          "description": {
+                            "text": "Learn how play can improve your relationships, creativity, and productivity."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Benefits-of-play-170153653.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/the-benefits-of-play-for-adults",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/humor-can-help-you-manage-grief-and-cope-with-loss",
+                          "title": "Humor can help you manage grief and cope with loss",
+                          "description": {
+                            "text": "Explore how humor can help you handle grief and cope with loss."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Humor-can-help-529080145.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/humor-can-help-you-manage-grief-and-cope-with-loss",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/30-benefits-of-humor-at-work",
+                          "title": "30 Benefits of humor at work",
+                          "description": {
+                            "text": "Discover how humor at work can improve your interactions with colleagues and enhance your well-being"
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/30-benefits-79860528.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/30-benefits-of-humor-at-work",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "title": "Positive Psychology",
+                  "data": [
+                    {
+                      "type": "GuidesModel",
+                      "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/More Topics Skeleton/positive-psychology/positive-psychology-carousel-items/positive-psychology-tab-fragment",
+                      "data": [
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/flourishing-for-beginners-five-ways-to-get-started",
+                          "title": "Flourishing for beginners: 5 ways to get started",
+                          "description": {
+                            "text": "Learn what it means to truly flourish by focusing on Positive Emotions, Engagement, Relationships, Meaning, and Accomplishment."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Flourishing-for-1193052039.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/flourishing-for-beginners-five-ways-to-get-started",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/The positive effects of positive emotions",
+                          "title": "The positive effects of positive emotions",
+                          "description": {
+                            "text": "Researcher Jennifer Stellar explores how remarkable experiences can significantly impact our physical and mental health."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Positive-effects-667790518.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/The positive effects of positive emotions",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/sonja-lyubomirsky-on-the-myths-of-happiness",
+                          "title": "Myths of happiness",
+                          "description": {
+                            "text": "Learn how misconceptions about happiness can actually lead to a richer, more meaningful life."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Myths-happiness-1302836174.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/sonja-lyubomirsky-on-the-myths-of-happiness",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Article/improve-your-flourishing-with-these-three-easy-steps",
+                          "title": "Improve your flourishing with these three easy steps",
+                          "description": {
+                            "text": "Understand how you can use positive psychology to enhance your emotional wellbeing, psychological wellbeing, and social wellbeing."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Improve-your-651953563.jpg"
+                          },
+                          "buttonText": "Read Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-article?page=articles/improve-your-flourishing-with-these-three-easy-steps",
+                          "openURLInNewTab": false,
+                          "cardTag": "Article",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Video/positive-psychology-exercises-self-compassion-letter-and-your-daily-holiday",
+                          "title": "Positive Psychology Exercises: Self Compassion Letter & Your Daily Holiday",
+                          "description": {
+                            "text": "Put positive psychology into practice with simple exercises highlighted in this video."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Positive-psy-1395504255.jpg"
+                          },
+                          "buttonText": "Watch Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-video?page=videos/positive-psychology-exercises-self-compassion-letter-and-your-daily-holiday",
+                          "openURLInNewTab": false,
+                          "cardTag": "Video",
+                          "otherCardTags": null
+                        },
+                        {
+                          "type": "CardModel",
+                          "path": "/content/dam/careloneap/content-fragments/CredibleMind Monthly Resource/October - 2024/Podcast/love-your-life-through-the-science-of-happiness",
+                          "title": "Love your life through the Science of Happiness",
+                          "description": {
+                            "text": "Dr. Lisa Coyne discusses positive psychology and ways to create happiness in our daily lives. She shares tips for managing stress and avoiding self-sabotage."
+                          },
+                          "image": {
+                            "url": "http: //uat.aem.anthem.com/content/dam/careloneap/images/desktop/october-2024/Love-your-1492169447.jpg"
+                          },
+                          "buttonText": "Listen Now",
+                          "redirectUrl": null,
+                          "staticRedirectUrl": "/content/careloneap/us/en/client-home/emotional-wellness/cm-podcast?page=podcasts/love-your-life-through-the-science-of-happiness",
+                          "openURLInNewTab": false,
+                          "cardTag": "Podcast",
+                          "otherCardTags": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "genesysChatDisabled": false,
+              "genesysChatDisableHeader": false,
+              "genesysChatEnabled": true,
+              "genesysChatClientLogo": {
+                "url": "http: //uat.aem.anthem.com/content/dam/careloneap/logos/minimum-clients/Resized_BCBS_NC.png"
+              },
+              "genesysChatHeader": {
+                "text": "We're here to help 8 a.m. to 8 p.m. ET.  Call 877-764-5643 for immediate support outside these hours."
+              },
+              "genesysChatAnonymousUserHeader": {
+                "text": "Please fill out the required fields below to begin. This information is only used to follow up, if needed, and never shared."
+              },
+              "genesysChatClosedHeader": {
+                "text": "Chat support is available 8 a.m. to 8 p.m. ET."
+              },
+              "genesysChatClosedSupportAssistance": {
+                "text": "For immediate support, call 877-764-5643 if you are outside these hours."
+              },
+              "genesysChatErrorHeader": {
+                "text": "We are currently experiencing technical issues and will be back online soon."
+              },
+              "genesysChatErrorSupportAssistance": {
+                "text": "Please check back or call 877-764-5643 for immediate support."
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

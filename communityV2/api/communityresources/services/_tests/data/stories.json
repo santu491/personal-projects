@@ -1,0 +1,502 @@
+[{
+  "_id" : "618aa1950225310023a57011",
+  "id" : "618aa1950225310023a57011",
+  "authorId" : "61796cad30cd04002b54e39e",
+  "featuredQuote" : "23",
+  "answer" : [
+      {
+          "id" : "618aa1950225310023a57010",
+          "promptId" : "607ed34c4b9db58c6e7ffa90",
+          "question" : "What was it like to learn the diagnosis?",
+          "sensitiveContentText" : null,
+          "response" : "ewew",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2021-11-09T16:28:05.518Z",
+          "updatedDate" : "2021-11-10T07:09:34.702Z"
+      }
+  ],
+  "communityId" : "607e7c99d0a2b533bb2ae3d2",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 12,
+  "relation" : "Myself",
+  "displayName" : "Elon Musk",
+  "relationAgeWhenDiagnosed" : 12,
+  "updatedDate" : "2021-11-10T07:09:35.497Z",
+  "createdDate" : "2021-11-09T16:28:05.518Z",
+  "published" : true,
+  "removed" : false,
+  "flagged" : false,
+  "hasStoryBeenPublishedOnce" : false,
+  "allowComments" : true,
+  "publishedAt" : null,
+  "comments": [
+    {
+        "_id" : "61447cd997d29b001da45224",
+        "comment" : "How are you bro?\n",
+        "createdAt" : "2021-09-17T11:32:41.241Z",
+        "updatedAt" : "2021-09-17T11:32:41.241Z",
+        "flagged" : false,
+        "removed" : false,
+        "isCommentTextProfane" : false,
+        "author" : {
+            "id" : "60646605a450020007eae236"
+        },
+        "replies" : [
+            {
+                "_id" : "623c265642c8946087853f70",
+                "comment" : "Good",
+                "createdAt" : "2021-09-17T11:32:41.241Z",
+                "updatedAt" : "2021-09-17T11:32:41.241Z",
+                "flagged" : false,
+                "removed" : false,
+                "isCommentTextProfane" : false,
+                "author" : {
+                    "id" : "6135e075788db5002bc6743d"
+                }
+            }
+        ],
+        "reactions" : {
+            "log" : [
+                {
+                    "userId" : "628f6210b94fde00241c0ec0",
+                    "reaction" : "like",
+                    "createdDate" : "2022-07-04T13:51:35.299Z",
+                    "updatedDate" : "2022-07-04T13:52:54.504Z"
+                }
+            ],
+            "count" : {
+                "like" : 1,
+                "care" : 0,
+                "celebrate" : 0,
+                "good_idea" : 0,
+                "total" : 1
+            }
+        }
+    },
+    {
+        "_id" : "61447cfd97d29b001da45226",
+        "id" : "61447cfd97d29b001da45226",
+        "comment" : "Are you happy?",
+        "createdAt" : "2021-09-17T11:33:17.432Z",
+        "updatedAt" : "2021-09-17T11:33:17.432Z",
+        "flagged" : false,
+        "removed" : false,
+        "isCommentTextProfane" : false,
+        "author" : {
+            "id" : "60646605a450020007eae236"
+        },
+        "replies" : [
+            {
+                "_id" : "623c265742c8946087853f71",
+                "comment" : "Yes",
+                "createdAt" : "2021-09-17T11:33:17.432Z",
+                "updatedAt" : "2021-09-17T11:33:17.432Z",
+                "flagged" : false,
+                "removed" : false,
+                "isCommentTextProfane" : false,
+                "author" : {
+                    "id" : "6135e075788db5002bc6743d"
+                }
+            }
+        ]
+    }
+  ]
+},
+{
+  "_id" : "621cbcb7b558ef001d6ba3a7",
+  "id" : "621cbcb7b558ef001d6ba3a7",
+  "authorId" : "61d49e744374dc002a286ccb",
+  "featuredQuote" : "spanish story diabetes",
+  "answer" : [
+      {
+          "id" : "621cbcb7b558ef001d6ba3a4",
+          "promptId" : "607ed34c4b9db58c6e7ffa90",
+          "question" : "¿Cómo fue la experiencia de conocer el diagnóstico?",
+          "sensitiveContentText" : null,
+          "response" : "next question after myself",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-02-28T12:14:47.349Z",
+          "updatedDate" : "2022-02-28T12:14:47.349Z"
+      },
+      {
+          "id" : "621cbcb7b558ef001d6ba3a6",
+          "promptId" : "607ed72f4b9db58c6e7ffa91",
+          "question" : "¿Qué tipo de información/educación se le proporcionó?",
+          "sensitiveContentText" : null,
+          "response" : "2nd qquestion after myseld",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-02-28T12:14:47.349Z",
+          "updatedDate" : "2022-02-28T12:14:47.349Z"
+      }
+  ],
+  "communityId" : "607e7c99d0a2b533bb2ae3d2",
+  "storyText" : "Texto de la historia del marcador de posición",
+  "authorAgeWhenStoryBegan" : 23,
+  "relation" : "Yo",
+  "displayName" : "VLUOPMYR",
+  "relationAgeWhenDiagnosed" : 23,
+  "createdDate" : "2022-02-28T12:14:47.349Z",
+  "updatedDate" : "2022-03-17T07:46:59.593Z",
+  "published" : false,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : false,
+  "allowComments" : true,
+  "publishedAt" : "2022-03-17T07:46:59.593Z"
+},
+{
+  "_id" : "61deb11ff44500001d091bb5",
+  "id" : "61deb11ff44500001d091bb5",
+  "authorId" : "611a1530414a9500233a89bb",
+  "featuredQuote" : "***",
+  "answer" : [
+      {
+          "id" : "62150910a2b4334af6c5c7ce",
+          "promptId" : "6215088617e4506761d18e61",
+          "question" : "What type of cancer was diagnosed?",
+          "sensitiveContentText" : "",
+          "response" : "5f0e744536b382377497ecef",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : null,
+          "updatedDate" : "2022-03-04T07:33:01.262Z",
+          "optionType" : "cancer"
+      },
+      {
+          "id" : "61deb11ff44500001d091bb2",
+          "promptId" : "5f9c4d39fdfbb52b2c86c98d",
+          "question" : "If you could go back in time and give yourself one piece of advice about how to handle what you were about to experience, what would that advice be?",
+          "sensitiveContentText" : null,
+          "response" : "12",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-01-12T10:44:47.397Z",
+          "updatedDate" : "2022-03-04T07:33:01.262Z"
+      },
+      {
+          "id" : "61deb11ff44500001d091bb4",
+          "promptId" : "5f9c5221fdfbb52b2c86c9b5",
+          "question" : "What happened after that?",
+          "sensitiveContentText" : null,
+          "response" : "rrr",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-01-12T10:44:47.397Z",
+          "updatedDate" : "2022-03-04T07:33:01.262Z"
+      }
+  ],
+  "communityId" : "6214e8959aa982c0d09b40f5",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 12,
+  "relation" : "Yo",
+  "displayName" : "Metaverse\n",
+  "relationAgeWhenDiagnosed" : 12,
+  "updatedDate" : "2022-03-04T07:33:01.262Z",
+  "createdDate" : "2022-01-12T10:44:47.397Z",
+  "published" : false,
+  "removed" : false,
+  "flagged" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "reaction" : null,
+  "allowComments" : true,
+  "publishedAt" : "2022-03-04T07:33:01.262Z"
+},
+{
+  "_id" : "615c29f0d435b70016b00209",
+  "id" : "615c29f0d435b70016b00209",
+  "authorId" : "615b154b6e6ce3002aed6a8f",
+  "featuredQuote" : "Story3",
+  "answer" : [
+      {
+          "id" : "615c29f0d435b70016b00208",
+          "promptId" : "60e2e72a7c37b43a668a32fa",
+          "question" : "How many children do you have? How old are they?",
+          "sensitiveContentText" : null,
+          "response" : "2",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2021-10-05T10:33:20.946Z",
+          "updatedDate" : "2021-10-05T10:33:20.946Z"
+      }
+  ],
+  "communityId" : "60e2e7277c37b43a668a32f2",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 1,
+  "relation" : "self",
+  "displayName" : "NASA",
+  "relationAgeWhenDiagnosed" : 1,
+  "createdDate" : "2021-10-05T10:33:20.946Z",
+  "updatedDate" : "2022-04-06T11:17:18.747Z",
+  "published" : false,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "allowComments" : true,
+  "publishedAt" : "2022-04-06T11:17:18.747Z",
+  "comments": [
+    {
+        "_id" : "61447cd997d29b001da45224",
+        "comment" : "How are you bro?\n",
+        "createdAt" : "2021-09-17T11:32:41.241Z",
+        "updatedAt" : "2021-09-17T11:32:41.241Z",
+        "flagged" : false,
+        "removed" : false,
+        "isCommentTextProfane" : false,
+        "author" : {
+            "id" : "60646605a450020007eae236"
+        },
+        "replies" : [
+            {
+                "_id" : "623c265642c8946087853f70",
+                "comment" : "Good",
+                "createdAt" : "2021-09-17T11:32:41.241Z",
+                "updatedAt" : "2021-09-17T11:32:41.241Z",
+                "flagged" : false,
+                "removed" : false,
+                "isCommentTextProfane" : false,
+                "author" : {
+                    "id" : "6135e075788db5002bc6743d"
+                }
+            }
+        ],
+        "reactions" : {
+            "log" : [
+                {
+                    "userId" : "628f6210b94fde00241c0ec0",
+                    "reaction" : "like",
+                    "createdDate" : "2022-07-04T13:51:35.299Z",
+                    "updatedDate" : "2022-07-04T13:52:54.504Z"
+                }
+            ],
+            "count" : {
+                "like" : 1,
+                "care" : 0,
+                "celebrate" : 0,
+                "good_idea" : 0,
+                "total" : 1
+            }
+        }
+    },
+    {
+        "_id" : "61447cfd97d29b001da45226",
+        "comment" : "Are you happy?",
+        "createdAt" : "2021-09-17T11:33:17.432Z",
+        "updatedAt" : "2021-09-17T11:33:17.432Z",
+        "flagged" : false,
+        "removed" : false,
+        "isCommentTextProfane" : false,
+        "author" : {
+            "id" : "60646605a450020007eae236"
+        },
+        "replies" : [
+            {
+                "_id" : "623c265742c8946087853f71",
+                "comment" : "Yes",
+                "createdAt" : "2021-09-17T11:33:17.432Z",
+                "updatedAt" : "2021-09-17T11:33:17.432Z",
+                "flagged" : false,
+                "removed" : false,
+                "isCommentTextProfane" : false,
+                "author" : {
+                    "id" : "6135e075788db5002bc6743d"
+                }
+            }
+        ]
+    }
+  ]
+},
+{
+  "_id" : "615c2f343ad4f8002b798af6",
+  "id" : "615c2f343ad4f8002b798af6",
+  "authorId" : "615b154b6e6ce3002aed6a8f",
+  "featuredQuote" : "Story55",
+  "answer" : [
+      {
+          "id" : "62150915a2b4334af6c5c7dd",
+          "promptId" : "6215088617e4506761d18e61",
+          "question" : "What type of cancer was diagnosed?",
+          "sensitiveContentText" : "",
+          "response" : "5f189ba00d5f552cf445b8c2",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "optionType" : "cancer"
+      },
+      {
+          "id" : "615c2f343ad4f8002b798af5",
+          "promptId" : "5f9c4e7afdfbb52b2c86c997",
+          "question" : "What was it like to learn the diagnosis?",
+          "sensitiveContentText" : null,
+          "response" : "Test",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2021-10-05T10:55:48.377Z",
+          "updatedDate" : "2021-10-05T10:55:48.377Z"
+      }
+  ],
+  "communityId" : "6214e8959aa982c0d09b40f5",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 32,
+  "relation" : "Myself",
+  "displayName" : "NASA",
+  "relationAgeWhenDiagnosed" : 32,
+  "createdDate" : "2021-10-05T10:55:48.377Z",
+  "updatedDate" : "2022-04-06T11:17:22.546Z",
+  "published" : false,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "reaction" : {
+      "log" : [
+          {
+              "userId" : "61309910358d7100162b8613",
+              "reaction" : "like",
+              "createdDate" : "2021-11-08T14:14:02.037Z",
+              "updatedDate" : "2021-11-08T14:14:02.037Z"
+          }
+      ],
+      "count" : {
+          "like" : 1,
+          "care" : 0,
+          "celebrate" : 0,
+          "good_idea" : 0,
+          "total" : 1
+      }
+  },
+  "allowComments" : true,
+  "publishedAt" : "2022-04-06T11:17:22.546Z"
+},
+{
+  "_id" : "621cc012b558ef001d6ba3af",
+  "id" : "621cc012b558ef001d6ba3af",
+  "authorId" : "61dd9a1947397234d86588bb",
+  "featuredQuote" : "WM story",
+  "answer" : [
+      {
+          "id" : "621cc012b558ef001d6ba3ae",
+          "promptId" : "60a4d9ff7f3ea0d2537e42b2",
+          "question" : "What were the results and how do those involved feel now?",
+          "sensitiveContentText" : null,
+          "response" : "text",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-02-28T12:29:06.709Z",
+          "updatedDate" : "2022-02-28T12:29:06.709Z"
+      }
+  ],
+  "communityId" : "60a358bc9c336e882b19bbf0",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 12,
+  "relation" : "Friend",
+  "displayName" : "SOMA",
+  "relationAgeWhenDiagnosed" : 14,
+  "createdDate" : "2022-02-28T12:29:06.709Z",
+  "updatedDate" : "2022-02-28T12:29:16.481Z",
+  "published" : true,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "allowComments" : true,
+  "publishedAt" : "2022-02-28T12:29:16.481Z"
+},
+{
+  "_id" : "615c3f94d435b70016b00212",
+  "id" : "615c3f94d435b70016b00212",
+  "authorId" : "62021eb615794e00237056b0",
+  "featuredQuote" : "Hello Life",
+  "answer" : [
+      {
+          "id" : "615c3f94d435b70016b0020f",
+          "promptId" : "607ed34c4b9db58c6e7ffa90",
+          "question" : "What was it like to learn the diagnosis?",
+          "sensitiveContentText" : null,
+          "response" : "Test",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2021-10-05T12:05:40.118Z",
+          "updatedDate" : "2021-10-05T12:05:40.118Z"
+      },
+      {
+          "id" : "615c3f94d435b70016b00211",
+          "promptId" : "607ed72f4b9db58c6e7ffa91",
+          "question" : "What kind of information/education were you provided?",
+          "sensitiveContentText" : null,
+          "response" : "Demo ",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2021-10-05T12:05:40.118Z",
+          "updatedDate" : "2021-10-05T12:05:40.118Z"
+      }
+  ],
+  "communityId" : "607e7c99d0a2b533bb2ae3d2",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 25,
+  "relation" : "Myself",
+  "displayName" : "Demo ",
+  "relationAgeWhenDiagnosed" : 25,
+  "createdDate" : "2021-10-05T12:05:40.118Z",
+  "updatedDate" : "2021-10-05T12:07:30.628Z",
+  "published" : true,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "allowComments" : true,
+  "publishedAt" : "2021-10-05T12:07:30.628Z"
+},
+{
+  "_id" : "61e1340db04749002a384014",
+  "id" : "61e1340db04749002a384014",
+  "authorId" : "62021eb615794e00237056b0",
+  "featuredQuote" : "Ask and",
+  "answer" : [
+      {
+          "id" : "61e1340db04749002a38400f",
+          "promptId" : "60a4d9d97f3ea0d2537e42ae",
+          "question" : "What were the biggest concerns?",
+          "sensitiveContentText" : null,
+          "response" : "Sdsd",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-01-14T08:27:57.097Z",
+          "updatedDate" : "2022-01-14T08:27:57.097Z"
+      },
+      {
+          "id" : "61e1340db04749002a384011",
+          "promptId" : "60a4d9e57f3ea0d2537e42af",
+          "question" : "What helped to decide it was time for a change?",
+          "sensitiveContentText" : null,
+          "response" : "Dada’s",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-01-14T08:27:57.097Z",
+          "updatedDate" : "2022-01-14T08:27:57.097Z"
+      },
+      {
+          "id" : "61e1340db04749002a384013",
+          "promptId" : "60a4d9ee7f3ea0d2537e42b0",
+          "question" : "What was the plan for change?",
+          "sensitiveContentText" : null,
+          "response" : "Sds",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-01-14T08:27:57.097Z",
+          "updatedDate" : "2022-01-14T08:27:57.097Z"
+      }
+  ],
+  "communityId" : "60a358bc9c336e882b19bbf0",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 44,
+  "relation" : "Myself",
+  "displayName" : "HELLO",
+  "relationAgeWhenDiagnosed" : 44,
+  "createdDate" : "2022-01-14T08:27:57.097Z",
+  "updatedDate" : "2022-01-14T08:27:57.097Z",
+  "published" : false,
+  "flagged" : false,
+  "removed" : false,
+  "hasStoryBeenPublishedOnce" : false,
+  "allowComments" : true,
+  "publishedAt" : null
+}]

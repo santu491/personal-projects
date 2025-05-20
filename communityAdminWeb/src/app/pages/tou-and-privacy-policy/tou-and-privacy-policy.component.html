@@ -1,0 +1,52 @@
+<div class="form-container view p-3">
+  <h2>Mass Email for Sydney Community Users</h2>
+  <div class="row">
+    <div class="col">
+      <iframe class="email-template" frameBorder="0" [srcdoc]="emailTemplate"></iframe>
+    </div>
+    <div class="col">
+      <div class="pt-3">
+        <p><b>Tou Version :</b> {{ emailInfo.touVersion }}</p>
+        <p>
+          <b>Last Email Triggered At :</b
+          ><span class="p-2">{{
+            emailInfo.lastUpdatedTouAt | date : 'medium'
+          }}</span>
+        </p>
+      </div>
+    
+      <table>
+        <tr>
+          <th></th>
+          <th>Total Users</th>
+          <th>Email Received Users</th>
+        </tr>
+        <tr>
+          <td>Available Users</td>
+          <td>{{ emailInfo?.allUsers?.totalUsersCount }}</td>
+          <td>{{ emailInfo?.allUsers?.emailReceivedCount }}</td>
+        </tr>
+        <tr>
+          <td>Commercial Users</td>
+          <td>{{ emailInfo?.commercialUsers?.totalUsersCount }}</td>
+          <td>{{ emailInfo?.commercialUsers?.emailReceivedCount }}</td>
+        </tr>
+        <tr>
+          <td>Medicaid Users</td>
+          <td>{{ emailInfo?.medicaidUsers?.totalUsersCount }}</td>
+          <td>{{ emailInfo?.medicaidUsers?.emailReceivedCount }}</td>
+        </tr>
+      </table>
+      <div class="d-flex align-items-center p-2">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="sendMassEmail()"
+          [disabled]="isEmailTriggered"
+        >
+          <mat-icon>mail</mat-icon> Trigger Email
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

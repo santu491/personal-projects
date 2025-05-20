@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "61dd711ee055cc001cd8c016",
+    "isActivityNotificationRead": false,
+    "activityCreatedDate": "2022-01-11T11:59:26.247Z",
+    "activityText": "Has shared a post to your community",
+    "activityInitiator": {
+      "_id": "6197d6364b8aa1e7702a13e3",
+      "displayName": "Sydney Community",
+      "profileImage": null,
+      "firstName": "",
+      "lastName": "",
+      "role": "scadmin",
+      "displayTitle": ""
+    },
+    "postLink": {
+      "postId": "61dd711de055cc001cd8bff2",
+      "commentId": null,
+      "replyId": null
+    }
+  },
+  {
+    "_id": "61dd89c9eecc4d0023ad612c",
+    "isActivityNotificationRead": false,
+    "activityCreatedDate": "2022-01-11T13:44:41.975Z",
+    "activityText": "Has shared a post to your community",
+    "activityInitiator": {
+      "_id": "6197d6364b8aa1e7702a13e3",
+      "displayName": "Sydney Community",
+      "profileImage": null,
+      "firstName": "",
+      "lastName": "",
+      "role": "scadmin",
+      "displayTitle": ""
+    },
+    "postLink": {
+      "postId": "61dd89c9eecc4d0023ad6102",
+      "commentId": null,
+      "replyId": null
+    }
+  }
+]

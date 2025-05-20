@@ -1,0 +1,12 @@
+{
+  "adminLogin": "Admin Login",
+  "signInToYourAcc": "Sign into your account",
+  "userName": "Username",
+  "userNameRequired": "Username is required",
+  "password": "Password",
+  "passwordRequired": "Password is required",
+  "loginBtn": "Login",
+  "forgotPass": "Forgot password?",
+  "termsOfUse": "Terms of use",
+  "privacyPolicy": "Privacy policy"
+}

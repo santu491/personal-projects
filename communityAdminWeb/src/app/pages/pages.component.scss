@@ -1,0 +1,25 @@
+.full-width {
+  width: 100%;
+}
+
+.form-container {
+  margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  margin-left: 32px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.view {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 170px);
+}
+
+.modal {
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 99999;
+  position: fixed;
+  opacity: 1;
+}

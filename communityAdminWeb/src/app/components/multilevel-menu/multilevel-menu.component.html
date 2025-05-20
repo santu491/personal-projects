@@ -1,0 +1,74 @@
+<span *ngIf="heading !== ''">
+  <strong>{{ heading }}</strong>
+</span>
+<div class="row mt-2" *ngIf="selectedDeeplink || isEdit">
+  <div class="col">
+    <mat-form-field class="full-width">
+      <mat-label>Deeplink Title</mat-label>
+      <input
+        #enLinkName
+        matInput
+        name="enLabel"
+        placeholder="Enter Label Title"
+        [(ngModel)]="enLabel"
+        (blur)="setDeeplinkTitle(enLinkName.value, 'en')"
+      />
+    </mat-form-field>
+  </div>
+  <div class="col">
+    <mat-form-field class="full-width" *ngIf="esLabel !== ''">
+      <mat-label>Deeplink Title - Spanish</mat-label>
+      <input
+        #esLinkName
+        matInput
+        name="esLabel"
+        placeholder="Enter Label Title Spanish"
+        [(ngModel)]="esLabel"
+        (blur)="setDeeplinkTitle(esLinkName.value, 'es')"
+      />
+    </mat-form-field>
+  </div>
+  <div class="text-center">
+    <mat-error *ngIf="titleError">
+      Label's cannot be set to empty. Hence the values used will be <br />
+      <em>English:</em> <b>{{ selectedDeeplink.label }}</b> &nbsp;&nbsp;
+      <em>Spanish:</em> <b>{{ selectedDeeplink.label_es }}</b>
+    </mat-error>
+  </div>
+</div>
+<div *ngIf="selectedDeeplink" class="mt-2">
+  <div class="mt-2">
+    <span class="selected community" *ngIf="selectedCommunityLabel">{{
+      selectedCommunityLabel
+    }}</span>
+    <span class="selected deeplink">{{ selectedDeeplink.label }}</span
+    >&nbsp;&nbsp;is selected!
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-3 col-lg-4">
+    <ng-material-multilevel-menu
+      class="deeplink-container"
+      [configuration]="config"
+      [items]="deepLinkData"
+      (selectedLabel)="selectedLabel($event)"
+      (selectedItem)="selectedItem($event)"
+    >
+    </ng-material-multilevel-menu>
+  </div>
+  <div class="col-sm-12 col-md-9 col-lg-8" *ngIf="!loadingHelpfulInfo">
+    <ng-material-multilevel-menu
+      class="deeplink-container"
+      [configuration]="config"
+      [items]="libraryDeeplinkData"
+      (selectedLabel)="selectedLibraryLabel($event)"
+      (selectedItem)="setSelectedItem($event)"
+    ></ng-material-multilevel-menu>
+  </div>
+  <div
+    class="col-sm-12 col-md-9 col-lg-8 spinner"
+    *ngIf="loadingHelpfulInfo && helpfulInfoRequested"
+  >
+    <img src="assets/gif/spinner.gif" alt="Spinner" />
+  </div>
+</div>

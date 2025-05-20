@@ -1,0 +1,17 @@
+<div class="count-container" mat-elevation-z8 *ngIf="count">
+
+    <span class="" *ngIf="count.like">
+        <img src="{{likeSmall}}" alt="" class="reaction-image z-index-4" [class.margin-child-reaction]="count.total">
+    </span>
+     <span class="" *ngIf="count.care">
+        <img src="{{careSmall}}" alt="" class="reaction-image margin-child-reaction z-index-3">
+     </span>
+     <span class="" *ngIf="count.celebrate">
+        <img src="{{celebrateSmall}}" alt="" class="reaction-image margin-child-reaction z-index-2">
+     </span>
+     <span class="" *ngIf="count.good_idea">
+        <img src="{{ideaSmall}}" alt="" class="reaction-image margin-child-reaction z-index-1">
+     </span>
+ 
+     <span class="reaction-count" *ngIf="reactionCount > 0">{{reactionCount}}</span>
+ </div>

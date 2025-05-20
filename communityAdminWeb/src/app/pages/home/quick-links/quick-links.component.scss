@@ -1,0 +1,26 @@
+mat-card {
+    min-height: 100%;
+
+    h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4d9901;
+        text-align: center;
+    }
+
+    li {
+        list-style-image: url("/assets/img/right-arrow-18.png");
+        text-transform: uppercase;
+        font-size: 1.2em;
+        margin-top: 2%;
+
+        a {
+            text-decoration: none;
+            color: #333;
+
+            &:visited {
+                text-decoration: none;
+            }
+        }
+    }
+}

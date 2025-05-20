@@ -1,0 +1,597 @@
+{
+  "raw": [
+    {
+      "_id": "643fca6a7a9914002e63fffd",
+      "language": "en",
+      "version": "2.2.3",
+      "contentType": "helpfulInfo",
+      "updatedAt": "2023-04-19T11:03:06.388Z",
+      "createdAt": "2023-04-19T11:03:06.388Z",
+      "createdBy": "628f6210b94fde00241c0ec0",
+      "updatedBy": "628f6210b94fde00241c0ec0",
+      "data": {
+        "helpfulInfoModule": [
+          {
+            "helpfulInfoId": "608142209184f81ffab0221b",
+            "headerTitle": "Medication",
+            "headerDescription": "",
+            "communityId": "",
+            "title": "Medication",
+            "description": "Insulin and other drugs that can help your body make and use insulin.",
+            "sections": [
+              {
+                "title": "",
+                "description": "",
+                "type": "List",
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "How is medicine used to treat type 2 diabetes?",
+                    "description": "Medications can help your body better manage insulin and carbohydrates.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/acd8859",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "What do you need to know about taking ACE inhibitors and ARBs for diabetes?",
+                    "description": "Taking some medicines together can cause problems.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abt0686",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "How is insulin used to treat type 1 diabetes?",
+                    "description": "Insulin helps keep your blood sugar level within a target range.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/acd8916",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "sectionId": "63d8dddd58114b1e4052acee"
+              }
+            ]
+          },
+          {
+            "helpfulInfoId": "60a36a036c8649ba2ed11c83",
+            "headerTitle": "Treatments",
+            "headerDescription": "",
+            "communityId": "",
+            "title": "Treatments",
+            "description": "Medical treatment options for weight management.",
+            "sections": [
+              {
+                "title": "",
+                "description": "",
+                "type": "List",
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "How is obesity treated?",
+                    "description": "The best way to lose weight is to eat less and move more.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abx2141",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Obesity: Can you take medicines or have surgery to lose weight?",
+                    "description": "Weight loss medicine or surgery may be an option for certain individuals.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abt0272",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Gastric Bypass Surgery for Obesity",
+                    "description": "",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/aa57905",
+                    "video": "",
+                    "thumbnail": "https://cdn.healthwise.net/common/images/l/h9991546_001.jpg",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Deciding About Weight-Loss Surgery",
+                    "description": "",
+                    "type": "HWVideoReference",
+                    "link": "/v2/healthWise/videoTopic/abp7324",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abp7324/SD/E0/abp7324.mp4",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abp7324/SD/abp7324.jpg",
+                    "provider": "healthwise"
+                  }
+                ],
+                "sectionId": "63d8dddd58114b1e4052acef"
+              }
+            ]
+          },
+          {
+            "helpfulInfoId": "608141529184f81ffab0221a",
+            "headerTitle": "Diet",
+            "headerDescription": "",
+            "communityId": "",
+            "title": "Diet",
+            "description": "Healthy eating tips and techniques that can help you control your blood sugar.",
+            "sections": [
+              {
+                "title": "",
+                "description": "",
+                "type": "List",
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Diabetes: How to Build Your Plate",
+                    "description": "",
+                    "type": "HWVideoReference",
+                    "link": "/v2/healthWise/videoTopic/abo2803",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abo2803/SD/E0/abo2803.mp4",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abo2803/SD/abo2803.jpg",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Diabetes: Counting Carbohydrates",
+                    "description": "",
+                    "type": "HWVideoReference",
+                    "link": "/v2/healthWise/videoTopic/acl0478",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/acl0478/SD/E0/acl0478.mp4",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/acl0478/SD/acl0478.jpg",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Smart snacking tips for diabetes",
+                    "description": "Smart snacking can help you keep your blood sugar levels stable.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abs7252",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Diabetes: Finding out what's keeping you from healthy eating",
+                    "description": "Most people need time to figure out what foods work for their body.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/acf8491",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "sectionId": "63d8dddd58114b1e4052acf0"
+              }
+            ]
+          },
+          {
+            "helpfulInfoId": "6081435c9184f81ffab0221c",
+            "headerTitle": "Exercise",
+            "headerDescription": "",
+            "communityId": "",
+            "title": "Exercise",
+            "description": "Find out how exercise helps you control your blood sugar and helps you feel better in other ways too.",
+            "sections": [
+              {
+                "title": "",
+                "description": "",
+                "type": "List",
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Diabetes: How Exercise Can Help",
+                    "description": "",
+                    "type": "HWVideoReference",
+                    "link": "/v2/healthWise/videoTopic/abr8820",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8820/SD/E0/abr8820.mp4",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8820/SD/abr8820.jpg",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Exercising safely when you have diabetes",
+                    "description": "Your doctor can tell you what types of exercise are good choices for you.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abw4050",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "sectionId": "63d8dddd58114b1e4052acf1"
+              }
+            ]
+          },
+          {
+            "helpfulInfoId": "6081367b9184f81ffab02218",
+            "headerTitle": "Overview",
+            "headerDescription": "",
+            "communityId": "",
+            "title": "Overview",
+            "description": "What is diabetes and what it means for you and your life.",
+            "sections": [
+              {
+                "title": "",
+                "description": "",
+                "type": "List",
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Diabetes",
+                    "description": "Diabetes is a condition in which sugar (glucose) remains in the blood.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/std120744",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "Type 2 Diabetes",
+                    "description": "",
+                    "type": "HWVideoReference",
+                    "link": "/v2/healthWise/videoTopic/abr8813",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8813/SD/E0/abr8813.mp4",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8813/SD/abr8813.jpg",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "title": "What is gestational diabetes?",
+                    "description": "Gestational diabetes is high blood sugar that first occurs during pregnancy.",
+                    "type": "HWReference",
+                    "link": "/v2/healthWise/articleTopic/abw4239",
+                    "video": "",
+                    "thumbnail": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "sectionId": "63d8dddd58114b1e4052acf2"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    {
+      "_id": "643fca7f52c4d6001528a344",
+      "language": "es",
+      "version": "2.2.3",
+      "contentType": "helpfulInfo",
+      "updatedAt": "2023-04-19T11:03:27.072Z",
+      "createdAt": "2023-04-19T11:03:27.072Z",
+      "createdBy": "628f6210b94fde00241c0ec0",
+      "updatedBy": "628f6210b94fde00241c0ec0",
+      "data": {
+        "helpfulInfoModule": [
+          {
+            "communityId": "",
+            "description": "La insulina y otros medicamentos que pueden ayudar al cuerpo a elaborar y usar insulina.",
+            "headerDescription": "",
+            "headerTitle": "Medicamentos",
+            "helpfulInfoId": "608142209184f81ffab0221b",
+            "sections": [
+              {
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "Los medicamentos pueden ayudar al cuerpo a manejar mejor la insulina y los carbohidratos.",
+                    "link": "/v2/healthWise/articleTopic/acd8859",
+                    "thumbnail": "",
+                    "title": "¿Cómo se usa la medicina para tratar la diabetes tipo 2?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "Tomar algunas medicinas juntas puede causar problemas.",
+                    "link": "/v2/healthWise/articleTopic/abt0686",
+                    "thumbnail": "",
+                    "title": "¿Qué necesita saber sobre el uso de los inhibidores de la enzima convertidora de angiotensina (ECA) y los bloqueadores de los receptores de angiotensina (BRA) para la diabetes?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La insulina ayuda a mantener su nivel de azúcar en sangre dentro de un rango objetivo.",
+                    "link": "/v2/healthWise/articleTopic/acd8916",
+                    "thumbnail": "",
+                    "title": "¿Cómo se usa la insulina para tratar la diabetes tipo 1?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "description": "",
+                "title": "",
+                "type": "List",
+                "sectionId": "63d8dddd58114b1e4052acee"
+              }
+            ],
+            "title": "Medicamentos"
+          },
+          {
+            "communityId": "",
+            "description": "Opciones de tratamiento médico para el control del peso.",
+            "headerDescription": "",
+            "headerTitle": "Tratamientos",
+            "helpfulInfoId": "60a36a036c8649ba2ed11c83",
+            "sections": [
+              {
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La mejor manera de perder peso es comer menos y moverse más.",
+                    "link": "/v2/healthWise/articleTopic/abx2141",
+                    "thumbnail": "",
+                    "title": "¿Cómo se trata la obesidad?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La medicina o la cirugía para perder peso puede ser una opción para ciertas personas.",
+                    "link": "/v2/healthWise/articleTopic/abt0272",
+                    "thumbnail": "",
+                    "title": "Obesidad: ¿Puede tomar medicinas o someterse a cirugía para perder peso?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/articleTopic/aa57905",
+                    "thumbnail": "https://cdn.healthwise.net/common/images/l/h9991546_001.jpg",
+                    "title": "Cirugía de derivación gástrica para la obesidad",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/videoTopic/abp7324",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abp7324/SD/abp7324.jpg",
+                    "title": "La decisión sobre la cirugía para perder peso",
+                    "type": "HWVideoReference",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abp7324/SD/E0/abp7324.mp4",
+                    "provider": "healthwise"
+                  }
+                ],
+                "description": "",
+                "title": "",
+                "type": "List",
+                "sectionId": "63d8dddd58114b1e4052acef"
+              }
+            ],
+            "title": "Tratamientos"
+          },
+          {
+            "communityId": "",
+            "description": "Consejos y técnicas para la alimentación saludable que pueden ayudar a controlar su azúcar en sangre.",
+            "headerDescription": "",
+            "headerTitle": "Dieta",
+            "helpfulInfoId": "608141529184f81ffab0221a",
+            "sections": [
+              {
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/videoTopic/abo2803",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abo2803/SD/abo2803.jpg",
+                    "title": "Diabetes: cómo preparar su plato",
+                    "type": "HWVideoReference",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abo2803/SD/E0/abo2803.mp4",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/videoTopic/acl0478",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/acl0478/SD/acl0478.jpg",
+                    "title": "Diabetes: cómo contar carbohidratos",
+                    "type": "HWVideoReference",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/acl0478/SD/E0/acl0478.mp4",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La preparación inteligente de refrigerios puede ayudarlo a mantener estables sus niveles de azúcar en sangre.",
+                    "link": "/v2/healthWise/articleTopic/abs7252",
+                    "thumbnail": "",
+                    "title": "Consejos sobre la preparación inteligente de refrigerios para la diabetes",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La mayoría de las personas necesita tiempo para saber qué funciona para su cuerpo.",
+                    "link": "/v2/healthWise/articleTopic/acf8491",
+                    "thumbnail": "",
+                    "title": "Diabetes: sepa qué le impide tener una alimentación saludable.",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "description": "",
+                "title": "",
+                "type": "List",
+                "sectionId": "63d8dddd58114b1e4052acf0"
+              }
+            ],
+            "title": "Dieta"
+          },
+          {
+            "communityId": "",
+            "description": "Sepa cómo el ejercicio lo ayuda a controlar su azúcar en sangre y también a sentirse mejor de otras maneras.",
+            "headerDescription": "",
+            "headerTitle": "Actividad física",
+            "helpfulInfoId": "6081435c9184f81ffab0221c",
+            "sections": [
+              {
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/videoTopic/abr8820",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8820/SD/abr8820.jpg",
+                    "title": "Diabetes: cómo el ejercicio puede ayudar",
+                    "type": "HWVideoReference",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8820/SD/E0/abr8820.mp4",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "Su médico puede indicarle qué tipos de ejercicios son buenas opciones para usted.",
+                    "link": "/v2/healthWise/articleTopic/abw4050",
+                    "thumbnail": "",
+                    "title": "Cómo ejercitarse de manera segura cuando tiene diabetes",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "description": "",
+                "title": "",
+                "type": "List",
+                "sectionId": "63d8dddd58114b1e4052acf1"
+              }
+            ],
+            "title": "Actividad física"
+          },
+          {
+            "communityId": "",
+            "description": "Qué es la diabetes y qué implica para usted y su vida.",
+            "headerDescription": "",
+            "headerTitle": "Resumen",
+            "helpfulInfoId": "6081367b9184f81ffab02218",
+            "sections": [
+              {
+                "content": [
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La diabetes es una afección por la cual el azúcar (glucosa) permanece en la sangre.",
+                    "link": "/v2/healthWise/articleTopic/std120744",
+                    "thumbnail": "",
+                    "title": "Diabetes",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "",
+                    "link": "/v2/healthWise/videoTopic/abr8813",
+                    "thumbnail": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8813/SD/abr8813.jpg",
+                    "title": "Diabetes tipo 2",
+                    "type": "HWVideoReference",
+                    "video": "https://d20bb9v528piij.cloudfront.net/latest/en-us/abr8813/SD/E0/abr8813.mp4",
+                    "provider": "healthwise"
+                  },
+                  {
+                    "_id": "",
+                    "communityId": "",
+                    "contentId": "",
+                    "description": "La diabetes gestacional es el azúcar en sangre alto que ocurre primero durante el embarazo.",
+                    "link": "/v2/healthWise/articleTopic/abw4239",
+                    "thumbnail": "",
+                    "title": "¿Qué es la diabetes gestacional?",
+                    "type": "HWReference",
+                    "video": "",
+                    "provider": "healthwise"
+                  }
+                ],
+                "description": "",
+                "title": "",
+                "type": "List",
+                "sectionId": "63d8dddd58114b1e4052acf2"
+              }
+            ],
+            "title": "Resumen"
+          }
+        ]
+      }
+    }
+  ]
+}

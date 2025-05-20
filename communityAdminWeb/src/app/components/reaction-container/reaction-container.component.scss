@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  background-color: white;
+  height: 50px;
+  width: fit-content;
+}
+.container:hover {
+  display: flex;
+  flex-direction: row;
+  border-radius: 50px;
+  background-color: white;
+  height: 50px;
+  width: fit-content;
+}
+
+.reaction-view {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.5);
+}
+
+.reaction-image {
+  height: 20px;
+  width: 20px;
+}
+
+.reaction-text {
+  text-align: center;
+  margin-top: 2px;
+}
+
+.good-idea {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.like-color {
+  color: #2a73e5;
+}
+
+.care-color {
+  color: #cc2a73;
+}
+
+.celebrate-color {
+  color: #108709;
+}
+
+.good-idea-color {
+  color: #511284;
+}

@@ -1,0 +1,86 @@
+#!/bin/bash
+
+function setPermission {
+  echo "set permissions"
+  url='https://bitbucket.anthem.com/rest/branch-permissions/2.0/projects/'$3'/repos/'$4'/restrictions?type=read-only&matcherType=BRANCH&matcherId=refs/heads/'$5
+  curl -X POST -H 'Content-Type: application/json' -d '{ "type": "read-only", "matcher": { "id": "refs/heads/'$5'", "displayId": "'$5'", "type": { "id": "BRANCH", "name": "Branch" }, "active": true }, "users": ["ac64500", "af64139", "af31119", "af29422", "ac29229", "ac18576" ], "groups": [ ], "accessKeys": [ ]}' -s -w "\n%{http_code}" -H 'Authorization: Basic '$9 -k $url | {
+    read body
+    read code
+    echo $code
+    echo $body
+  }
+}
+
+function resetPermission {
+  echo "resetting permissions"
+  url='https://bitbucket.anthem.com/rest/branch-permissions/2.0/projects/'$3'/repos/'$4'/restrictions?type=read-only&matcherType=BRANCH&matcherId=refs/heads/'$5
+  curl -s -w "\n%{http_code}" -H 'Authorization: Basic '$9 -k $url | {
+      read body
+      read code
+      echo $code
+      echo $body
+      id=$(echo "${body}" | "$8" '.values | .[] | .id')
+      echo $id
+
+      if [ "$id" ]; then
+        url1='https://bitbucket.anthem.com/rest/branch-permissions/2.0/projects/'$3'/repos/'$4'/restrictions/'$id
+        curl -X DELETE -H 'Content-Type: application/json' -d '{}' -s -w "\n%{http_code}" -H 'Authorization: Basic '$9 -k $url1 | {
+          read body1
+          read code1
+          echo $code1
+          echo $body1
+        }
+      else
+        echo "no perrmission available to reset"
+      fi
+  }
+
+}
+
+function validateBuild {
+  getSessionCookie $1 $2 $3 $4 $5 $6 $7 $8 $9
+
+  url='https://bamboo.anthem.com/rest/api/latest/result/'$7'?max-results=1'
+  echo $url
+  echo $1
+  echo $2
+  randid="U$(date +%s)"
+  curl -X GET --cookie cookies.txt -s -w "\n%{http_code}" -H 'Authorization: Basic '$9 -H 'Accept: application/json' -k $url | {
+      read body
+      read code
+      echo $code
+      echo $body
+      result=$(echo "${body}" | "$8" '.results.result | .[] | .buildState')
+      echo $result
+
+      if [ "$result" == '"Successful"' ]; then
+        resetPermission $1 $2 $3 $4 $5 $6 $7 $8 $9
+      fi
+      if [ "$result" == '"Failed"' ]; then
+        setPermission $1 $2 $3 $4 $5 $6 $7 $8 $9
+      fi
+  }
+}
+
+function getSessionCookie {
+  url='https://bamboo.anthem.com/rest/api/latest/result/'$7'?max-results=1'
+
+  curl -X POST --cookie-jar cookies.txt -H 'Authorization: Basic '$9 -k $url
+}
+
+#username $1
+#password $2
+#proj $3 ANREIMAGED
+#repo $4 angular-framework
+#branch $5 master
+#operation $6 set|reset
+#buildkey $7 ANREIMAGEDV2-DEVNODE84API
+#jqpath $8 jq
+#SRCINGENIOBAMBOO '!Ingenio123!' ANREIMAGED memberportal-ui develop set ANREIMAGEDV2-DEVNODE84API jq
+if [ "$1" ] && [ "$2" ] && [ "$3" ] && [ "$4" ] && [ "$5" ] && [ "$6" ] && [ "$7" ] && [ "$8" ]; then
+  base64auth=$(echo -n "$1":"$2" | openssl base64)
+  echo $base64auth
+  validateBuild $1 $2 $3 $4 $5 $6 $7 $8 $base64auth
+else
+  echo 'missing arguments'
+fi

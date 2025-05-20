@@ -1,0 +1,70 @@
+<div class="form-container view view-container">
+    <div class="heading-container">
+        <h1>{{communityName}}</h1>
+    </div>
+    <form [formGroup]="addCommunity">
+        <div class="row">
+            <div class="col">
+                <mat-form-field class="full-width">
+                    <mat-label> English Name</mat-label>
+                    <input type="text" formControlName="englishTitle" name="name_en" matInput
+                        placeholder="Community Title in English" required (blur)="onBlur($event, 'englishTitle')">
+                    <mat-error>Please enter a community Title</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field class="full-width">
+                    <mat-label> Spanish Name</mat-label>
+                    <input type="text" formControlName="spanishTitle" name="name_es" matInput
+                        placeholder="Community Title in Spanish" required (blur)="onBlur($event, 'spanishTitle')">
+                    <mat-error>Please enter a community Title</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <mat-form-field class="full-width">
+                    <mat-label>Community Type</mat-label>
+                    <mat-select name="type" formControlName="communityType" required>
+                        <mat-option value="clinical">clinical</mat-option>
+                        <mat-option value="non-clinical">non-clinical</mat-option>
+                    </mat-select>
+                    <mat-error>Please select a community Type</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row pad-b16">
+            <div class="col">
+                <mat-slide-toggle formControlName="isNew" color="primary" name="isNew">New</mat-slide-toggle>
+            </div>
+            <div class="col">
+                <mat-slide-toggle formControlName="isActive" color="primary" name="isActive">Publish</mat-slide-toggle>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 post-setting">
+                <mat-label class="heading-container">Upload Community Image</mat-label>
+                <mat-icon class="info" [matTooltip]=infoText>info</mat-icon>
+                <div class="m-2">
+                    <image-preview (image)="setImage($event)" [currentImage]="communityImage"></image-preview>
+                </div>
+                <div class="col" *ngIf="communityImage != ''">
+                    <hr>
+                    <h3>Current Image</h3>
+                    <img class="imageSize"  [src]="communityImage" alt=""/>
+                </div>
+            </div>
+            <div class="col-md-12 post-setting" *ngIf="imagePath"><br />
+                <img [src]="imagePath" class="image" alt="post_image" />
+            </div>
+        </div>
+        <br /> <br />
+        <mat-card-actions>
+            <button mat-raised-button class="btn" color="primary" type="submit" *ngIf="!isEdit"
+                (click)="onSubmit()">Create</button>
+            <button mat-raised-button class="btn" color="primary" type="submit" *ngIf="isEdit"
+                (click)="onEdit()">Edit</button>
+            <button mat-raised-button class="btn" color="info" type="submit" (click)="backToCommunity()">Cancel</button>
+        </mat-card-actions>
+    </form>
+</div>

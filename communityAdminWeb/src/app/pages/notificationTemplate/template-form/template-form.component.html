@@ -1,0 +1,101 @@
+<div>
+  <form (ngSubmit)="onSave()">
+    <h2>Template: {{ template.name }}</h2>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Push Notification Title</mat-label>
+        <textarea
+          name="title"
+          placeholder="Enter notification title line"
+          matInput
+          [maxlength]="pnTitleLimit"
+          [(ngModel)]="template.title"
+          required
+        >
+        </textarea>
+        <mat-hint align="end">{{
+          template.title.length + '/' + pnTitleLimit
+        }}</mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Push Notification Body</mat-label>
+        <textarea
+          name="body"
+          placeholder="Enter notification subtitle line"
+          matInput
+          [maxlength]="pnBodyLimit"
+          [(ngModel)]="template.body"
+          required
+        >
+        </textarea>
+        <mat-hint align="end">{{
+          template.body.length + '/' + pnBodyLimit
+        }}</mat-hint>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Activity Line</mat-label>
+        <textarea
+          name="activityText"
+          placeholder="Enter notification activity line text"
+          matInput
+          [(ngModel)]="template.activityText"
+          required
+        >
+        </textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-slide-toggle
+        name="active"
+        [checked]="template.active"
+        class="full-width"
+        color="primary"
+        class="notify-toggle"
+        [(ngModel)]="template.active"
+        required
+      >
+        Is template Active?
+      </mat-slide-toggle>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Push Notification Deeplink</mat-label>
+        <textarea
+          name="deepLink"
+          placeholder="Enter notification deeplink"
+          matInput
+          [(ngModel)]="template.deepLink.label"
+          required
+        >
+        </textarea>
+      </mat-form-field>
+      <div *ngIf="communityList.length > 0">
+        <mat-card class="shadow p-3 mb-3 bg-white rounded">
+          <app-multilevel-menu
+            [headerData]="adminModule.deepLink"
+            [communityListData]="communityList"
+            [deeplinkLabel]="deeplinkLabel"
+            (onItemSelectEvent)="onDeepLinkItemSelect($event)"
+          >
+          </app-multilevel-menu>
+        </mat-card>
+      </div>
+    </div>
+
+    <div class="btn-container">
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button
+        mat-raised-button
+        color="warning"
+        type="cancel"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

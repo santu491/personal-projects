@@ -1,0 +1,42 @@
+{
+  "defaultLine1": "Search above with post id and press enter or search icon",
+  "defaultLine2": "Searching a post allows you to view a post.",
+  "noPostFoundLine1": "You don't have any Post with postId: ",
+  "noPostFoundLine2": "Please try searching with some other postId.",
+  "postFoundLine1": "Found a post with postId: ",
+  "confirmDelete": "Are you sure you want to delete this post?",
+  "deleteSuccess": "Post deleted successfully!",
+  "confirmFlag": "Are you sure you want to flag this post?",
+  "confirmUnFlag": "Are you sure you want to un-flag this post?",
+  "flagSuccess": "Post flagged successfully!",
+  "unFlagSuccess": "Post un-flagged successfully!",
+  "postNotfound": "Post not found!!",
+  "postNodata": "Sorry!!  This post no longer available 🙁",
+  "authorTxt": "Author",
+  "replyTxt": "Reply",
+  "repliesTxt": "Replies",
+  "en": {
+    "editedLabel": "Edited",
+    "linkTxt": "Link",
+    "deepLinkTxt": "Deep Link",
+    "statusTxt": "Status",
+    "published": "Published",
+    "draft": "Draft",
+    "flaggedLabel": "This post is flagged.",
+    "likeBtn": "Like",
+    "commentBtn": "Comment",
+    "commentTxt": "comment",
+    "commentsTxt": "comments",
+    "likeLabel": "Like",
+    "replyLabel": "Reply",
+
+    "likedReactionText": "Liked",
+    "likeReactionText": "Like",
+    "careReactionText": "Care",
+    "celebrateReactionText": "Celebrate",
+    "goodIdeaReactionText": "Good Idea",
+
+    "commentPlaceholder": "Write a comment and press Enter...",
+    "hideCommentsLink": "Hide comments"
+  }
+}

@@ -1,0 +1,183 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: subSectionModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered section-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h3 class="heading">Sub Section Details</h3>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <app-section-details
+          [mode]="'modal'"
+          [sectionData]="selectedCommunitySections"
+          (onSubmit)="handleAddSubSection($event)"
+        ></app-section-details>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Section Modal -->
+<div *ngIf="sectionModalDisplay">
+  <app-section-modal
+    [displayModal]="sectionModalDisplay"
+    [sectionMode]="sectionMode"
+    [sectionData]="sectionEditData"
+    (onDataSubmit)="updateSectionData($event)"
+    (onClose)="onCloseModal()"
+  ></app-section-modal>
+</div>
+
+<!-- Component Body -->
+<div *ngIf="subSections?.en?.communitiesList">
+  <div class="row">
+    <div class="col">
+      <mat-form-field class="full-width">
+        <mat-label>Select Cancer Type</mat-label>
+        <mat-select (selectionChange)="onCommunitySelect($event)">
+          <mat-option>None</mat-option>
+          <mat-optgroup
+            *ngFor="let community of subSections?.en?.content; let i = index"
+            [label]="community.title"
+          >
+            <mat-option
+              *ngFor="let subCommunity of community.types"
+              [value]="subCommunity.link"
+            >
+              {{ subCommunity.title }}
+            </mat-option>
+          </mat-optgroup>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="showCancerTypeForm = !showCancerTypeForm"
+      >
+        {{ showCancerTypeForm ? 'Hide New Cancer Type Form' : 'Add New Cancer Type' }} 
+      </button>
+    </div>
+  </div>
+  <!-- Add cancer type form -->
+  <div class="row" [hidden]="!showCancerTypeForm">
+    <div class="col-sm-12 col-md-5 col-lg-5">
+      <mat-form-field class="full-width">
+        <input placeholder="Enter Title" #enTitle matInput name="enTitle" />
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-5 col-lg-5">
+      <mat-form-field class="full-width">
+        <input
+          placeholder="Enter Spanish Title"
+          #esTitle
+          matInput
+          name="esTitle"
+        />
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-2 col-lg-2">
+      <button
+        mat-stroked-button
+        color="primary"
+        (click)="addSubCommunity(enTitle, esTitle)"
+      >
+        Add
+      </button>
+    </div>
+    <span>
+      <mat-error *ngIf="titleError"> The values cannot be empty </mat-error>
+    </span>
+  </div>
+
+  <!-- Cancer type library render -->
+  <div *ngIf="showCommunityPanel">
+    <mat-accordion>
+      <div cdkDropList (cdkDropListDropped)="reorderBuckets($event)">
+        <div
+          *ngFor="
+            let section of selectedCommunitySections?.en?.sections[0].content;
+            let i = index
+          "
+          class="mt-2"
+          cdkDrag
+        >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header
+              (click)="fetchSubContent(section?.link, i)"
+            >
+              <mat-panel-title>
+                {{ section?.title }}
+              </mat-panel-title>
+              <mat-panel-description>
+                {{ section?.description }}
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div cdkDropList (cdkDropListDropped)="reorderArticle($event, i)">
+              <div *ngFor="let bucket of getBucketContent()" cdkDrag>
+                <div class="custom-placeholder" *cdkDragPlaceholder></div>
+                <app-article-view
+                  [article]="bucket"
+                  [parentId]="section.helpfulInfoId"
+                  (onDelete)="deleteArticle($event)"
+                  (onEdit)="editSectionArticle($event)"
+                ></app-article-view>
+              </div>
+            </div>
+            <mat-action-row>
+              <button mat-button color="primary" (click)="editCancerTopics(i)">
+                Edit Details
+              </button>
+              <button
+                mat-button
+                color="primary"
+                (click)="addArticleToSection()"
+              >
+                Add Article
+              </button>
+              <button
+                *ngIf="section?.isOrderChanged"
+                mat-raised-button
+                color="primary"
+                (click)="publishArticleOrderChanges()"
+              >
+                Publish Article Order
+              </button>
+              <button
+                *ngIf="isModified()"
+                (click)="publishChanges()"
+                mat-raised-button
+                color="primary"
+              >
+                Publish Changes
+              </button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </div>
+        <div class="btn-container">
+          <button
+            *ngIf="sectionOrderChanged"
+            mat-raised-button
+            (click)="publishSectionOrderChange()"
+          >
+            Publish Section Order
+          </button>
+          <button mat-raised-button (click)="showAddSubSection()">
+            Add Sub Section
+          </button>
+        </div>
+      </div>
+    </mat-accordion>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="form-container view">
+  <h2 class="text-center">{{ labels.title }}</h2>
+
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="expiredUsers">
+      <ng-container matColumnDef="serialNo">
+        <mat-header-cell *matHeaderCellDef>S.No</mat-header-cell>
+        <mat-cell *matCellDef="let item; let i = index"
+          ><span>{{ i + 1 }} </span></mat-cell
+        >
+      </ng-container>
+
+      <ng-container matColumnDef="userName">
+        <mat-header-cell *matHeaderCellDef>{{
+          labels.userName
+        }}</mat-header-cell>
+        <mat-cell *matCellDef="let item"
+          ><span>{{ item?.username }}</span></mat-cell
+        >
+      </ng-container>
+
+      <ng-container matColumnDef="firstName">
+        <mat-header-cell *matHeaderCellDef>{{
+          labels.firstName
+        }}</mat-header-cell>
+        <mat-cell *matCellDef="let item"
+          ><span>{{ item?.firstName }}</span></mat-cell
+        >
+      </ng-container>
+
+      <ng-container matColumnDef="lastName">
+        <mat-header-cell *matHeaderCellDef>{{
+          labels.lastName
+        }}</mat-header-cell>
+        <mat-cell *matCellDef="let item"
+          ><span>{{ item?.lastName }}</span></mat-cell
+        >
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let item">
+          <span
+            ><mat-icon
+              (click)="addUser(item)"
+              matTooltip="Enable User"
+              color="primary"
+              >login</mat-icon
+            ></span
+          >
+          <span style="padding-left: 30px"
+            ><mat-icon
+              (click)="deleteUser(item)"
+              color="primary"
+              matTooltip="Delete User"
+              >delete</mat-icon
+            ></span
+          >
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="tableColumn"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: tableColumn"></mat-row>
+    </mat-table>
+  </div>
+</div>

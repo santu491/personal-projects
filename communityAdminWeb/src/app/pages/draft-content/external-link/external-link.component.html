@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <mat-form-field class="full-width">
+                <textarea
+                  matInput
+                  [placeholder]="postsModule.en.link"
+                  autocomplete="off"
+                  (blur)="getLinkData($event)"
+                  name="enUrl"
+                  [(ngModel)]="link.en.url"
+                ></textarea>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngIf="isSpanishEnabled">
+            <mat-form-field class="full-width">
+                <textarea
+                  matInput
+                  [placeholder]="postsModule.es.link"
+                  autocomplete="off"
+                  (blur)="getSpanishLinkInfo($event)"
+                  name="esUrl"
+                  [(ngModel)]="link.es.url"
+                ></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <div *ngIf="showPreview">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <mat-form-field class="full-width">
+                    <textarea
+                    matInput
+                    [placeholder]="postsModule.en.title"
+                    autocomplete="off"
+                    name="title"
+                    (blur)="setTitle($event,'en')"
+                    [(ngModel)]="link.en.title"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" *ngIf="isSpanishEnabled">
+                <mat-form-field class="full-width">
+                    <textarea
+                    matInput
+                    [placeholder]="postsModule.es.title"
+                    autocomplete="off"
+                    name="esTitle"
+                    (blur)="setTitle($event,'es')"
+                    [(ngModel)]="link.es.title"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <mat-form-field class="full-width">
+                    <textarea
+                    matInput
+                    [placeholder]="postsModule.en.description"
+                    autocomplete="off"
+                    name="description"
+                    (blur)="setDescription($event,'en')"
+                    [(ngModel)]="link.en.description"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6" *ngIf="isSpanishEnabled">
+                <mat-form-field class="full-width">
+                    <textarea
+                    matInput
+                    [placeholder]="postsModule.es.description"
+                    autocomplete="off"
+                    name="esDescription"
+                    (blur)="setDescription($event, 'es')"
+                    [(ngModel)]="link.es.description"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="full-width">
+            <div class="info">Select a template image/Upload an image</div>
+            <span class="sub-header">Image Template Preview</span>
+            <div class="image-preview" [ngClass]="{'disable-click': disablePreviewClick}">
+                <label class="image-holder" *ngFor="let image of images">
+                    <input type="radio" name="imagePicked" [(ngModel)]="imagePicked" value="{{image}}" (change)="selectImage(image)">
+                    <img [src]="image" [alt]="link.en.title + ' related images'">
+                </label>
+            </div>
+        </div>
+        <div class="row upload-img" *ngIf="link.en.url !== ''">
+            <div class="col-md-2 col-sm-12 post-setting">
+                <span class="sub-header">{{ postsModule.en.uploadImage }}</span>
+            </div>
+            <div class="col-md-5 col-sm-12 post-setting">
+              <input
+                #imageInput
+                type="file"
+                class="post-setting"
+                accept="image/*"
+                (change)="onUploadImage($event, imageInput)"
+                autocomplete="off"
+              />
+              <button (click)="clearImage()" mat-raised-button>
+                {{ postsModule.en.clearImageBtn }}
+              </button>
+            </div>
+            <div class="col-md-5 col-sm-12 post-setting" *ngIf="imagePath">
+              <img [src]="imagePath" class="image" alt="post_image" />
+            </div>
+          </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2 class="heading">Edit Section Data</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="closeModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <app-lib-section-detail
+          [sectionMode]="sectionMode"
+          [sectionData]="sectionData"
+          (submitData)="onSubmit($event)"
+        ></app-lib-section-detail>
+      </div>
+    </div>
+  </div>
+</div>

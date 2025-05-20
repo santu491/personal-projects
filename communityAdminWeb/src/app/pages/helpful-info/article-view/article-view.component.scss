@@ -1,0 +1,33 @@
+.icon-holder {
+    display: flex;
+    place-content: space-evenly;
+}
+
+.article-view {
+    border: 1px solid #acacac;
+    box-shadow: 2px 2px 3px #d9d3dd;
+    padding: 1rem;
+    margin-top: 10px;
+    margin-left: 5%;
+    width: 90%;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+    &:hover {
+        color: #6107bb;
+        border: 1px solid #d8b9f5;
+        box-shadow: 2px 2px 3px #d7c7e7;
+    }
+
+    mat-icon {
+        cursor: pointer;
+    }
+}
+
+.title {
+    margin-left: 4px;
+    font-weight: 500;
+}

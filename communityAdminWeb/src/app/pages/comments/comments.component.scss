@@ -1,0 +1,122 @@
+.comment-text-view {
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  width: 80%;
+  -webkit-box-shadow: 0px 10px 13px -7px #ddc9f2,
+    0px 5px 10px -7px rgb(0 0 0 / 0%);
+  box-shadow: 0px 10px 13px -7px #ddc9f2, 0px 5px 10px -7px rgb(0 0 0 / 0%);
+  text-align: left;
+  margin-left: 1em;
+}
+
+.author-name {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+}
+
+.author-title {
+  font-style: italic;
+  font-size: smaller;
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  font-weight: 300;
+  color: #333333;
+  display: inline-block;
+}
+
+.comment-text {
+  color: #131313;
+  padding: 10px;
+  word-break: break-word;
+}
+
+.last-updated-comment {
+  // margin-left: 5px;
+  font-size: 10px;
+  float: right;
+  padding-top: 8px;
+  margin-right: 1em;
+}
+
+.like-comment {
+  font-weight: bold;
+  position: relative;
+}
+
+.like-comment:hover {
+  text-decoration: underline;
+}
+
+.dot-icon {
+  margin-left: 2px;
+  margin-right: 5px;
+  font-size: 5px;
+}
+
+.like-reply-view {
+  font-size: 12px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  color: gray;
+  display: inline-flex;
+  align-items: center;
+}
+
+app-reaction-container .container {
+  width: fit-content !important;
+  justify-content: center !important;
+  padding: 0% 10% !important;
+}
+
+.reaction-image {
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.reply-view {
+  margin-left: 8%;
+  .comment-text-view {
+    width: 90%;
+    margin-left: 1.5em;
+  }
+}
+
+.comment-option-icon {
+  border-radius: 50%;
+  border: none;
+  float: right;
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  .mat-icon {
+    vertical-align: middle;
+  }
+}
+
+.comment-option-icon:hover {
+  height: 35px;
+  width: 35x;
+  background-color: #d7e8fc;
+  float: right;
+  border-radius: 50%;
+  border: none;
+  .mat-icon {
+    vertical-align: middle;
+  }
+}
+
+.reaction-container-comment {
+  z-index: 5;
+  position: absolute;
+}
+
+.flagged {
+  border: 2px solid red;
+}

@@ -1,0 +1,10 @@
+{
+  "totalUsersLabel": "Total Users",
+  "allCommunitiesLabel": "All Communities",
+  "noUserLine1": "You don't have any data here.",
+  "noUserLine2": "User list will appear here shortly!",
+  "deleteUserToolTip": "Remove this User",
+  "editUserToolTip": "Edit this user details",
+  "confirmRemove": "Are you sure you want to remove this user?",
+  "deleteSuccess": "User removed successfully!"
+}

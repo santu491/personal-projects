@@ -1,0 +1,34 @@
+[
+  {
+    "_id": "607e7c99d0a2b533bb2ae3d2",
+    "id": "607e7c99d0a2b533bb2ae3d2",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Diabetes",
+    "category": "Diabetes",
+    "categoryId": "607e7c92d0a2b533bb2ae3d1",
+    "type": "clinical",
+    "parent": "Diabetes",
+    "createdAt": "2021-08-10T13:11:37.083Z",
+    "updatedAt": "2022-01-07T07:34:15.433Z",
+    "displayName": {
+      "en": "Diabetes",
+      "es": "Diabetes"
+    }
+  },
+  {
+    "_id": "60e2e7277c37b43a668a32f2",
+    "id": "60e2e7277c37b43a668a32f2",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Parenting",
+    "category": "Parenting",
+    "categoryId": "60ed47c4fd042c828fca117e",
+    "type": "non-clinical",
+    "parent": "Parenting",
+    "createdAt": "2021-08-10T13:11:37.083Z",
+    "updatedAt": "2022-01-07T07:34:16.483Z",
+    "displayName": {
+      "en": "Parenting",
+      "es": "Crianza"
+    }
+  }
+]

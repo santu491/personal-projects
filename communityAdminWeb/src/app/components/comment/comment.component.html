@@ -1,0 +1,178 @@
+<div class="row">
+  <div class="col col-1 col-xs-1 col-sm-1 col-md-1">
+    <!-- Comment Author's Image -->
+    <img
+      [src]="getAuthorImage(comment?.author?.role)"
+      alt=""
+      class="commentAuthorImage"
+    />
+  </div>
+  <div class="col col-10 col-xs-10 col-sm-10 col-md-10">
+    <div class="comment-text-view" [ngClass]="{ flagged: comment.flagged }">
+      <!-- Comments - More Option -->
+      <span
+        class="comment-more-option"
+        *ngIf="
+          (!isAdvocate || (isAdvocate && !comment.flagged)) && !comment.removed
+        "
+      >
+        <mat-menu #commentOptionMenu>
+          <button
+            mat-menu-item
+            *ngIf="checkReportPrivilege()"
+            (click)="onFlagOrUnFlagComment(comment)"
+          >
+            {{ commentLabels.reportComment }}
+          </button>
+          <button
+            mat-menu-item
+            *ngIf="comment.flagged && !isAdvocate"
+            (click)="onFlagOrUnFlagComment(comment)"
+          >
+            {{ commentLabels.ignoreComment }}
+          </button>
+          <button
+            mat-menu-item
+            *ngIf="comment.flagged && !isAdvocate"
+            (click)="onRemoveComment(comment)"
+          >
+            {{ commentLabels.removeComment }}
+          </button>
+          <button
+            mat-menu-item
+            *ngIf="comment.flagged && !isAdvocate && checkBanPrivilege(comment)"
+            (click)="onRemoveComment(comment, true)"
+          >
+            {{ commentLabels.removeAndBanUserTitle }}
+          </button>
+          <button
+            mat-menu-item
+            *ngIf="checkIfAuthor(comment)"
+            (click)="onEditComment(comment)"
+          >
+            {{ commentLabels.editComment }}
+          </button>
+          <button
+            mat-menu-item
+            *ngIf="checkIfAuthor(comment)"
+            (click)="onRemoveComment(comment)"
+          >
+            {{ commentLabels.deleteComment }}
+          </button>
+        </mat-menu>
+
+        <button
+          [matMenuTriggerFor]="commentOptionMenu"
+          class="comment-option-icon"
+        >
+          <mat-icon matTooltip="Actions">more_horiz</mat-icon>
+        </button>
+        <span class="last-updated-comment"
+          >{{ getDateDifference(comment.updatedAt) }}
+        </span>
+      </span>
+      <!-- Comment's Author Name -->
+      <p
+        class="author-name"
+        *ngIf="comment?.author?.displayName || comment?.author?.firstName"
+      >
+        {{ comment.author.displayName || comment.author.firstName }}
+        <span *ngIf="checkIfEntityAuthor()" class="author-text">{{
+          search.authorTxt
+        }}</span>
+      </p>
+      <!-- Author Text -->
+      <p
+        class="author-title"
+        *ngIf="
+          comment?.author?.role == 'scadvocate' && comment?.author?.displayTitle
+        "
+      >
+        {{ comment.author.displayTitle }}
+      </p>
+      <!-- Comment Text -->
+      <p
+        class="comment-text"
+        [innerHTML]="getComments(comment.comment)"
+        [class.comment-text-flagged]="comment.flagged == true"
+      ></p>
+
+      <div *ngIf="comment?.deeplink?.label?.en" class="deeplink">
+        <mat-icon style="color: #ffffff">{{
+          getCommentDeepLinkIcon()
+        }}</mat-icon>
+        <span class="deeplink-text">{{ comment?.deeplink?.label?.en }}</span>
+      </div>
+    </div>
+
+    <!-- Like and Comment For Comments -->
+    <div class="like-reply-view">
+      <div class="comment-action">
+        <span
+          class="like-comment"
+          [class.like-color]="
+            comment.hasCurrentAdminReacted &&
+            comment.reactionText == search.en.likedReactionText
+          "
+          [class.care-color]="
+            comment.hasCurrentAdminReacted &&
+            comment.reactionText == search.en.careReactionText
+          "
+          [class.celebrate-color]="
+            comment.hasCurrentAdminReacted &&
+            comment.reactionText == search.en.celebrateReactionText
+          "
+          [class.good-idea-color]="
+            comment.hasCurrentAdminReacted &&
+            comment.reactionText == search.en.goodIdeaReactionText
+          "
+          (mouseenter)="onMouseOverLikeComment(this, comment)"
+          (mouseleave)="onMouseOutLikeComment(this, comment)"
+        >
+          {{ comment.reactionText }}
+        </span>
+
+        <span
+          class="material-icons dot-icon"
+          *ngIf="comment.reactions && comment.reactions.count.total"
+          >fiber_manual_record</span
+        >
+        <!-- Reaction Count on Comment -->
+        <span class="comment-reactions" *ngIf="comment.reactions">
+          <app-reaction-with-count
+            [data]="comment.reactions"
+          ></app-reaction-with-count>
+        </span>
+        <span class="material-icons dot-icon">fiber_manual_record</span>
+        <span class="reply-comment" (click)="onAddNewReply()">
+          {{ search.en.replyLabel }}
+        </span>
+        <span
+          class="material-icons dot-icon"
+          *ngIf="isReplyExist(comment.replyCount)"
+          >fiber_manual_record</span
+        >
+        <span class="" *ngIf="isReplyExist(comment.replyCount)"
+          >{{ comment.replyCount }}
+          {{
+            comment.replyCount == 1 ? search.replyTxt : search.repliesTxt
+          }}</span
+        >
+      </div>
+      <!-- Reaction Container for Comments -->
+      <div
+        class="flex reaction-container-comment"
+        *ngIf="comment.showReactionContainer"
+        (mouseenter)="onMouseOverLikeComment(this, comment)"
+        (mouseleave)="onMouseOutLikeComment(this, comment)"
+      >
+        <app-reaction-container
+          [contentType]="contentType"
+          [postId]="entityId"
+          [currentAdminReaction]="comment.currentAdminReaction"
+          [adminUser]="selectedPersona"
+        ></app-reaction-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+diff --git a/node_modules/multer/.DS_Store b/node_modules/multer/.DS_Store
+new file mode 100644
+index 0000000..10f4d43
+Binary files /dev/null and b/node_modules/multer/.DS_Store differ
+diff --git a/node_modules/multer/index.js b/node_modules/multer/index.js
+index d5b67eb..dad845a 100644
+--- a/node_modules/multer/index.js
++++ b/node_modules/multer/index.js
+@@ -20,6 +20,7 @@ function Multer (options) {
+   this.limits = options.limits
+   this.preservePath = options.preservePath
+   this.fileFilter = options.fileFilter || allowAll
++  this.parseBlobs = options.parseBlobs
+ }
+ 
+ Multer.prototype._makeMiddleware = function (fields, fileStrategy) {
+@@ -49,7 +50,8 @@ Multer.prototype._makeMiddleware = function (fields, fileStrategy) {
+       preservePath: this.preservePath,
+       storage: this.storage,
+       fileFilter: wrappedFileFilter,
+-      fileStrategy: fileStrategy
++      fileStrategy: fileStrategy,
++      parseBlobs: this.parseBlobs
+     }
+   }
+ 
+@@ -79,7 +81,8 @@ Multer.prototype.any = function () {
+       preservePath: this.preservePath,
+       storage: this.storage,
+       fileFilter: this.fileFilter,
+-      fileStrategy: 'ARRAY'
++      fileStrategy: 'ARRAY',
++      parseBlobs: this.parseBlobs
+     }
+   }
+ 
+diff --git a/node_modules/multer/lib/make-middleware.js b/node_modules/multer/lib/make-middleware.js
+index 6627cf4..428ef84 100644
+--- a/node_modules/multer/lib/make-middleware.js
++++ b/node_modules/multer/lib/make-middleware.js
+@@ -1,24 +1,30 @@
+ var is = require('type-is')
+ var Busboy = require('busboy')
+ var extend = require('xtend')
++var onFinished = require('on-finished')
+ var appendField = require('append-field')
++var concat = require('concat-stream')
+ 
+ var Counter = require('./counter')
+ var MulterError = require('./multer-error')
+ var FileAppender = require('./file-appender')
+ var removeUploadedFiles = require('./remove-uploaded-files')
+ 
++function drainStream (stream) {
++  stream.on('readable', stream.read.bind(stream))
++}
++
+ function makeMiddleware (setup) {
+   return function multerMiddleware (req, res, next) {
+     if (!is(req, ['multipart'])) return next()
+ 
+     var options = setup()
+-
+     var limits = options.limits
+     var storage = options.storage
+     var fileFilter = options.fileFilter
+     var fileStrategy = options.fileStrategy
+     var preservePath = options.preservePath
++    var parseBlobs = options.parseBlobs
+ 
+     req.body = Object.create(null)
+ 
+@@ -40,9 +46,12 @@ function makeMiddleware (setup) {
+     function done (err) {
+       if (isDone) return
+       isDone = true
++
+       req.unpipe(busboy)
++      drainStream(req)
+       busboy.removeAllListeners()
+-      next(err)
++
++      onFinished(req, function () { next(err) })
+     }
+ 
+     function indicateDone () {
+@@ -86,21 +95,44 @@ function makeMiddleware (setup) {
+     })
+ 
+     // handle files
+-    busboy.on('file', function (fieldname, fileStream, { filename, encoding, mimeType }) {
+-      // don't attach to the files object, if there is no file
+-      if (!filename) return fileStream.resume()
++ // handle files
++ busboy.on('file', function (fieldname, fileStream, filename, encoding, mimetype) {
++  // don't attach to the files object, if there is no file
++  if (!filename || (parseBlobs && filename === 'blob')) { // default filename value for "Blobs" https://developer.mozilla.org/en-US/docs/Web/API/FormData/append
++    var parseData = function (decoder) {
++      fileStream.pipe(concat({ encoding: 'string' }, function (data) {
++        appendField(req.body, fieldname, typeof decoder === 'function' ? decoder(data) : data)
++      }))
++    }
+ 
+-      // Work around bug in Busboy (https://github.com/mscdex/busboy/issues/6)
+-      if (limits && Object.prototype.hasOwnProperty.call(limits, 'fieldNameSize')) {
+-        if (fieldname.length > limits.fieldNameSize) return abortWithCode('LIMIT_FIELD_KEY')
+-      }
++    switch (mimetype) {
++      case 'text/csv':
++        return parseData()
++      case 'application/json':
++        return parseData(function (data) {
++          try {
++            return JSON.parse(data)
++          } catch (err) {
++            console.warn('failed parsing json in ', fieldname, err)
++          }
++        })
++      default:
++        console.warn('ignored multipart with fieldname', fieldname, mimetype)
++        return fileStream.resume()
++    }
++  }
+ 
+-      var file = {
+-        fieldname: fieldname,
+-        originalname: filename,
+-        encoding: encoding,
+-        mimetype: mimeType
+-      }
++  // Work around bug in Busboy (https://github.com/mscdex/busboy/issues/6)
++  if (limits && limits.hasOwnProperty('fieldNameSize')) {
++    if (fieldname.length > limits.fieldNameSize) return abortWithCode('LIMIT_FIELD_KEY')
++  }
++
++  var file = {
++    fieldname: fieldname,
++    originalname: filename,
++    encoding: encoding,
++    mimetype: mimetype
++  }
+ 
+       var placeholder = appender.insertPlaceholder(file)
+ 

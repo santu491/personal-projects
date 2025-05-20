@@ -1,0 +1,75 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered common-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2 class="heading">Select Common Library</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="closeModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6 lib-list">
+            <mat-radio-group
+              aria-labelledby="radio-group-label"
+              class="radio-group"
+              [(ngModel)]="selectedLibraryIndex"
+            >
+              <label *ngFor="let library of commonLibrary; let i = index">
+                <div class="lib-option">
+                  <mat-radio-button
+                    class="radio-button"
+                    color="primary"
+                    [value]="i"
+                  >
+                  </mat-radio-button>
+                  <span>{{ library.title }}</span>
+                </div>
+              </label>
+            </mat-radio-group>
+          </div>
+          <div
+            class="col-sm-12 col-md-6 col-lg-6 lib-content"
+            *ngIf="selectedLibraryIndex > -1"
+          >
+            <h3 *ngIf="selectedLibraryIndex > -1">
+              Contents from
+              <em>{{ commonLibrary[selectedLibraryIndex].title }}</em>
+            </h3>
+            <div
+              *ngFor="
+                let content of commonLibrary[selectedLibraryIndex].content;
+                let i = index
+              "
+            >
+              <span *ngIf="content.type == 'HWReference'" class="icons"
+                ><img src="/assets/img/article-icon.png" alt="Article Icon"
+              /></span>
+              <span *ngIf="content.type.match(videoType)" class="icons">
+                <img src="/assets/img/video-icon.png" alt="Video Icon" />
+              </span>
+              <span *ngIf="content.type.match(bucketType)" class="icons">
+                <mat-icon class="inline-icon">folder</mat-icon>
+              </span>
+              {{ content.title }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button mat-raised-button color="primary" (click)="librarySelected()">
+          Select Library
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

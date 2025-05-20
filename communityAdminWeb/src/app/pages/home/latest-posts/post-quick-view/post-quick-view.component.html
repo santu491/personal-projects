@@ -1,0 +1,21 @@
+<div *ngIf="!!post">
+  <mat-card class="post-card" (click)="navigateToPost(post.id)">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-lg-10">
+        {{ post.content.en.title }}
+      </div>
+      <div class="col-sm-12 col-md-2 col-lg-2">
+        <div class="icon-holder">
+          <div class="icon-count">
+            <span><mat-icon color="primary">thumb_up</mat-icon></span>
+            <span class="count">{{ post?.reactions?.count?.total ?? 0 }}</span>
+          </div>
+          <div class="icon-count ms-2">
+            <span><mat-icon color="primary">comment</mat-icon></span>
+            <span class="count">{{ post.commentCount }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

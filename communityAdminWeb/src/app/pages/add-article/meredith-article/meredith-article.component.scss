@@ -1,0 +1,16 @@
+@import '/src/app/pages/pages.component.scss';
+@import '../add-article.component.scss';
+
+.img-background {
+    background-color: #37475a;
+    padding: 1em;
+
+    img {
+        width: 200px;
+    }
+}
+
+.indicator {
+    color: #9a9898;
+    text-decoration: wavy;
+}

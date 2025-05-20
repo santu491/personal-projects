@@ -1,0 +1,18 @@
+@import '/src/app/pages/pages.component.scss';
+
+mat-form-field {
+    width: 49%;
+    padding: 1%;
+}
+
+mat-stepper {
+    box-shadow: 2px 6px 4px #eee;
+}
+
+.done-icon {
+    scale: 2;
+}
+
+.success-msg {
+    font-size: 1.5em;
+}

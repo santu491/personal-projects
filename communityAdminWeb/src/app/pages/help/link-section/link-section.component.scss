@@ -1,0 +1,46 @@
+@import '/src/app/pages/pages.component.scss';
+
+.link-title {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+
+    .icon-holder {
+        width: fit-content;
+        visibility: hidden;
+    }
+
+    &:hover {
+        .icon-holder {
+            visibility: visible;
+        }
+    }
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-bottom: 1em;
+
+    .icon-holder {
+        width:fit-content;
+        margin-left: 0.5em;
+        display: none;
+    }
+
+    &:hover {
+        .icon-holder {
+            display: block;
+            margin-bottom: -0.5em;
+        }
+    }
+}
+
+.modal {
+    background-color: rgba(51, 51, 51, 0.8);
+    z-index: 99999;
+    position: fixed;
+    opacity: 1;
+}
+  

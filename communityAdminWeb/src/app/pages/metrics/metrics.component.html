@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center p-5">
+  <div class="d-grid gap-4 d-md-flex justify-content-md-center" *ngIf="!isProd">
+    <mat-button-toggle-group
+      name="environment"
+      aria-label="Environment"
+      value="sit"
+    >
+      <mat-button-toggle value="sit" (change)="getMetricsData($event.value)"
+        >SIT</mat-button-toggle
+      >
+      <mat-button-toggle value="uat" (change)="getMetricsData($event.value)"
+        >UAT</mat-button-toggle
+      >
+      <mat-button-toggle value="perf" (change)="getMetricsData($event.value)"
+        >PERF</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Metrics Data to be displayed -->
+  <div class="col-sm-12 col-md-7 col-lg-7 offset-md-1 offset-lg-1">
+    <div id="metrics-data">
+      <app-metrics-data
+        [metricsData]="metricsData"
+        [filterApplied]="filterApplied"
+        [envName]="selectedEnv"
+      ></app-metrics-data>
+    </div>
+    <div class="error-container" *ngIf="showError">
+      API server down. Please try again later
+    </div>
+  </div>
+  <div
+    class="justify-content-md-center member-type-filter col-sm-12 col-md-3 col-lg-3"
+  >
+    <h2>Filters</h2>
+    <div>
+      <span class="pad-r-8">
+        <strong>Member Type</strong>
+      </span>
+      <button
+        mat-stroked-button
+        *ngIf="memberFilter"
+        color="primary"
+        (click)="getMetricsData(selectedEnv)"
+      >
+        Reset
+      </button>
+    </div>
+    <app-member-filter
+      [envName]="selectedEnv"
+      (selectedMemberType)="getDataForMember($event)"
+      [resetRequired]="!memberFilter"
+    ></app-member-filter>
+    <div class="mt-3">
+      <strong>Date Range</strong>
+      <app-date-range-picker
+        (onDateRangeSelect)="onSelectDate($event)"
+        (onDateReset)="onDateReset()"
+      ></app-date-range-picker>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center" *ngIf="showButtons">
+  <!-- <button class="btn btn-outline-primary mr-10" type="button">
+      <span class="btn-label pad-r-8"><em class="fa fa-envelope"></em></span>
+      Share via outlook
+    </button> -->
+  <button class="btn btn-outline-primary mr-10" type="button" (click)="print()">
+    <span class="btn-label pad-r-8"><em class="fa fa-print"></em></span>
+    Print
+  </button>
+  <button
+    class="btn btn-outline-primary me-md-2"
+    type="button"
+    (click)="downloadPDF(true)"
+  >
+    <span class="btn-label pad-r-8"><em class="fa fa-download"></em></span>
+    Download as PDF
+  </button>
+</div>

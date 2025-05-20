@@ -1,0 +1,36 @@
+{
+  "selectCommunity": "Please select atleast one community",
+  "storyFlag": "Story flagged successfully",
+  "storyUnflagged": "Story un-flagged successfully",
+  "bannedUser": "User banned successfully",
+  "storyRemoved": "Story removed successfully",
+  "allCommunities": "All Communities",
+  "storyNotFound": "Story not found!!",
+  "storyNotAvilable": "Sorry!!  This story no longer available 🙁",
+  "storyFilters": [
+    { "name": "All Stories", "value": "all"},
+    { "name": "Published Stories", "value": "published" },
+    { "name": "Flagged Stories", "value": "flagged" },
+    { "name": "Removed Stories", "value": "removed" }
+  ],
+  "columns": [
+    "index",
+    "featuredQuote",
+    "displayName",
+    "communityId",
+    "flagged",
+    "published",
+    "removed",
+    "publishedAt",
+    "id"
+  ],
+  "banUserConfirm": "Are you sure you want to ban the user?",
+  "removeStoryConfirm": "Are you sure you want to remove the story?",
+  "reportStoryConfirm": "Are you sure you want to report the story?",
+  "authorLabel": "Author",
+  "communityLabel": "Community",
+  "publishedAtLabel": "Published At",
+  "commentsOffLabel": "User has turned off the comments section.",
+  "noCommentsLabel": "No comments to be displayed",
+  "selectCommunities": "Select Communities"
+}

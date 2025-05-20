@@ -1,0 +1,17 @@
+{
+    "reactions": {
+        "like": "assets/reactions/iconReactionsLikeOn.svg",
+        "care": "assets/reactions/iconReactionsCare.svg",
+        "celebrate": "assets/reactions/iconReactionsCelebrate.svg",
+        "good_idea": "assets/reactions/iconReactionsGoodIdea.svg",
+        "default": "assets/reactions/iconReactionsLikeOff.svg"
+    },
+    "users": {
+        "defaultUser": "assets/img/account_image.svg",
+        "scadmin": "assets/img/profileAvatarAdminPost.svg"
+    },
+    "deeplink": {
+        "article": "assets/img/article-icon.png",
+        "video": "assets/img/video-icon.png"
+    }
+}

@@ -1,0 +1,139 @@
+.form-container {
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 16px 24px;
+  padding: 16px;
+}
+.view {
+  overflow-y: auto;
+  height: calc(100vh - 170px);
+  // display: flex;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  background-color: #fff;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  color: #0000008a;
+}
+
+.pagination .mat-form-field {
+  width: 3em;
+}
+
+.page-select {
+  margin-top: 5px;
+  padding-right: 2em;
+}
+.mat-column-serialNo {
+  flex-basis: 0.1%;
+}
+
+.mat-column-title {
+  flex-basis: 15%;
+}
+
+.mat-column-author {
+  flex-basis: 10%;
+}
+
+.mat-column-date {
+  flex-basis: 15%;
+}
+
+.mat-column-actions {
+  flex-basis: 7%;
+}
+/*
+.mat-column-pollCount,.mat-column-reactionCount,.mat-column-commentsCount {
+  text-align: center;
+  padding-left: 30px;
+} */
+
+mat-cell.mat-cell.cdk-cell.cdk-column-commentsCount.mat-column-commentsCount.ng-star-inserted,
+mat-cell.mat-cell.cdk-cell.cdk-column-pollCount.mat-column-pollCount.ng-star-inserted,
+mat-cell.mat-cell.cdk-cell.cdk-column-reactionsCount.mat-column-reactionsCount.ng-star-inserted {
+  text-align: center;
+}
+mat-cell.mat-cell.cdk-cell.cdk-column-actions.mat-column-actions.ng-star-inserted {
+  cursor: pointer;
+}
+
+.mat-column-reactionsCount {
+  flex-basis: 3%;
+}
+
+.mat-column-viewsCount {
+  flex-basis: 1.5%;
+}
+
+.mat-column-date {
+  flex-basis: 10%;
+}
+
+.mat-column-community {
+  flex-basis: 6%;
+}
+
+.mat-column-colorCode {
+  flex: 0 0 0.01% !important;
+  margin-right: 10px;
+}
+
+.mat-header-cell {
+  color: #000000;
+  font-size: 14px;
+}
+
+.modal {
+  background-color: rgba(51, 51, 51, 0.8);
+  z-index: 99999;
+  opacity: 1;
+  position: fixed;
+}
+
+.button-View {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-content {
+  padding: 0px 50px 40px 30px;
+}
+
+.head-line {
+  color: #0d6efd;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.status-color-label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+  color: #0000008a;
+}
+
+.status-color-info {
+  display: flex;
+  justify-content: center;
+}
+
+.color-box {
+  width: 10px;
+  height: 10px;
+  background: red;
+  margin-right: 3px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  padding: 0 40px;
+}

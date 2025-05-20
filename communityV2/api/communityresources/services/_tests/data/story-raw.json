@@ -1,0 +1,61 @@
+{
+  "_id" : "6229f75b088e590023d74531",
+  "id" : "6229f75b088e590023d74531",
+  "authorId" : "62277a1d2aae1100159a76d3",
+  "featuredQuote" : "Story🎶🎶",
+  "answer" : [
+      {
+          "id" : "6229f75b088e590023d74530",
+          "promptId" : "607ed34c4b9db58c6e7ffa90",
+          "question" : "What was it like to learn the diagnosis?",
+          "sensitiveContentText" : null,
+          "response" : "aad",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-03-10T13:04:27.902Z",
+          "updatedDate" : "2022-03-11T13:06:00.084Z"
+      },
+      {
+          "id" : "622b4935a8ec590023e651c0",
+          "promptId" : "607ed7614b9db58c6e7ffa94",
+          "question" : "What changes/habits were you able to implement?",
+          "sensitiveContentText" : "",
+          "response" : "Chhavvi",
+          "order" : 0,
+          "type" : "PromptQuestion",
+          "createdDate" : "2022-03-11T13:05:57.539Z",
+          "updatedDate" : "2022-03-11T13:06:00.084Z"
+      }
+  ],
+  "communityId" : "607e7c99d0a2b533bb2ae3d2",
+  "storyText" : "Placeholder story text",
+  "authorAgeWhenStoryBegan" : 12,
+  "relation" : "Sibling",
+  "displayName" : "Fish",
+  "relationAgeWhenDiagnosed" : 13,
+  "updatedDate" : "2022-03-11T13:07:38.118Z",
+  "createdAt" : "2022-03-10T13:04:27.902Z",
+  "published" : true,
+  "removed" : false,
+  "flagged" : false,
+  "hasStoryBeenPublishedOnce" : true,
+  "reaction" : null,
+  "allowComments" : true,
+  "comments" : [
+      {
+          "_id" : "624b2892a3debd0023e28056",
+          "comment" : "asd",
+          "createdAt" : "2022-04-04T17:19:14.087Z",
+          "updatedAt" : "2022-04-04T17:19:46.541Z",
+          "flagged" : false,
+          "removed" : true,
+          "isCommentTextProfane" : false,
+          "author" : {
+              "id" : "624ab83dd79c2700243f0488",
+              "firstName" : "MEDOMINIC",
+              "lastName" : "MEHENDERSON",
+              "displayName" : "asdasd"
+          }
+      }
+  ]
+}

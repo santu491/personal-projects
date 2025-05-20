@@ -1,0 +1,80 @@
+#!/bin/bash
+
+NPM_REG_DOMAIN_ARTIFACTORY="https://artifactory.anthem.com:443/artifactory/api/npm/npm-release/"
+NPM_REG_DOMAIN_RCP="http://va10twviss436.us.ad.wellpoint.com:8080"
+NPM_REG_DOMAIN=""
+
+function createNpmrc {
+  if [ -e ".npmrc" ]; then
+    echo ".npmrc file exists"
+  else
+    echo ".npmrc file missing creating..."
+    #echo "//$NPM_REG_DOMAIN:8080/:_authToken=\"fooBar\"" > ".npmrc"
+    copyCmd="cp ../.npmrc ./"
+    echo "$copyCmd"
+    eval "$copyCmd"
+  fi
+}
+
+function createNpmIgnore {
+  if [ -e ".npmignore" ]; then
+    echo ".npmignore file exists"
+  else
+    echo ".npmignore file missing creating..."
+    echo "" > ".npmignore"
+  fi
+}
+
+function npmUnpublish {
+  if [ "$2" ]; then
+    unpublishCmd="npm unpublish $1@$2 --registry=$NPM_REG_DOMAIN"
+    echo "$unpublishCmd"
+    eval "$unpublishCmd"
+  else
+    echo "no current version found for unpublish"
+  fi
+}
+
+function setNpmRegDomain {
+  if [ "$1" ]; then
+    NPM_REG_DOMAIN="$NPM_REG_DOMAIN_ARTIFACTORY"
+  else
+    NPM_REG_DOMAIN="$NPM_REG_DOMAIN_RCP"
+  fi
+  echo "npm registry domain $NPM_REG_DOMAIN"
+}
+
+function publishNewVersion {
+  setNpmRegDomain $4
+  createNpmrc
+  currentVersion=`npm dist-tag ls $1 --registry=$NPM_REG_DOMAIN | grep "$2\."`
+  currentVersion=$(echo $currentVersion | sed 's/^'$2': //')
+  echo "$currentVersion"
+  newVersion="$3"
+  echo "$newVersion"
+
+  if [ "$currentVersion" == "$newVersion" ]; then
+    echo "skip publish as new version is same as current"
+  else
+    if [[ "$2" = *"develop"* ]]; then
+      npmUnpublish $1 $currentVersion
+    fi
+
+    if [[ "$2" = *"intg"* ]]; then
+      npmUnpublish $1 $currentVersion
+    fi
+
+    if [[ "$2" = *"release"* ]]; then
+      npmUnpublish $1 $currentVersion
+    fi
+
+    versionCmd="npm version $newVersion"
+    echo "$versionCmd"
+    eval "$versionCmd"
+    publishCmd="npm publish --tag $2 --registry=$NPM_REG_DOMAIN"
+    echo "$publishCmd"
+    eval "$publishCmd"
+  fi
+}
+
+publishNewVersion $1 $2 $3 $4

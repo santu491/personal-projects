@@ -1,0 +1,23 @@
+{
+  "sidenavHeader": "Systems Admin Activities",
+  "sidenavRouting": [
+    {
+      "btnName": "Health Check",
+      "routerLink": "/ui/pages/system/health-check",
+      "matIcon": "health_and_safety",
+      "routerLinkActive": "active"
+    },
+    {
+      "btnName": "Update Version",
+      "routerLink": "/ui/pages/system/fau",
+      "matIcon": "security_update",
+      "routerLinkActive": "active"
+    },
+    {
+      "btnName": "Update Content",
+      "routerLink": "/ui/pages/system/content",
+      "matIcon": "description",
+      "routerLinkActive": "active"
+    }
+  ]
+}

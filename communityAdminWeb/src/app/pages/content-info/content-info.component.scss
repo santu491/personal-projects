@@ -1,0 +1,25 @@
+@import '/src/app/pages/pages.component.scss';
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  padding: 20px 30px;
+}
+.container {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.no-data {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-data-label {
+  color: red;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+@import '../../pages.component.scss';
+
+textarea {
+    resize: none;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.notify-toggle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }

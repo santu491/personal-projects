@@ -1,0 +1,65 @@
+<!-- Article modal -->
+<div *ngIf="articleModal">
+  <app-add-article
+    [article]="articleData"
+    [displayModal]="articleModal"
+    (onAddArticle)="manageArticle($event)"
+    (onClose)="onCloseModal()"
+  ></app-add-article>
+</div>
+
+<!-- External Link modal -->
+<div *ngIf="externalLinkModal">
+  <app-external-reference-view
+    [displayForm]="externalLinkModal"
+    (closeModal)="onCloseModal()"
+    (onSubmitForm)="createExternalReference($event)"
+    [externalRefernceData]="externalRefernceData"
+  ></app-external-reference-view>
+</div>
+
+<!-- Video Library -->
+<app-video-library
+  *ngIf="isVideoLibrary()"
+  [subSections]="subSections"
+  (onEditSubSectionArticle)="onEditArticle($event)"
+  (onAddArticle)="addArticleToSection()"
+  (onEditArticle)="onEditArticle($event)"
+  (onEditSubSection)="editSubSection($event)"
+></app-video-library>
+
+<!-- Sub Sections Data -->
+<app-sub-section
+  *ngIf="
+    subSections?.en &&
+    !subSections?.en?.isGridView &&
+    !subSections?.en?.communitiesList &&
+    !isVideoLibrary()
+  "
+  [subSections]="subSections"
+  (onAddArticle)="addArticleToSection()"
+  (onEditSubSection)="editSubSection($event)"
+  (onEditArticle)="onEditArticle($event)"
+  (manageLink)="showExternalLinkModal($event)"
+></app-sub-section>
+
+<!-- Grid Section -->
+<app-grid-section
+  *ngIf="
+    subSections?.en &&
+    subSections?.en?.isGridView &&
+    !subSections?.en?.communitiesList
+  "
+  [subSections]="subSections"
+  (onAddArticle)="addArticleToSection()"
+  (onEditArticle)="onEditArticle($event)"
+  (manageLink)="showExternalLinkModal($event)"
+></app-grid-section>
+
+<!-- Community Section -->
+<app-community-section
+  *ngIf="subSections?.en?.communitiesList"
+  [subSections]="subSections"
+  (onAddArticle)="addArticleToSection()"
+  (onEditArticle)="onEditArticle($event)"
+></app-community-section>

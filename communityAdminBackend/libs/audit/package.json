@@ -1,0 +1,11 @@
+{
+  "name": "@anthem/communityadminapi/audit",
+  "author": "Anthem, Inc.",
+  "version": "1.0.0",
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {},
+  "main": "./index.ts",
+  "module": "./index.ts",
+  "typings": "./index.d.ts"
+}

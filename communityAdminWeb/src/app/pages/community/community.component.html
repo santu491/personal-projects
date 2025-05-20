@@ -1,0 +1,73 @@
+<div class="form-container view">
+  <div class="row community-container" *ngIf="communityData.length > 0">
+    <div
+      class="col col-sm-12 col-md-6 col-lg-6"
+      *ngFor="let community of communityData"
+    >
+      <mat-card class="card-view">
+        <div class="heading-container">
+          <h1>{{ community.title }}</h1>
+          <mat-icon
+            class="pull-right"
+            color="primary"
+            (click)="onEdit(community)"
+            >edit</mat-icon
+          >
+        </div>
+        <div class="row">
+          <div class="col col-sm-12 col-md-6 col-lg-6">
+            <p>Spanish Name: {{ community.displayName.es }}</p>
+            <p>Type: {{ community.type }}</p>
+          </div>
+          <div class="col col-sm-12 col-md-6 col-lg-6">
+            <div>
+              <p>
+                Is New tag Enabled:
+                {{ community?.isNew ?? false ? 'Yes' : 'No' }}
+              </p>
+            </div>
+            <div>
+              <p>Active: {{ community?.active ?? true ? 'Yes' : 'No' }}</p>
+            </div>
+          </div>
+          <div
+            class="col col-sm-12 col-md-12 col-lg-12"
+            *ngIf="community?.image"
+          >
+            <img
+              class="imageSize"
+              [src]="community.image ?? ''"
+              [alt]="community.title"
+            />
+          </div>
+        </div>
+        <mat-card-actions class="add-info-container">
+          <button
+            mat-button
+            class="btn btn-outline-secondary"
+            (click)="navigateToPrompts(community.id, community.title)"
+          >
+            Add Story Prompts
+          </button>
+          <button
+            mat-button
+            class="btn btn-outline-secondary"
+            (click)="navigateToHelpfulInfo(community.id, community.title)"
+          >
+            Add Helpful Info
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button
+      mat-raised-button
+      class="app-btn"
+      color="primary"
+      (click)="navigateToAddCommunity()"
+    >
+      <mat-icon>group_add</mat-icon> Add Community
+    </button>
+  </div>
+</div>

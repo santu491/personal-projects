@@ -1,0 +1,70 @@
+[
+  {
+    "_id": "607e7c99d0a2b533bb2ae3d2",
+    "id": "607e7c99d0a2b533bb2ae3d2",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Diabetes",
+    "category": "Diabetes",
+    "categoryId": "607e7c92d0a2b533bb2ae3d1",
+    "type": "clinical",
+    "parent": "Diabetes",
+    "createdDate": "2021-04-20T07:02:42.587Z",
+    "createdAt": "2021-08-10T13:11:37.083Z",
+    "updatedAt": "2022-01-07T07:34:15.433Z",
+    "displayName": {
+      "en": "Diabetes",
+      "es": "Diabetes"
+    }
+  },
+  {
+    "_id": "60a358bc9c336e882b19bbf0",
+    "id": "60a358bc9c336e882b19bbf0",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Weight Management",
+    "category": "Weight Management",
+    "categoryId": "60a3589d9c336e882b19bbef",
+    "type": "non-clinical",
+    "parent": "Weight Management",
+    "createdDate": "2021-05-18T06:03:32.976Z",
+    "createdAt": "2021-08-10T13:11:37.083Z",
+    "updatedAt": "2022-01-07T07:34:15.951Z",
+    "displayName": {
+      "en": "Weight Management",
+      "es": "Control del peso"
+    }
+  },
+  {
+    "_id": "60e2e7277c37b43a668a32f2",
+    "id": "60e2e7277c37b43a668a32f2",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Parenting",
+    "category": "Parenting",
+    "categoryId": "60ed47c4fd042c828fca117e",
+    "type": "non-clinical",
+    "parent": "Parenting",
+    "createdDate": "2021-07-05T11:03:22.835Z",
+    "createdAt": "2021-08-10T13:11:37.083Z",
+    "updatedAt": "2022-01-07T07:34:16.483Z",
+    "displayName": {
+      "en": "Parenting",
+      "es": "Crianza"
+    }
+  },
+  {
+    "_id": "622232033eb6ab7e525b54cb",
+    "id": "622232033eb6ab7e525b54cb",
+    "createdBy": "5f99844130b711000703cd74",
+    "title": "Cancer",
+    "category": "Cancer",
+    "categoryId": "5f8759dc54fdb7a2c9ae9d0f",
+    "type": "clinical",
+    "parent": "Cancer",
+    "createdDate": "2022-03-04T15:36:35.796Z",
+    "createdAt": "2022-03-04T15:36:35.796Z",
+    "updatedAt": "2022-03-04T15:36:35.796Z",
+    "displayName": {
+      "en": "Cancer",
+      "es": "Cáncer"
+    }
+  }
+]

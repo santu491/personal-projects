@@ -1,0 +1,549 @@
+{
+  "status": 200,
+  "versioning": {
+    "X-HW-Version": "2"
+  },
+  "links": {
+    "self": "https://content.healthwise.net/topics/abu3814/es-us?contentOutput=json",
+    "localizations": {
+      "es-us": "https://content.healthwise.net/topics/abu3814/es-us"
+    }
+  },
+  "schema": "https://content.healthwise.net/spec/schema.healthwise.api.item.json",
+  "data": {
+    "topics": [
+      {
+        "id": "abu3814",
+        "version": "2",
+        "hash": "2",
+        "lang": "es-us",
+        "type": "hwInfoConcept",
+        "title": {
+          "consumer": "¿Cómo puede cuidar a su hijo que tiene sobrepeso?"
+        },
+        "legal": {
+          "logoUrl": "https://cdn.healthwise.net/common/images/hwlogo/s_hwlogo.png",
+          "copyrightText": {
+            "element": "text",
+            "content": "© 1995-2021 Healthwise, Incorporated. Healthwise, Healthwise para cada decisión de la salud, y el logo de Healthwise son marcas de fábrica de Healthwise, Incorporated."
+          },
+          "disclaimerText": {
+            "element": "text",
+            "content": "Esta información no reemplaza la consulta médica. Healthwise, Incorporated niega toda garantía y responsabilidad por el uso de esta información."
+          },
+          "termsOfUseUrl": "https://www.healthwise.org/specialpages/legal/terms.aspx",
+          "privacyPolicyUrl": "https://www.healthwise.org/specialpages/legal/privacy.aspx",
+          "moreInformationUrl": "https://www.healthwise.org",
+          "toLearnMoreHtml": {
+            "element": "text",
+            "content": "NEEDS TRANSLATING"
+          },
+          "yourUseOfThisInformationHtml": [
+            {
+              "element": "text",
+              "content": "El uso que usted hace de esta información significa que usted acepta"
+            },
+            {
+              "element": "a",
+              "attributes": {
+                "href": "https://www.healthwise.org/specialpages/legal/spanishterms.aspx"
+              },
+              "content": {
+                "element": "text",
+                "content": "los Términos de uso"
+              }
+            },
+            {
+              "element": "text",
+              "content": " y"
+            },
+            {
+              "element": "a",
+              "attributes": {
+                "href": "https://www.healthwise.org/specialpages/legal/spanishprivacy.aspx"
+              },
+              "content": {
+                "element": "text",
+                "content": "Política de privacidad"
+              }
+            },
+            {
+              "element": "text",
+              "content": "."
+            }
+          ],
+          "html": {
+            "element": "div",
+            "attributes": {
+              "class": "HwLegal"
+            },
+            "content": [
+              {
+                "element": "div",
+                "attributes": {
+                  "class": "HwLogo"
+                },
+                "content": {
+                  "element": "img",
+                  "attributes": {
+                    "width": "112",
+                    "height": "46",
+                    "src": "https://cdn.healthwise.net/common/images/hwlogo/s_hwlogo.png",
+                    "alt": ""
+                  }
+                }
+              },
+              {
+                "element": "div",
+                "attributes": {
+                  "class": "HwDisclaimer"
+                },
+                "content": {
+                  "element": "p",
+                  "content": [
+                    {
+                      "element": "text",
+                      "content": "Esta información no reemplaza la consulta médica. Healthwise, Incorporated niega toda garantía y responsabilidad por el uso de esta información. El uso que usted hace de esta información significa que usted acepta"
+                    },
+                    {
+                      "element": "a",
+                      "attributes": {
+                        "href": "https://www.healthwise.org/specialpages/legal/spanishterms.aspx"
+                      },
+                      "content": {
+                        "element": "text",
+                        "content": "los Términos de uso"
+                      }
+                    },
+                    {
+                      "element": "text",
+                      "content": " y"
+                    },
+                    {
+                      "element": "a",
+                      "attributes": {
+                        "href": "https://www.healthwise.org/specialpages/legal/spanishprivacy.aspx"
+                      },
+                      "content": {
+                        "element": "text",
+                        "content": "Política de privacidad"
+                      }
+                    },
+                    {
+                      "element": "text",
+                      "content": "."
+                    }
+                  ]
+                }
+              },
+              {
+                "element": "div",
+                "attributes": {
+                  "class": "HwCopyright"
+                },
+                "content": [
+                  {
+                    "element": "p",
+                    "attributes": {
+                      "class": "HwCopyrightLink"
+                    },
+                    "content": [
+                      {
+                        "element": "text",
+                        "content": "Para aprender más sobre Healthwise, visite"
+                      },
+                      {
+                        "element": "a",
+                        "attributes": {
+                          "href": "https://www.healthwise.org"
+                        },
+                        "content": {
+                          "element": "text",
+                          "content": "Healthwise.org"
+                        }
+                      },
+                      {
+                        "element": "text",
+                        "content": "."
+                      }
+                    ]
+                  },
+                  {
+                    "element": "p",
+                    "content": {
+                      "element": "text",
+                      "content": "© 1995-2021 Healthwise, Incorporated. Healthwise, Healthwise para cada decisión de la salud, y el logo de Healthwise son marcas de fábrica de Healthwise, Incorporated."
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "navigable": false,
+        "credits": {
+          "author": {
+            "name": "El personal de Healthwise"
+          },
+          "primaryReviewers": [
+            {
+              "name": "Adam Husney MD - Family Medicine, Kathleen Romito MD - Family Medicine, Martin J. Gabica MD - Family Medicine, John Pope MD - Pediatrics"
+            }
+          ]
+        },
+        "html": {
+          "element": "hwinfoconcept",
+          "attributes": {
+            "id": "6E83ACE9-E94D-5D0D-8887-7161AE1AC8A2",
+            "xml:lang": "es-US",
+            "class": "- topic/topic concept/concept hwInfoConcept/hwInfoConcept "
+          },
+          "content": [
+            {
+              "element": "title",
+              "attributes": {
+                "class": "- topic/title "
+              },
+              "content": {
+                "element": "text",
+                "content": "¿Cómo puede cuidar a su hijo que tiene sobrepeso?"
+              }
+            },
+            {
+              "element": "titlealts",
+              "attributes": {
+                "class": "- topic/titlealts "
+              },
+              "content": [
+                {
+                  "element": "navtitle",
+                  "attributes": {
+                    "class": "- topic/navtitle "
+                  },
+                  "content": {
+                    "element": "text",
+                    "content": "¿Cómo puede cuidar a su hijo en el hogar?"
+                  }
+                }
+              ]
+            },
+            {
+              "element": "prolog",
+              "attributes": {
+                "class": "- topic/prolog "
+              },
+              "content": [
+                {
+                  "element": "metadata",
+                  "attributes": {
+                    "class": "- topic/metadata "
+                  },
+                  "content": [
+                    {
+                      "element": "othermeta",
+                      "attributes": {
+                        "content": "465;854;35;2133",
+                        "name": "readingLevel",
+                        "class": "- topic/othermeta "
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "element": "hwinfoconceptbody",
+              "attributes": {
+                "class": "- topic/body concept/conbody hwInfoConcept/hwInfoConceptBody "
+              },
+              "content": [
+                {
+                  "element": "section",
+                  "attributes": {
+                    "id": "2A9BCE19-0041-42FA-A341-FB91F8E3145D",
+                    "class": "- topic/section "
+                  },
+                  "content": [
+                    {
+                      "element": "ul",
+                      "attributes": {
+                        "id": "74C49173-5505-4463-9556-1789B50EC520",
+                        "class": "- topic/ul "
+                      },
+                      "content": [
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "B76533F3-2721-4B4D-8B83-5CD1506DD267",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Fíjese metas que sean posibles. Su médico puede ayudarle a fijar una buena meta en cuanto al peso."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "249D488A-BDED-4451-A9FF-D53030EE9C4C",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Evite dietas para adelgazar. Pueden afectar el crecimiento en altura de su hijo."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "9D64678E-5126-41FB-BC77-84FABE9D326F",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Haga cambios saludables para toda la familia. Trate de no hacer diferencias con su hijo."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "AB6EB926-9B45-41C5-950C-6CE29DB8BF00",
+                            "class": "- topic/li "
+                          },
+                          "content": [
+                            {
+                              "element": "text",
+                              "content": "Pregúntele a su médico sobre otros profesionales de la salud que puedan ayudarles a usted y a su hijo a hacer cambios saludables."
+                            },
+                            {
+                              "element": "ul",
+                              "attributes": {
+                                "id": "BBCA2254-FE99-447C-9A3F-215E422D7FEF",
+                                "class": "- topic/ul "
+                              },
+                              "content": [
+                                {
+                                  "element": "li",
+                                  "attributes": {
+                                    "id": "485F4991-E264-4F1D-B540-91432C6C42FD",
+                                    "class": "- topic/li "
+                                  },
+                                  "content": {
+                                    "element": "text",
+                                    "content": "Un dietista puede sugerirle nuevas ideas de alimentos. Y puede ayudarles a usted y a su hijo con opciones para una alimentación saludable."
+                                  }
+                                },
+                                {
+                                  "element": "li",
+                                  "attributes": {
+                                    "id": "3591B1A1-7739-455A-B260-EF4C90092A77",
+                                    "class": "- topic/li "
+                                  },
+                                  "content": {
+                                    "element": "text",
+                                    "content": "Un especialista en ejercicio o entrenador personal pueden ayudarles a usted y a su hijo a encontrar maneras divertidas para estar activos."
+                                  }
+                                },
+                                {
+                                  "element": "li",
+                                  "attributes": {
+                                    "id": "BE06B2FD-E2E0-410F-B611-CF045C9EDF0C",
+                                    "class": "- topic/li "
+                                  },
+                                  "content": {
+                                    "element": "text",
+                                    "content": "Un consejero o psiquiatra pueden ayudarles a usted y a su hijo con cualquier cuestión que pueda hacer que sea difícil concentrarse en opciones saludables. Puede tratarse de depresión, ansiedad o problemas familiares."
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "07C2C943-20B5-4A78-9B6B-2DCF01CDB7DE",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Trate de hablar sobre la salud, el nivel de actividad de su hijo y de otras opciones saludables para él. Trate de no hablar del peso de su hijo. Cómo habla del cuerpo de su hijo puede tener realmente un impacto en cómo se siente su hijo en cuanto a su propio cuerpo."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "element": "section",
+                  "attributes": {
+                    "id": "87CEB73D-CC53-443F-8C69-55E8E534B57A",
+                    "class": "- topic/section "
+                  },
+                  "content": [
+                    {
+                      "element": "title",
+                      "attributes": {
+                        "class": "- topic/title "
+                      },
+                      "content": {
+                        "element": "text",
+                        "content": "Para comer bien"
+                      }
+                    },
+                    {
+                      "element": "ul",
+                      "attributes": {
+                        "id": "7750FCF3-713E-402E-BDF7-9C6D413E16F4",
+                        "class": "- topic/ul "
+                      },
+                      "content": [
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "B6D34339-9820-412A-B1CF-F9881F1A4A61",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Coman juntos en familia con la mayor frecuencia posible. Ofrezca las mismas opciones de alimentos a toda la familia."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "29BEED51-DAEC-4B87-BE35-F5C9F2DA60B4",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Mantenga una rutina regular de comidas y refrigerios. No coma refrigerios todo el día. Programe refrigerios para cuando su hijo tenga más hambre, como después de la escuela o de hacer ejercicio. Esto es importante porque si su hijo omite una comida o un refrigerio, es posible que coma de más en la próxima comida o que opte por alimentos que no son saludables."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "9CF2B1A7-F1EA-416A-B2FD-ED2BE667E834",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Comparta la responsabilidad. Usted decide cuándo, dónde y qué come la familia. Pero su hijo decide si quiere comer, así como cuánto y lo que va a comer de las opciones que le ofrezca usted. Esto puede ayudarle a prevenir problemas de alimentación causados por luchas de poder."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "ADF726CE-87CD-479A-9B97-C273D19D8C0E",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "No use comida para premiar a su hijo por hacer un buen trabajo o por comer toda la porción de ejotes (judías verdes). Usted quiere que su hijo coma alimentos saludables porque es saludable, no porque vaya a comer un postre."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "5CF262B0-9AD5-4375-9D67-71A8C7A5130F",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Sirva frutas y verduras en todas las comidas. Puede añadir algo de fruta en el cereal del desayuno y poner tiras de zanahoria en el almuerzo de su hijo."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "element": "section",
+                  "attributes": {
+                    "id": "AD70C5DA-F5F3-445C-8A20-7509A6835A9F",
+                    "class": "- topic/section "
+                  },
+                  "content": [
+                    {
+                      "element": "title",
+                      "attributes": {
+                        "class": "- topic/title "
+                      },
+                      "content": {
+                        "element": "text",
+                        "content": "Para estar más activo"
+                      }
+                    },
+                    {
+                      "element": "ul",
+                      "attributes": {
+                        "id": "7023009B-451A-44CE-8CB0-472C1204324A",
+                        "class": "- topic/ul "
+                      },
+                      "content": [
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "8117715A-0C20-45E0-99C2-6A7DF47D6473",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Muévase más. Haga que la actividad física sea parte de la vida diaria de su familia. Aliente a su hijo a estar activo al menos 1 hora todos los días."
+                          }
+                        },
+                        {
+                          "element": "li",
+                          "attributes": {
+                            "id": "04EA5D6B-AF6D-4ED2-897E-1CE7D3A66454",
+                            "class": "- topic/li "
+                          },
+                          "content": {
+                            "element": "text",
+                            "content": "Limite el tiempo total frente al televisor y la computadora a menos de 2 horas al día. Aliéntelo a jugar al aire libre con la mayor frecuencia posible."
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "taxonomy": [
+          {
+            "aspect": {
+              "id": "selfCareTxOptions",
+              "label": "self-care overview",
+              "href": null
+            },
+            "concept": {
+              "id": "HWCV_05501",
+              "label": "Overweight Children and Teens",
+              "href": null
+            }
+          }
+        ],
+        "aspect": "self-care overview [selfCareTxOptions]",
+        "detailLevel": "FullDetail",
+        "associatedTopics": {
+          "alternateDetailLevels": [
+            {
+              "href": "https://content.healthwise.net/topics/abt4518/es-us",
+              "id": "abt4518",
+              "lang": "es-us",
+              "type": "hwInfoConcept",
+              "title": {
+                "consumer": "¿Cómo puede cuidar a su hijo que tiene sobrepeso?"
+              },
+              "detailLevel": "FullDetail"
+            }
+          ]
+        },
+        "hwid": "abu3814",
+        "audience": "Parent"
+      }
+    ]
+  }
+}

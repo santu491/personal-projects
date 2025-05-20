@@ -1,0 +1,56 @@
+.data-container {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid #d1d1d18a;
+    box-shadow: 2px 2px 5px #d1d1d18a;
+    transition: border-left 0.3s linear;
+
+    &:hover {
+        border-left: 5px solid #8b26e5;
+    }
+}
+
+.border-right {
+    border-right: 1px solid #333;
+}
+
+.left-15 {
+    margin-left: 15px;
+}
+
+.heading {
+    font-size: 1.15rem;
+    width: 58%;
+}
+
+.sub-heading {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+.data-set {
+    &:hover {
+        color: #9a64c8;
+        font-weight: 600;
+    }
+}
+
+table {
+    width: 100%;
+}
+
+.space {
+    width: 30%;
+}
+
+.some-space {
+    width: 36%;
+}
+
+.more-space {
+    width: 38%;
+}
+
+.pad-15 {
+    padding-top: 15px;
+}

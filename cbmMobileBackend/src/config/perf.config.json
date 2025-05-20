@@ -1,0 +1,107 @@
+{
+  "env": "perf",
+  "logLevel": "warn",
+  "awsDetails": {
+    "apiVersion": "latest",
+    "region": "us-east-1",
+    "durationSeconds": "90",
+    "roleSessionName": "session1",
+    "profile": "gld-apm1018071-devrole",
+    "roleArn": "arn:aws:iam::014498645368:role/gld-apm1018071-devrole",
+    "iosArn": "arn:aws:sns:us-east-1:014498645368:app/APNS/carelon-ios-uat1",
+    "notificationQueue": "https://sqs.us-east-1.amazonaws.com/014498645368/cbhm_notification_queue_test.fifo"
+  },
+  "clientConfiguration": {
+    "eap": {
+      "consumerHost": "https://stage.carelonwellbeing.com",
+      "host": "https://stage.aem.graphql.internal.das",
+      "articles": "/graphql/execute.json/beacon/article%3Bpath%3D{path}",
+      "cards": "/graphql/execute.json/beacon/card%3Bpath%3D{path}",
+      "resources": "/graphql/execute.json/beacon/resources%3BclientUri%3D{clientUri}",
+      "clients": "/graphql/execute.json/beacon/clients%3BisTerminated%3D{isTerminated}"
+    },
+    "mhsud": {}
+  },
+  "credibleMindDetails": {
+    "host": "https://api.crediblemind.com",
+    "monthlyResources": "/monthly-resources/{month}/client/carelonwellbeingmobile",
+    "topics": "/carelonwellbeingmobile/topics",
+    "xApiKey": "369c9bb19a0da876f0571d002a7100473832e7104eb5ef33754a65be07190af9bae18869ce3a3162abf6196697f2eea9de72945ab84692c5a5fe6eaebcedd1a2"
+  },
+  "providerSearchDetails": {
+    "getAccessToken": "https://www.carelonwellbeing.com/dfd/public/api/accesstoken",
+    "sendEmail": "https://providersearch.carelonbehavioralhealth.com/api/email"
+  },
+  "assessmentsSurvey": {
+    "link": "https://uat.assessment.carelonwellbeing.com/survey/respondents",
+    "domainName": "qa.carelonwellbeing.com",
+    "calibrateHost": "uat.assessment.carelonwellbeing.com"
+  },
+  "database": {
+    "host": "http://carelon-mobile-db-services:443",
+    "basePath": {
+      "secure": "/db/v1",
+      "public": "/db/v1/public"
+    },
+    "apikey": "93778c114b149d185725ed5243b03d9a09d9304cec6ab4cdcf2212ab9511d1fc"
+  },
+  "memberAuth": {
+    "eap": {
+      "host": "https://uat.api.sydneymember.ps.awsdns.internal.das",
+      "basePath": {
+        "public": "/v1/eap/dfd/auth/public",
+        "secure": "/v1/eap/dfd/auth/secure",
+        "provider": "/v1/eap/dfd/provider"
+      },
+      "apiKey": "50w713nadx9tmo4bh2lsz8rgfejv",
+      "dfdOrigin": "qa.carelonwellbeing.com",
+      "accessToken": {
+        "url": "/v1/oauth/accesstoken",
+        "scope": "public",
+        "grantType": "client_credentials",
+        "authorization": "Basic c2VjdXJlYXV0aEFwcDI3NTpDQjQzQzRGNkIzQjFFRDY4QjkyNkU2RUY5RTdDMjk=",
+        "contentType": "application/x-www-form-urlencoded"
+      },
+      "clientSearch": "/v1/eap/dfd/clients?client={client}&searchData={searchData}",
+      "registerMember": "/{client}/mfaRegister",
+      "loginMember": "/mfaLogin",
+      "forgotUserName": "/user/mfaForgotUsername",
+      "checkDetails": "/user/mfaDetailsCheck",
+      "changeSecret": "/user/mfaPasswordChange",
+      "disableAccount": "/member/disableProfile",
+      "sendOtp": "/mfa/otp/send",
+      "validateOtp": "/mfa/otp/validate",
+      "contactDetails": "/mfa/getUserContact",
+      "rememberDevice": "/mfaRememberDevice",
+      "userLookup": "/userLookup",
+      "profileDetails": "/profileDetails",
+      "updateProfile": "/user/{client}/updateProfile",
+      "appointment": {
+        "create": "/member/pfAppointment/create",
+        "assessmentRequired": "/isAssesmentNeeded",
+        "tabStatus": "/member/pfAppointment/appointmentTabStatus",
+        "fetchById": "/member/fetchAppointment",
+        "update": "/member/pfAppointment/userActionUpdate",
+        "questionnaire": "/questions/fetch",
+        "memberStatus": "/member/pfAppointment/memberStatus",
+        "memberDashboard": "/member/pfAppointment/memberDashboardFilter"
+      },
+      "provider": {
+        "addresses": "/addresses",
+        "geocode": "/geoCode/address",
+        "providerList": "/providers",
+        "providerDetails": "/providerDetails"
+      },
+      "assessments": {
+        "calibrate": "/calibrate/assessment"
+      },
+      "telehealth": {
+        "mdLiveAppointment": "/member/MDLiveAppointment/create"
+      },
+      "genesysChat": {
+        "init": "/member/GenesysChat",
+        "getData": "/member/genesys/getdata"
+      }
+    }
+  }
+}

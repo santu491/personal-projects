@@ -1,0 +1,84 @@
+@import '/src/app/pages/pages.component.scss';
+
+.article-id {
+    display: flex;
+    padding-top: 1.25rem;
+
+    mat-form-field {
+        width: 80%;
+        margin-right: 10px;
+    }
+}
+
+.btn-container {
+    margin-top: 5px;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.thumbnail {
+    display: flex;
+
+    label {
+        padding: 2%;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    a {
+        padding-top: 2%;
+    }
+}
+
+#meredith-description {
+    height: 250px;
+    overflow-y: auto;
+    text-align: justify;
+    padding: 3%;
+    border: 1px solid #e3e0e0;
+    margin-top: 1em;
+}
+
+.create-btn {
+    margin-top: 12px;
+}
+
+.field-container {
+    width: 80%;
+}
+
+.mat-input-element:disabled {
+    cursor: not-allowed;
+}
+
+.other-form {
+    padding: 1.5rem 0;
+}
+
+.article-modal {
+    max-width: 80%;
+}
+
+/* Article Partner image picker embossing styles */
+:host ::ng-deep .image-preview {
+    .image-holder {
+        transition: transform .2s;
+        &:hover {
+            transform: scale(1.08);
+        }
+    }
+
+    [type='radio']:checked + img {
+        outline: 2px solid #ffaf51 !important;
+        padding: 0.25em;
+    }
+}

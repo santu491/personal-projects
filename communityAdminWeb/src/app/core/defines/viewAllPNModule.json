@@ -1,0 +1,30 @@
+{
+  "pnFilters": [
+    { "name": "All Status", "value": "AllStatus" },
+    { "name": "Scheduled", "value": "Scheduled" },
+    { "name": "Sent", "value": "Sent" },
+    { "name": "Cancelled", "value": "Cancelled" }
+  ],
+
+  "columns": [
+    "colorCode",
+    "index",
+    "status",
+    "date",
+    "author",
+    "title",
+    "community",
+    "audience",
+    "deepLink",
+    "action"
+  ],
+  "selectCommunity": "Please select atleast one community",
+  "allCommunities": "Selected All",
+  "pnDeletedMessage": "Push notification Cancelled",
+  "confirmPnDelete": "Are you sure you want to delete the notification?",
+  "noCommunity": "noCommunity",
+  "allUsers": "All Users",
+  "unjoinedUsers": "Un Joined Users",
+  "noCommunityTitle": "No Community",
+  "chooseAudienceLabel": "Choose Audience"
+}

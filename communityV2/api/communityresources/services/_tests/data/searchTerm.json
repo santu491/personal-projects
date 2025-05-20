@@ -1,0 +1,124 @@
+{
+  "dbData": [
+    {
+      "_id": "61013eb670dbd030d83c8c5f",
+      "id": "61013eb670dbd030d83c8c5f",
+      "term": "food",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.143Z",
+      "updatedAt": "2021-12-02T04:55:29.138Z",
+      "displayName": {
+        "en": "food",
+        "es": "alimentos"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c60",
+      "id": "61013eb670dbd030d83c8c60",
+      "term": "housing",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.143Z",
+      "updatedAt": "2021-12-02T04:55:29.768Z",
+      "displayName": {
+        "en": "housing",
+        "es": "vivienda"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c61",
+      "id": "61013eb670dbd030d83c8c61",
+      "term": "goods",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.143Z",
+      "updatedAt": "2021-12-02T04:55:30.472Z",
+      "displayName": {
+        "en": "goods",
+        "es": "bienes"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c62",
+      "id": "61013eb670dbd030d83c8c62",
+      "term": "transit",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.144Z",
+      "updatedAt": "2021-12-02T04:55:31.040Z",
+      "displayName": {
+        "en": "transit",
+        "es": "tránsito"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c63",
+      "id": "61013eb670dbd030d83c8c63",
+      "term": "health",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.144Z",
+      "updatedAt": "2021-12-02T04:55:31.690Z",
+      "displayName": {
+        "en": "health",
+        "es": "salud"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c64",
+      "id": "61013eb670dbd030d83c8c64",
+      "term": "money",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.144Z",
+      "updatedAt": "2021-12-02T04:55:32.339Z",
+      "displayName": {
+        "en": "money",
+        "es": "dinero"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c65",
+      "id": "61013eb670dbd030d83c8c65",
+      "term": "care",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.145Z",
+      "updatedAt": "2021-12-02T04:55:32.943Z",
+      "displayName": {
+        "en": "care",
+        "es": "cuidado"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c66",
+      "id": "61013eb670dbd030d83c8c66",
+      "term": "education",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.145Z",
+      "updatedAt": "2021-12-02T04:55:33.557Z",
+      "displayName": {
+        "en": "education",
+        "es": "educación"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c67",
+      "id": "61013eb670dbd030d83c8c67",
+      "term": "work",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.145Z",
+      "updatedAt": "2021-12-02T04:55:34.139Z",
+      "displayName": {
+        "en": "work",
+        "es": "trabajo"
+      }
+    },
+    {
+      "_id": "61013eb670dbd030d83c8c68",
+      "id": "61013eb670dbd030d83c8c68",
+      "term": "legal",
+      "__v": 0,
+      "createdAt": "2021-08-17T14:22:31.145Z",
+      "updatedAt": "2021-12-02T04:55:34.721Z",
+      "displayName": {
+        "en": "legal",
+        "es": "legal"
+      }
+    }
+  ]
+}

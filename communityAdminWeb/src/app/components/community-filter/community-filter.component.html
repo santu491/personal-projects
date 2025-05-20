@@ -1,0 +1,44 @@
+<form [formGroup]="formFilter">
+    <mat-form-field appearance="outline" class="col-md-6">
+        <mat-label>View By</mat-label>
+        <mat-select
+          multiple
+          formControlName="communities"
+        >
+          <mat-select-trigger
+            >{{ selectedCommunity }}
+            <span
+              *ngIf="
+                formControls.communities.value.length > 1 &&
+                selectedCommunity !== viewAllPNModule.allUsers
+              "
+              >(+{{ formControls.communities.value.length - 1 }}
+              {{
+                formControls.communities.value.length > 2 ? "others" : "other"
+              }})</span
+            ></mat-select-trigger
+          >
+          <mat-option #allSelected (click)="toggleAllSelection()" [value]="0">
+            All Users</mat-option
+          >
+          <mat-option
+            *ngFor="let community of communityList"
+            [value]="community.id"
+            (click)="singleSelectAssignedCommunity()"
+            [disabled]="selectedCommunity === viewAllPNModule.allUsers"
+            >{{ community.title }}</mat-option
+          >
+          <mat-option
+            [value]="viewAllPNModule.noCommunity"
+            #noCommunity
+            *ngIf="isAdvocateAction()"
+            (click)="singleSelectAssignedCommunity()"
+            [disabled]="selectedCommunity === viewAllPNModule.allUsers"
+            >{{ viewAllPNModule.unjoinedUsers }}</mat-option
+          >
+        </mat-select>
+        <mat-error *ngIf="formControls.communities.invalid"
+          >Select atleast one option</mat-error
+        >
+      </mat-form-field>
+</form>

@@ -1,0 +1,147 @@
+<form class="form-container">
+  <div class="main-title-container">
+    <h2 class="main-title">{{ contentLabels.updateContent }}</h2>
+  </div>
+  <div class="download-btn">
+    <button mat-raised-button color="primary" (click)="openModal()">
+      {{ contentLabels.exportJson }}
+    </button>
+  </div>
+  <div mat-elevation-z8>
+    <mat-card class="content-preview">
+      <mat-card-content>
+        <form name="contentForm" [formGroup]="contentForm">
+          <div
+            class="modal"
+            tabindex="-1"
+            role="dialog"
+            [ngStyle]="{ display: display }"
+            data-backdrop="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title">{{ contentLabels.exportJson }}</h2>
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    (click)="onCloseModal()"
+                  >
+                    <mat-icon class="float-right">close</mat-icon>
+                  </button>
+                </div>
+                <div class="modal-body text-center">
+                  <div *ngFor="let item of contentArr">
+                    <div
+                      class="col-md-12"
+                      *ngIf="
+                        item.key === 'version'
+                          ? !!contentForm.controls.contentType.value &&
+                            !!contentForm.controls.language.value
+                          : true
+                      "
+                    >
+                      <div class="bottom-15">
+                        <mat-form-field appearance="outline" class="full-width">
+                          <mat-label
+                            >{{ contentLabels.choose }}
+                            {{ item?.name }}</mat-label
+                          >
+                          <mat-select
+                            formControlName="{{ item.key }}"
+                            required
+                            (selectionChange)="onSelect(item.key)"
+                          >
+                            <mat-option
+                              value="{{ lang }}"
+                              *ngFor="let lang of item?.list"
+                            >
+                              {{ lang }}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="downloadContent()"
+                    [disabled]="!formIsValid()"
+                  >
+                    {{ contentLabels.download }}
+                  </button>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    (click)="onCloseModal()"
+                  >
+                    {{ contentLabels.close }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div *ngFor="let item of contentArr">
+              <mat-form-field
+                appearance="outline"
+                class="full-width"
+                *ngIf="item.key === 'language' || item.key === 'contentType'"
+              >
+                <mat-label
+                  >{{ contentLabels.choose }} {{ item?.name }}</mat-label
+                >
+                <mat-select formControlName="{{ item.key }}" required>
+                  <mat-option
+                    value="{{ lang }}"
+                    *ngFor="let lang of item?.list"
+                  >
+                    {{ lang }}
+                  </mat-option>
+                </mat-select>
+                <mat-error
+                  *ngIf="contentForm?.get([item.key])?.errors?.required"
+                >
+                  {{ item.name }} {{ contentLabels.isRequired }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+              <mat-label>{{ contentLabels.uploadJson }}</mat-label
+              ><br />
+              <input
+                #fileSelected
+                formControlName="targetFile"
+                type="file"
+                accept=".json"
+              />
+            </div>
+          </div>
+          <div class="mt-15">
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="uploadContent()"
+              [disabled]="!formValid() || !contentForm.get('targetFile')?.value"
+            >
+              {{ contentLabels.uploadContent }}
+            </button>
+
+            <button
+              mat-raised-button
+              color="primary"
+              class="ml-10"
+              [disabled]="!contentForm.dirty || display == 'block'"
+              (click)="clearForm()"
+            >
+              {{ contentLabels.clear }}
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>

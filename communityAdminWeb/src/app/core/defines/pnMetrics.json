@@ -1,0 +1,16 @@
+{
+  "allUsersLabel": "For All Registered Users",
+  "bySubscription": "Opted By Subscription:",
+  "commentNotification": "A comment is left under my story",
+  "commentReaction": "There is a reaction to my comment",
+  "communityActivity": "There is community activity",
+  "heading": "Push Notification Metrics",
+  "overallStatus": "Overall User Opt In Status",
+  "totalOptInUsers": "Total Number of Users opted in for PN",
+  "totalCommunityOptIn": "Total Number of Users opted in for PN from selected category",
+  "reactionNotification": "Someone reacts to my story",
+  "repliedNotification": "Someone replied to my comment",
+  "maternityNotification": "Maternity due date notifications",
+  "download": "Download",
+  "print": "Print"
+}

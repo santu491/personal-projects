@@ -1,0 +1,46 @@
+<mat-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill the section name</ng-template>
+        <mat-form-field>
+          <mat-label>Section Title</mat-label>
+          <input matInput placeholder="Section Title" formControlName="sectionTitle" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Add Document Links">
+      <form [formGroup]="secondFormGroup">
+        <div formArrayName="link">
+            <ng-container *ngFor="let link of linkControl.controls; let i = index">
+                <div [formGroupName]="i">
+                    <mat-form-field>
+                        <mat-label>Link Title</mat-label>
+                        <input matInput formControlName="title" placeholder="Fill in Link Title"
+                               required>
+                      </mat-form-field>
+                      <mat-form-field>
+                          <mat-label>Link URL</mat-label>
+                          <input matInput formControlName="url" placeholder="Fill in Link URL"
+                                 required>
+                        </mat-form-field>
+                </div>
+            </ng-container>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext (click)="createSection()">Create</button>
+          <button mat-button (click)="addLink()" color="primary" class="pull-right">Add Link</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <div class="p-3 text-center">
+          <span class="me-3"><mat-icon class="done-icon" color="primary">check_circle</mat-icon></span>
+          <span class="success-msg">The new section is successfully added</span>
+      </div>
+    </mat-step>
+  </mat-stepper>

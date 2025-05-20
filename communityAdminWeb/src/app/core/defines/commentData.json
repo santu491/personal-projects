@@ -1,0 +1,16 @@
+{
+  "confirmDelete": "Are you sure you want to delete this comment?",
+  "deleteSuccess": "Comment deleted successfully!",
+  "confirmFlag": "Are you sure you want to flag this comment?",
+  "confirmUnFlag": "Are you sure you want to un-flag this comment?",
+  "flagSuccess": "Comment flagged successfully!",
+  "unFlagSuccess": "Comment un-flagged successfully!",
+  "removeAndBanUser": "Are you sure you want to remove this comment and ban user?",
+  "commentRemovedAndUserBanned": "Comment removed and banned user successfully",
+  "reportComment": "Report Comment",
+  "ignoreComment": "Ignore Comment",
+  "removeComment": "Remove Comment",
+  "editComment": "Edit Comment",
+  "deleteComment": "Delete Comment",
+  "removeAndBanUserTitle": "Remove and Ban User"
+}

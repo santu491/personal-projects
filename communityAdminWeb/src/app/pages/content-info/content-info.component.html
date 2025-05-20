@@ -1,0 +1,63 @@
+<div class="form-container view p-3">
+  <h1 style="font-weight: 500">{{ contentLabels.contentInfoTitle }}</h1>
+  <div>
+    <mat-form-field appearance="outline" class="col-md-6 mb-3">
+      <mat-icon matPrefix>search</mat-icon>
+      <input
+        type="text"
+        name="search"
+        id="searchInput"
+        matInput
+        autocomplete="off"
+        [placeholder]="contentLabels.searchTextPlaceHolder"
+        [(ngModel)]="searchText"
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <!-- Bad Words-->
+    <div class="col-md-6" *ngIf="badWords.length > 0">
+      <h1 class="text-center">{{ contentLabels.badWords }}</h1>
+      <ul class="grid-container container">
+        <ng-container *ngFor="let badWord of badWords | filter : searchText">
+          <div *ngIf="badWord.message; else data">
+            <div class="no-data" style="padding-left: 10px">
+              <p class="no-data-label">
+                {{ contentLabels.tryAnotherWord }}
+              </p>
+            </div>
+          </div>
+          <ng-template #data>
+            <li>{{ badWord }}</li>
+          </ng-template>
+        </ng-container>
+      </ul>
+    </div>
+
+    <!-- Sensitive  Words-->
+    <div class="col-md-6" *ngIf="sensitiveWords.length > 0">
+      <h1 class="text-center">{{ contentLabels.sensitiveWords }}</h1>
+
+      <ul class="grid-container container">
+        <ng-container
+          *ngFor="let sensitiveWord of sensitiveWords | filter : searchText"
+        >
+          <div *ngIf="sensitiveWord.message; else sensitiveWordData">
+            <div class="no-data" style="padding-left: 10px">
+              <p class="no-data-label">
+                {{ contentLabels.tryAnotherWord }}
+              </p>
+            </div>
+          </div>
+
+          <ng-template #sensitiveWordData>
+            <li>
+              {{ sensitiveWord }}
+            </li>
+          </ng-template>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>

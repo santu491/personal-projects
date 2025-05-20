@@ -1,0 +1,37 @@
+<div>
+  <div cdkDropList (cdkDropListDropped)="reorder($event)">
+    <div *ngFor="let section of subSections?.en.content" cdkDrag>
+      <div class="custom-placeholder" *cdkDragPlaceholder></div>
+      <app-article-view
+        [article]="section"
+        [parentId]="section.helpfulInfoId"
+        (onDelete)="deleteSectionArticle($event)"
+        (onEdit)="editSectionArticle($event)"
+      ></app-article-view>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button
+      mat-button
+      color="primary"
+      [disabled]="!subSections.en?.isOrderChanged"
+      (click)="updateCommunitySection()"
+    >
+      Publish Order Change
+    </button>
+    <button
+      mat-button
+      color="primary"
+      [disabled]="!subSections.en?.isModified"
+      (click)="publishSectionChanges()"
+    >
+      Publish Changes
+    </button>
+    <button mat-button color="primary" (click)="addArticleToSection()">
+      Add Article
+    </button>
+    <button mat-button color="primary" (click)="addExternalLink()">
+      Add External Link
+    </button>
+  </div>
+</div>

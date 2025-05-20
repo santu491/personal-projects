@@ -1,0 +1,14 @@
+{
+  "name": "@anthem/communityapi/http",
+  "author": "Anthem, Inc.",
+  "version": "1.0.0",
+  "scripts": {},
+  "license": "ISC",
+  "dependencies": {},
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts",
+  "publishConfig": {
+    "registry": "https://artifactory.anthem.com:443/artifactory/api/npm/npm-release/"
+  }
+}

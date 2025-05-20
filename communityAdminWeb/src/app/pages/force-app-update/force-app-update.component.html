@@ -1,0 +1,302 @@
+<form class="form-container">
+  <div class="main-title-container">
+    <h2 class="main-title">{{ fau.header }}</h2>
+  </div>
+  <div mat-elevation-z8>
+    <mat-card class="fau-preview">
+      <mat-card-content>
+        <form name="fauForm" [formGroup]="fauForm">
+          <strong>{{ fau.forceAppUpdate }}</strong>
+          <div class="row margin-ver-15 d-flex">
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.android }}</mat-label>
+                <input
+                  formControlName="android"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.android }}"
+                  value="{{ appVersionRes?.android }}"
+                  (blur)="onBlurForm($event, 'android')"
+                  (input)="onTextChange($event, 'android')"
+                />
+                <mat-error *ngIf="fauForm?.get('android')?.errors?.required">
+                  {{ fau.androidErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.ios }}</mat-label>
+                <input
+                  formControlName="ios"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.ios }}"
+                  value="{{ appVersionRes?.ios }}"
+                  (blur)="onBlurForm($event, 'ios')"
+                  (input)="onTextChange($event, 'ios')"
+                />
+                <mat-error *ngIf="fauForm?.get('android')?.errors?.required">
+                  {{ fau.iosErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <strong>{{ fau.contentVersionUpdate }}</strong>
+          <div class="row margin-ver-15">
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.public }}</mat-label>
+                <input
+                  formControlName="public"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.public }}"
+                  value="{{ appVersionRes?.content?.public }}"
+                  (blur)="onBlurForm($event, 'public')"
+                  (input)="onTextChange($event, 'public')"
+                />
+                <mat-error *ngIf="fauForm?.get('public')?.errors?.required">
+                  {{ fau.publicErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.generic }}</mat-label>
+                <input
+                  formControlName="generic"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.generic }}"
+                  value="{{ appVersionRes?.content?.generic }}"
+                  (blur)="onBlurForm($event, 'generic')"
+                  (input)="onTextChange($event, 'generic')"
+                />
+                <mat-error *ngIf="fauForm?.get('generic')?.errors?.required">
+                  {{ fau.genericErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.helpfulInfo }}</mat-label>
+                <input
+                  formControlName="helpfulInfo"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.helpfulInfo }}"
+                  value="{{ appVersionRes?.content?.helpfulInfo }}"
+                  (blur)="onBlurForm($event, 'helpfulInfo')"
+                  (input)="onTextChange($event, 'helpfulInfo')"
+                />
+                <mat-error
+                  *ngIf="fauForm?.get('helpfulInfo')?.errors?.required"
+                >
+                  {{ fau.helpfulInfoErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.prompts }}</mat-label>
+                <input
+                  formControlName="prompts"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.prompts }}"
+                  value="{{ appVersionRes?.content?.prompts }}"
+                  (blur)="onBlurForm($event, 'prompts')"
+                  (input)="onTextChange($event, 'prompts')"
+                />
+                <mat-error *ngIf="fauForm?.get('prompts')?.errors?.required">
+                  {{ fau.promptsErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row margin-ver-15">
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.deepLink }}</mat-label>
+                <input
+                  formControlName="deepLink"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.deepLink }}"
+                  value="{{ appVersionRes?.content?.deepLink }}"
+                  (blur)="onBlurForm($event, 'deepLink')"
+                  (input)="onTextChange($event, 'deepLink')"
+                />
+                <mat-error *ngIf="fauForm?.get('deepLink')?.errors?.required">
+                  {{ fau.deepLinkErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.wordList }}</mat-label>
+                <input
+                  formControlName="wordList"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.wordList }}"
+                  value="{{ appVersionRes?.content?.wordList }}"
+                  (blur)="onBlurForm($event, 'wordList')"
+                  (input)="onTextChange($event, 'wordList')"
+                />
+                <mat-error *ngIf="fauForm?.get('wordList')?.errors?.required">
+                  {{ fau.wordListErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
+            >
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.tou }}</mat-label>
+                <input
+                  formControlName="tou"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.tou }}"
+                  value="{{ appVersionRes?.tou }}"
+                  (blur)="onBlurForm($event, 'tou')"
+                  (input)="onTextChange($event, 'tou')"
+                />
+                <mat-error *ngIf="fauForm?.get('tou')?.errors?.required">
+                  {{ fau.touErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label class="label">{{ fau.pushNotification }}</mat-label>
+                <input
+                  formControlName="pushNotification"
+                  matInput
+                  autocomplete="off"
+                  required
+                  placeholder="{{ fau.pushNotification }}"
+                  value="{{ appVersionRes?.content?.pushNotification }}"
+                  (blur)="onBlurForm($event, 'pushNotification')"
+                  (input)="onTextChange($event, 'pushNotification')"
+                />
+                <mat-error *ngIf="fauForm?.get('pushNotification')?.errors?.required">
+                  {{ fau.pushNotificationErr }}
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 top-15"
+            >
+              <strong>{{ fau.demoUserAccess }}</strong>
+              <div class="row margin-ver-15">
+                <div>
+                  <mat-slide-toggle
+                    class="full-width"
+                    color="primary"
+                    class="notify-toggle"
+                    (change)="onToggle($event)"
+                    [checked]="appVersionRes?.demoUserAccess"
+                  >
+                    {{
+                      appVersionRes?.demoUserAccess
+                        ? fau.enableLbl
+                        : fau.disableLbl
+                    }}
+                  </mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3"
+            >
+              <strong>{{ fau.imageFilter }}</strong>
+              <div class="row margin-ver-15">
+                <div>
+                  <mat-slide-toggle
+                    color="primary"
+                    [checked]="appVersionRes?.imageFilter"
+                    class="full-width"
+                    class="notify-toggle"
+                    (change)="onToggleImageFilter($event)"
+                    >{{
+                      appVersionRes?.imageFilter
+                        ? fau.enableLbl
+                        : fau.disableLbl
+                    }}</mat-slide-toggle
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+              <strong>{{ fau.apiVersion }}</strong>
+              <div class="row margin-ver-15">
+                  <mat-form-field appearance="outline" class="full-width">
+                    <mat-label class="label">{{ fau.apiVersion }}</mat-label>
+                    <input
+                      formControlName="apiVersion"
+                      matInput
+                      autocomplete="off"
+                      required
+                      placeholder="{{ fau.apiVersion }}"
+                      value="{{ appVersionRes?.apiVersion }}"
+                      (blur)="onBlurForm($event, 'apiVersion')"
+                      (input)="onTextChange($event, 'apiVersion')"
+                    />
+                    <mat-error *ngIf="fauForm?.get('apiVersion')?.errors?.required">
+                      {{ fau.pushNotificationErr }}
+                    </mat-error>
+                  </mat-form-field>
+              </div>
+            </div>
+
+          </div>
+          <button
+            mat-raised-button
+            color="primary"
+            class="update-profile-btn"
+            [disabled]="onFormChange()"
+            (click)="onUpdateAppVersion()"
+          >
+            {{ fau.updateBtn }}
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>

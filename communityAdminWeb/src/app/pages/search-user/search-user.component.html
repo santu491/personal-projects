@@ -1,0 +1,143 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: modalDisplay }"
+  data-backdrop="true"
+  #storyModal
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h2>User Report Preview</h2>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="export-data">
+            <div class="center-align">
+                <img src="assets/img/logo/SydneyCommunityLogo.svg" alt="Community Logo" width="50%" height="50%"/>
+            </div>
+            <hr>
+            <div>
+                <div>
+                    <h3 class="section-heading">Personal Information</h3>
+                    <table aria-label="Personal Information Table" aria-hidden="true">
+                        <tr>
+                            <td>First Name</td>
+                            <td>{{firstName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Last Name</td>
+                            <td>{{lastName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Nick Name</td>
+                            <td>{{nickName ?? '-'}}</td>
+                        </tr>
+                        <tr>
+                            <td>User contains Profile Picture</td>
+                            <td>{{profileImageExists ? 'YES': 'NO'}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content-info" *ngIf="firstName">
+                    <h3 class="section-heading">User Content Information</h3>
+                    <div>
+                        <table 
+                        id
+                        aria-hidden="true"
+                        *ngIf="publishedStories.length > 0 || unpublishedStories.length > 0; 
+                            else elseBlock" >
+                            <tr>
+                                <th class="underlined">Activities Performed in Mobile App</th>
+                                <th class="underlined">Total #</th>
+                            </tr>
+                            <tr *ngFor="let story of publishedStories">
+                                <td>Published Stories in {{story.communityTitle}} community</td>
+                                <td class="center-align">{{story.numberOfStories}}</td>
+                            </tr>
+                            <tr *ngFor="let story of unpublishedStories">
+                                <td>Draft Stories in {{story.communityTitle}} community</td>
+                                <td class="center-align">{{story.numberOfStories}}</td>
+                            </tr>
+                        </table>
+                        <ng-template #elseBlock>No Stories Added by the User</ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="width: 100%">
+        <button type="button" class="btn btn-success pull-right" (click)="downloadPdf()">Download</button>
+        <button type="button" class="btn btn-warning pull-right" (click)="onCloseModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="form-container view" mat-elevation-z8>
+    <div class="header full-width">
+        <input type="search" id="searchInput" matInput placeholder="Search Mobile User" [(ngModel)]="searchText"
+            (ngModelChange)="onChangeSearchText($event)" autocomplete="off" (keydown.enter)="onSearch()">
+        <div class="search-button">
+            <button id="searchButton" matSuffix mat-button (click)="onSearch()">
+                <mat-icon matTooltip="Click here to Search">search</mat-icon>
+            </button>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <!-- No Search View -->
+    <div class="full-width no-search-view">
+        <br>
+        <div *ngIf="isError">
+            <strong>{{ noUserFoundLine1 }}</strong>
+            <br>
+            <br>
+            <p> {{ noUserFoundLine2 }} </p>
+        </div>
+        <strong *ngIf="isUser">{{ userFoundLine1 }} {{ userProfile?.username }}</strong>
+        <strong *ngIf="!isError && !isUser">{{ noSearchLine1 }}</strong>
+        <br>
+    </div>
+
+    <!--Table View -->
+    <div *ngIf="isUser" class="no-search-view">
+        <table class="table custom-tble">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Export</th>
+                    <th>Opt - In Minor</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ userProfile?.username }}</td>
+                    <td>{{ userProfile?.firstName }}</td>
+                    <td>{{ userProfile?.lastName }}</td>
+                    <td>
+                        <mat-icon color="primary" (click)="exportUser()">file_upload</mat-icon>
+                    </td>
+                    <td>
+                        <mat-slide-toggle class="full-width cursor-ptr" color="primary" class="notify-toggle"
+                            (change)="onToggle($event)" [checked]="userProfile?.optInMinor">
+                        </mat-slide-toggle>
+                    </td>
+                    <td>
+                        <span (click)="deleteUser()" role="button">
+                            <mat-icon class="delete-icon cursor-ptr">delete</mat-icon>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

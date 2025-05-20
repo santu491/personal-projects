@@ -1,0 +1,93 @@
+<ng-container [formGroup]="form">
+  <div class="row">
+    <!--Text Input Title -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ titleLabel }}</mat-label>
+      <input
+        matInput
+        required
+        [placeholder]="titleLabel"
+        [formControlName]="titleControlName"
+        [maxlength]="schedulePNModule.charCount30"
+        [readonly]="isInputReadOnly"
+        autocomplete="off"
+      />
+      <mat-icon
+        class="emoji-icon"
+        color="primary"
+        (click)="onToggleEmoji('pnTitleEmoji')"
+      >
+        {{ pnTitleEmoji ? "close" : "mood" }}
+      </mat-icon>
+
+      <span class="pull-right label label-default count-message"
+        >{{ pnTitle?.value?.length ?? 0 }} /
+        {{ schedulePNModule.charCount30 }}</span
+      >
+    </mat-form-field>
+
+    <div class="emoji-mart-styles">
+      <emoji-mart
+        *ngIf="pnTitleEmoji"
+        title="Pick your emoji…"
+        emoji="point_up"
+        (emojiClick)="
+          onSelectEmoji($event, 'pnTitle', schedulePNModule.charCount30)
+        "
+        [exclude]="['flags']"
+        [emojisToShowFilter]="getEmojis"
+      ></emoji-mart>
+    </div>
+
+    <p
+      *ngIf="pnTitle && pnTitle.touched && pnTitle.invalid"
+      class="text-danger customError"
+    >
+      {{ titleLabel + " " + schedulePNModule.emptyMessage }}
+    </p>
+  </div>
+
+  <div class="row">
+    <!--Text Input Body -->
+    <mat-form-field appearance="outline">
+      <mat-label>{{ bodyLabel }}</mat-label>
+      <textarea
+        type="text"
+        matInput
+        required
+        [placeholder]="bodyLabel"
+        [formControlName]="bodyControlName"
+        [maxlength]="schedulePNModule.charCount140"
+        autocomplete="off"
+        [readonly]="isInputReadOnly"
+      ></textarea>
+      <mat-icon
+        class="emoji-icon"
+        color="primary"
+        (click)="onToggleEmoji('pnBodyEmoji')"
+      >
+        {{ pnBodyEmoji ? "close" : "mood" }}
+      </mat-icon>
+
+      <span class="pull-right count-message"
+        >{{ pnBody?.value?.length ?? 0 }} /
+        {{ schedulePNModule.charCount140 }}</span
+      >
+    </mat-form-field>
+  </div>
+  <p class="text-danger customError" *ngIf="pnBody?.touched && pnBody?.invalid">
+    {{ bodyLabel + " " + schedulePNModule.emptyMessage }}
+  </p>
+  <div class="emoji-mart-styles">
+    <emoji-mart
+      *ngIf="pnBodyEmoji"
+      title="Pick your emoji…"
+      emoji="point_up"
+      (emojiClick)="
+        onSelectEmoji($event, 'pnBody', schedulePNModule.charCount140)
+      "
+      [exclude]="['flags']"
+      [emojisToShowFilter]="getEmojis"
+    ></emoji-mart>
+  </div>
+</ng-container>

@@ -1,0 +1,69 @@
+{
+  "sidenavHeader": "Engage with Community",
+  "sidenavRouting": [
+    {
+      "btnName": "Communities",
+      "children": [
+        {
+          "btnName": "Stories",
+          "routerLink": "/ui/pages/engage/view-stories",
+          "matIcon": "group",
+          "routerLinkActive": "active"
+        },
+        {
+          "btnName": "Posts",
+          "children": [
+            {
+              "btnName": "View Posts",
+              "routerLink": "/ui/pages/engage/view-all-posts",
+              "matIcon": "list_alt",
+              "routerLinkActive": "active"
+            },
+            {
+              "btnName": "New Post",
+              "routerLink": "/ui/pages/engage/draft-content",
+              "matIcon": "mode_edit",
+              "routerLinkActive": "active"
+            },
+
+            {
+              "btnName": "Search Posts",
+              "routerLink": "/ui/pages/engage/search",
+              "matIcon": "search",
+              "routerLinkActive": "active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "btnName": "Push Notifications",
+      "children": [
+        {
+          "btnName": "Send Notification",
+          "routerLink": "/ui/pages/engage/schedule",
+          "matIcon": "event_note",
+          "routerLinkActive": "active"
+        },
+        {
+          "btnName": "View All PN",
+          "routerLink": "/ui/pages/engage/view-all-push-notifications",
+          "matIcon": "list_alt",
+          "routerLinkActive": "active"
+        },
+        {
+          "btnName": "Metrics",
+          "routerLink": "/ui/pages/engage/pn/metrics",
+          "matIcon": "assessment",
+          "routerLinkActive": "active"
+        }
+      ]
+    },
+    {
+      "btnName": "Help",
+      "routerLink": "/ui/pages/engage/help",
+      "matIcon": "help_outline",
+      "routerLinkActive": "active"
+    }
+  ]
+}

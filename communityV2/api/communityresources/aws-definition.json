@@ -1,0 +1,22 @@
+{
+  "environments": {
+    "default": {
+      "parameters": [
+        {
+          "ParameterKey": "CommunityResourcesScalingCapacity",
+          "ParameterValue": "1,1,2"
+        }
+      ]
+    }
+  },
+  "service": {
+    "version": "1.0.0",
+    "name": "CommunityResourcesService",
+    "ContainerName": "communityresources-service",
+    "HealthCheckPath": "/communityresources/v2/health",
+    "Path": "/community/public/communityresources/v2*",
+    "LBListenerPriority": "1",
+    "ApiName": "communityresources",
+    "imageName": "CommunityResourcesImageName"
+  }
+}

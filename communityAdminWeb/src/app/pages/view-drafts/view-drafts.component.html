@@ -1,0 +1,74 @@
+<!-- Edit PN Modal-->
+<div class="modal" style="display: block" *ngIf="isEditEnable">
+  <div class="bg-white m-5">
+    <div class="button-View">
+      <button class="btn btn-light" (click)="onEditClose()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div style="padding: 0px 50px 40px 30px">
+      <draft-content
+        (onPressCancel)="onEditClose()"
+        (onPressDraft)="onDraftPost()"
+      ></draft-content>
+    </div>
+  </div>
+</div>
+
+<div class="form-container" mat-elevation-z8>
+  <strong class="draft-selected-count full-width">
+    {{ drafts.totalDraft }}: {{ draftList.length || 0 }}
+  </strong>
+
+  <mat-list role="list" class="list">
+    <!-- No Drafts View -->
+    <div *ngIf="!draftList.length" class="full-width no-draft-view">
+      <p>{{ noDraftsLine1 }}</p>
+      <p>{{ noDraftsLine2 }}</p>
+    </div>
+    <div *ngIf="draftList.length > 0">
+      <div class="row pb-2">
+        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 width75percent">
+          <span style="padding-left: 20px; font-weight: bold">Draft Posts</span>
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+          <span style="font-weight: bold; padding-left: 10px">Actions</span>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <div *ngFor="let item of draftList">
+        <div class="row">
+          <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 width75percent">
+            <mat-list-item role="listitem" color="primary">
+              {{ item?.content?.en?.title ?? item?.content?.es?.title }}
+            </mat-list-item>
+            <p class="d-flex updated-time">{{ item.updatedDate }}</p>
+          </div>
+          <div class="item-action-view">
+            <div
+              class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 margin-right-16"
+            >
+              <mat-icon
+                (click)="deleteDraft(item.id)"
+                color="warn"
+                matTooltip="{{ drafts.deleteDraftToolTip }}"
+                >delete
+              </mat-icon>
+            </div>
+            <div
+              class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 margin-horizon-16"
+            >
+              <mat-icon
+                (click)="editDraftPost(item)"
+                color="primary"
+                matTooltip="{{ drafts.editDraftToolTip }}"
+                >edit
+              </mat-icon>
+            </div>
+          </div>
+        </div>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+  </mat-list>
+</div>

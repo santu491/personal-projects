@@ -1,0 +1,43 @@
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered article-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h1>{{ isEdit ? 'Edit Article' : 'Add Article' }}</h1>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <mat-tab-group mat-stretch-tabs [(selectedIndex)]="selectedTabIndex">
+          <mat-tab label="Health Wise">
+            <app-healthwise-article
+              [articleData]="healthWiseArticle"
+              (onAddArticle)="createArticle($event)"
+            >
+            </app-healthwise-article>
+          </mat-tab>
+          <mat-tab label="Meredith">
+            <app-meredith-article
+              [articleData]="meredithArticle"
+              (onAddArticle)="createArticle($event)"
+            ></app-meredith-article>
+          </mat-tab>
+          <mat-tab label="Other">
+            <app-custom-article
+              (onAddArticle)="createArticle($event)"
+              [articleData]="customArticle"
+            ></app-custom-article>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>

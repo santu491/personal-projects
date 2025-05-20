@@ -1,0 +1,29 @@
+{
+  "tableColumns": [
+    "colorCode",
+    "serialNo",
+    "title",
+    "author",
+    "date",
+    "community",
+    "pollCount",
+    "commentsCount",
+    "reactionsCount",
+    "actions"
+  ],
+  "selectAudience": "Select Audience",
+  "allCommunities": "All Communities",
+  "errorMessage": "Please select at Least one target audience",
+  "chooseStatus": "Choose Status",
+  "goToPage": "Go to Page:",
+  "confirmDelete": "Are you sure you want to delete the post?",
+  "confirmDeletePoll": "Are you sure you want to delete the post with poll?",
+  "deleteSuccess": "Post deleted successfully!",
+  "postFilters": [
+    { "name": "All Status", "value": "AllStatus" },
+    { "name": "Published", "value": "Published" },
+    { "name": "Scheduled", "value": "Scheduled" },
+    { "name": "Draft", "value": "Draft" }
+  ],
+  "selectCommunities": "Select Communities"
+}

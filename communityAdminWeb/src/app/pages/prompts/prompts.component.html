@@ -1,0 +1,68 @@
+<p class="community-holder">{{ title }} Community</p>
+<div class="form-container view">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 prompt-tree">
+      <div *ngIf="!editData && showAddForm" class="placeholder-prompt prompt">
+        <h2>Add Question</h2>
+        <p>Help Text will be shown here</p>
+        <p>Sensitive Content Text will be shown here</p>
+      </div>
+      <div *ngIf="promptData.length > 0; else promptAdd">
+        <div cdkDropList (cdkDropListDropped)="drop($event)">
+          <div
+            *ngFor="let prompt of promptData; let i = index"
+            (click)="onEditClick(prompt)"
+            [ngClass]="{
+              'placeholder-prompt': editData?.promptId == prompt.promptId
+            }"
+            class="prompt"
+            cdkDrag
+          >
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+            <div>
+              <h3>{{ i + 1 + '. ' }}{{ prompt.en.question }}</h3>
+              <p>{{ prompt?.en?.helpText }}</p>
+              <p>{{ prompt?.en?.sensitiveContentText }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button mat-raised-button color="primary" (click)="createPrompts()">
+            Publish Prompts
+          </button>
+          <button mat-stroked-button color="primary" (click)="addNewForm()">
+            <mat-icon>add</mat-icon> Add Prompt
+          </button>
+        </div>
+      </div>
+      <ng-template #promptAdd>
+        <div class="else-block">
+          <p *ngIf="!showAddForm">
+            Add new prompt by clicking on Add Prompt button
+          </p>
+          <button
+            mat-raised-button
+            color="primary"
+            *ngIf="allDeleted"
+            (click)="createPrompts()"
+          >
+            Publish Prompts
+          </button>
+          <button mat-stroked-button color="primary" (click)="addNewForm()">
+            <mat-icon>add</mat-icon> Add Prompt
+          </button>
+        </div>
+      </ng-template>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-8 prompt-form">
+      <div *ngIf="showAddForm">
+        <app-prompt-form
+          (addPrompt)="onPromptAdd($event)"
+          (cancelPrompt)="removePromptForm()"
+          (deletePrompt)="onDeletePrompt($event)"
+          [editData]="editData"
+        ></app-prompt-form>
+      </div>
+    </div>
+  </div>
+</div>

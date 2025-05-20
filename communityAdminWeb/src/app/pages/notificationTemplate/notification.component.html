@@ -1,0 +1,20 @@
+<div class="form-container view">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 template-tree scroll">
+      <div *ngIf="templates.length > 0">
+          <div *ngFor="let item of templates; let i = index" class="template" (click)="onEditClick(item, i)"  [ngClass]="{'highlight': selectedItemIdex === i}">
+            <div>
+              <h3>{{ item.title }}</h3>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8 col-lg-8 template-form templateScroll">
+      <app-template-form *ngIf="showAddForm" 
+        (cancelTemplate)="removePromptForm()" 
+        (saveTemplate)="updateTemplate($event)"
+        [editData]="editData">
+      </app-template-form>
+    </div>
+  </div>
+</div>

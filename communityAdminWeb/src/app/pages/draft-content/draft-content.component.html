@@ -1,0 +1,369 @@
+<form [formGroup]="profileForm" class="form-container view">
+  <mat-card>
+    <mat-card-title>{{ mainHeader }}</mat-card-title>
+    <mat-card-content class="pt-2">
+      <!-- English Content -->
+      <div class="mt-2">
+        <strong>{{ postsModule.englishContent }}</strong>
+        <app-post-content
+          [postContent]="enContent"
+          [invalidField]="{ title: titleIsInvalId, body: bodyIsInvalId }"
+        ></app-post-content>
+      </div>
+      <!-- Spanish Content -->
+      <div *ngIf="isSpanish" class="mt-3">
+        <strong>{{ postsModule.spanishContent }}</strong>
+        <app-post-content [postContent]="esContent"></app-post-content>
+      </div>
+
+      <!-- Divider -->
+      <mat-divider class="mt-3"></mat-divider>
+
+      <!-- Post Settings -->
+      <div class="row mt-3">
+        <strong class="full-width mt-2">{{
+          postsModule.en.postSettingsLabel
+        }}</strong>
+        <!-- Select Language  -->
+        <div class="col-md-12">
+          <mat-slide-toggle
+            [checked]="isSpanish"
+            class="full-width"
+            color="primary"
+            class="notify-toggle"
+            (change)="onToggleLanguage($event)"
+            [disabled]="
+              enContent.controls.title.value == '' ||
+              enContent.controls.body.value == ''
+            "
+          >
+            {{ postsModule.en.spanishToggleLabel }}
+          </mat-slide-toggle>
+        </div>
+
+        <div class="col-md-12">
+          <div class="row">
+            <!-- Choose Persona -->
+            <div class="col-md-6" *ngIf="isPersonaEnabled()">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>
+                  <strong>{{ postsModule.en.choosePersona }}</strong></mat-label
+                >
+                <mat-select formControlName="persona">
+                  <mat-option
+                    value="none"
+                    (click)="onSelectPersona(null)"
+                    [disabled]="isPublishedAlready"
+                    >{{ getUserRoleTitle() }}</mat-option
+                  >
+                  <mat-option
+                    *ngFor="let item of personaDetails"
+                    value="{{ item.id }}"
+                    (click)="onSelectPersona(item)"
+                    [disabled]="isPublishedAlready"
+                    >{{
+                      !!item.displayName ? item.displayName : item?.firstName
+                    }}, {{ item.displayTitle }}</mat-option
+                  >
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <!-- Choose Community -->
+            <div class="col-md-6 mb-2">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>{{ postsModule.en.chooseCommunityLabel }}</mat-label>
+                <mat-select formControlName="community" required>
+                  <mat-option
+                    value="{{ item.id }}"
+                    *ngFor="let item of communityList"
+                    [disabled]="
+                      isPublishedAlready || isPersonaHasCommunity(item)
+                    "
+                  >
+                    {{ item.title }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2"
+        >
+          <div class="row">
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+            >
+              <!-- Poll Toggle  -->
+              <mat-slide-toggle
+                [checked]="isPollEnabled"
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggleAddPoll($event)"
+                [disabled]="
+                  isPublishedAlready || isImageEnabled || isLinkEnabled
+                "
+              >
+                {{ postsModule.addPoll }}
+              </mat-slide-toggle>
+            </div>
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+            >
+              <!-- Deeplink Toggle  -->
+              <mat-slide-toggle
+                [checked]="isDeepLinkEnabled"
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggleDeepLink($event)"
+                [disabled]="isImageEnabled || isLinkEnabled"
+              >
+                {{ postsModule.deepLinkToggleLabel }}
+              </mat-slide-toggle>
+            </div>
+          </div>
+          <!-- Add Poll Form -->
+          <div *ngIf="isPollEnabled">
+            <mat-card class="shadow p-3 mb-2 bg-white rounded">
+              <app-post-poll
+                #pollInfo
+                [pollData]="pollData"
+                [isSpanishEnabled]="isSpanish"
+                (onAddPoll)="setPollData($event)"
+              ></app-post-poll>
+            </mat-card>
+          </div>
+
+          <!-- DeepLink Selection List -->
+          <div *ngIf="isDeepLinkEnabled && communityList.length > 0">
+            <mat-card class="shadow p-3 mb-2 bg-white rounded">
+              <app-multilevel-menu
+                [headerData]="postsModule.chooseDeeplink"
+                [communityListData]="communityList"
+                [deeplinkLabel]="deeplinkLabel"
+                (onItemSelectEvent)="onDeepLinkItemSelect($event)"
+              >
+              </app-multilevel-menu>
+            </mat-card>
+          </div>
+        </div>
+
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2"
+        >
+          <div class="row">
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+            >
+              <!-- Image Toggle  -->
+              <mat-slide-toggle
+                [checked]="isImageEnabled"
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggleImage($event)"
+                [disabled]="isLinkEnabled || isDeepLinkEnabled || isPollEnabled"
+              >
+                {{ postsModule.imageToggleLabel }}
+              </mat-slide-toggle>
+            </div>
+
+            <div
+              class="col col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"
+            >
+              <!-- Link Toggle  -->
+              <mat-slide-toggle
+                [checked]="isLinkEnabled"
+                class="full-width"
+                color="primary"
+                class="notify-toggle"
+                (change)="onToggleLink($event)"
+                [disabled]="
+                  isImageEnabled || isDeepLinkEnabled || isPollEnabled
+                "
+              >
+                {{ postsModule.linkToggleLabel }}
+              </mat-slide-toggle>
+            </div>
+          </div>
+
+          <!-- Image Upload -->
+          <mat-card
+            *ngIf="isImageEnabled"
+            class="shadow p-3 mb-2 bg-white rounded"
+          >
+            <div class="row">
+              <div class="col">
+                <mat-label>{{ postsModule.en.uploadImage }}</mat-label
+                ><br />
+                <input
+                  #imageInput
+                  type="file"
+                  class="mt-2 mb-2"
+                  accept="image/*"
+                  (change)="onSelectImage($event, imageInput)"
+                  autocomplete="off"
+                />
+                <button (click)="clearImage()" mat-raised-button>
+                  {{ postsModule.en.clearImageBtn }}
+                </button>
+              </div>
+              <div class="col" *ngIf="imagePath">
+                <img [src]="imagePath" class="image" alt="post_image" />
+              </div>
+            </div>
+          </mat-card>
+
+          <!-- Link Widget -->
+          <mat-card
+            *ngIf="isLinkEnabled"
+            class="shadow p-3 mb-2 bg-white rounded"
+          >
+            <app-external-link
+              (selectedLink)="getLinkData($event)"
+              [isSpanishEnabled]="isSpanish"
+              [editData]="linkData"
+            ></app-external-link>
+          </mat-card>
+        </div>
+
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2 mt-2"
+        >
+          <mat-slide-toggle
+            color="primary"
+            [checked]="isScheduledPostEnabled"
+            [disabled]="isPublishedAlready"
+            (change)="onToggleScheduledPost($event)"
+            >{{ postsModule.scheduledLabel }}</mat-slide-toggle
+          >
+          <!-- Scheduled Post -->
+          <mat-form-field
+            appearance="outline"
+            class="ms-3"
+            *ngIf="isScheduledPostEnabled"
+          >
+            <mat-label>{{ postsModule.dateAndTime }}</mat-label>
+            <input
+              formControlName="sendOn"
+              matInput
+              [ngxMatDatetimePicker]="picker"
+              [placeholder]="postsModule.dateAndTime"
+              [min]="minDate"
+              [max]="maxDate"
+              [disabled]="!isScheduledPostEnabled"
+              autocomplete="off"
+              required
+              [readonly]="true"
+              (dateInput)="onDateSelect('input', $event)"
+              (blur)="onBlurDatePicker($event)"
+            />
+
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="$any(picker)"
+            ></mat-datepicker-toggle>
+            <ngx-mat-datetime-picker
+              #picker
+              [showSpinners]="showSpinners"
+              [showSeconds]="showSeconds"
+              [stepHour]="stepHour"
+              [stepMinute]="stepMinute"
+              [stepSecond]="stepSecond"
+              [touchUi]="touchUi"
+              [color]="color"
+              [enableMeridian]="enableMeridian"
+              [disableMinute]="disableMinute"
+              [hideTime]="hideTime"
+            >
+              <ng-template>
+                <span>OK</span>
+              </ng-template>
+            </ngx-mat-datetime-picker>
+            <mat-error
+              *ngIf="
+                (sendOn &&
+                  sendOn.invalid &&
+                  sendOn.touched &&
+                  profileForm?.get('sendOn')?.value?.length == 0) ||
+                showDatePickerErr
+              "
+              class="customErrorLeft10"
+            >
+              {{ postsModule.sendOnErr }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div
+          class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2 mt-2"
+        >
+          <!-- Send/Suppress Push Notification  -->
+          <mat-slide-toggle
+            formControlName="isNotify"
+            class="full-width"
+            color="primary"
+            class="notify-toggle"
+            [disabled]="isPublishedAlready"
+          >
+            {{ postsModule.en.pnLabel }}
+          </mat-slide-toggle>
+          <mat-card
+            class="shadow p-3 mb-3 bg-white rounded"
+            *ngIf="this.profileForm.controls.isNotify.value"
+          >
+            <p style="font-weight: bold">Custom Push Notification:</p>
+            <app-pn-title-body
+              titleLabel="Push Notification Title"
+              bodyLabel="Push Notification Body"
+              titleControlName="pnTitle"
+              bodyControlName="pnBody"
+              formGroupName="pnDetails"
+              [isInputReadOnly]="isPublishedAlready"
+            ></app-pn-title-body>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        (click)="onCancelEditPost()"
+        mat-raised-button
+        color="primary"
+        *ngIf="isPublishedAlready || draftId"
+      >
+        {{ postsModule.en.cancelEditBtn }}
+      </button>
+      <button
+        (click)="saveForm(false)"
+        mat-raised-button
+        color="primary"
+        [disabled]="
+          checkIfNotValid() || isPublishedAlready || isScheduledPostEnabled
+        "
+      >
+        {{ postsModule.en.saveDraftBtn }}
+      </button>
+      <button
+        (click)="saveForm(true)"
+        mat-raised-button
+        color="primary"
+        [disabled]="checkIfNotValid() || isScheduledPostEnabled"
+      >
+        {{ postsModule.en.publishBtn }}
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="checkIfScheduleNotEnabled()"
+        (click)="saveForm(false)"
+      >
+        {{ postsModule.scheduleBtn }}
+      </button>
+    </mat-card-actions>
+    <span class="mb-3"></span>
+  </mat-card>
+</form>

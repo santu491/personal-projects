@@ -1,0 +1,23 @@
+@import '/src/app/pages/pages.component.scss';
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.email-template {
+  width: 100%;
+  height: calc(100vh - 170px);
+}

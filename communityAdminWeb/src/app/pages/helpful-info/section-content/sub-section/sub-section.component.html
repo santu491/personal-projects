@@ -1,0 +1,173 @@
+<!-- Section modal -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: subSectionModal ? 'block' : 'none' }"
+  data-backdrop="true"
+>
+  <div class="modal-dialog modal-dialog-centered section-modal" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title">
+          <h3 class="heading">Sub Section Details</h3>
+        </span>
+        <button type="button" class="btn btn-light" (click)="onCloseModal()">
+          <mat-icon class="float-right">close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <app-section-details
+          [mode]="'modal'"
+          [sectionData]="subSectionData"
+          (onSubmit)="handleAddSubSection($event)"
+        ></app-section-details>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Partner Modal -->
+<div *ngIf="partnerModal">
+  <add-partner-section
+    [displayModal]="partnerModal"
+    (onClose)="onCloseModal()"
+    (onAdd)="handleAddPartner($event)"
+  ></add-partner-section>
+</div>
+
+<div>
+  <mat-accordion>
+    <div cdkDropList (cdkDropListDropped)="reorderBuckets($event)">
+      <div
+        *ngFor="let section of subSections?.en.content; let i = index"
+        class="mt-2"
+        cdkDrag
+      >
+        <div class="custom-placeholder" *cdkDragPlaceholder></div>
+        <mat-expansion-panel
+          *ngIf="section?.type.match(bucketType)"
+          [disabled]="section?.commonSection"
+        >
+          <mat-expansion-panel-header
+            (click)="fetchSubContent(section?.link, i)"
+          >
+            <mat-panel-title>
+              <img
+                *ngIf="section?.type === 'HWPartner'"
+                [src]="getLogoImage(section?.brandLogo)"
+                [alt]="section?.title"
+                class="logo-img"
+              />
+              <span *ngIf="section?.type !== 'HWPartner'">{{
+                section?.title
+              }}</span>
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ section?.description }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div cdkDropList (cdkDropListDropped)="reorderArticle($event)">
+            <div *ngFor="let bucket of getBucketContent()" cdkDrag>
+              <div class="custom-placeholder" *cdkDragPlaceholder></div>
+              <app-article-view
+                [article]="bucket"
+                [parentId]="section.helpfulInfoId"
+                (onDelete)="deleteArticle($event)"
+                (onEdit)="editBucketArticle($event)"
+              ></app-article-view>
+            </div>
+          </div>
+          <mat-action-row>
+            <button mat-button color="primary" (click)="addArticleToSection()">
+              Add Article
+            </button>
+            <button
+              mat-button
+              color="primary"
+              (click)="addExternalLinkToSection()"
+            >
+              Add External Link
+            </button>
+            <button mat-button color="primary" (click)="editSubSection(i)">
+              Edit Details
+            </button>
+            <button mat-button color="warn" (click)="deleteSection(i)">
+              Delete Sub Section
+            </button>
+            <button
+              *ngIf="section?.isOrderChanged"
+              mat-raised-button
+              color="primary"
+              (click)="publishArticleOrderChanges()"
+            >
+              Publish Article Order
+            </button>
+            <button
+              *ngIf="section.isModified"
+              mat-raised-button
+              color="primary"
+              (click)="publishChanges()"
+            >
+              Publish Changes
+            </button>
+          </mat-action-row>
+        </mat-expansion-panel>
+        <div *ngIf="!section?.type.match(bucketType)">
+          <app-article-view
+            [article]="section"
+            [parentId]="section.helpfulInfoId"
+            (onDelete)="deleteArticle($event)"
+            (onEdit)="editSectionArticle($event)"
+          ></app-article-view>
+        </div>
+      </div>
+    </div>
+  </mat-accordion>
+  <div class="btn-container">
+    <button
+      mat-raised-button
+      *ngIf="sectionOrderChanged"
+      (click)="publishSectionOrderChange()"
+    >
+      Publish Order Change
+    </button>
+    <button
+      mat-raised-button
+      *ngIf="subSections?.en?.isModified"
+      (click)="publishSectionChanges()"
+    >
+      Publish Changes
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      *ngIf="!isPartnerContentPresent()"
+      (click)="addExternalLinkToSection()"
+    >
+      Add External Link
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      *ngIf="!isPartnerContentPresent()"
+      (click)="showSubSection()"
+    >
+      Add Sub Section
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      *ngIf="isPartnerContentPresent()"
+      (click)="showPartnerModal()"
+    >
+      Add Partner
+    </button>
+  </div>
+  <div *ngIf="isCommonSectionPresent()" class="common-warn">
+    <p>
+      Disabled Section is a common content across communities and cannot be made
+      changes to it.
+    </p>
+  </div>
+</div>

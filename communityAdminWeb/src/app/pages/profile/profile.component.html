@@ -1,0 +1,390 @@
+<div class="profile-container row" mat-elevation-z8>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="header-container"> <strong class="full-width profile-header">{{profile.yourProfile}}</strong> </div>
+		<p class="full-width profile-subheader">{{profile.profileSubHeader}}</p>
+		<mat-divider></mat-divider>
+		<br>
+	</div>
+	<!-- Card View for My Profile -->
+	<div mat-elevation-z8>
+		<mat-card class="profile-preview">
+			<div class="row align-ceter" *ngIf="myProfileRes">
+				<!-- Avatar Photo -->
+				<div class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 avatar-view">
+					<strong class="text-center"
+						*ngIf="myProfileImage || profileInitials">{{profile.profilePic}}</strong>
+					<img [src]="myProfileImage" alt="" class="profileImage" *ngIf="myProfileImage">
+					<div class="circle" *ngIf="profileInitials && !myProfileImage">
+						<span class="initials">{{profileInitials}}</span>
+					</div>
+					<div class="col col-2 col-xs-2 col-sm-2 col-md-2 edit-icon"
+						*ngIf="myProfileImage || profileInitials">
+						<input #imageInput type="file" accept="image/*"
+							(change)="onSelectImage($event, imageInput, 'myProfile')" style="display: none;">
+						<mat-menu #editPictureMenu="matMenu">
+							<button mat-menu-item (click)="imageInput.click()">{{profile.uploadPic}}</button>
+							<button mat-menu-item (click)="onRemoveProfilePic(imageInput, 'myProfile')"
+								[disabled]="!myProfileImage">{{profile.removePic}}</button>
+						</mat-menu>
+						<button [matMenuTriggerFor]="editPictureMenu" class="edit-picture-option">
+							<mat-icon class="float-right" matTooltip="{{profile.editPicTooltip}}">edit</mat-icon>
+						</button>
+					</div>
+				</div>
+				<div class="col col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+					<mat-card-content>
+						<form name="profileForm" [formGroup]="profileForm">
+							<div class="row">
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.displayName}}</mat-label>
+										<input formControlName="displayName" matInput autocomplete="off"
+											placeholder="{{profile.displayNamePlaceholder}}"
+											value="{{myProfileRes?.displayName}}"
+											(blur)="onBlurForm1($event, 'displayName')"
+											(input)="onTextChange($event, 'displayName')" />
+									</mat-form-field>
+								</div>
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.displayTitle}}</mat-label>
+										<input formControlName="displayTitle" matInput required autocomplete="off"
+											placeholder="{{profile.displayTitlePlaceholder}}"
+											value="{{myProfileRes?.displayTitle}}"
+											(blur)="onBlurForm1($event, 'displayTitle')"
+											(input)="onTextChange($event, 'displayTitle')" />
+									</mat-form-field>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.firstName}}</mat-label>
+										<input formControlName="firstName" matInput required autocomplete="off"
+											placeholder="{{profile.firstNamePlaceholder}}"
+											value="{{myProfileRes?.firstName}}"
+											(blur)="onBlurForm1($event, 'firstName')"
+											(input)="onTextChange($event, 'firstName')" />
+										<mat-error *ngIf="profileForm?.get('firstName')?.errors?.required">
+											{{profile.firstNameErr}} </mat-error>
+									</mat-form-field>
+								</div>
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.lastName}}</mat-label>
+										<input formControlName="lastName" matInput autocomplete="off"
+											placeholder="{{profile.lastNamePlaceholder}}"
+											value="{{myProfileRes?.lastName}}" (blur)="onBlurForm1($event, 'lastName')"
+											(input)="onTextChange($event, 'lastName')" />
+									</mat-form-field>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+									*ngIf="!isAdvocate">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.myCommunitiesLabel}}</mat-label>
+										<input formControlName="scAdminCommunity" matInput required autocomplete="off"
+											placeholder="{{profile.myCommunitiesLabel}}"
+											value="{{profile.allCommunitiesLabel}}" />
+									</mat-form-field>
+								</div>
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+									*ngIf="isAdvocate">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.myCommunitiesLabel}}</mat-label>
+										<mat-select formControlName="communities" multiple>
+											<mat-select-trigger>
+												{{myCommunityName}}
+												<span
+													*ngIf="communities.value?.length > 1 && myCommunityName != profile.allCommunitiesLabel"
+													class="additional-selection">
+													(+{{communities.value.length - 1}}
+													{{communities.value?.length === 2 ? 'other' : 'others'}})
+												</span>
+											</mat-select-trigger>
+											<mat-option *ngFor="let community of myCommunityList" [value]="community.id"
+												disabled>
+												{{community.title}}</mat-option>
+										</mat-select>
+									</mat-form-field>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.aboutMe}}</mat-label>
+										<textarea formControlName="aboutMe" matInput autocomplete="off"
+											value="{{myProfileRes?.aboutMe}}" required
+											maxlength="{{profile.charCount150}}"
+											placeholder="{{profile.aboutMePlaceholder}}"
+											(blur)="onBlurForm1($event, 'aboutMe')"
+											(input)="onTextChange($event, 'aboutMe')"></textarea>
+										<mat-error *ngIf="profileForm?.get('aboutMe')?.errors?.required">
+											{{profile.aboutMeErr}} </mat-error>
+									</mat-form-field>
+								</div>
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.interests}}</mat-label>
+										<textarea formControlName="interests" matInput autocomplete="off"
+											value="{{myProfileRes?.interests}}" maxlength="{{profile.charCount150}}"
+											placeholder="{{profile.interestsPlaceholder}}"
+											(blur)="onBlurForm1($event, 'interests')"
+											(input)="onTextChange($event, 'interests')"></textarea>
+									</mat-form-field>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+									<mat-form-field appearance="outline" class="full-width">
+										<mat-label>{{profile.location}}</mat-label>
+										<input formControlName="location" matInput autocomplete="off"
+											placeholder="{{profile.locationPlaceholder}}"
+											value="{{myProfileRes?.location}}" (blur)="onBlurForm1($event, 'location')"
+											(input)="onTextChange($event, 'location')" />
+									</mat-form-field>
+								</div>
+							</div>
+							<button mat-raised-button color="primary" class="update-profile-btn"
+								[disabled]="onFormChange()"
+								(click)="onUpdateProfile(false, true)">{{profile.updateProfileBtn}}</button>
+						</form>
+					</mat-card-content>
+				</div>
+			</div>
+			<!-- No Profile View -->
+			<div *ngIf="!myProfileRes" class="full-width no-profile-view">
+				<p>{{profile.noProfileLine1}}</p>
+				<p>{{profile.noProfileLine2}}</p>
+			</div>
+		</mat-card>
+	</div>
+</div>
+
+<!-- Manage other Admin's Profile -->
+<div *ngIf="!isAdvocate" class="profile-container row">
+	<mat-divider></mat-divider>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+		<div class="header-container"> <strong
+				class="full-width profile-header">{{profile.manageOtherAdminHeader}}</strong> </div>
+		<p class="full-width profile-subheader">{{profile.manageOtherAdminSubHeader}}</p>
+		<mat-divider></mat-divider>
+		<br>
+	</div>
+
+	<div mat-elevation-z8>
+		<mat-card class="profile-preview">
+			<div class="row align-ceter">
+				<form name="otherAdminForm" [formGroup]="otherAdminForm">
+					<!-- Choose Admin -->
+					<div class="col col-12 col-xs-12 col-sm-12 col-md-4">
+						<mat-form-field class="full-width">
+							<mat-label>{{profile.selectAdminLabel}}</mat-label>
+							<mat-select formControlName="selectedAdminProfile" required
+								(selectionChange)="selectedProfile($event?.value)">
+								<mat-option [value]="item.id" *ngFor="let item of allProfileRes">
+									{{item.displayName || item.firstName}},
+									{{item.role === 'scadmin' ? profile.sydneyCommunity : item.role === 'scadvocate' ?
+									profile.communityAdvocate : item.role === 'sysadmin' ? profile.systemAdmin :
+									item.role}}
+								</mat-option>
+							</mat-select>
+						</mat-form-field>
+					</div>
+
+					<!-- Card View for Other Admin Profile -->
+					<div mat-elevation-z8 *ngIf="selectedAdmin">
+						<div class="row align-ceter">
+							<!-- Avatar Photo -->
+							<div class="col col-12 col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 avatar-view"> <strong
+									class="text-center">{{profile.profilePic}}</strong> <img [src]="otherProfileImage"
+									alt="" class="profileImage" *ngIf="otherProfileImage">
+								<div class="circle" *ngIf="otherProfileInitials && !otherProfileImage">
+									<span class="initials">{{otherProfileInitials}}</span>
+								</div>
+								<div class="col col-2 col-xs-2 col-sm-2 col-md-2 edit-icon">
+									<input #oa_ImageInput type="file" accept="image/*"
+										(change)="onSelectImage($event, oa_ImageInput, 'oaProfilePic')"
+										style="display: none;">
+									<mat-menu #editOtherAdminPictureMenu="matMenu">
+										<button mat-menu-item
+											(click)="oa_ImageInput.click()">{{profile.uploadPic}}</button>
+										<button mat-menu-item
+											(click)="onRemoveProfilePic(oa_ImageInput, 'oaProfilePic')"
+											[disabled]="!otherProfileImage">{{profile.removePic}}</button>
+									</mat-menu>
+									<button [matMenuTriggerFor]="editOtherAdminPictureMenu" class="edit-picture-option">
+										<mat-icon class="float-right" matTooltip="{{profile.editPicTooltip}}">edit
+										</mat-icon>
+									</button>
+								</div>
+							</div>
+							<div class="col col-12 col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+								<mat-card-content>
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field class="full-width">
+												<mat-label>{{profile.chooseRole}}</mat-label>
+												<mat-select formControlName="oa_selectedRole" [disabled]="selectedAdmin.isPersona"
+													(selectionChange)="onRoleChange($event.value)">
+													<mat-option [value]="item.role" *ngFor="let item of roleList">
+														{{item.name}}
+													</mat-option>
+												</mat-select>
+											</mat-form-field>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.displayName}}</mat-label>
+												<input formControlName="oa_displayName" matInput autocomplete="off"
+													placeholder="{{profile.displayNamePlaceholder}}"
+													value="{{selectedAdmin?.displayName}}"
+													(blur)="onBlurForm2($event, 'oa_displayName')"
+													(input)="onTextChange($event, 'oa_displayName')" />
+											</mat-form-field>
+										</div>
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.displayTitle}}</mat-label>
+												<input formControlName="oa_displayTitle" matInput autocomplete="off"
+													placeholder="{{profile.displayTitlePlaceholder}}"
+													value="{{selectedAdmin?.displayTitle}}"
+													(blur)="onBlurForm2($event, 'oa_displayTitle')"
+													(input)="onTextChange($event, 'oa_displayTitle')" />
+
+											</mat-form-field>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.firstName}}</mat-label>
+												<input formControlName="oa_firstName" matInput required
+													autocomplete="off" placeholder="{{profile.firstNamePlaceholder}}"
+													value="{{selectedAdmin?.firstName}}"
+													(blur)="onBlurForm2($event, 'oa_firstName')"
+													(input)="onTextChange($event, 'oa_firstName')" />
+												<mat-error
+													*ngIf="otherAdminForm?.get('oa_firstName')?.errors?.required">
+													{{profile.firstNameErr}} </mat-error>
+											</mat-form-field>
+										</div>
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.lastName}}</mat-label>
+												<input formControlName="oa_lastName" matInput autocomplete="off"
+													placeholder="{{profile.lastNamePlaceholder}}"
+													value="{{selectedAdmin?.lastName}}"
+													(blur)="onBlurForm2($event, 'oa_lastName')"
+													(input)="onTextChange($event, 'oa_lastName')" />
+											</mat-form-field>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+											*ngIf="selectedRole === roleList[0].role">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.assignedCommunity}}</mat-label>
+												<input formControlName="oa_scAdminCommunity" matInput required
+													autocomplete="off" placeholder="{{profile.assignedCommunity}}"
+													value="{{profile.allCommunitiesLabel}}" />
+											</mat-form-field>
+										</div>
+
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6"
+											*ngIf="selectedRole !== roleList[0].role">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.assignedCommunity}}</mat-label>
+												<mat-select formControlName="oa_communities" multiple required>
+													<mat-select-trigger>
+														{{selectedCommunityName}}
+														<span
+															*ngIf="oa_communities.value?.length > 1 && selectedCommunityName != profile.allCommunitiesLabel"
+															class="additional-selection">
+															(+{{oa_communities.value.length - 1}}
+															{{oa_communities.value?.length === 2 ? 'other' : 'others'}})
+														</span>
+													</mat-select-trigger>
+													<mat-option #allSelected (click)="toggleAllSelection()" [value]="0"
+														[disabled]="selectedRole === roleList[0].role">
+														{{profile.allCommunitiesLabel}}</mat-option>
+													<mat-option *ngFor="let community of communityList"
+														(click)="singleSelectAssignedCommunity()" [value]="community.id"
+														[disabled]="selectedRole === roleList[0].role">
+														{{community.title}}</mat-option>
+												</mat-select>
+												<mat-error
+													*ngIf="otherAdminForm?.get('oa_communities')?.errors?.required">
+													{{profile.communityErr}} </mat-error>
+											</mat-form-field>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.aboutMe}}</mat-label>
+												<textarea formControlName="oa_aboutMe" matInput autocomplete="off"
+													value="{{selectedAdmin?.aboutMe}}" required
+													maxlength="{{profile.charCount150}}"
+													placeholder="{{profile.aboutMePlaceholder}}"
+													(blur)="onBlurForm2($event, 'oa_aboutMe')"
+													(input)="onTextChange($event, 'oa_aboutMe')"></textarea>
+												<mat-error *ngIf="otherAdminForm?.get('oa_aboutMe')?.errors?.required">
+													{{profile.aboutMeErr}} </mat-error>
+											</mat-form-field>
+										</div>
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.interests}}</mat-label>
+												<textarea formControlName="oa_interests" matInput autocomplete="off"
+													value="{{selectedAdmin?.interests}}"
+													maxlength="{{profile.charCount150}}"
+													placeholder="{{profile.interestsPlaceholder}}"
+													(blur)="onBlurForm2($event, 'oa_interests')"
+													(input)="onTextChange($event, 'oa_interests')"></textarea>
+											</mat-form-field>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-form-field appearance="outline" class="full-width">
+												<mat-label>{{profile.location}}</mat-label>
+												<input formControlName="oa_location" matInput autocomplete="off"
+													placeholder="{{profile.locationPlaceholder}}"
+													value="{{selectedAdmin?.location}}"
+													(blur)="onBlurForm2($event, 'oa_location')"
+													(input)="onTextChange($event, 'oa_location')" />
+											</mat-form-field>
+										</div>
+										<div class="col col-12 col-xs-12 col-sm-12 col-md-6">
+											<mat-slide-toggle
+											formControlName="oa_isActive"
+											class="full-width"
+											color="primary"
+											class="notify-toggle"
+										  >
+										  Active
+										  </mat-slide-toggle>
+										</div>
+									</div>
+									<button mat-raised-button color="primary" class="update-profile-btn"
+										[disabled]="onOtherAdminFormChange()"
+										(click)="onUpdateOtherProfile(false, true)">{{profile.updateProfileBtn}}</button>
+								</mat-card-content>
+							</div>
+						</div>
+					</div>
+					<!-- No Admin Selected View -->
+					<div *ngIf="!selectedAdmin" class="full-width no-profile-view">
+						<p>{{profile.noOtherProfileLine1}}</p>
+						<p>{{profile.noOtherProfileLine2}}</p>
+					</div>
+				</form>
+			</div>
+		</mat-card>
+	</div>
+</div>

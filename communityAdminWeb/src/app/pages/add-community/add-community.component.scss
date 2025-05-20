@@ -1,0 +1,29 @@
+@import '../pages.component.scss';
+
+.view-container {
+    padding: 2rem;
+}
+
+.heading-container {
+    text-align: center;
+    font-weight: 500;
+}
+
+.pad-b16 {
+    padding-bottom: 16px;
+}
+
+.btn {
+    margin-right: 20px
+}
+
+.info {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.imageSize {
+    width: 375px;
+    height: 300px;
+}

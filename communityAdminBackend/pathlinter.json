@@ -1,0 +1,13 @@
+{
+  "severity": "error",
+  "rules": [
+    {
+      "directory": "libs",
+      "rule": "([a-z|0-9|_|\\.|\\-|\\\\|\\/]+(\\/|\\\\)[a-z][a-z|0-9|A-Z|_|\\.|\\-]+|.java|.class)$"
+    },
+    {
+      "directory": "api",
+      "rule": "([a-z|0-9|_|\\.|\\-|\\\\|\\/]+(\\/|\\\\)[a-z][a-z|0-9|A-Z|_|\\.|\\-]+|.pdf|.png|.gitignore)$"
+    }
+  ]
+}

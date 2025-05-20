@@ -1,0 +1,60 @@
+@import '../pages.component.scss';
+
+.card-view {
+    margin: 2%;
+}
+
+.btn-container {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.app-btn {
+    vertical-align: middle;
+}
+
+.btn-container {
+    padding: 0.2rem;
+    text-align: center;
+
+    button {
+        font-size: 0.85rem;
+    }
+}
+
+.heading-container {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 16px;
+
+    h1 {
+        color: #752dbd;
+        position: absolute;
+    }
+
+    mat-icon {
+        cursor: pointer;
+
+        &:hover {
+            background-color: #faf6ff;
+        }
+    }
+}
+
+.add-info-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.community-container {
+    padding: 12px;
+}
+
+.imageSize {
+    width: 375px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

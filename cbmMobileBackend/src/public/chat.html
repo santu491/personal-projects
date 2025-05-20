@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    if (self === top) {
+      // The page is not in an iframe
+      document.documentElement.style.display = 'block';
+    } else {
+      // The page is in an iframe
+      top.location = sanitize(self.location.href);
+    }
+  </script>
+  <style>
+    #genesys-mxg-frame {
+      display: none !important;
+    }
+
+    .main-container {
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      padding-top: 40%;
+    }
+
+    .main-container img {
+      margin: auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <img
+      src="https://www.carelonwellbeing.com/etc.clientlibs/beacon/fe-clientlibs/beaconeap/resources/images/Carelon-loader.gif"
+      alt="Loading..." />
+  </div>
+  <script>
+    const sanitize = (input) => {
+      const element = document.createElement('div');
+      element.textContent = input;
+      return element.innerHTML.replace(/&amp;/g, '&');
+    };
+    const urlParam = new URLSearchParams(sanitize(window.location.search));
+    const deploymentId = sanitize(urlParam.get('deploymentId'));
+    const sessionId = sanitize(urlParam.get('sessionId'));
+    const env = sanitize(urlParam.get('env'));
+    const libUrl = sanitize(urlParam.get('libUrl'));
+
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', libUrl, {
+      environment: env,
+      deploymentId: deploymentId,
+      debug: false
+    });
+
+    Genesys("subscribe", "Database.ready", function () {
+      // Set the data in the Database plugin. This data will automatically be included along when sending actual messages.
+      Genesys("command", "Database.set", { messaging: { customAttributes: { ixn_key: sessionId } } });
+    });
+
+    /** You can subscribe to Messenger.ready event or Launcher.ready event **/
+    Genesys("subscribe", "Messenger.ready", function () {
+      Genesys("command", "Messenger.open",
+        (data) => {
+          console.log("genesys window is opened");
+          hideLoader();
+        },
+        (error) => {
+          console.debug(error);
+          console.log("genesys window open command has error");
+        }
+      );
+    });
+
+    Genesys('subscribe', 'Messenger.closed', (e) => {
+      console.log('genesys messenger is closed');
+      window.ReactNativeWebView.postMessage('back');
+      window.postMessage('back');
+    });
+
+    Genesys("subscribe", "MessagingService.conversationCleared", function (response) {
+      console.log('Conversation cleared');
+      window.ReactNativeWebView.postMessage('clear');
+      window.postMessage('clear');
+    });
+
+    function hideLoader() {
+      const loader = document.querySelector('.main-container');
+      loader.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

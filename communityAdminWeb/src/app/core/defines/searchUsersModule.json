@@ -1,0 +1,11 @@
+{
+    "defaultLine1": "Search above with user name and press enter or search icon",
+    "noUserFoundLine1": "Member not found in Sydney Community",
+    "noUserFoundLine2": "Please try searching with a different username.",
+    "userFoundLine1": "Found a User with username: ",
+    "confirmDelete": "Are you sure you want to delete this member's profile?",
+    "optInMinor": "Opt in minor is on for the user.",
+    "optOutMinor": "Opt in minor is off for the user.",
+    "removeUserSuccess": "User removed successfully"
+  }
+  

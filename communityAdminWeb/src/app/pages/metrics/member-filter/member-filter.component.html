@@ -1,0 +1,31 @@
+<div *ngIf="showFilter else elseBlock">
+  <div>
+    <span class="type-label">Medicaid Users</span>
+    <mat-radio-group [value]="selectedMemberTypeValue"  *ngFor="let option of marketBrandOptions">
+      <div>
+        <mat-radio-button
+          [value]="option.value"
+          (change)="selectMemberType($event.value)"
+        >
+          <mat-label>{{ option.title }}</mat-label>
+        </mat-radio-button>
+      </div>
+    </mat-radio-group>
+  </div>
+  <div style="margin-top: 15px;">
+    <span class="type-label">Commercial Users</span>
+    <mat-radio-group [value]="selectedMemberTypeValue"  *ngFor="let option of commercialBrand">
+      <div>
+        <mat-radio-button
+          [value]="option.value"
+          (change)="selectMemberType($event.value)"
+        >
+          <mat-label>{{ option.title }}</mat-label>
+        </mat-radio-button>
+      </div>
+    </mat-radio-group>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <span class="loading-text">Loading Filters</span>
+</ng-template>
