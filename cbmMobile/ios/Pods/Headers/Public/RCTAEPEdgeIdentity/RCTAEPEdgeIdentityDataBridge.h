@@ -1,0 +1,1 @@
+../../../../../node_modules/@adobe/react-native-aepedgeidentity/ios/src/RCTAEPEdgeIdentityDataBridge.h

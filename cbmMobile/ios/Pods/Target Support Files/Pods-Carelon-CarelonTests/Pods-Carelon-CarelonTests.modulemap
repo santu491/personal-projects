@@ -1,0 +1,6 @@
+module Pods_Carelon_CarelonTests {
+  umbrella header "Pods-Carelon-CarelonTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

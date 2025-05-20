@@ -1,0 +1,45 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/ElevanceSans-Bold.ttf",
+      "sha1": "415310380ba87467349c659767cf492ec952fd6a"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-BoldItalic.ttf",
+      "sha1": "31ba7f1810a594d427d416e6d1b9abd97506dcbf"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-Italic.ttf",
+      "sha1": "4dc764b3fb057e8ee16a45edb582778c5aaa538a"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-Light.ttf",
+      "sha1": "9c52d0ea3b9d8a057f4d923c8092693e3cc86ce3"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-LightItalic.ttf",
+      "sha1": "82949e1c20dbc22e345d9d4025be85fc54b8cd4d"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-Medium.ttf",
+      "sha1": "93210e0c6a769dc8d34cef5abad25c06799016fa"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-MediumItalic.ttf",
+      "sha1": "911e90360273633f0435d3ecf2f31d2fdd302047"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-Regular.ttf",
+      "sha1": "751c235e349e1371ba9772cbd8ee9b2d5ca0b517"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-Semibold.ttf",
+      "sha1": "96cf9f84a79d74a7bfbe04886d5c633ad27aaf1a"
+    },
+    {
+      "path": "src/assets/fonts/ElevanceSans-SemiboldItalic.ttf",
+      "sha1": "a5d174ca691e427c5a0fa9bba0bcf8dde6eae984"
+    }
+  ]
+}

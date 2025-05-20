@@ -1,0 +1,2 @@
+export const OPEN_BOTTOMSHEET = 0;
+export const CLIENT_STORAGE_KEY = 'CLIENT_DETAILS';

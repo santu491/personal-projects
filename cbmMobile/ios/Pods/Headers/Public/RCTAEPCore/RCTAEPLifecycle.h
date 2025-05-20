@@ -1,0 +1,1 @@
+../../../../../node_modules/@adobe/react-native-aepcore/ios/src/Lifecycle/RCTAEPLifecycle.h

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>36583318-1E8A-4A7A-BA32-AC2508243F96</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>36583318-1E8A-4A7A-BA32-AC2508243F96.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Carelon project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dev1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning workspace Carelon with scheme dev1 and configuration dev1</string>
+			<key>timeStartedRecording</key>
+			<real>753786359.06568599</real>
+			<key>timeStoppedRecording</key>
+			<real>753786362.22999096</real>
+			<key>title</key>
+			<string>Cleaning workspace Carelon with scheme dev1 and configuration dev1</string>
+			<key>uniqueIdentifier</key>
+			<string>36583318-1E8A-4A7A-BA32-AC2508243F96</string>
+		</dict>
+		<key>E818AD1B-77AB-4AFC-A2AD-EAB365C43622</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E818AD1B-77AB-4AFC-A2AD-EAB365C43622.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Carelon project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>dev1</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning workspace Carelon with scheme dev1 and configuration dev1</string>
+			<key>timeStartedRecording</key>
+			<real>753785868.28807199</real>
+			<key>timeStoppedRecording</key>
+			<real>753785871.924577</real>
+			<key>title</key>
+			<string>Cleaning workspace Carelon with scheme dev1 and configuration dev1</string>
+			<key>uniqueIdentifier</key>
+			<string>E818AD1B-77AB-4AFC-A2AD-EAB365C43622</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

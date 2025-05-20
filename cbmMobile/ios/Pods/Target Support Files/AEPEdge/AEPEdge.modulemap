@@ -1,0 +1,6 @@
+module AEPEdge {
+  umbrella header "AEPEdge-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+module AEPEdgeIdentity {
+  umbrella header "AEPEdgeIdentity-umbrella.h"
+
+  export *
+  module * { export * }
+}

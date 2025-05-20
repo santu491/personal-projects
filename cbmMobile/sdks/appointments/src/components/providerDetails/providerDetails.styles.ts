@@ -1,0 +1,171 @@
+import { StyleSheet } from 'react-native';
+
+import { appFonts } from '../../../../../shared/src/context/appFonts';
+import { appColors } from '../../../../../src/config';
+
+const TITLE_WIDTH = '50%';
+const VALUE_WIDTH = '50%';
+
+export const providerStyles = StyleSheet.create({
+  container: {
+    height: 'auto',
+    borderColor: appColors.lightGray,
+    borderWidth: 1,
+    borderRadius: 20,
+    backgroundColor: appColors.white,
+    marginHorizontal: 15,
+    paddingHorizontal: 5,
+    paddingBottom: 20,
+    marginVertical: 5,
+  },
+  label: {
+    fontFamily: appFonts.semiBold,
+    fontWeight: '600',
+    fontSize: 14,
+    width: TITLE_WIDTH,
+    color: appColors.darkGray,
+  },
+  statusContainer: {
+    borderRadius: 20,
+    paddingVertical: 5,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: VALUE_WIDTH,
+  },
+
+  statusValue: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: appColors.darkGray,
+    fontFamily: appFonts.regular,
+    textAlignVertical: 'center',
+    textAlign: 'center',
+  },
+  value: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: appColors.darkGray,
+    fontFamily: appFonts.regular,
+    textAlignVertical: 'center',
+    width: VALUE_WIDTH,
+  },
+  timeValue: {
+    fontSize: 12,
+    fontWeight: '400',
+    marginLeft: 10,
+    color: appColors.darkGray,
+    textAlignVertical: 'center',
+    fontFamily: appFonts.regular,
+    textAlign: 'left',
+    width: VALUE_WIDTH,
+  },
+  timeDescriptionValue: {
+    fontSize: 12,
+    fontWeight: '400',
+    marginLeft: 10,
+    color: appColors.darkGray,
+    textAlignVertical: 'center',
+    fontFamily: appFonts.regular,
+    textAlign: 'left',
+  },
+  itemSeparatorStyle: {
+    height: 0.8,
+    marginHorizontal: 14,
+    backgroundColor: appColors.lightGray,
+    marginVertical: 4,
+  },
+  cardStyle: {
+    flexDirection: 'row',
+    marginHorizontal: 16,
+    marginTop: 15,
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
+    color: appColors.purple,
+    marginVertical: 12,
+    marginHorizontal: 16,
+    fontWeight: '600',
+    textAlignVertical: 'center',
+  },
+  dateTimeContainer: {
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+  },
+  dateContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 5,
+  },
+  icon: {
+    width: 18,
+    height: 18,
+    resizeMode: 'contain',
+    marginTop: 2,
+  },
+  actionButtonView: {
+    paddingTop: 25,
+    paddingBottom: 5,
+    paddingHorizontal: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  confirmActionButton: {
+    backgroundColor: appColors.lightPurple,
+    borderRadius: 24,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: '100%',
+    marginTop: 20,
+  },
+  confirmActionButtonText: {
+    color: appColors.white,
+    fontSize: 16,
+    fontFamily: appFonts.semiBold,
+    textAlign: 'center',
+  },
+  cancelActionButton: {
+    backgroundColor: appColors.white,
+    borderColor: appColors.lightPurple,
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    width: '100%',
+  },
+  cancelButtonText: {
+    color: appColors.lightPurple,
+    fontSize: 16,
+    fontFamily: appFonts.semiBold,
+    textAlign: 'center',
+  },
+  linkButtonStyle: {
+    fontSize: 14,
+    fontWeight: '500',
+    fontFamily: appFonts.medium,
+    lineHeight: 22,
+    color: appColors.lightPurple,
+    textDecorationLine: 'underline',
+    textDecorationColor: appColors.lightPurple,
+    textAlign: 'center',
+    marginLeft: 5,
+    textAlignVertical: 'center',
+  },
+  otherRequestsView: {
+    paddingTop: 20,
+    justifyContent: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+  },
+  counselorsContainer: {
+    flexDirection: 'row',
+    width: VALUE_WIDTH,
+  },
+  requestCountContainer: {
+    borderRadius: 20,
+    paddingHorizontal: 10,
+    marginHorizontal: 15,
+    alignSelf: 'center',
+    backgroundColor: appColors.paleTurquoise,
+  },
+});

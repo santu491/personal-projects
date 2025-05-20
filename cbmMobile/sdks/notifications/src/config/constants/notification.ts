@@ -1,0 +1,2 @@
+export const PN_PERMISSION_GRANTED_KEY = 'PN_PERMISSION_GRANTED';
+export const PAGE_SIZE = 10;

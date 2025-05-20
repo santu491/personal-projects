@@ -1,0 +1,26 @@
+{
+  "name": "RCTAEPEdgeBridge",
+  "version": "7.0.0",
+  "summary": "Adobe Experience Platform Edge Bridge extension for AEP Mobile SDK. Written and maintained by Adobe.",
+  "authors": "Adobe Experience Platform SDK Team",
+  "homepage": "https://github.com/adobe/aepsdk-react-native",
+  "license": "Apache 2.0 License",
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/adobe/aepsdk-react-native.git",
+    "tag": "7.0.0"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ],
+    "AEPEdgeBridge": [
+      ">= 5.0.0",
+      "< 6.0.0"
+    ]
+  }
+}

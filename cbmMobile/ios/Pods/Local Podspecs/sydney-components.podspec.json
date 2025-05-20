@@ -1,0 +1,21 @@
+{
+  "name": "sydney-components",
+  "version": "10.28.0",
+  "summary": "react-native motif UI components",
+  "license": "UNLICENSED",
+  "authors": "Anthem (https://www.elevancehealth.com)",
+  "homepage": "https://bitbucket.elevancehealth.com/projects/MADTN/repos/react-native-sydney-components#readme",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://bitbucket.elevancehealth.com/projects/MADTN/repos/react-native-sydney-components.git",
+    "tag": "v10.28.0"
+  },
+  "source_files": "ios/*.{h,m}",
+  "dependencies": {
+    "React-Core": [
+
+    ]
+  }
+}

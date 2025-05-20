@@ -1,0 +1,32 @@
+diff --git a/node_modules/react-native-snap-carousel/src/carousel/types.ts b/node_modules/react-native-snap-carousel/src/carousel/types.ts
+index 46c1e5e..4c89d15 100644
+--- a/node_modules/react-native-snap-carousel/src/carousel/types.ts
++++ b/node_modules/react-native-snap-carousel/src/carousel/types.ts
+@@ -10,6 +10,11 @@ import type {
+ } from 'react-native';
+ import type { ReactNode } from 'react';
+ 
++// Animated.AnimatedInterpolation has been converted to a generic type
++// in @types/react-native 0.70. This way we can maintain compatibility
++// with all versions of @types/react-native`
++type AnimatedInterpolation = ReturnType<Animated.Value['interpolate']>;
++
+ type CarouselBaseProps<TData> = {
+   data: TData[];
+   activeSlideAlignment: 'center' | 'end' | 'start';
+@@ -37,7 +42,7 @@ type CarouselBaseProps<TData> = {
+   };
+   slideInterpolatedStyle?: (
+     index: number,
+-    animatedValue: Animated.AnimatedInterpolation,
++    animatedValue: AnimatedInterpolation,
+     props: CarouselBaseProps<TData>
+   ) => StyleProp<ViewStyle>;
+   slideStyle?: Animated.WithAnimatedValue<StyleProp<ViewStyle>>;
+@@ -99,5 +104,5 @@ export type CarouselProps<TData> = CarouselBaseProps<TData> &
+ 
+ export type CarouselState = {
+   hideCarousel: boolean;
+-  interpolators: (Animated.Value | Animated.AnimatedInterpolation)[];
++  interpolators: (Animated.Value | AnimatedInterpolation)[];
+ };

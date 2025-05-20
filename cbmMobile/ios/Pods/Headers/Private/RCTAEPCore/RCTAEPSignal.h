@@ -1,0 +1,1 @@
+../../../../../node_modules/@adobe/react-native-aepcore/ios/src/Signal/RCTAEPSignal.h

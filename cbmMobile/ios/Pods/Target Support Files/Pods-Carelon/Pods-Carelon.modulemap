@@ -1,0 +1,6 @@
+module Pods_Carelon {
+  umbrella header "Pods-Carelon-umbrella.h"
+
+  export *
+  module * { export * }
+}

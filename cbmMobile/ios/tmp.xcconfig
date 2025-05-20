@@ -1,0 +1,4 @@
+API_HOST=https:/$()/dev1.api.mobile.carelon.com
+ENV=dev1
+CREDIBLEMIND_CLIENT_IDENTIFIER=carelonwellbeingmobile
+CREDIBLEMIND_ENVIRONMENT=demo

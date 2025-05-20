@@ -1,0 +1,5 @@
+ extern const unsigned char Carelon_BH_Dev1VersionString[];
+ extern const double Carelon_BH_Dev1VersionNumber;
+
+ const unsigned char Carelon_BH_Dev1VersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Carelon BH Dev1  PROJECT:Carelon-5" "\n";
+ const double Carelon_BH_Dev1VersionNumber __attribute__ ((used)) = (double)5.;

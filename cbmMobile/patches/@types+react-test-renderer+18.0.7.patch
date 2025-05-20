@@ -1,0 +1,13 @@
+diff --git a/node_modules/@types/react-test-renderer/index.d.ts b/node_modules/@types/react-test-renderer/index.d.ts
+index be245b6..02ae84c 100644
+--- a/node_modules/@types/react-test-renderer/index.d.ts
++++ b/node_modules/@types/react-test-renderer/index.d.ts
+@@ -84,7 +84,7 @@ export function act(callback: () => Promise<VoidOrUndefinedOnly>): Promise<undef
+  *
+  * @see https://reactjs.org/blog/2019/02/06/react-v16.8.0.html#testing-hooks
+  */
+-export function act(callback: () => VoidOrUndefinedOnly): DebugPromiseLike;
++export function act(callback: () => VoidOrUndefinedOnly): void;
+ 
+ // Intentionally doesn't extend PromiseLike<never>.
+ // Ideally this should be as hard to accidentally use as possible.

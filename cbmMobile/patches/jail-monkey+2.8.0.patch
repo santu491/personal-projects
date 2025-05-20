@@ -1,0 +1,17 @@
+diff --git a/node_modules/jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java b/node_modules/jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java
+index bf75f27..9225540 100644
+--- a/node_modules/jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java
++++ b/node_modules/jail-monkey/android/src/main/java/com/gantix/JailMonkey/Rooted/RootedCheck.java
+@@ -65,6 +65,12 @@ public class RootedCheck {
+         }
+ 
+         public boolean isJailBroken() {
++            if (android.os.Build.VERSION.SDK_INT == 30 && android.os.Build.MANUFACTURER.equalsIgnoreCase("oneplus") && android.os.Build.MODEL.toLowerCase().contains("a60")){
++                return detectRootManagementApps || detectPotentiallyDangerousApps || checkForSuBinary
++                    /*|| checkForDangerousProps */ || checkForRWPaths
++                    || detectTestKeys || checkSuExists || checkForRootNative || checkForMagiskBinary;
++            }
++
+             return detectRootManagementApps || detectPotentiallyDangerousApps || checkForSuBinary
+                     || checkForDangerousProps || checkForRWPaths
+                     || detectTestKeys || checkSuExists || checkForRootNative || checkForMagiskBinary;

@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "tsx": "^4.7.2",
+    "yargs": "^17.7.2",
+    "zx": "7.2.3"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.4"
+  }
+}

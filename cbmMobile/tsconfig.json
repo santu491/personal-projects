@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "customConditions": null,
+    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "paths": { 
+      /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "@sydney/motif-components-real": ["./node_modules/@sydney/motif-components"],
+      "@react-navigation/*": [
+        "./node_modules/@react-navigation/*"
+      ],
+      "@react-navigation-real/*": [
+        "./node_modules/@react-navigation/*"
+      ],
+      "react-native-calendars": ["./node_modules/@types/react-native-calendars"]
+    },
+    "typeRoots": [
+      "@types",
+      "node_modules/@types",
+    ] /* List of folders to include type definitions from. */,
+  },
+  "exclude": [
+    "**/lib",
+    "node_modules",
+    "scripts/zx",
+  ]
+}

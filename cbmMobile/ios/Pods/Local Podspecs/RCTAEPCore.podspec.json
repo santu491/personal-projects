@@ -1,0 +1,39 @@
+{
+  "name": "RCTAEPCore",
+  "version": "7.0.0",
+  "summary": "Core library for Adobe Experience Platform Mobile SDK. Written and Supported by Adobe.",
+  "authors": "Adobe Experience Platform SDK Team",
+  "homepage": "https://github.com/adobe/aepsdk-react-native",
+  "license": "Apache 2.0 License",
+  "platforms": {
+    "ios": "12.0",
+    "tvos": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/adobe/aepsdk-react-native.git",
+    "tag": "7.0.0"
+  },
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ],
+    "AEPCore": [
+      ">= 5.4.0",
+      "< 6.0.0"
+    ],
+    "AEPLifecycle": [
+      ">= 5.4.0",
+      "< 6.0.0"
+    ],
+    "AEPIdentity": [
+      ">= 5.4.0",
+      "< 6.0.0"
+    ],
+    "AEPSignal": [
+      ">= 5.4.0",
+      "< 6.0.0"
+    ]
+  },
+  "source_files": "ios/src/**/*.{h,m}"
+}

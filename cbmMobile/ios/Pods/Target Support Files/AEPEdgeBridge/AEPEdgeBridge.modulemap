@@ -1,0 +1,6 @@
+module AEPEdgeBridge {
+  umbrella header "AEPEdgeBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

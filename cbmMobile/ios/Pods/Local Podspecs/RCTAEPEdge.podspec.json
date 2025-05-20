@@ -1,0 +1,27 @@
+{
+  "name": "RCTAEPEdge",
+  "version": "7.0.0",
+  "summary": "Adobe Experience Platform Edge Network extension for Adobe Experience Platform Mobile SDK. Written and maintained by Adobe",
+  "authors": "Adobe Experience Platform SDK Team",
+  "homepage": "https://github.com/adobe/aepsdk-react-native",
+  "license": "Apache 2.0 License",
+  "platforms": {
+    "ios": "12.0",
+    "tvos": "12.0"
+  },
+  "source": {
+    "git": "https://github.com/adobe/aepsdk-react-native.git",
+    "tag": "7.0.0"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ],
+    "AEPEdge": [
+      ">= 5.0.0",
+      "< 6.0.0"
+    ]
+  }
+}

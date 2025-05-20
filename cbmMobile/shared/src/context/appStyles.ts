@@ -1,0 +1,267 @@
+import { Dimensions, StyleSheet } from 'react-native';
+
+import { dimensionCheck, isIOS } from '../../../src/util/commonUtils';
+import { appColors } from './appColors';
+import { appFonts } from './appFonts';
+
+const { width, height } = Dimensions.get('window');
+
+export const appStyles = StyleSheet.create({
+  viewContainer: {
+    flex: 1,
+  },
+  textInputContainer: {
+    flexDirection: 'row',
+    width: '100%',
+    justifyContent: 'flex-start',
+    height: 46,
+    marginTop: 5,
+  },
+  headerActionButton: {
+    backgroundColor: appColors.white,
+    borderRadius: 20,
+    alignItems: 'center',
+    top: isIOS() ? (dimensionCheck() ? height * 0.032 : height * 0.01) : height * 0.02,
+    width: width * 0.41,
+    height: height * 0.03,
+    justifyContent: 'center',
+    borderColor: appColors.lightPurple,
+    borderWidth: 2,
+  },
+  headerActionButtonText: {
+    color: appColors.lightPurple,
+    fontSize: 12,
+    fontFamily: appFonts.regular,
+  },
+  backButton: {
+    position: 'absolute',
+    width: width * 0.06,
+    height: height * 0.03,
+    alignSelf: 'flex-start',
+    resizeMode: 'contain',
+  },
+  backButtonTop: { top: height * 0.015 },
+  backButtonImage: {
+    width: width * 0.06,
+    height: height * 0.03,
+    resizeMode: 'contain',
+    left: '8%',
+  },
+  notificationIcon: {
+    position: 'relative',
+    marginLeft: 10,
+  },
+  description: {
+    fontSize: 16,
+    flexDirection: 'row',
+    fontFamily: appFonts.regular,
+    color: appColors.mediumGray,
+  },
+  textInput: {
+    height: 46,
+    borderColor: appColors.thickerGray,
+    borderWidth: 1,
+    padding: 10,
+    width: '100%',
+    borderRadius: 8,
+    color: appColors.mediumGray,
+    fontFamily: appFonts.medium,
+    fontSize: 14,
+    textAlignVertical: 'center',
+  },
+  textInputError: {
+    borderColor: appColors.darkRed,
+  },
+  errorText: {
+    color: appColors.darkRed,
+    fontFamily: appFonts.medium,
+    fontSize: 14,
+  },
+  actionButtonAltText: {
+    color: appColors.purple,
+    fontSize: 18,
+  },
+  mainContainer: {
+    backgroundColor: appColors.white,
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: appColors.white,
+  },
+  menuItem: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  menuImageItem: {
+    width: 20,
+    height: 20,
+    justifyContent: 'flex-start',
+  },
+  menuItemText: {
+    fontSize: 20,
+    textAlign: 'left',
+    marginLeft: 5,
+    fontFamily: appFonts.bold,
+    color: appColors.mediumGray,
+  },
+  acceptTermsConditionsView: {
+    height: 32,
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  acceptTermsText: {
+    marginLeft: 10,
+    textAlign: 'left',
+    fontSize: 14,
+    fontFamily: appFonts.regular,
+    color: appColors.mediumGray,
+  },
+  menuSectionTitleView: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  eyeView: {
+    justifyContent: 'center',
+    right: 30,
+  },
+  eyeImg: {
+    width: 22,
+    height: 18,
+    resizeMode: 'contain',
+    alignSelf: 'center',
+  },
+  nameTextStyle: {
+    color: appColors.mediumGray,
+    textAlign: 'left',
+    fontSize: 14,
+    width: '100%',
+    fontFamily: appFonts.semiBold,
+    lineHeight: 22,
+  },
+  errorViewStyle: {
+    paddingTop: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+  },
+  errorImage: {
+    width: 16,
+    height: 16,
+    resizeMode: 'contain',
+    marginRight: 5,
+  },
+  notificationBadgeStyle: {
+    position: 'absolute',
+    borderRadius: 12,
+    backgroundColor: appColors.red,
+    zIndex: 1,
+    alignSelf: 'flex-end',
+    height: 12,
+    width: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: -4,
+    right: -4,
+  },
+  notificationCountText: {
+    fontSize: 6,
+    color: appColors.white,
+    fontWeight: 'bold',
+  },
+  textRequired: {
+    color: appColors.purple,
+  },
+  secretEditableView: {
+    height: 46,
+    flexDirection: 'row',
+    width: '95%',
+    justifyContent: 'flex-start',
+    backgroundColor: appColors.paleGray,
+    borderRadius: 8,
+  },
+  secretEditableTextInput: {
+    height: 46,
+    borderColor: appColors.mediumGray,
+    marginBottom: 10,
+    padding: 10,
+    borderRadius: 8,
+    color: appColors.darkGray,
+    fontFamily: appFonts.regular,
+  },
+  modalCenteredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: appColors.lightModalGray,
+  },
+  modalParentView: {
+    backgroundColor: appColors.white,
+    borderColor: appColors.black,
+    borderWidth: 1,
+    position: 'absolute',
+    zIndex: 1,
+    width: 260,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  modalButtonStyle: {
+    backgroundColor: appColors.lightPurple,
+    borderRadius: 60,
+    flexGrow: 0.1,
+    paddingVertical: 4,
+    paddingTop: 4,
+    height: 30,
+    marginHorizontal: 12,
+    justifyContent: 'center',
+  },
+  modalPopUpBtnText: {
+    fontFamily: appFonts.regular,
+    textAlign: 'center',
+    fontSize: 14,
+    color: appColors.white,
+  },
+  modalSubView: {
+    flex: 1,
+    paddingHorizontal: 16,
+    paddingVertical: 18,
+  },
+  modalAccountText: {
+    fontFamily: appFonts.regular,
+    fontSize: 12,
+    marginVertical: 12,
+    textAlign: 'center',
+  },
+  modalTitle: {
+    fontFamily: appFonts.regular,
+    flex: 0.3,
+    fontSize: 16,
+    flexGrow: 0.4,
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  webContainer: {
+    marginBottom: isIOS() ? (!dimensionCheck() ? 170 : 105) : 100,
+  },
+
+  loaderContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  image: {
+    width: 100,
+    height: 100,
+    alignSelf: 'center',
+  },
+  disclaimerViewStyle: {
+    marginHorizontal: 15,
+    marginVertical: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderColor: appColors.lightGray,
+    borderWidth: 2,
+    borderRadius: 24,
+  },
+});

@@ -1,0 +1,1 @@
+../../../../../node_modules/@adobe/react-native-aepedgebridge/ios/src/RCTAEPEdgeBridge.h
